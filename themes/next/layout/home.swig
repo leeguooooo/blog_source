@@ -8,7 +8,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <title>lee - 郭立个人站</title>
+    <meta name="baidu-site-verification" content="v3WPgfCRrA" />
+    <title>郭立个人博客</title>
     <link rel="apple-touch-icon" href="icon.png" />
     <link rel="apple-touch-icon-precomposed" href="icon.png" />
     <link rel="stylesheet" type="text/css" href="{{ url_for(theme.css) }}/home.css?v={{ theme.version }}"/>

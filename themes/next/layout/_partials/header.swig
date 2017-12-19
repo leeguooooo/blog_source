@@ -22,7 +22,7 @@
   {% set hasSearch = theme.swiftype_key || theme.tinysou_Key || theme.baidu_key %}
 
   {% if theme.menu %}
-    <a href="https://leeguoo.com/" class="lee menu-item">首页</a>
+    <a href="https://leeguoo.com/" class="lee menu-item">GU0</a>
     <ul id="menu" class="menu {{ hasSearch and 'menu-left' }}">
       {% for name, path in theme.menu %}
         {% set itemName = name.toLowerCase() %}
