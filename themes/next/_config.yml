@@ -1,16 +1,17 @@
 # when running hexo in a subdirectory (e.g. domain.tld/blog), remove leading slashes ( "/archives" -> "archives" )
 menu:
   home: /
-  # categories: /categories
-  # archives: /archives
-  # tags: /tags
+  categories: /categories
+  archives: /archives
+  tags: /tags
   # projects: /projects/
   # tech: /categories/大前端技术/
   # product: /categories/产品与设计/
   # plan: /categories/方案整理/
   # conf: /categories/leeConf/
   # explore: /categories/前沿探索/
-  # github: https://github.com/lee
+  github: https://github.com/leeguooooo
+  weibo: https://weibo.com/12491851
   # team: /categories/团队生活/
   # about: /about/
   # joinus: /joinus/
@@ -98,9 +99,11 @@ version: 0.4.5.1
 
 # Social
 social:
+  去哪儿: https://www.qunar.com/
   Home: https://www.leeguoo.com/
   GitHub: https://github.com/leeguooooo
-  去哪儿: https://xn--v4q63d8za.xn--6qq986b3xl/
+  WeiBo: https://weibo.com/12491851
+  Email: mailto:lee.guo@qunar.com
 
 # Rss
 rss: atom.xml
