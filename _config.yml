@@ -18,7 +18,7 @@ avatar: https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blog.leeguoo.com/
+url: https://xn--v4q63d8za.xn--6qq986b3xl/
 root: /
 permalink: :title/
 # permalink: blog/:year/:month/:day/:title/
