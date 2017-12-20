@@ -31,7 +31,7 @@
 
 
 
-  <meta name="keywords" content="面试," />
+  <meta name="keywords" content="面试,react,前端," />
 
 
 
@@ -42,18 +42,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="1. 发布到线上的版本发现问题，git回滚怎么实现？2. react什么情况会触发页面重新渲染3. lreact-router了解多少，怎么实现路由页面的切换4. svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。5. webpack怎么实现线上版本发布 和本地代码分离，webpack配置项怎么配置6. 用过redux吗">
-<meta name="keywords" content="面试">
+<meta name="description" content="发布到线上的版本发现问题，git回滚怎么实现？ react什么情况会触发页面重新渲染&amp;emsp; 参考链接： React组件生命周期小结   首次加载 setState改变组件内部state 接收到新的props  react-router了解多少，怎么实现路由页面的切换 svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。 webpack怎么实现线上版本发布">
+<meta name="keywords" content="面试,react,前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lisa面试总结1001篇 - 0001">
 <meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/李爽的面试总结0001/index.html">
 <meta property="og:site_name" content="LEE">
-<meta property="og:description" content="1. 发布到线上的版本发现问题，git回滚怎么实现？2. react什么情况会触发页面重新渲染3. lreact-router了解多少，怎么实现路由页面的切换4. svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。5. webpack怎么实现线上版本发布 和本地代码分离，webpack配置项怎么配置6. 用过redux吗">
+<meta property="og:description" content="发布到线上的版本发现问题，git回滚怎么实现？ react什么情况会触发页面重新渲染&amp;emsp; 参考链接： React组件生命周期小结   首次加载 setState改变组件内部state 接收到新的props  react-router了解多少，怎么实现路由页面的切换 svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。 webpack怎么实现线上版本发布">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-19T09:53:46.452Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmn7ygn3ywj30mf0n6tah.jpg">
+<meta property="og:updated_time" content="2017-12-20T06:44:41.551Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lisa面试总结1001篇 - 0001">
-<meta name="twitter:description" content="1. 发布到线上的版本发现问题，git回滚怎么实现？2. react什么情况会触发页面重新渲染3. lreact-router了解多少，怎么实现路由页面的切换4. svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。5. webpack怎么实现线上版本发布 和本地代码分离，webpack配置项怎么配置6. 用过redux吗">
+<meta name="twitter:description" content="发布到线上的版本发现问题，git回滚怎么实现？ react什么情况会触发页面重新渲染&amp;emsp; 参考链接： React组件生命周期小结   首次加载 setState改变组件内部state 接收到新的props  react-router了解多少，怎么实现路由页面的切换 svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。 webpack怎么实现线上版本发布">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmn7ygn3ywj30mf0n6tah.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -210,7 +212,7 @@
         <span class="post-time">
           &nbsp; | &nbsp;
           <span class="iconfont">&#xf024;</span>
-          <a href="/authors/李爽/">李爽</a>
+          <a href="/authors/李爽lisa/">李爽lisa</a>
         </span>
         
 
@@ -256,7 +258,7 @@
       </div>
       
       <blockquote class="blockquote-center">
-        <p style="padding: 0 50px">李爽，目前任职于九次方大数据，负责可视化开发。</p>
+        <p style="padding: 0 50px">李爽lisa，目前任职于九次方大数据，负责可视化开发。</p>
       </blockquote>
       
 
@@ -269,7 +271,22 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="1-_发布到线上的版本发现问题，git回滚怎么实现？">1. 发布到线上的版本发现问题，git回滚怎么实现？</h3><h3 id="2-_react什么情况会触发页面重新渲染">2. react什么情况会触发页面重新渲染</h3><h3 id="3-_lreact-router了解多少，怎么实现路由页面的切换">3. lreact-router了解多少，怎么实现路由页面的切换</h3><h3 id="4-_svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。">4. svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。</h3><h3 id="5-_webpack怎么实现线上版本发布_和本地代码分离，webpack配置项怎么配置">5. webpack怎么实现线上版本发布 和本地代码分离，webpack配置项怎么配置</h3><h3 id="6-_用过redux吗">6. 用过redux吗</h3></span>
+        <span itemprop="articleBody"><h3 id="发布到线上的版本发现问题，git回滚怎么实现？">发布到线上的版本发现问题，git回滚怎么实现？</h3><hr>
+<h3 id="react什么情况会触发页面重新渲染">react什么情况会触发页面重新渲染</h3><p>&emsp;<a href="http://www.jianshu.com/p/4784216b8194" target="_blank" rel="external"> 参考链接： React组件生命周期小结 </a></p>
+<ol>
+<li>首次加载</li>
+<li>setState改变组件内部state</li>
+<li>接收到新的props</li>
+</ol>
+<h2 id=""><img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmn7ygn3ywj30mf0n6tah.jpg" alt="react声明周期"></h2><h3 id="react-router了解多少，怎么实现路由页面的切换">react-router了解多少，怎么实现路由页面的切换</h3><hr>
+<h3 id="svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。">svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。</h3><hr>
+<h3 id="webpack怎么实现线上版本发布_和本地代码分离，webpack配置项怎么配置">webpack怎么实现线上版本发布 和本地代码分离，webpack配置项怎么配置</h3><hr>
+<h3 id="用过redux吗">用过redux吗</h3><ul>
+<li>用过</li>
+<li>待补充</li>
+</ul>
+<hr>
+</span>
       
     </div>
 
@@ -278,6 +295,10 @@
         <div class="post-tags">
           
             <a href="/tags/面试/" rel="tag">#面试</a>
+          
+            <a href="/tags/react/" rel="tag">#react</a>
+          
+            <a href="/tags/前端/" rel="tag">#前端</a>
           
         </div>
       
@@ -366,7 +387,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags/">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">标签</span>
             </a>
           </div>
@@ -430,7 +451,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_发布到线上的版本发现问题，git回滚怎么实现？"><span class="nav-number">1.</span> <span class="nav-text">1. 发布到线上的版本发现问题，git回滚怎么实现？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_react什么情况会触发页面重新渲染"><span class="nav-number">2.</span> <span class="nav-text">2. react什么情况会触发页面重新渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-_lreact-router了解多少，怎么实现路由页面的切换"><span class="nav-number">3.</span> <span class="nav-text">3. lreact-router了解多少，怎么实现路由页面的切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-_svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。"><span class="nav-number">4.</span> <span class="nav-text">4. svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-_webpack怎么实现线上版本发布_和本地代码分离，webpack配置项怎么配置"><span class="nav-number">5.</span> <span class="nav-text">5. webpack怎么实现线上版本发布 和本地代码分离，webpack配置项怎么配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-_用过redux吗"><span class="nav-number">6.</span> <span class="nav-text">6. 用过redux吗</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#发布到线上的版本发现问题，git回滚怎么实现？"><span class="nav-number">1.</span> <span class="nav-text">发布到线上的版本发现问题，git回滚怎么实现？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#react什么情况会触发页面重新渲染"><span class="nav-number">2.</span> <span class="nav-text">react什么情况会触发页面重新渲染</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#react-router了解多少，怎么实现路由页面的切换"><span class="nav-number">1.</span> <span class="nav-text">react-router了解多少，怎么实现路由页面的切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。"><span class="nav-number">2.</span> <span class="nav-text">svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack怎么实现线上版本发布_和本地代码分离，webpack配置项怎么配置"><span class="nav-number">3.</span> <span class="nav-text">webpack怎么实现线上版本发布 和本地代码分离，webpack配置项怎么配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用过redux吗"><span class="nav-number">4.</span> <span class="nav-text">用过redux吗</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

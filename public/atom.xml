@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://xn--v4q63d8za.xn--6qq986b3xl/"/>
-  <updated>2017-12-19T09:53:46.452Z</updated>
+  <updated>2017-12-20T06:44:41.551Z</updated>
   <id>https://xn--v4q63d8za.xn--6qq986b3xl/</id>
   
   <author>
@@ -19,13 +19,33 @@
     <link href="https://xn--v4q63d8za.xn--6qq986b3xl/%E6%9D%8E%E7%88%BD%E7%9A%84%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%930001/"/>
     <id>https://xn--v4q63d8za.xn--6qq986b3xl/李爽的面试总结0001/</id>
     <published>2017-12-19T07:28:05.000Z</published>
-    <updated>2017-12-19T09:53:46.452Z</updated>
-    <content type="html"><![CDATA[<h3 id="1-_发布到线上的版本发现问题，git回滚怎么实现？">1. 发布到线上的版本发现问题，git回滚怎么实现？</h3><h3 id="2-_react什么情况会触发页面重新渲染">2. react什么情况会触发页面重新渲染</h3><h3 id="3-_lreact-router了解多少，怎么实现路由页面的切换">3. lreact-router了解多少，怎么实现路由页面的切换</h3><h3 id="4-_svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。">4. svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。</h3><h3 id="5-_webpack怎么实现线上版本发布_和本地代码分离，webpack配置项怎么配置">5. webpack怎么实现线上版本发布 和本地代码分离，webpack配置项怎么配置</h3><h3 id="6-_用过redux吗">6. 用过redux吗</h3>]]></content>
+    <updated>2017-12-20T06:44:41.551Z</updated>
+    <content type="html"><![CDATA[<h3 id="发布到线上的版本发现问题，git回滚怎么实现？">发布到线上的版本发现问题，git回滚怎么实现？</h3><hr>
+<h3 id="react什么情况会触发页面重新渲染">react什么情况会触发页面重新渲染</h3><p>&emsp;<a href="http://www.jianshu.com/p/4784216b8194" target="_blank" rel="external"> 参考链接： React组件生命周期小结 </a></p>
+<ol>
+<li>首次加载</li>
+<li>setState改变组件内部state</li>
+<li>接收到新的props</li>
+</ol>
+<h2 id=""><img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmn7ygn3ywj30mf0n6tah.jpg" alt="react声明周期"></h2><h3 id="react-router了解多少，怎么实现路由页面的切换">react-router了解多少，怎么实现路由页面的切换</h3><hr>
+<h3 id="svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。">svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。</h3><hr>
+<h3 id="webpack怎么实现线上版本发布_和本地代码分离，webpack配置项怎么配置">webpack怎么实现线上版本发布 和本地代码分离，webpack配置项怎么配置</h3><hr>
+<h3 id="用过redux吗">用过redux吗</h3><ul>
+<li>用过</li>
+<li>待补充</li>
+</ul>
+<hr>
+]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="1-_发布到线上的版本发现问题，git回滚怎么实现？">1. 发布到线上的版本发现问题，git回滚怎么实现？</h3><h3 id="2-_react什么情况会触发页面重新渲染">2. react什么情况会触发页面重新渲染</h3><h3 id="3-_lreac]]>
+    <![CDATA[<h3 id="发布到线上的版本发现问题，git回滚怎么实现？">发布到线上的版本发现问题，git回滚怎么实现？</h3><hr>
+<h3 id="react什么情况会触发页面重新渲染">react什么情况会触发页面重新渲染</h3><p>&emsp;<a href="http:]]>
     </summary>
     
       <category term="面试" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="react" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/react/"/>
+    
+      <category term="前端" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="面试题" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
@@ -36,7 +56,7 @@
     <link href="https://xn--v4q63d8za.xn--6qq986b3xl/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
     <id>https://xn--v4q63d8za.xn--6qq986b3xl/我的第一篇文章/</id>
     <published>2017-03-28T05:52:24.000Z</published>
-    <updated>2017-12-18T09:24:36.034Z</updated>
+    <updated>2017-12-20T06:17:26.609Z</updated>
     <content type="html"><![CDATA[<p>雪落无绪，梨花弄雨，美丽的相遇，春风依依。淡淡的年华似水，流逝的思念，没有谁不想走出爱的荆棘。</p>
 <p>一段感情的浓浓蜜意，只是为失落做了更深的苦凄，不是守不住颜花玫丽；因为风，因为雨，因为有太多的折磨经历。多想与你共谋岁月，同渡一生，只是你的影袂已在千里之外，相隔山水重重。<br><a id="more"></a><br>一个人走在冷冷风中，雪花飘飘如梦，痴想着守护今生，不要有什么海誓山盟，那不过是离别的誓词，为岁月中的相思留下满心的惆怅。春色撩人，春花茵茵，盛开的春景中遗落了爱的脚步。流水无情，情书难诉，其实水在洗涤着落香，失落的爱情。</p>
 <p>你走了，你走向天涯的远方，没有音信，盼不到归期。鸿雁常飞，轮回秋月，收割者收去了季节的金黄，只余下空空荡荡的旷野，稀稀落落的残梦。天空蓝的莫名，白云轻轻，不要惊扰了思念，不要安慰孤独的心灵。感不到温暖，饮一壶老酒，燃烧胸膛，不去熄灭爱的征程。</p>
@@ -56,8 +76,6 @@
     </summary>
     
       <category term="乱写" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E4%B9%B1%E5%86%99/"/>
-    
-      <category term="测试" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E6%B5%8B%E8%AF%95/"/>
     
       <category term="测试" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/%E6%B5%8B%E8%AF%95/"/>
     
