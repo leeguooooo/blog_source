@@ -1,7 +1,8 @@
 {% macro render(post, is_index, post_extra_class) %}
   <article class="post post-type-{{ post.type | default('normal') }} {{ post_extra_class | default('') }}" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
 
+    <header class="post-header">
+      <input type="text" id="post_title" value="{{ post.title }}" hidden/>
       {# Not to show title for quote posts that do not have a title #}
       {% if not (is_index and post.type === 'quote' and not post.title) %}
         <h1 class="post-title" itemprop="name headline">
@@ -162,7 +163,6 @@
         <span itemprop="articleBody">{{ post.content }}</span>
       {% endif  %}
     </div>
-
     <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
@@ -186,6 +186,21 @@
             {% endif %}
           </div>
         </div>
+        <div id="container"></div>
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+        <script>
+        var gitment = new Gitment({
+          id: document.getElementById('post_title').value, // 可选。默认为 location.href
+          owner: 'leeguooooo',
+          repo: 'shuoshuo',
+          oauth: {
+            client_id: 'df4b56c0c784b50449a2',
+            client_secret: '272d603a2eb298930f8c20b76aed0570400b4095',
+          },
+        })
+        gitment.render('container')
+        </script>
       {% endif %}
 
       {% set isLast = loop.index % page.per_page === 0 %}
@@ -194,5 +209,4 @@
       {% endif %}
     </footer>
   </article>
-
 {% endmacro %}

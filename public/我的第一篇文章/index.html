@@ -184,8 +184,9 @@
     <div id="js-share-img" data-src="https://ws1.sinaimg.cn/large/005T0OjCly1fml1pzkkayj30xc0m8ted.jpg"></div>
     
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
 
+    <header class="post-header">
+      <input type="text" id="post_title" value="我的第一篇文章" hidden/>
       
       
         <h1 class="post-title" itemprop="name headline">
@@ -285,7 +286,6 @@
 </span>
       
     </div>
-
     <footer class="post-footer">
       
         <div class="post-tags">
@@ -307,13 +307,27 @@
             
           </div>
         </div>
+        <div id="container"></div>
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+        <script>
+        var gitment = new Gitment({
+          id: document.getElementById('post_title').value, // 可选。默认为 location.href
+          owner: 'leeguooooo',
+          repo: 'shuoshuo',
+          oauth: {
+            client_id: 'df4b56c0c784b50449a2',
+            client_secret: '272d603a2eb298930f8c20b76aed0570400b4095',
+          },
+        })
+        gitment.render('container')
+        </script>
       
 
       
       
     </footer>
   </article>
-
 
     <div class="post-spread">
       
@@ -358,8 +372,8 @@
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg" alt="郭立" width="200px" itemprop="image" style="border:none;max-width:200px"/>
-          <p class="site-author-name" itemprop="name">郭立</p>
+          <img class="site-author-image" src="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg" alt="郭立lee" width="200px" itemprop="image" style="border:none;max-width:200px"/>
+          <p class="site-author-name" itemprop="name">郭立lee</p>
         </div>
         <p class="site-description motion-element" itemprop="description"></p>
         <nav class="site-state motion-element">
@@ -457,16 +471,17 @@
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner"> <div class="copyright" >
+      <div class="footer-inner"> <a href="https://count.chanet.com.cn/click.cgi?a=536545&d=382348&u=&e=&url=https%3A%2F%2Fwww.canda.cn%2F" target="_blank"><img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmoendkjrnj30l401omxw.jpg" width="1" height="1"  border="0"><img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmoendkjrnj30l401omxw.jpg" border="0"</a>
+<div class="copyright" >
   
   &copy; &nbsp; 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="icon-next-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">郭立</span>
+  <span class="author" itemprop="copyrightHolder">郭立lee | 去哪儿郭立 | lee.guo | https://leeguoo.com | https://myblog.leeguoo.com</span>
 </div>
-
+<!--
 <div class="powered-by">
   由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
@@ -476,8 +491,7 @@
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
-</div>
-
+</div>-->
 
  </div>
     </footer>
