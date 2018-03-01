@@ -1,4 +1,3 @@
-<a href="https://count.chanet.com.cn/click.cgi?a=536545&d=382348&u=&e=&url=https%3A%2F%2Fwww.canda.cn%2F" target="_blank"><img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmoendkjrnj30l401omxw.jpg" width="1" height="1"  border="0"><img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmoendkjrnj30l401omxw.jpg" border="0"</a>
 <div class="copyright" >
   {% set current = date(Date.now(), "YYYY") %}
   &copy; &nbsp; {% if theme.since and theme.since != current %} {{ theme.since }} - {% endif %}

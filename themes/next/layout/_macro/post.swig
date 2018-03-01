@@ -186,20 +186,55 @@
             {% endif %}
           </div>
         </div>
-        <div id="container"></div>
-        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+
+        <div class ="post-donate">
+            <div id="donate_board" class="donate_bar center">
+                <a id="btn_donate" class="btn_donate" href="javascript:;" title="谢谢您请我吃糖~"></a>
+                <span class="donate_txt">
+                   <br>坚持原创技术分享，您的支持将鼓励我继续创作！
+                </span>
+                <br>
+              </div>
+        	<div id="donate_guide" class="donate_bar center hidden" >
+        		<!-- 微信打赏图案 -->
+        		<img src="/images/shang2.png" alt="谢谢您请我吃糖~ 一定要留下大名啊">
+            </div>
+        	<script type="text/javascript">
+        		document.getElementById('btn_donate').onclick = function(){
+        			$('#donate_board').addClass('hidden');
+        			$('#donate_guide').removeClass('hidden');
+        		}
+        	</script>
+        </div>
+
+        {# <div id="container"></div> #}
+        <div id="gitalk-container"></div>
+        {# <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> #}
+        {# <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> #}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+        <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
         <script>
-        var gitment = new Gitment({
+        var gitalk = new Gitalk({
           id: document.getElementById('post_title').value, // 可选。默认为 location.href
+          clientID: 'df4b56c0c784b50449a2',
+          clientSecret: '272d603a2eb298930f8c20b76aed0570400b4095',
           owner: 'leeguooooo',
           repo: 'shuoshuo',
-          oauth: {
-            client_id: 'df4b56c0c784b50449a2',
-            client_secret: '272d603a2eb298930f8c20b76aed0570400b4095',
-          },
-        })
-        gitment.render('container')
+          admin: ['leeguooooo'],
+          language: 'zh-CN',
+        });
+
+        gitalk.render('gitalk-container')
+        // var gitment = new Gitment({
+        //   id: document.getElementById('post_title').value, // 可选。默认为 location.href
+        //   owner: 'leeguooooo',
+        //   repo: 'shuoshuo',
+        //   oauth: {
+        //     client_id: 'df4b56c0c784b50449a2',
+        //     client_secret: '272d603a2eb298930f8c20b76aed0570400b4095',
+        //   },
+        // })
+        // gitment.render('container')
         </script>
       {% endif %}
 
@@ -208,5 +243,6 @@
         <div class="post-eof"></div>
       {% endif %}
     </footer>
+
   </article>
 {% endmacro %}

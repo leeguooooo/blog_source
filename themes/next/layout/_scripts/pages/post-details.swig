@@ -34,7 +34,6 @@
       var height = $('.sidebar').height() -
                    $tocSelector.position().top -
                    $('.post-toc-indicator-bottom').height();
-
       $tocSelector.css('height', height);
 
       return height;

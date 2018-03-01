@@ -3,15 +3,16 @@ menu:
   home: /
   categories: /categories
   archives: /archives
-  tags: /tags
+  # tags: /tags
   # projects: /projects/
-  # tech: /categories/大前端技术/
   # product: /categories/产品与设计/
   # plan: /categories/方案整理/
   # conf: /categories/leeConf/
   # explore: /categories/前沿探索/
-  github: https://github.com/leeguooooo
-  weibo: https://weibo.com/12491851
+  # github: https://github.com/leeguooooo
+  # weibo: https://weibo.com/12491851
+  rn: /categories/react-native/
+  interview: /categories/面试题/
   # team: /categories/团队生活/
   # about: /about/
   # joinus: /joinus/
@@ -99,12 +100,11 @@ version: 0.4.5.1
 
 # Social
 social:
-  去哪儿: https://www.qunar.com/
-  Home: https://www.leeguoo.com/
-  GitHub: https://github.com/leeguooooo
-  WeiBo: https://weibo.com/12491851
-  Email: mailto:lee.guo@qunar.com
-
+  去哪儿官网: https://www.qunar.com/
+  LEEGUOO官网: https://www.leeguoo.com/
+  印记中文文档: https://www.docschina.org
+  腾讯前端博客: //www.alloyteam.com/page/0/
+  项目风格指南: //zh-google-styleguide.readthedocs.io/en/latest/contents/
 # Rss
 rss: atom.xml
 
@@ -112,3 +112,10 @@ leancloud_visitors:
   enable: true
   app_id: BO9eK46P9VzLNPSvO36RsbwT-gzGzoHsz
   app_key: cN4Bh7rj4G1oYaAyLhiAf2PE
+
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+alipay: http://ww3.sinaimg.cn/small/937882b5jw1f4dalzfc5nj20p00vu0um.jpg
+#是否开启打赏功能
+donate: true
+#打赏文案
+donate_message: 欣赏此文？求鼓励，求支持！

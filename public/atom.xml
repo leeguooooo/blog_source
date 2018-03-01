@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[LEE]]></title>
+  <title><![CDATA[郭立lee - 个人博客]]></title>
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://xn--v4q63d8za.xn--6qq986b3xl/"/>
-  <updated>2017-12-20T06:44:41.551Z</updated>
+  <updated>2018-01-18T14:17:40.986Z</updated>
   <id>https://xn--v4q63d8za.xn--6qq986b3xl/</id>
   
   <author>
@@ -15,11 +15,517 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[python环境集成]]></title>
+    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/python%E7%8E%AF%E5%A2%83%E9%9B%86%E6%88%90/"/>
+    <id>https://xn--v4q63d8za.xn--6qq986b3xl/python环境集成/</id>
+    <published>2018-01-08T10:15:07.000Z</published>
+    <updated>2018-01-18T14:17:40.986Z</updated>
+    <content type="html"><![CDATA[<p>进入<a href="https://pypi.python.org/pypi/pip" target="_blank" rel="external">https://pypi.python.org/pypi/pip</a>，下载第二项。</p>
+<pre><code>pip install virtualenv
+
+wget https:<span class="comment">//pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz\#md5\=35f01da33009719497f01a4ba69d63c9 --no-check-certificate</span>
+
+tar -xf pip-<span class="number">9.0</span>.<span class="number">1</span><span class="class">.tar</span><span class="class">.gz</span>
+
+virtualenv <span class="class">.venv</span>
+
+source .venv/bin/activate
+
+pip install -r requirements<span class="class">.txt</span> -<span class="tag">i</span> http:<span class="comment">//devpi.corp.qunar.com/qunar/dev/+simple/</span>
+
+tools/with_venv<span class="class">.sh</span> python setup<span class="class">.py</span> install
+</code></pre><hr>
+<h1 id="Centos6-5-nodejsv4-X-express">Centos6.5-nodejsv4.X-express</h1><p>Centos6.5+nodejsv4.x+express的安装</p>
+<p>很高兴第一次在github中写东西，以后我会多在这里边写东西的<br>为什么我想要写这个Centos6.5+nodejsv4.x+express的安装呢？<br>首先我接触nodejs在4月份，<br>然后一直是在windows下使用nodejs+express的，windows我们很熟悉，<br>也容易处理一些文件<br>等等，但是我们工作的时候避免不了在linux下使用各种软件，这里不得不提到nodejs了，<br>当然linux的的性能等等的优点我这里就不阐述了。</p>
+<p>#下面进入正题：<br>（PS：网上关于Centos6.5+nodejsv4.x+express确实也很多，但是我照着网上的教程搞了一天还是失败了<br>而且还很麻烦，因为centos里的东西太老了，比如使用nodejs4.x以上就要升级gcc到4.8以上，这个我尝<br>试了好多还是失败了，后来我差点绝望了，不过我发现了一个办法可以，在这里跟大家说一声，希望少走<br>弯路）<br>(注意：这里的所有操作都在root模式下)</p>
+<p>1.安装centos6.5可以在虚拟机下安装</p>
+<p>2.打开centos6.5，打开终端，在root<br>模式下操作，root模式稍微说一下（su<br>回车，然后输入密码即可）</p>
+<h2 id="3-获取nodejs_资源，这里有一下几种模式">3.获取nodejs 资源，这里有一下几种模式</h2><p> 4.x——————————<br>curl –silent –location <a href="https://rpm.nodesource.com/setup_4.x" target="_blank" rel="external">https://rpm.nodesource.com/setup_4.x</a> | bash -</p>
+<p> 5.x——————————<br>curl –silent –location <a href="https://rpm.nodesource.com/setup_5.x" target="_blank" rel="external">https://rpm.nodesource.com/setup_5.x</a> | bash -</p>
+<p> 0.10—————————–<br>curl –silent –location <a href="https://rpm.nodesource.com/setup" target="_blank" rel="external">https://rpm.nodesource.com/setup</a> | bash -</p>
+<p>我当然安装比较新的版本，4.X</p>
+<p>在root模式下输入其中的一个</p>
+<p>4.安装<br>yum install -y nodejs</p>
+<p>5.测试是否成功<br>node -v</p>
+<p>成功会返回版本号</p>
+<hr>
+<p>下面可以安装express框架，具体express框架的作用自己谷歌一下</p>
+<p>1.npm install express -g</p>
+<p>不过express安装之后还要安装一下npm install -g express-generator</p>
+<p>具体为什么可以自己去了解这里就不多说了</p>
+<p>2.验证是否<br>建立一个文件夹，然后express myblog</p>
+<p>然后你们就应该都会了。。。。。。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>进入<a href="https://pypi.python.org/pypi/pip" target="_blank" rel="external">https://pypi.python.org/pypi/pip</a>，下载第二项。</p>
+<pre><code>pi]]>
+    </summary>
+    
+      <category term="python" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/python/"/>
+    
+      <category term="python" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[LINUX如何优雅的编码]]></title>
+    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/LINUX%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E7%BC%96%E7%A0%81/"/>
+    <id>https://xn--v4q63d8za.xn--6qq986b3xl/LINUX如何优雅的编码/</id>
+    <published>2018-01-08T09:00:36.000Z</published>
+    <updated>2018-01-08T09:54:14.199Z</updated>
+    <content type="html"><![CDATA[<h2 id="oh-my-zsh">oh-my-zsh</h2><h3 id="zsh">zsh</h3><h4 id="Linux_shell">Linux shell</h4><p>Linux/Unix提供了很多种Shell，为毛要这么多Shell？</p>
+<blockquote>
+<p>难道用来炒着吃么？那我问你，你同类型的衣服怎么有那么多件？花色，质地还不一样。写程序比买衣服复杂多了，而且程序员往往负责把复杂的事情搞简单，简单的事情搞复杂。牛程序员看到不爽的Shell，就会自己重新写一套，慢慢形成了一些标准，常用的Shell有这么几种，sh、bash、csh等，想知道你的系统有几种shell，可以通过以下命令查看：</p>
+</blockquote>
+<pre><code>cat <span class="regexp">/etc/</span>shells
+</code></pre><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[lee.guo@l-backyard.ops.dev.cn0 ~/qunar.com/qunar-backyard-v2]cat /etc/shells</div><div class="line">/bin/sh</div><div class="line">/bin/bash</div><div class="line">/sbin/nologin</div><div class="line">/bin/dash</div><div class="line">/bin/tcsh</div><div class="line">/bin/csh</div></pre></td></tr></table></figure>
+<h4 id="zsh简介">zsh简介</h4><p>Zsh是一个Linux下强大的shell, 由于大多数Linux产品安装，以及默认使用bash shell, 但是丝毫不影响极客们对zsh的热衷, 几乎每一款Linux产品都包含有zsh，通常可以用apt-get、urpmi或yum等包管理器进行安装</p>
+<p>Zsh具有以下主要功能</p>
+<ul>
+<li><p>开箱即用、可编程的命令行补全功能可以帮助用户输入各种参数以及选项</p>
+</li>
+<li><p>在用户启动的所有shell中共享命令历史</p>
+</li>
+<li><p>通过扩展的文件通配符，可以不利用外部命令达到find命令一般展开文件名</p>
+</li>
+<li><p>改进的变量与数组处理</p>
+</li>
+<li><p>在缓冲区中编辑多行命令</p>
+</li>
+<li><p>多种兼容模式，例如使用/bin/sh运行时可以伪装成Bourne shell</p>
+</li>
+<li><p>可以定制呈现形式的提示符；包括在屏幕右端显示信息，并在键入长命令时自动隐藏</p>
+</li>
+<li><p>可加载的模块，提供其他各种支持：完整的TCP与Unix域套接字控制，FTP客户端与扩充过的数学函数</p>
+</li>
+<li><p>完全可定制化</p>
+</li>
+</ul>
+<h4 id="zsh安装">zsh安装</h4><pre><code>sudo apt-get <span class="keyword">install</span> zsh <span class="comment"># Ubuntu</span>
+
+sudo yum <span class="keyword">install</span> zsh
+</code></pre><h4 id="取代bash，设为默认shell">取代bash，设为默认shell</h4><pre><code>sudo usermod <span class="operator">-s</span> /bin/zsh
+
+<span class="built_in">exit</span>
+</code></pre><h3 id="oh-my-zsh安装">oh-my-zsh安装</h3><p>直接用zsh会很蛋疼，因为zsh功能很强大但是太复杂，所以需要oh-my-zsh来将它简单化</p>
+<p><strong>直接用git从github上面下载包</strong></p>
+<pre><code>git <span class="keyword">clone</span> <span class="title">git</span>://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+</code></pre><p><strong>直接使用脚本安装</strong></p>
+<pre><code><span class="keyword">cd</span> oh-my-zsh/tools
+./install.<span class="keyword">sh</span>
+</code></pre><p>你可以直接直接使用如下命令安装</p>
+<p><strong>curl</strong></p>
+<pre><code>sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>"</span>
+</code></pre><p><strong>wget</strong></p>
+<pre><code>sh -c <span class="string">"<span class="variable">$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)</span>"</span>
+</code></pre><h3 id="oh-my-zsh主题">oh-my-zsh主题</h3><pre><code><span class="title">vim</span> themes/robbyrussell.zsh-theme
+</code></pre><p>替换内容</p>
+<pre><code><span class="title">local</span> ret_status=<span class="string">"%(?:%{<span class="variable">$fg_bold</span>[green]%}➜ :%{<span class="variable">$fg_bold</span>[red]%}➜ )"</span>
+<span class="comment"># PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'</span>
+PROMPT=<span class="string">'%{<span class="variable">$fg_bold</span>[red]%}➜ %{<span class="variable">$fg_bold</span>[green]%}%p%{<span class="variable">$fg</span>[cyan]%}%d %{<span class="variable">$fg_bold</span>[blue]%}$(git_prompt_info)%{<span class="variable">$fg_bold</span>[blue]%}% %{<span class="variable">$reset_color</span>%}&gt;'</span>
+
+ZSH_THEME_GIT_PROMPT_PREFIX=<span class="string">"%{<span class="variable">$fg_bold</span>[blue]%}git:(%{<span class="variable">$fg</span>[red]%}"</span>
+ZSH_THEME_GIT_PROMPT_SUFFIX=<span class="string">"%{<span class="variable">$reset_color</span>%} "</span>
+ZSH_THEME_GIT_PROMPT_DIRTY=<span class="string">"%{<span class="variable">$fg</span>[blue]%}) %{<span class="variable">$fg</span>[yellow]%}✗"</span>
+ZSH_THEME_GIT_PROMPT_CLEAN=<span class="string">"%{<span class="variable">$fg</span>[blue]%})"</span>
+</code></pre><hr>
+<h2 id="exz-conf">exz-conf</h2><p>  vim 工具</p>
+<h4 id="GET_CODE">GET CODE</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">CONFDIR=/home/lee.guo</div><div class="line">echo $CONFDIR</div><div class="line">cd $CONFDIR</div><div class="line">git clone https://github.com/jaypei/exz-conf.git</div><div class="line">cd exz-conf</div><div class="line">git submodule init</div><div class="line">git submodule update</div></pre></td></tr></table></figure>
+<h4 id="VIM_CONFIG">VIM CONFIG</h4><h4 id="install">install</h4><pre><code>ln <span class="operator">-s</span> <span class="variable">$CONFDIR</span>/exz-conf/vimconf/_vimrc ~/.vimrc
+ln <span class="operator">-s</span> <span class="variable">$CONFDIR</span>/exz-conf/vimconf/_gvimrc ~/.gvimrc
+ln <span class="operator">-s</span> <span class="variable">$CONFDIR</span>/exz-conf/vimconf/vimfiles ~/.vim
+<span class="comment"># pylint</span>
+ln <span class="operator">-s</span> <span class="variable">$CONFDIR</span>/exz-conf/vimconf/pylint.ini ~/.pylintrc
+</code></pre><h4 id="updating">updating</h4><pre><code>cd <span class="variable">$CONFDIR</span>/exz-conf
+git pull --rebase; git submodule <span class="keyword">update</span>
+cd -
+</code></pre><h4 id="usage">usage</h4><ul>
+<li><code>回车</code> 等同于 <code>:</code> (normal)</li>
+<li><code>空格</code> 等同于 <code>,/</code> (normal)</li>
+<li><code>0</code> 等同于 <code>^</code> ，到行首字母前 (noarmal)</li>
+<li><code>Q</code> 关闭文件 (normal)</li>
+</ul>
+<ul>
+<li><code>F4</code> or <code>Shift+F4</code> 切换 source/header (A)</li>
+<li><code>F5</code> or <code>Shift+F5</code> 语法静态检查 (SyntasticCheck)</li>
+<li><code>F8</code> or <code>Shift+F8</code> VimWiki</li>
+<li><code>F11</code> or <code>Shift+F11</code> tag list (tagbar)</li>
+<li><code>F12</code> or <code>Shift+F12</code> 目录树 (NERDTree)</li>
+</ul>
+<ul>
+<li><code>Ctrl+h</code> 光标移进 <code>左</code> 侧分割窗</li>
+<li><code>Ctrl+l</code> 光标移进 <code>右</code> 侧分割窗</li>
+<li><code>Ctrl+j</code> 光标移进 <code>下</code> 侧分割窗</li>
+<li><code>Ctrl+k</code> 光标移进 <code>上</code> 侧分割窗</li>
+</ul>
+<p>  默认 leader key 已设置为 <code>,</code> 。</p>
+<ul>
+<li><code>,j</code> 当前行下移 (normal)</li>
+<li><code>,k</code> 当前行上移 (normal)</li>
+<li><code>,pp</code> 切换paste和nopaste模式</li>
+<li><code>,m</code> 设置当前位置单词高亮</li>
+<li><code>,n</code> 取消当前位置单词高亮</li>
+<li><code>,/</code> 跳转到下一个高亮位置</li>
+<li><code>,c</code> 清除所有高亮</li>
+<li><code>,s</code> 删除所有行尾空白</li>
+<li><code>,,</code> 保存文件，等同于 <code>:w</code></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="oh-my-zsh">oh-my-zsh</h2><h3 id="zsh">zsh</h3><h4 id="Linux_shell">Linux shell</h4><p>Linux/Unix提供了很多种Shell，为毛要这么多Shell？</p>
+<blockq]]>
+    </summary>
+    
+      <category term="linux" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/linux/"/>
+    
+      <category term="LINUX" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/LINUX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[LINUX磁盘空间查看]]></title>
+    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/LINUX%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E6%9F%A5%E7%9C%8B/"/>
+    <id>https://xn--v4q63d8za.xn--6qq986b3xl/LINUX磁盘空间查看/</id>
+    <published>2018-01-03T03:34:32.000Z</published>
+    <updated>2018-01-03T04:37:42.506Z</updated>
+    <content type="html"><![CDATA[<h2 id="显示磁盘分区上的可使用的磁盘空间">显示磁盘分区上的可使用的磁盘空间</h2><pre><code>df命令用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。
+</code></pre><h3 id="语法">语法</h3><pre><code><span class="function"><span class="title">df</span><span class="params">(选项)</span><span class="params">(参数)</span></span>
+</code></pre><h3 id="选项">选项</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">-a或--all：包含全部的文件系统；</div><div class="line">--block-size=&lt;区块大小&gt;：以指定的区块大小来显示区块数目；</div><div class="line">-h或--human-readable：以可读性较高的方式来显示信息；</div><div class="line">-H或--si：与-h参数相同，但在计算时是以1000 Bytes为换算单位而非1024 Bytes；</div><div class="line">-i或--inodes：显示inode的信息；</div><div class="line">-k或--kilobytes：指定区块大小为1024字节；</div><div class="line">-l或--local：仅显示本地端的文件系统；</div><div class="line">-m或--megabytes：指定区块大小为1048576字节；</div><div class="line">--no-sync：在取得磁盘使用信息前，不要执行sync指令，此为预设值；</div><div class="line">-P或--portability：使用POSIX的输出格式；</div><div class="line">--sync：在取得磁盘使用信息前，先执行sync指令；</div><div class="line">-t&lt;文件系统类型&gt;或--type=&lt;文件系统类型&gt;：仅显示指定文件系统类型的磁盘信息；</div><div class="line">-T或--print-type：显示文件系统的类型；</div><div class="line">-x&lt;文件系统类型&gt;或--exclude-type=&lt;文件系统类型&gt;：不要显示指定文件系统类型的磁盘信息；</div><div class="line">--help：显示帮助；</div><div class="line">--version：显示版本信息。</div></pre></td></tr></table></figure>
+<h3 id="参数">参数</h3><pre><code>文件：指定文件系统上的文件。
+</code></pre><h3 id="实例">实例</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[root@l-opsapp1.ops.cn2 /home/q]# df -h</div><div class="line">Filesystem            Size  Used Avail Use% Mounted on</div><div class="line">/dev/vda2             9.9G  1.5G  7.9G  16% /</div><div class="line">tmpfs                 1.9G   12K  1.9G   1% /dev/shm</div><div class="line">/dev/vda1             194M   54M  131M  29% /boot</div><div class="line">/dev/vda6             985M   38M  897M   5% /home</div><div class="line">/dev/vda7              60G   48G  9.1G  85% /home/q</div><div class="line">/dev/vda5             4.0G  2.9G  953M  76% /var</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="对文件和目录磁盘使用的空间的查看">对文件和目录磁盘使用的空间的查看</h2><pre><code>du命令也是查看使用空间的，但是与df命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看，还是和df命令有一些区别的。
+</code></pre><h3 id="语法-1">语法</h3><pre><code>du [<span class="link_label">选项</span>][<span class="link_reference">文件</span>]
+</code></pre><h3 id="选项-1">选项</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">-a或-all 显示目录中个别文件的大小。</div><div class="line">-b或-bytes 显示目录或文件大小时，以byte为单位。</div><div class="line">-c或--total 除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和。</div><div class="line">-k或--kilobytes 以KB(1024bytes)为单位输出。</div><div class="line">-m或--megabytes 以MB为单位输出。</div><div class="line">-s或--summarize 仅显示总计，只列出最后加总的值。</div><div class="line">-h或--human-readable 以K，M，G为单位，提高信息的可读性。</div><div class="line">-x或--one-file-xystem 以一开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过。</div><div class="line">-L&lt;符号链接&gt;或--dereference&lt;符号链接&gt; 显示选项中所指定符号链接的源文件大小。</div><div class="line">-S或--separate-dirs 显示个别目录的大小时，并不含其子目录的大小。</div><div class="line">-X&lt;文件&gt;或--exclude-from=&lt;文件&gt; 在&lt;文件&gt;指定目录或文件。</div><div class="line">--exclude=&lt;目录或文件&gt; 略过指定的目录或文件。</div><div class="line">-D或--dereference-args 显示指定符号链接的源文件大小。</div><div class="line">-H或--si 与-h参数相同，但是K，M，G是以1000为换算单位。</div><div class="line">-l或--count-links 重复计算硬件链接的文件。</div></pre></td></tr></table></figure>
+<h3 id="实例-1">实例</h3><p>查看当前目录下总大小<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@l-opsapp1.ops.cn2 /home/q]# du -s</div><div class="line">49912968	.</div></pre></td></tr></table></figure></p>
+<p>查看当前目录下各文件及文件夹大小<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">[root@l-opsapp1.ops.cn2 /home/q]# du -h --max-depth=1</div><div class="line">192K	./ops_deploy</div><div class="line">16K	./lost+found</div><div class="line">228K	./www</div><div class="line">7.0M	./collectd</div><div class="line">6.9M	./tomcat</div><div class="line">94M	./apache-flume-1.5.0-bin</div><div class="line">120M	./opsapp-tools</div><div class="line">279M	./java</div><div class="line">11M	./zeromq</div><div class="line">23M	./qagentcli</div><div class="line">994M	./qflume-ng</div><div class="line">16K	./salt</div><div class="line">46G	./var</div><div class="line">197M	./python27</div><div class="line">16K	./.code</div><div class="line">44K	./tools</div><div class="line">20K	./runit</div><div class="line">24K	./bds_deploy</div><div class="line">528K	./cache</div><div class="line">6.4M	./nrpe</div><div class="line">48G	.</div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="附">附</h2><h3 id="清空大文件内容">清空大文件内容</h3><pre><code><span class="built_in">echo</span> <span class="string">""</span> &gt; filename
+</code></pre><hr>
+<p>以上资料均参考自<a href="http://man.linuxde.net/" target="_blank" rel="external">linux命令大全</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="显示磁盘分区上的可使用的磁盘空间">显示磁盘分区上的可使用的磁盘空间</h2><pre><code>df命令用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。
+</code></pre><]]>
+    </summary>
+    
+      <category term="linux" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/linux/"/>
+    
+      <category term="LINUX" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/LINUX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[RN大版本升级 0.41 -> 0.51]]></title>
+    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/RN%E5%A4%A7%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7-0-41-0-51/"/>
+    <id>https://xn--v4q63d8za.xn--6qq986b3xl/RN大版本升级-0-41-0-51/</id>
+    <published>2018-01-02T11:53:45.000Z</published>
+    <updated>2018-01-08T06:33:58.972Z</updated>
+    <content type="html"><![CDATA[<h2 id="前言">前言</h2><blockquote>
+<p>没什么可说的, 直接搞起..</p>
+</blockquote>
+<p>  <a href="https://segmentfault.com/a/1190000004352162" target="_blank" rel="external">增量升级方案</a></p>
+<p>  <a href="https://reactnative.cn/docs/0.51/upgrading.html#content" target="_blank" rel="external">react native 中文网</a></p>
+<h2 id="Lv-_UP!">Lv. UP!</h2><h3 id="安装react-native-git-upgrade工具模块">安装react-native-git-upgrade工具模块</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g react-native-git-upgrade</div></pre></td></tr></table></figure>
+<h3 id="运行更新命令">运行更新命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">react-native-git-upgrade</div><div class="line"><span class="meta">#</span> 把react native升级到最新版本</div><div class="line"></div><div class="line"><span class="meta">#</span> 或者是：</div><div class="line"></div><div class="line">react-native-git-upgrade X.Y.Z</div><div class="line"><span class="meta">#</span> 把react native升级到指定的X.Y.Z版本</div></pre></td></tr></table></figure>
+<h3 id="解决冲突">解决冲突</h3><p>文件中的冲突会以分隔线隔开，并清楚的标记出处，例如下面这样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="number">13</span>B07F951A680F5B00A75B9A <span class="comment">/* Release */</span> = &#123;</div><div class="line">  isa = XCBuildConfiguration;</div><div class="line">  buildSettings = &#123;</div><div class="line">    ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;</div><div class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; ours</div><div class="line">    CODE_SIGN_IDENTITY = "iPhone Developer";</div><div class="line">    FRAMEWORK_SEARCH_PATHS = (</div><div class="line">      "$(inherited)",</div><div class="line">      "$(PROJECT_DIR)/HockeySDK.embeddedframework",</div><div class="line">      "$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",</div><div class="line">    );</div><div class="line">=======</div><div class="line">    CURRENT_PROJECT_VERSION = 1;</div><div class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; theirs</div><div class="line">    HEADER_SEARCH_PATHS = (</div><div class="line">      "$(inherited)",</div><div class="line">      /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,</div><div class="line">      "$(SRCROOT)/../node_modules/react-native/React/**",</div><div class="line">      "$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",</div><div class="line">    );</div></pre></td></tr></table></figure>
+<ul>
+<li>上面代码中的”ours”表示你自己的代码，而”theirs”表示React Native的官方代码。然后你可以根据实际情况判断，选择某一方晋级，另一方出局</li>
+</ul>
+<h3 id="新增index-js">新增index.js</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">将 index.android.js 重命名为 index.js</div><div class="line">然后把 index.ios.js 删除。</div></pre></td></tr></table></figure>
+<h3 id="更新react-native的node依赖包">更新react-native的node依赖包</h3><pre><code>npm <span class="keyword">install</span>
+</code></pre><p>译注：从0.24版本开始，react-native还需要额外安装react模块，且对react的版本有严格要求，高于或低于某个范围都不可以。本文无法在这里列出所有react native和对应的react模块版本要求，只能提醒读者先尝试执行npm install，然后注意观察安装过程中的报错信息，例如require react@某.某.某版本, but none was installed，然后根据这样的提示，执行npm install react@某.某.某版本 –save</p>
+<h3 id="升级项目模板文件">升级项目模板文件</h3><pre><code>react-<span class="keyword">native</span> upgrade
+</code></pre><p>这一命令会检查最新的项目模板，然后进行如下操作：</p>
+<ul>
+<li>如果是新添加的文件，则直接创建。</li>
+<li>如果文件和当前版本的文件相同，则跳过。</li>
+<li>如果文件和当前版本的文件不同，则会提示你一些选项：查看两者的不同，选择保留你的版本或是用新的模板覆盖。你可以按下h键来查看所有可以使用的命令。</li>
+</ul>
+<p>译注：如果你有修改原生代码，那么在使用upgrade升级前，先备份，再覆盖。覆盖完成后，使用比对工具找出差异，将你之前修改的代码逐步搬运到新文件中。</p>
+<h3 id="手动升级">手动升级</h3><p>如果项目较大还有很多东西需要手动修改</p>
+<hr>
+<hr>
+<h2 id="项目升级实例">项目升级实例</h2><h3 id="react_native部分(opsapp-rn项目)">react native部分(opsapp-rn项目)</h3><ul>
+<li>修改<code>package.json</code>中<code>react</code>,<code>react-native</code>版本</li>
+<li><code>qnpm install</code></li>
+<li>根据react native 的changelog 修改不兼容的代码，同时需要注意用到的某些开源组件，是否对新版本兼容。<br>修改不兼容的组件，升级/修改源码/重换组件</li>
+</ul>
+<h3 id="ios部分">ios部分</h3><ul>
+<li>更新依赖, 修改react,react-native版本.</li>
+<li><code>rm -rf node_modules</code></li>
+<li><code>qnpm install</code></li>
+<li><code>pod install --no-repo-update</code></li>
+<li>清理xcode/模拟器缓存</li>
+<li>如果确认自己代码没问题，相关依赖也都正确，试试清空 watchman/模拟器/xcode 缓存，清理的时候，关闭npm start，模拟器，xcode</li>
+</ul>
+<blockquote>
+<p>如果 pod install 报错 <code>-bash: /usr/local/bin/pod: /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby: bad interpreter: No such file or directory</code>, <a href="https://madordie.github.io/post/macos-high-sierra-cocoapods/" target="_blank" rel="external">解决方案</a></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="前言">前言</h2><blockquote>
+<p>没什么可说的, 直接搞起..</p>
+</blockquote>
+<p>  <a href="https://segmentfault.com/a/1190000004352162" target="_blan]]>
+    </summary>
+    
+      <category term="RN" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/RN/"/>
+    
+      <category term="react native" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[RN升级遇到的坑]]></title>
+    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/RN%E5%8D%87%E7%BA%A7%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/"/>
+    <id>https://xn--v4q63d8za.xn--6qq986b3xl/RN升级遇到的坑/</id>
+    <published>2018-01-02T09:58:33.000Z</published>
+    <updated>2018-01-03T07:58:31.370Z</updated>
+    <content type="html"><![CDATA[<h2 id="找不到index入口">找不到index入口</h2><h3 id="问题症状">问题症状</h3><blockquote>
+<ul>
+<li>RN找不到index入口</li>
+<li>error: bundling failed: Error</li>
+<li>Cannot find entry file index.js in any of the roots</li>
+</ul>
+</blockquote>
+<p><img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn2eufwajwj30af0ikn05.jpg" alt=""></p>
+<h3 id="处理方法">处理方法</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">将 index<span class="selector-class">.android</span><span class="selector-class">.js</span> 重命名为 index.js</div><div class="line">然后把 index<span class="selector-class">.ios</span><span class="selector-class">.js</span> 删除。</div></pre></td></tr></table></figure>
+<h3 id="原因">原因</h3><blockquote>
+<p>0.49 版本最大的一个变化应该就是将两个平台的入口文件 index.android.js 与 index.ios.js 合并成了一个入口文件 index.js，但是 RN 并不会自动帮你完成这个改变，你需要自己完成这步操作.</p>
+</blockquote>
+<hr>
+<h2 id="prop-types_报错">prop-types 报错</h2><h3 id="症状">症状</h3><blockquote>
+<ul>
+<li>undefined is not an object</li>
+<li>evaluating ‘_react2.PropTypes.string’</li>
+<li>找不到PropTypes</li>
+</ul>
+</blockquote>
+<p><img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn2h4muo96j30ac0iidha.jpg" alt=""></p>
+<h3 id="处理方案">处理方案</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save prop-types</div></pre></td></tr></table></figure>
+<h4 id="代码引入">代码引入</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>; <span class="comment">// ES6</span></div><div class="line"><span class="keyword">var</span> PropTypes = <span class="built_in">require</span>(<span class="string">'prop-types'</span>); <span class="comment">// ES5 with npm</span></div></pre></td></tr></table></figure>
+<p>或者<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- development version --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/prop-types/prop-types.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- production version --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/prop-types/prop-types.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h4 id="使用">使用</h4><p>下面例子仅供参考</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="comment">// ... do things with the props</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">MyComponent.propTypes = &#123;</div><div class="line">  <span class="comment">// You can declare that a prop is a specific JS primitive. By default, these</span></div><div class="line">  <span class="comment">// are all optional.</span></div><div class="line">  optionalArray: PropTypes.array,</div><div class="line">  optionalBool: PropTypes.bool,</div><div class="line">  optionalFunc: PropTypes.func,</div><div class="line">  optionalNumber: PropTypes.number,</div><div class="line">  optionalObject: PropTypes.object,</div><div class="line">  optionalString: PropTypes.string,</div><div class="line">  optionalSymbol: PropTypes.symbol,</div><div class="line"></div><div class="line">  <span class="comment">// Anything that can be rendered: numbers, strings, elements or an array</span></div><div class="line">  <span class="comment">// (or fragment) containing these types.</span></div><div class="line">  optionalNode: PropTypes.node,</div><div class="line"></div><div class="line">  <span class="comment">// A React element.</span></div><div class="line">  optionalElement: PropTypes.element,</div><div class="line"></div><div class="line">  <span class="comment">// You can also declare that a prop is an instance of a class. This uses</span></div><div class="line">  <span class="comment">// JS's instanceof operator.</span></div><div class="line">  optionalMessage: PropTypes.instanceOf(Message),</div><div class="line"></div><div class="line">  <span class="comment">// You can ensure that your prop is limited to specific values by treating</span></div><div class="line">  <span class="comment">// it as an enum.</span></div><div class="line">  optionalEnum: PropTypes.oneOf([<span class="string">'News'</span>, <span class="string">'Photos'</span>]),</div><div class="line"></div><div class="line">  <span class="comment">// An object that could be one of many types</span></div><div class="line">  optionalUnion: PropTypes.oneOfType([</div><div class="line">    PropTypes.string,</div><div class="line">    PropTypes.number,</div><div class="line">    PropTypes.instanceOf(Message)</div><div class="line">  ]),</div><div class="line"></div><div class="line">  <span class="comment">// An array of a certain type</span></div><div class="line">  optionalArrayOf: PropTypes.arrayOf(PropTypes.number),</div><div class="line"></div><div class="line">  <span class="comment">// An object with property values of a certain type</span></div><div class="line">  optionalObjectOf: PropTypes.objectOf(PropTypes.number),</div><div class="line"></div><div class="line">  <span class="comment">// An object taking on a particular shape</span></div><div class="line">  optionalObjectWithShape: PropTypes.shape(&#123;</div><div class="line">    color: PropTypes.string,</div><div class="line">    fontSize: PropTypes.number</div><div class="line">  &#125;),</div><div class="line"></div><div class="line">  <span class="comment">// You can chain any of the above with `isRequired` to make sure a warning</span></div><div class="line">  <span class="comment">// is shown if the prop isn't provided.</span></div><div class="line">  requiredFunc: PropTypes.func.isRequired,</div><div class="line"></div><div class="line">  <span class="comment">// A value of any data type</span></div><div class="line">  requiredAny: PropTypes.any.isRequired,</div><div class="line"></div><div class="line">  <span class="comment">// You can also specify a custom validator. It should return an Error</span></div><div class="line">  <span class="comment">// object if the validation fails. Don't `console.warn` or throw, as this</span></div><div class="line">  <span class="comment">// won't work inside `oneOfType`.</span></div><div class="line">  customProp: <span class="function"><span class="keyword">function</span>(<span class="params">props, propName, componentName</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="regexp">/matchme/</span>.test(props[propName])) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(</div><div class="line">        <span class="string">'Invalid prop `'</span> + propName + <span class="string">'` supplied to'</span> +</div><div class="line">        <span class="string">' `'</span> + componentName + <span class="string">'`. Validation failed.'</span></div><div class="line">      );</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="comment">// You can also supply a custom validator to `arrayOf` and `objectOf`.</span></div><div class="line">  <span class="comment">// It should return an Error object if the validation fails. The validator</span></div><div class="line">  <span class="comment">// will be called for each key in the array or object. The first two</span></div><div class="line">  <span class="comment">// arguments of the validator are the array or object itself, and the</span></div><div class="line">  <span class="comment">// current item's key.</span></div><div class="line">  customArrayProp: PropTypes.arrayOf(<span class="function"><span class="keyword">function</span>(<span class="params">propValue, key, componentName, location, propFullName</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="regexp">/matchme/</span>.test(propValue[key])) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(</div><div class="line">        <span class="string">'Invalid prop `'</span> + propFullName + <span class="string">'` supplied to'</span> +</div><div class="line">        <span class="string">' `'</span> + componentName + <span class="string">'`. Validation failed.'</span></div><div class="line">      );</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="原因-1">原因</h3><p>从 React 16.0.0 开始，PropTypes 就已经不再由 React 提供了，而 fb 专门提供了 prop-types 模块，需要通过<code>import PropTypes from ‘prop-types’</code>来使用 PropTypes。0.48 版本的 RN 使用的是 16.0.0-alpha.12 版本的 React，alpha 版本还没有移除 PropTypes，所以之前项目不会有任何问题。而到了 0.49版本，自动将 React 升级到了 16.0.0-beta.5，这个版本已经移除了 React.PropTypes，所以再编译就会报错了，因为找不到 PropTypes 了。</p>
+<hr>
+<h2 id="react-native_出现_No_component_found_for_view_with_name_“RNSVG*”">react-native 出现 No component found for view with name “RNSVG<em>*</em>”</h2><h3 id="症状-1">症状</h3><blockquote>
+<ul>
+<li>no component found for view with name ‘RNSVGPath’</li>
+</ul>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/5822915-eecb1f40a36e82df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
+<h4 id="处理办法">处理办法</h4><blockquote>
+<p><a href="https://www.jianshu.com/p/b51b79ca14e7" target="_blank" rel="external">ios解决方案</a></p>
+</blockquote>
+<hr>
+<p>## </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="找不到index入口">找不到index入口</h2><h3 id="问题症状">问题症状</h3><blockquote>
+<ul>
+<li>RN找不到index入口</li>
+<li>error: bundling failed: Error</li>
+<li]]>
+    </summary>
+    
+      <category term="RN" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/RN/"/>
+    
+      <category term="react native" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[react native 原生环境踩坑]]></title>
+    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-%E5%8E%9F%E7%94%9F%E7%8E%AF%E5%A2%83%E8%B8%A9%E5%9D%91/"/>
+    <id>https://xn--v4q63d8za.xn--6qq986b3xl/react-native-原生环境踩坑/</id>
+    <published>2017-12-26T09:07:23.000Z</published>
+    <updated>2017-12-26T09:11:55.557Z</updated>
+    <content type="html"><![CDATA[<h2 id="IOS_‘MMMarkdown/MMMarkdown-h’_file_not_found">IOS ‘MMMarkdown/MMMarkdown.h’ file not found</h2><blockquote>
+<p>苹果原生环境MMMarkdown找不到，需要安装carthage<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">brew install carthage</div><div class="line">carthage update # 项目目录下执行</div><div class="line">open Untitled.xcworkspace/</div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>此文章只作为遇到问题的记录，如有相似问题请结合项目进行参考。</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="IOS_‘MMMarkdown/MMMarkdown-h’_file_not_found">IOS ‘MMMarkdown/MMMarkdown.h’ file not found</h2><blockquote>
+<p>苹果原生环境MMMarkdown找不到，需]]>
+    </summary>
+    
+      <category term="RN" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/RN/"/>
+    
+      <category term="native" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/native/"/>
+    
+      <category term="react native" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[react native 安卓真机开发者模式]]></title>
+    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-%E5%AE%89%E5%8D%93%E7%9C%9F%E6%9C%BA%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://xn--v4q63d8za.xn--6qq986b3xl/react-native-安卓真机开发者模式/</id>
+    <published>2017-12-25T12:04:35.000Z</published>
+    <updated>2017-12-26T08:21:37.898Z</updated>
+    <content type="html"><![CDATA[<h2 id="踩坑">踩坑</h2><blockquote>
+<ul>
+<li>安卓真机调试，摇一摇无法唤醒开发菜单</li>
+<li>react native 安卓无法打开开发者菜单</li>
+<li>react native无法调试</li>
+<li>安卓开发者模式出不来</li>
+</ul>
+</blockquote>
+<h2 id="准备">准备</h2><h3 id="你需要开启USB调试才能在你的设备上安装你的APP。首先，确定你已经打开设备的USB调试开关">你需要开启USB调试才能在你的设备上安装你的APP。首先，确定你已经<a href="https://www.baidu.com/s?wd=%E5%AE%89%E5%8D%93%E6%89%93%E5%BC%80usb%E8%B0%83%E8%AF%95" target="_blank" rel="external">打开设备的USB调试开关</a></h3><h3 id="确保手机电脑连接同一WiFi">确保手机电脑连接同一WiFi</h3><h3 id="手机已打开可出现在顶部的应用程序权限">手机已打开<em>可出现在顶部的应用程序</em>权限</h3><p>各个手机设置方法不一致，以三星s6为例<br><code>设置 --&gt; 应用程序 --&gt; [对应的程序] --&gt; 高级设置(出现在顶部的应用程序)</code></p>
+<h3 id="[注意]_android中setUseDeveloperSupport为true">[注意] android中setUseDeveloperSupport为true</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ReactInstanceManager <span class="title">buildBundle</span><span class="params">(Activity activity, String register, String bundle)</span></span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> ReactInstanceManager.builder()</div><div class="line">                .setApplication(activity.getApplication())</div><div class="line">                .setJSBundleFile(getLocalBundlePath(activity) + bundle)</div><div class="line">                .setJSMainModuleName(<span class="string">"index.android"</span>)</div><div class="line">                .addPackage(<span class="keyword">new</span> MainReactPackage())</div><div class="line">                .addPackage(<span class="keyword">new</span> StoreReactPackage())</div><div class="line">                .setUseDeveloperSupport(CommonConfig.isDebug) <span class="comment">//这里必须设置成true</span></div><div class="line">                .setInitialLifecycleState(LifecycleState.RESUMED)</div><div class="line">                .build();</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<h3 id="摇晃设备，打开开发者菜单。">摇晃设备，打开开发者菜单。</h3><p><code>Dev Settings --&gt; Debug server host for device --&gt; 输入你电脑的IP地址和端口号</code></p>
+<hr>
+<h2 id="后话">后话</h2><p>至此全部准备工作完成，开始你愉快的RN开发旅程吧。 如有什么疑问欢迎下方留言。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="踩坑">踩坑</h2><blockquote>
+<ul>
+<li>安卓真机调试，摇一摇无法唤醒开发菜单</li>
+<li>react native 安卓无法打开开发者菜单</li>
+<li>react native无法调试</li>
+<li>安卓开发者模式出不来<]]>
+    </summary>
+    
+      <category term="RN" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/RN/"/>
+    
+      <category term="android" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/android/"/>
+    
+      <category term="react native" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[ECMAScript学习笔记(一)]]></title>
+    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/ECMAScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/"/>
+    <id>https://xn--v4q63d8za.xn--6qq986b3xl/ECMAScript学习笔记-一/</id>
+    <published>2017-12-22T09:31:30.000Z</published>
+    <updated>2017-12-22T10:45:43.371Z</updated>
+    <content type="html"><![CDATA[<h2 id="ECMAScript_学习笔记（一）">ECMAScript 学习笔记（一）</h2><hr>
+<p>es6标准的制定为javascript添加了很多新特性,今天主要说一下展开运算符。</p>
+<h3 id="函数调用中使用展开运算符">函数调用中使用展开运算符</h3><p>es6之前：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">a, b, c</span>) </span>&#123; &#125;</div><div class="line"><span class="keyword">var</span> args = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>];</div><div class="line">test.apply(<span class="literal">null</span>, args);<span class="comment">//数组展开成多个参数</span></div></pre></td></tr></table></figure></p>
+<p>es6之后，利用es6的展开运算符这一新特性，简化了代码书写:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">a,b,c</span>) </span>&#123; &#125;</div><div class="line"><span class="keyword">var</span> args = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>];</div><div class="line">test(...args);</div></pre></td></tr></table></figure></p>
+<h3 id="用于解构赋值">用于解构赋值</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> [arg1,arg2,...arg3] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</div><div class="line">arg1 <span class="comment">//1</span></div><div class="line">arg2 <span class="comment">//2</span></div><div class="line">arg3 <span class="comment">//['3','4']</span></div><div class="line"></div><div class="line"><span class="comment">/* 注意： 解构赋值中展开运算符必须放在最后，不然会报错！！！*/</span></div></pre></td></tr></table></figure>
+<h3 id="ES7对象展开运算符">ES7对象展开运算符</h3><p>偶然发现对象还可以有这种操作，跟数组展开运算符大同小异，很方便啊~~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//解构赋值</span></div><div class="line"><span class="keyword">let</span> &#123;x,y,...z&#125;=&#123;<span class="attr">x</span>:<span class="number">1</span>,<span class="attr">y</span>:<span class="number">2</span>,<span class="attr">a</span>:<span class="number">3</span>,<span class="attr">b</span>:<span class="number">4</span>&#125;;</div><div class="line">x; <span class="comment">//1</span></div><div class="line">y; <span class="comment">//2</span></div><div class="line">z; <span class="comment">//&#123;a:3,b:4&#125;</span></div><div class="line"></div><div class="line"><span class="comment">// 直接插值</span></div><div class="line"><span class="keyword">let</span> a=&#123;<span class="attr">x</span>:<span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">let</span> b=&#123;<span class="attr">y</span>:<span class="number">1</span>,<span class="attr">z</span>:<span class="number">1</span>,...a&#125;;</div><div class="line"></div><div class="line"><span class="comment">//对象合并</span></div><div class="line"><span class="keyword">let</span> a=&#123;<span class="attr">x</span>:<span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">let</span> b=&#123;<span class="attr">y</span>:<span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">let</span> c=&#123;...a,...b&#125;;</div><div class="line">c; <span class="comment">//&#123;x:1,y:1&#125;</span></div></pre></td></tr></table></figure></p>
+<h3 id="类数组对象变成数组(Array-from())">类数组对象变成数组(Array.from())</h3><p>一开始对类数组对象的认识比较模糊，特地了解了一下什么是类数组对象，对于类数组对象的解释和大家说一下：</p>
+<p>关于类数组对象的介绍：<strong>JavaScript中有一些看起来像却又不是数组的对象，叫做类数组。</strong><br>简单举个例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> t=&#123;<span class="number">0</span>:<span class="number">52</span>,<span class="number">1</span>:<span class="number">63</span>,<span class="number">2</span>:<span class="number">4</span>,<span class="attr">length</span>:<span class="number">3</span>&#125;;</div></pre></td></tr></table></figure></p>
+<p>我理解的简单一点，首先它必须是一个对象类型，其次对象内部的key表示的是当前的索引值，以及length 属性告诉我们对象的元素个数. 类数组对象自身<strong>不具有push、forEach、indexOf等数组对象对应的方法</strong>。</p>
+<p>这里es6新特性对于类数组对象转化为数组，提供了更简便的方法。<br>es6之前：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> t=&#123;<span class="number">0</span>:<span class="number">52</span>,<span class="number">1</span>:<span class="number">63</span>,<span class="number">2</span>:<span class="number">4</span>,<span class="attr">length</span>:<span class="number">3</span>&#125;;</div><div class="line"><span class="keyword">let</span> arr=[].slice.call(t);</div><div class="line"><span class="built_in">console</span>.log(arr) <span class="comment">// [52, 63, 4]</span></div></pre></td></tr></table></figure></p>
+<p>es6之后：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> t=&#123;<span class="number">0</span>:<span class="number">52</span>,<span class="number">1</span>:<span class="number">63</span>,<span class="number">2</span>:<span class="number">4</span>,<span class="attr">length</span>:<span class="number">3</span>&#125;;</div><div class="line"><span class="keyword">let</span> d=<span class="built_in">Array</span>.from(t); <span class="comment">// [52, 63, 4]</span></div></pre></td></tr></table></figure></p>
+<h3 id="错误示范">错误示范</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> t=&#123;<span class="number">0</span>:<span class="number">52</span>,<span class="number">1</span>:<span class="number">63</span>,<span class="number">2</span>:<span class="number">4</span>,<span class="attr">length</span>:<span class="number">3</span>&#125;;</div><div class="line"><span class="keyword">let</span> arr=[...t];<span class="comment">// 这种写法是错误的，类数组对象明确定义不能直接使用数组对象的方法。只有展开对象是可遍历的情况下可以这样写。</span></div></pre></td></tr></table></figure>
+<h3 id="正确示范">正确示范</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> tr=&#123;<span class="attr">x</span>:<span class="number">52</span>,<span class="attr">y</span>:<span class="number">63</span>,<span class="attr">z</span>:<span class="number">4</span>&#125;;<span class="comment">//展开对象可遍历</span></div><div class="line"><span class="keyword">var</span> arr=[...d];</div><div class="line">arr；<span class="comment">// [52, 63, 4]</span></div></pre></td></tr></table></figure>
+<p>本文只是对es6展开运算符做了简单介绍，如有写不对的地方，欢迎指正！</p>
+<p>参考文章链接：<a href="https://www.cnblogs.com/mingjiezhang/p/5903026.html" target="_blank" rel="external">ECMAScript 6学习笔记（一）：展开运算符</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="ECMAScript_学习笔记（一）">ECMAScript 学习笔记（一）</h2><hr>
+<p>es6标准的制定为javascript添加了很多新特性,今天主要说一下展开运算符。</p>
+<h3 id="函数调用中使用展开运算符">函数调用中使用展开运算符<]]>
+    </summary>
+    
+      <category term="es6" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/es6/"/>
+    
+      <category term="javascrip" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/javascrip/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[react native样式整理]]></title>
+    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/react-native%E6%A0%B7%E5%BC%8F%E6%95%B4%E7%90%86/"/>
+    <id>https://xn--v4q63d8za.xn--6qq986b3xl/react-native样式整理/</id>
+    <published>2017-12-22T08:15:43.000Z</published>
+    <updated>2018-01-29T11:26:58.320Z</updated>
+    <content type="html"><![CDATA[<h1 id="react_native_样式表整理">react native 样式表整理</h1><hr>
+<p>整理下rn的常用样式，供新手参考：</p>
+<h2 id="Flexbox布局样式">Flexbox布局样式</h2><table>
+<thead>
+<tr>
+<th>样式<br>名称</th>
+<th style="text-align:right">k</th>
+<th style="text-align:center">v</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>项目<br>对齐</td>
+<td style="text-align:right">alignItems</td>
+<td style="text-align:center">flex-start<br>flex-end<br>center<br>stretch</td>
+<td></td>
+</tr>
+<tr>
+<td>自身<br>对齐</td>
+<td style="text-align:right">alignSelf</td>
+<td style="text-align:center">flex-start<br>flex-end<br>center<br>auto<br>stretch</td>
+<td>flex-start：与父容器首部对齐<br><br>flex-end:与父容器尾部对齐<br><br> center：位于垂直位置<br><br>auto：按照自身设置的宽高来显示，如果没设置，效果跟streth一样<br><br>stretch：垂直拉伸</td>
+</tr>
+<tr>
+<td>该属性通过定义flex容器的<br>主轴方向来决定felx子项<br>在flex容器中的位置。<br>这将决定flex需要如何进行排列</td>
+<td style="text-align:right">flexDirection</td>
+<td style="text-align:center">row<br>row-reverse<br>column<br>column-reverse</td>
+<td>row：主轴与行内轴方向作为默认的书写模式。即横向从左到右排列（左对齐）。<br><br>row-reverse：对齐方式与row相反<br><br>column：主轴与块轴方向作为默认的书写模式。即纵向从上往下排列（顶对齐）<br><br>column-reverse：对齐方式与column相反。</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="react_native_样式表整理">react native 样式表整理</h1><hr>
+<p>整理下rn的常用样式，供新手参考：</p>
+<h2 id="Flexbox布局样式">Flexbox布局样式</h2><table>
+<thead>
+<tr>
+<]]>
+    </summary>
+    
+      <category term="RN" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/RN/"/>
+    
+      <category term="样式" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E6%A0%B7%E5%BC%8F/"/>
+    
+      <category term="react native" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[用D3实现伪3D效果金字塔]]></title>
+    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/%E7%94%A8d3%E5%AE%9E%E7%8E%B0%E4%BC%AA3d%E6%95%88%E6%9E%9C%E9%87%91%E5%AD%97%E5%A1%94/"/>
+    <id>https://xn--v4q63d8za.xn--6qq986b3xl/用d3实现伪3d效果金字塔/</id>
+    <published>2017-12-21T16:10:03.000Z</published>
+    <updated>2018-01-29T11:25:34.918Z</updated>
+    <content type="html"><![CDATA[<h1 id="用d3实现金字塔伪3d效果">用d3实现金字塔伪3d效果</h1><hr>
+<p>工作中偶然接触到d3，慢慢开始熟悉d3，并可以根据效果图进行图形绘制，要完全掌握d3绘图技巧需要不断深入学习研究，今天要展示的是我遇到的一个类似3d效果的金字塔效果图，其实是个伪3d，由于本人学术不精，只想到利用path拼接面的形式来实现（其实一开始想研究研究threejs，but needtime,so…),废话不多说，绘制过程代码如下：</p>
+<h3 id="定义图表需要的数据结构">定义图表需要的数据结构</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">/*植被类型*/</span></div><div class="line"><span class="keyword">let</span> vegetation_type = [<span class="string">'人工林'</span>, <span class="string">'沼泽'</span>, <span class="string">'常绿阔叶灌丛'</span>, <span class="string">'灌草丛'</span>, <span class="string">'红树林'</span>];</div><div class="line"><span class="comment">/*金字塔每层颜色*/</span></div><div class="line"><span class="keyword">let</span> vegetation_color = [&#123;</div><div class="line">  startColor: <span class="string">'#077cec'</span>,</div><div class="line">	endColor: <span class="string">'#126fbf'</span></div><div class="line">&#125;, &#123;</div><div class="line">	startColor: <span class="string">'#2c6cff'</span>,</div><div class="line">	endColor: <span class="string">'#2783df'</span></div><div class="line">&#125;, &#123;</div><div class="line">	startColor: <span class="string">'#628eff'</span>,</div><div class="line">	endColor: <span class="string">'#2d74cc'</span></div><div class="line">&#125;, &#123;</div><div class="line">	startColor: <span class="string">'#60e9e9'</span>,</div><div class="line">	endColor: <span class="string">'#46b7b3'</span></div><div class="line">&#125;, &#123;</div><div class="line">	startColor: <span class="string">'#fffe2c'</span>,</div><div class="line">	endColor: <span class="string">'#fffe2c'</span></div><div class="line">&#125;];</div><div class="line"><span class="comment">/*定义金字塔最大宽度*/</span></div><div class="line"><span class="keyword">let</span> w_pyramid_max = <span class="number">148</span>;</div><div class="line"><span class="comment">/*定义金字塔最大高度*/</span></div><div class="line"><span class="keyword">let</span> h_pyramid_max = <span class="number">138</span>;</div></pre></td></tr></table></figure>
+<h3 id="创建svg">创建svg</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> svg = d3.select(<span class="string">'#pyramid'</span>)</div><div class="line">	.append(<span class="string">'svg'</span>)</div><div class="line">	.attr(<span class="string">'width'</span>, <span class="number">400</span>)</div><div class="line">	.attr(<span class="string">'height'</span>, <span class="number">400</span>);</div></pre></td></tr></table></figure>
+<h3 id="生成金字塔">生成金字塔</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">CreatePyramid</span>(<span class="params">tra_x, tra_y, startColor, endColor, path_bot, path_ins</span>) </span>&#123;</div><div class="line">	<span class="keyword">let</span> set_path_ins=path_ins||<span class="string">''</span>;</div><div class="line">	<span class="keyword">let</span> g_contain = svg.append(<span class="string">'g'</span>)</div><div class="line">		.attr(<span class="string">'transform'</span>, <span class="string">'translate('</span> + tra_x + <span class="string">','</span> + tra_y + <span class="string">')'</span>);</div><div class="line">	<span class="keyword">let</span> g_bottom = g_contain.append(<span class="string">'g'</span>)</div><div class="line">		.attr(<span class="string">'transform'</span>, <span class="string">'translate(0,0)'</span>);</div><div class="line">	<span class="keyword">let</span> path_bottom = g_bottom.append(<span class="string">'path'</span>)</div><div class="line">		.attr(<span class="string">'d'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">			<span class="keyword">return</span> path_bot;</div><div class="line">		&#125;)</div><div class="line">		.attr(<span class="string">'fill'</span>, startColor);</div><div class="line">	<span class="comment">//					.attr('stroke', '#3ed8fb');</span></div><div class="line">	<span class="keyword">let</span> g_inside = g_contain.append(<span class="string">'g'</span>)</div><div class="line">		.attr(<span class="string">'transform'</span>, <span class="string">'translate(0,0)'</span>);</div><div class="line">	<span class="keyword">let</span> path_inside = g_inside.append(<span class="string">'path'</span>)</div><div class="line">		.attr(<span class="string">'d'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">			<span class="keyword">return</span> set_path_ins;</div><div class="line">		&#125;)</div><div class="line">		.attr(<span class="string">'fill'</span>, endColor);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="调用函数方法并传参">调用函数方法并传参</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">let</span> [axis_a,axis_b,axis_c,axis_d]=[[],[],[],[]];<span class="comment">//外层坐标点</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> [axisIn_a,axisIn_b,axisIn_c,axisIn_d]=[[],[],[],[]];<span class="comment">//内层坐标点</span></div><div class="line"><span class="comment">//循环5组数据，调用函数方法并赋值</span></div><div class="line">vegetation_type.map(<span class="function">(<span class="params">t, i</span>) =&gt;</span> &#123;</div><div class="line">	<span class="keyword">let</span> tra_x = <span class="number">100</span>; <span class="comment">//x轴偏移量</span></div><div class="line">	<span class="keyword">let</span> tra_y = <span class="number">100</span> - i * <span class="number">26</span>; <span class="comment">//y轴偏移量</span></div><div class="line">	<span class="keyword">let</span> startColor = vegetation_color[i].startColor; <span class="comment">//外层颜色</span></div><div class="line">	<span class="keyword">let</span> endColor = vegetation_color[i].endColor; <span class="comment">//内层颜色</span></div><div class="line">	<span class="comment">//外层4个坐标点</span></div><div class="line">	axis_a=[<span class="number">12.8</span>*(i+<span class="number">1</span>),<span class="number">118</span>];</div><div class="line">	axis_b=[<span class="number">14.8</span>*i,<span class="number">138</span>];</div><div class="line">	axis_c=[w_pyramid_max<span class="number">-14.8</span>*i,h_pyramid_max];</div><div class="line">	axis_d=[w_pyramid_max<span class="number">-12.8</span>*(i+<span class="number">1</span>),<span class="number">118</span>];</div><div class="line">	<span class="comment">//里层4个坐标点</span></div><div class="line">	axisIn_a=[axis_a[<span class="number">0</span>]+<span class="number">6</span>,<span class="number">112</span>];</div><div class="line">	axisIn_b=[axis_a[<span class="number">0</span>],<span class="number">118</span>];</div><div class="line">	axisIn_c=[w_pyramid_max-axis_a[<span class="number">0</span>],<span class="number">118</span>]</div><div class="line">	axisIn_d=[<span class="number">148</span>-axis_a[<span class="number">0</span>]<span class="number">-6</span>*(i+<span class="number">1</span>),<span class="number">112</span>];</div><div class="line">	<span class="keyword">if</span>(i===<span class="number">4</span>)&#123;</div><div class="line">		<span class="comment">//最顶层</span></div><div class="line">		<span class="keyword">let</span> path_bot = <span class="string">'M'</span>+w_pyramid_max/<span class="number">2</span>+<span class="string">','</span>+<span class="number">108</span>+<span class="string">'L'</span>+axis_b[<span class="number">0</span>]+<span class="string">','</span>+axis_b[<span class="number">1</span>]+<span class="string">'L'</span>+<span class="number">90</span>+<span class="string">','</span>+axis_c[<span class="number">1</span>]+<span class="string">' Z'</span>;</div><div class="line">		CreatePyramid(tra_x, tra_y, startColor, endColor,path_bot);</div><div class="line">	&#125;<span class="keyword">else</span>&#123;</div><div class="line">		<span class="keyword">let</span> path_bot = <span class="string">'M'</span>+axis_a[<span class="number">0</span>]+<span class="string">','</span>+axis_a[<span class="number">1</span>]+<span class="string">'L'</span>+axis_b[<span class="number">0</span>]+<span class="string">','</span>+axis_b[<span class="number">1</span>]+<span class="string">'L'</span>+axis_c[<span class="number">0</span>]+<span class="string">','</span>+axis_c[<span class="number">1</span>]+<span class="string">'L'</span>+axis_d[<span class="number">0</span>]+<span class="string">','</span>+axis_d[<span class="number">1</span>]+<span class="string">' Z'</span>;</div><div class="line">	<span class="keyword">let</span> path_ins = <span class="string">'M'</span>+axisIn_a[<span class="number">0</span>]+<span class="string">','</span>+axisIn_a[<span class="number">1</span>]+<span class="string">'L'</span>+axisIn_b[<span class="number">0</span>]+<span class="string">','</span>+axisIn_b[<span class="number">1</span>]+<span class="string">'L'</span>+axisIn_c[<span class="number">0</span>]+<span class="string">','</span>+axisIn_c[<span class="number">1</span>]+<span class="string">'L'</span>+axisIn_d[<span class="number">0</span>]+<span class="string">','</span>+axisIn_d[<span class="number">1</span>]+<span class="string">' Z'</span>;</div><div class="line">	CreatePyramid(tra_x, tra_y, startColor, endColor,path_bot,path_ins);</div><div class="line">	&#125;				</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><a href="https://leeguoo.com/project/d3jinzita/ms.html" target="_blank" rel="external">点击跳转Demo</a></p>
+<p>最终效果呈现：</p>
+<p><img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmotvwc4u5j30bc0bewfc.jpg" alt="金字塔"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="用d3实现金字塔伪3d效果">用d3实现金字塔伪3d效果</h1><hr>
+<p>工作中偶然接触到d3，慢慢开始熟悉d3，并可以根据效果图进行图形绘制，要完全掌握d3绘图技巧需要不断深入学习研究，今天要展示的是我遇到的一个类似3d效果的金字塔效果图，其实是个伪3d]]>
+    </summary>
+    
+      <category term="D3" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/D3/"/>
+    
+      <category term="金字塔" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E9%87%91%E5%AD%97%E5%A1%94/"/>
+    
+      <category term="D3" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/D3/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[lisa面试总结1001篇 - 0001]]></title>
     <link href="https://xn--v4q63d8za.xn--6qq986b3xl/%E6%9D%8E%E7%88%BD%E7%9A%84%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%930001/"/>
     <id>https://xn--v4q63d8za.xn--6qq986b3xl/李爽的面试总结0001/</id>
     <published>2017-12-19T07:28:05.000Z</published>
-    <updated>2017-12-20T06:44:41.551Z</updated>
+    <updated>2017-12-22T10:49:03.322Z</updated>
     <content type="html"><![CDATA[<h3 id="发布到线上的版本发现问题，git回滚怎么实现？">发布到线上的版本发现问题，git回滚怎么实现？</h3><hr>
 <h3 id="react什么情况会触发页面重新渲染">react什么情况会触发页面重新渲染</h3><p>&emsp;<a href="http://www.jianshu.com/p/4784216b8194" target="_blank" rel="external"> 参考链接： React组件生命周期小结 </a></p>
 <ol>
@@ -56,7 +562,7 @@
     <link href="https://xn--v4q63d8za.xn--6qq986b3xl/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
     <id>https://xn--v4q63d8za.xn--6qq986b3xl/我的第一篇文章/</id>
     <published>2017-03-28T05:52:24.000Z</published>
-    <updated>2017-12-20T06:17:26.609Z</updated>
+    <updated>2017-12-22T09:35:03.655Z</updated>
     <content type="html"><![CDATA[<p>雪落无绪，梨花弄雨，美丽的相遇，春风依依。淡淡的年华似水，流逝的思念，没有谁不想走出爱的荆棘。</p>
 <p>一段感情的浓浓蜜意，只是为失落做了更深的苦凄，不是守不住颜花玫丽；因为风，因为雨，因为有太多的折磨经历。多想与你共谋岁月，同渡一生，只是你的影袂已在千里之外，相隔山水重重。<br><a id="more"></a><br>一个人走在冷冷风中，雪花飘飘如梦，痴想着守护今生，不要有什么海誓山盟，那不过是离别的誓词，为岁月中的相思留下满心的惆怅。春色撩人，春花茵茵，盛开的春景中遗落了爱的脚步。流水无情，情书难诉，其实水在洗涤着落香，失落的爱情。</p>
 <p>你走了，你走向天涯的远方，没有音信，盼不到归期。鸿雁常飞，轮回秋月，收割者收去了季节的金黄，只余下空空荡荡的旷野，稀稀落落的残梦。天空蓝的莫名，白云轻轻，不要惊扰了思念，不要安慰孤独的心灵。感不到温暖，饮一壶老酒，燃烧胸膛，不去熄灭爱的征程。</p>

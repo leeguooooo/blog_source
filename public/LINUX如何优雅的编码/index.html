@@ -1,0 +1,1065 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" href="icon.png" />
+<link rel="apple-touch-icon-precomposed" href="icon.png" />
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="baidu-site-verification" content="v3WPgfCRrA" />
+<meta name="google-site-verification" content="unpgIfuUXIXF_7KwU_A0Yqpy9tkr9uKV_Yq_x-wQn7I" />
+<link rel="stylesheet" type="text/css" href="https://q.qunarzz.com/train_pc_search/prd/styles/qn_banner@3d6d5040a7c96cdfea265536a84ed597.css"/>
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+
+
+  <meta name="keywords" content="linux," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="郭立lee - 个人博客" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="oh-my-zshzshLinux shellLinux/Unix提供了很多种Shell，为毛要这么多Shell？  难道用来炒着吃么？那我问你，你同类型的衣服怎么有那么多件？花色，质地还不一样。写程序比买衣服复杂多了，而且程序员往往负责把复杂的事情搞简单，简单的事情搞复杂。牛程序员看到不爽的Shell，就会自己重新写一套，慢慢形成了一些标准，常用的Shell有这么几种，sh、bash、csh等，">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LINUX如何优雅的编码">
+<meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/LINUX如何优雅的编码/index.html">
+<meta property="og:site_name" content="郭立lee - 个人博客">
+<meta property="og:description" content="oh-my-zshzshLinux shellLinux/Unix提供了很多种Shell，为毛要这么多Shell？  难道用来炒着吃么？那我问你，你同类型的衣服怎么有那么多件？花色，质地还不一样。写程序比买衣服复杂多了，而且程序员往往负责把复杂的事情搞简单，简单的事情搞复杂。牛程序员看到不爽的Shell，就会自己重新写一套，慢慢形成了一些标准，常用的Shell有这么几种，sh、bash、csh等，">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn9b741sfnj30d608zt9c.jpg">
+<meta property="og:updated_time" content="2018-01-08T09:54:14.199Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LINUX如何优雅的编码">
+<meta name="twitter:description" content="oh-my-zshzshLinux shellLinux/Unix提供了很多种Shell，为毛要这么多Shell？  难道用来炒着吃么？那我问你，你同类型的衣服怎么有那么多件？花色，质地还不一样。写程序比买衣服复杂多了，而且程序员往往负责把复杂的事情搞简单，简单的事情搞复杂。牛程序员看到不爽的Shell，就会自己重新写一套，慢慢形成了一些标准，常用的Shell有这么几种，sh、bash、csh等，">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn9b741sfnj30d608zt9c.jpg">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'always'
+  };
+</script>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+  <title> LINUX如何优雅的编码 | 郭立lee - 个人博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <!-- href: config.root -->
+  <a href="https://leeguoo.com/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title lee">郭立lee - 个人博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <a href="https://leeguoo.com/" class="lee menu-item">GU0</a>
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            博客首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-rn">
+          <a href="/categories/react-native/" rel="section">
+            <i class="menu-item-icon icon-next-rn"></i> <br />
+            react native
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-interview">
+          <a href="/categories/面试题/" rel="section">
+            <i class="menu-item-icon icon-next-interview"></i> <br />
+            面试题
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      
+      <div class="js-reading-position"></div>
+      
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    <div id="js-share-img" data-src="https://ws1.sinaimg.cn/large/005T0OjCly1fn9b741sfnj30d608zt9c.jpg"></div>
+    
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    <header class="post-header">
+      <input type="text" id="post_title" value="LINUX如何优雅的编码" hidden/>
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              LINUX如何优雅的编码
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        
+        <span class="post-time">
+          <!-- 发表于 -->
+          <span class="iconfont">&#xf19f;</span>
+          <time itemprop="dateCreated" datetime="2018-01-08T17:00:36+08:00" content="2018-01-08">
+            2018-01-08
+          </time>
+        </span>
+
+        
+        <span class="post-time">
+          &nbsp; | &nbsp;
+          <span class="iconfont">&#xf024;</span>
+          <a href="/authors/郭立lee/">郭立lee</a>
+        </span>
+        
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp;
+            <!-- 分类于 -->
+            <span class="iconfont">&#xf1d0;</span>
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/LINUX/" itemprop="url" rel="index">
+                  <span itemprop="name">LINUX</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+
+        
+        	 <span id="/LINUX如何优雅的编码/"class="leancloud_visitors"  data-flag-title="LINUX如何优雅的编码">
+                &nbsp; | &nbsp;
+                <span class="iconfont">&#xf03a;</span>
+                </span>
+        
+
+        
+        <span class="post-comments-count">
+          <!-- 暂不支持评论 &nbsp; | &nbsp;
+          <a class="cloud-tie-join-count" href="javascript:void(0);">
+           <span class="join-count" style="color:black">0</span>
+           <span class="join-text">人评论</span>
+         </a> -->
+         
+        </span>
+      </div>
+      
+      <blockquote class="blockquote-center">
+        <p style="padding: 0 50px">郭立lee，目前任职于去哪儿网，全栈工程师。 技术一般，喜欢折腾。</p>
+      </blockquote>
+      
+
+
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h2 id="oh-my-zsh">oh-my-zsh</h2><h3 id="zsh">zsh</h3><h4 id="Linux_shell">Linux shell</h4><p>Linux/Unix提供了很多种Shell，为毛要这么多Shell？</p>
+<blockquote>
+<p>难道用来炒着吃么？那我问你，你同类型的衣服怎么有那么多件？花色，质地还不一样。写程序比买衣服复杂多了，而且程序员往往负责把复杂的事情搞简单，简单的事情搞复杂。牛程序员看到不爽的Shell，就会自己重新写一套，慢慢形成了一些标准，常用的Shell有这么几种，sh、bash、csh等，想知道你的系统有几种shell，可以通过以下命令查看：</p>
+</blockquote>
+<pre><code>cat <span class="regexp">/etc/</span>shells
+</code></pre><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[lee.guo@l-backyard.ops.dev.cn0 ~/qunar.com/qunar-backyard-v2]cat /etc/shells</div><div class="line">/bin/sh</div><div class="line">/bin/bash</div><div class="line">/sbin/nologin</div><div class="line">/bin/dash</div><div class="line">/bin/tcsh</div><div class="line">/bin/csh</div></pre></td></tr></table></figure>
+<h4 id="zsh简介">zsh简介</h4><p>Zsh是一个Linux下强大的shell, 由于大多数Linux产品安装，以及默认使用bash shell, 但是丝毫不影响极客们对zsh的热衷, 几乎每一款Linux产品都包含有zsh，通常可以用apt-get、urpmi或yum等包管理器进行安装</p>
+<p>Zsh具有以下主要功能</p>
+<ul>
+<li><p>开箱即用、可编程的命令行补全功能可以帮助用户输入各种参数以及选项</p>
+</li>
+<li><p>在用户启动的所有shell中共享命令历史</p>
+</li>
+<li><p>通过扩展的文件通配符，可以不利用外部命令达到find命令一般展开文件名</p>
+</li>
+<li><p>改进的变量与数组处理</p>
+</li>
+<li><p>在缓冲区中编辑多行命令</p>
+</li>
+<li><p>多种兼容模式，例如使用/bin/sh运行时可以伪装成Bourne shell</p>
+</li>
+<li><p>可以定制呈现形式的提示符；包括在屏幕右端显示信息，并在键入长命令时自动隐藏</p>
+</li>
+<li><p>可加载的模块，提供其他各种支持：完整的TCP与Unix域套接字控制，FTP客户端与扩充过的数学函数</p>
+</li>
+<li><p>完全可定制化</p>
+</li>
+</ul>
+<h4 id="zsh安装">zsh安装</h4><pre><code>sudo apt-get <span class="keyword">install</span> zsh <span class="comment"># Ubuntu</span>
+
+sudo yum <span class="keyword">install</span> zsh
+</code></pre><h4 id="取代bash，设为默认shell">取代bash，设为默认shell</h4><pre><code>sudo usermod <span class="operator">-s</span> /bin/zsh
+
+<span class="built_in">exit</span>
+</code></pre><h3 id="oh-my-zsh安装">oh-my-zsh安装</h3><p>直接用zsh会很蛋疼，因为zsh功能很强大但是太复杂，所以需要oh-my-zsh来将它简单化</p>
+<p><strong>直接用git从github上面下载包</strong></p>
+<pre><code>git <span class="keyword">clone</span> <span class="title">git</span>://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+</code></pre><p><strong>直接使用脚本安装</strong></p>
+<pre><code><span class="keyword">cd</span> oh-my-zsh/tools
+./install.<span class="keyword">sh</span>
+</code></pre><p>你可以直接直接使用如下命令安装</p>
+<p><strong>curl</strong></p>
+<pre><code>sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>"</span>
+</code></pre><p><strong>wget</strong></p>
+<pre><code>sh -c <span class="string">"<span class="variable">$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)</span>"</span>
+</code></pre><h3 id="oh-my-zsh主题">oh-my-zsh主题</h3><pre><code><span class="title">vim</span> themes/robbyrussell.zsh-theme
+</code></pre><p>替换内容</p>
+<pre><code><span class="title">local</span> ret_status=<span class="string">"%(?:%{<span class="variable">$fg_bold</span>[green]%}➜ :%{<span class="variable">$fg_bold</span>[red]%}➜ )"</span>
+<span class="comment"># PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'</span>
+PROMPT=<span class="string">'%{<span class="variable">$fg_bold</span>[red]%}➜ %{<span class="variable">$fg_bold</span>[green]%}%p%{<span class="variable">$fg</span>[cyan]%}%d %{<span class="variable">$fg_bold</span>[blue]%}$(git_prompt_info)%{<span class="variable">$fg_bold</span>[blue]%}% %{<span class="variable">$reset_color</span>%}&gt;'</span>
+
+ZSH_THEME_GIT_PROMPT_PREFIX=<span class="string">"%{<span class="variable">$fg_bold</span>[blue]%}git:(%{<span class="variable">$fg</span>[red]%}"</span>
+ZSH_THEME_GIT_PROMPT_SUFFIX=<span class="string">"%{<span class="variable">$reset_color</span>%} "</span>
+ZSH_THEME_GIT_PROMPT_DIRTY=<span class="string">"%{<span class="variable">$fg</span>[blue]%}) %{<span class="variable">$fg</span>[yellow]%}✗"</span>
+ZSH_THEME_GIT_PROMPT_CLEAN=<span class="string">"%{<span class="variable">$fg</span>[blue]%})"</span>
+</code></pre><hr>
+<h2 id="exz-conf">exz-conf</h2><p>  vim 工具</p>
+<h4 id="GET_CODE">GET CODE</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">CONFDIR=/home/lee.guo</div><div class="line">echo $CONFDIR</div><div class="line">cd $CONFDIR</div><div class="line">git clone https://github.com/jaypei/exz-conf.git</div><div class="line">cd exz-conf</div><div class="line">git submodule init</div><div class="line">git submodule update</div></pre></td></tr></table></figure>
+<h4 id="VIM_CONFIG">VIM CONFIG</h4><h4 id="install">install</h4><pre><code>ln <span class="operator">-s</span> <span class="variable">$CONFDIR</span>/exz-conf/vimconf/_vimrc ~/.vimrc
+ln <span class="operator">-s</span> <span class="variable">$CONFDIR</span>/exz-conf/vimconf/_gvimrc ~/.gvimrc
+ln <span class="operator">-s</span> <span class="variable">$CONFDIR</span>/exz-conf/vimconf/vimfiles ~/.vim
+<span class="comment"># pylint</span>
+ln <span class="operator">-s</span> <span class="variable">$CONFDIR</span>/exz-conf/vimconf/pylint.ini ~/.pylintrc
+</code></pre><h4 id="updating">updating</h4><pre><code>cd <span class="variable">$CONFDIR</span>/exz-conf
+git pull --rebase; git submodule <span class="keyword">update</span>
+cd -
+</code></pre><h4 id="usage">usage</h4><ul>
+<li><code>回车</code> 等同于 <code>:</code> (normal)</li>
+<li><code>空格</code> 等同于 <code>,/</code> (normal)</li>
+<li><code>0</code> 等同于 <code>^</code> ，到行首字母前 (noarmal)</li>
+<li><code>Q</code> 关闭文件 (normal)</li>
+</ul>
+<ul>
+<li><code>F4</code> or <code>Shift+F4</code> 切换 source/header (A)</li>
+<li><code>F5</code> or <code>Shift+F5</code> 语法静态检查 (SyntasticCheck)</li>
+<li><code>F8</code> or <code>Shift+F8</code> VimWiki</li>
+<li><code>F11</code> or <code>Shift+F11</code> tag list (tagbar)</li>
+<li><code>F12</code> or <code>Shift+F12</code> 目录树 (NERDTree)</li>
+</ul>
+<ul>
+<li><code>Ctrl+h</code> 光标移进 <code>左</code> 侧分割窗</li>
+<li><code>Ctrl+l</code> 光标移进 <code>右</code> 侧分割窗</li>
+<li><code>Ctrl+j</code> 光标移进 <code>下</code> 侧分割窗</li>
+<li><code>Ctrl+k</code> 光标移进 <code>上</code> 侧分割窗</li>
+</ul>
+<p>  默认 leader key 已设置为 <code>,</code> 。</p>
+<ul>
+<li><code>,j</code> 当前行下移 (normal)</li>
+<li><code>,k</code> 当前行上移 (normal)</li>
+<li><code>,pp</code> 切换paste和nopaste模式</li>
+<li><code>,m</code> 设置当前位置单词高亮</li>
+<li><code>,n</code> 取消当前位置单词高亮</li>
+<li><code>,/</code> 跳转到下一个高亮位置</li>
+<li><code>,c</code> 清除所有高亮</li>
+<li><code>,s</code> 删除所有行尾空白</li>
+<li><code>,,</code> 保存文件，等同于 <code>:w</code></li>
+</ul>
+</span>
+      
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/python环境集成/" rel="prev">python环境集成</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/LINUX磁盘空间查看/" rel="next">LINUX磁盘空间查看</a>
+            
+          </div>
+        </div>
+
+        <div class ="post-donate">
+            <div id="donate_board" class="donate_bar center">
+                <a id="btn_donate" class="btn_donate" href="javascript:;" title="谢谢您请我吃糖~"></a>
+                <span class="donate_txt">
+                   <br>坚持原创技术分享，您的支持将鼓励我继续创作！
+                </span>
+                <br>
+              </div>
+        	<div id="donate_guide" class="donate_bar center hidden" >
+        		<!-- 微信打赏图案 -->
+        		<img src="/images/shang2.png" alt="谢谢您请我吃糖~ 一定要留下大名啊">
+            </div>
+        	<script type="text/javascript">
+        		document.getElementById('btn_donate').onclick = function(){
+        			$('#donate_board').addClass('hidden');
+        			$('#donate_guide').removeClass('hidden');
+        		}
+        	</script>
+        </div>
+
+        
+        <div id="gitalk-container"></div>
+        
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+        <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+        <script>
+        var gitalk = new Gitalk({
+          id: document.getElementById('post_title').value, // 可选。默认为 location.href
+          clientID: 'df4b56c0c784b50449a2',
+          clientSecret: '272d603a2eb298930f8c20b76aed0570400b4095',
+          owner: 'leeguooooo',
+          repo: 'shuoshuo',
+          admin: ['leeguooooo'],
+          language: 'zh-CN',
+        });
+
+        gitalk.render('gitalk-container')
+        // var gitment = new Gitment({
+        //   id: document.getElementById('post_title').value, // 可选。默认为 location.href
+        //   owner: 'leeguooooo',
+        //   repo: 'shuoshuo',
+        //   oauth: {
+        //     client_id: 'df4b56c0c784b50449a2',
+        //     client_secret: '272d603a2eb298930f8c20b76aed0570400b4095',
+        //   },
+        // })
+        // gitment.render('container')
+        </script>
+      
+
+      
+      
+    </footer>
+
+  </article>
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg" alt="郭立lee" width="200px" itemprop="image" style="border:none;max-width:200px"/>
+          <p class="site-author-name" itemprop="name">郭立lee</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives/">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">分类</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">标签</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-authors">
+            <a href="/authors/">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">作者</span>
+            </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <div class="links-of-author-item">
+                <a href="https://www.qunar.com/" target="_blank">去哪儿官网</a>
+              </div>
+            
+              <div class="links-of-author-item">
+                <a href="https://www.leeguoo.com/" target="_blank">LEEGUOO官网</a>
+              </div>
+            
+              <div class="links-of-author-item">
+                <a href="https://www.docschina.org" target="_blank">印记中文文档</a>
+              </div>
+            
+              <div class="links-of-author-item">
+                <a href="//www.alloyteam.com/page/0/" target="_blank">腾讯前端博客</a>
+              </div>
+            
+              <div class="links-of-author-item">
+                <a href="//zh-google-styleguide.readthedocs.io/en/latest/contents/" target="_blank">项目风格指南</a>
+              </div>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#oh-my-zsh"><span class="nav-number">1.</span> <span class="nav-text">oh-my-zsh</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh"><span class="nav-number">1.1.</span> <span class="nav-text">zsh</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux_shell"><span class="nav-number">1.1.1.</span> <span class="nav-text">Linux shell</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#zsh简介"><span class="nav-number">1.1.2.</span> <span class="nav-text">zsh简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#zsh安装"><span class="nav-number">1.1.3.</span> <span class="nav-text">zsh安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取代bash，设为默认shell"><span class="nav-number">1.1.4.</span> <span class="nav-text">取代bash，设为默认shell</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#oh-my-zsh安装"><span class="nav-number">1.2.</span> <span class="nav-text">oh-my-zsh安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#oh-my-zsh主题"><span class="nav-number">1.3.</span> <span class="nav-text">oh-my-zsh主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#exz-conf"><span class="nav-number">2.</span> <span class="nav-text">exz-conf</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GET_CODE"><span class="nav-number">2.0.1.</span> <span class="nav-text">GET CODE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VIM_CONFIG"><span class="nav-number">2.0.2.</span> <span class="nav-text">VIM CONFIG</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#install"><span class="nav-number">2.0.3.</span> <span class="nav-text">install</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#updating"><span class="nav-number">2.0.4.</span> <span class="nav-text">updating</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#usage"><span class="nav-number">2.0.5.</span> <span class="nav-text">usage</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+<div id="qn-banner-cont">
+	<div class="qn-banner-dis">
+	</div>
+	<div id="qnrg" class="qn-banner">
+
+		<div id="qn-banner-tic">
+			<i id="closeQunar" class="close qn-banner-close" onclick="document.getElementsByClassName('qn-banner')[0].style.display='none'"></i>
+            <div class="section-qunar">
+                <img class="logo" src="//s.qunarzz.com/train_search/images/yindaoQunar.png">
+                <div class="main">
+                    <div class="t1">去哪儿旅行</div>
+                    <div class="t2">
+                        <span class="highlight">火车票、机票、</span>你想要的都在这里！
+                    </div>
+                    <div class="op">
+                        <a class="js-download-click" clickkey="js_qunarapp_click_iphone" href="//touch.qunar.com/downloadUrlJump.jsp?type=iphone&amp;from=fuceng" target="_blank">
+                            <i class="icon qunar_iph"></i>iPhone</a>
+                        <a class="js-download-click" clickkey="js_qunarapp_click_android" href="//touch.qunar.com/h5/downloadAndroid?bd_source=fuceng" target="_blank">
+                            <i class="icon qunar_andr"></i>Android</a>
+                    </div>
+                </div>
+                <img src="//s.qunarzz.com/train_search/images/routine_code_banner_0516.png" class="routine_code">
+            </div>
+		</div>
+	</div>
+</div>
+<script>
+function getContentSize() {
+    var wh = document.documentElement.clientWidth;
+    var eh = document.getElementById('sidebar').style.width.replace('px','');
+    ch = (wh - eh) >= 1150 ? ch = (wh - eh) + "px" : "0px";
+    document.getElementById("qnrg").style.width = ch;
+}
+    window.onload = window.setTimeout(getContentSize,1300);
+    window.setTimeout(function(){document.getElementsByClassName('qn-banner')[0].style.display='none';},5000);;
+    window.onresize = getContentSize;
+</script>
+    
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">郭立lee | 去哪儿郭立 | lee.guo | https://leeguoo.com | https://myblog.leeguoo.com</span>
+</div>
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>-->
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/js/headBand.min.js"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+
+  </script>
+  <script type="text/javascript" src="//cdn.bootcss.com/raphael/2.2.1/raphael.min.js"></script>
+  <script type="text/javascript" src="//cdn.bootcss.com/flowchart/1.6.3/flowchart.min.js"></script>
+  <script type="text/javascript">
+      var requireId = 0;
+      $(function() {
+          $('.highlight.flow').each(function(index, item) {
+              var code = $(item).find('.code pre').text(),
+                  id = 'flow-' + requireId++;
+              $(item).attr('id', id);
+              $(item).attr('data-code', code);
+              $(item).html('');
+              var diagram = flowchart.parse(code);
+              diagram.drawSVG(id);
+          });
+      });
+  </script>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <script>
+  $(function(){
+    // 封装分享
+    function commonShare() {
+      var title = document.title,
+          link = location.href,
+          desc = $('.post-body p')[0].innerHTML,
+          imgSrc = $('#js-share-img').data('src') || $($('img')[0]).attr('src');
+      var commonConfig = {
+        title: title,
+        desc: desc,
+        link: link,
+        imgUrl: imgSrc,
+      };
+      wx.onMenuShareTimeline({
+        title: title,
+        link: link,
+        imgUrl: imgSrc
+      });
+      wx.onMenuShareAppMessage(commonConfig);
+      wx.onMenuShareQQ(commonConfig);
+      wx.onMenuShareWeibo(commonConfig);
+      wx.onMenuShareQZone(commonConfig);
+    }
+
+    // 请求: 微信分享
+    $.ajax({
+      type: "GET",
+      url: 'https://ued.qunar.com/ticket/wx',
+      data: {
+        url: window.location.href.split('#')[0],
+        jsApiList: [
+          'onMenuShareTimeline',
+          'onMenuShareAppMessage',
+          'onMenuShareQQ',
+          'onMenuShareWeibo',
+          'onMenuShareQZone'
+        ]
+      },
+      dataType: "jsonp",
+      jsonp: "sign",
+      success: function(res) {
+        wx.config({
+          debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+          appId: 'wx93dbe152c661b3bd', // 必填，公众号的唯一标识
+          timestamp: res.timestamp, // 必填，生成签名的时间戳
+          nonceStr: res.nonceStr, // 必填，生成签名的随机串
+          signature: res.signature,// 必填，签名，见附录1
+          jsApiList: [
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo',
+            'onMenuShareQZone'
+          ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+
+        wx.ready(function(res) {
+          commonShare();
+        })
+        wx.error(function(res){
+          console.log(res);
+        });
+      },
+      error: function(err) {
+        console.log(err);
+      }
+    })
+  });
+  $('.js-reading-position').headBand({
+		'background':'#ff561b',
+		'height':"3"
+	});
+  </script>
+
+  
+    <!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("BO9eK46P9VzLNPSvO36RsbwT-gzGzoHsz", "cN4Bh7rj4G1oYaAyLhiAf2PE");</script>
+<script>
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+	$(".leancloud_visitors").each(function() {
+		var url = $(this).attr("id").trim();
+		query.equalTo("url", url);
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {
+					var content = $(document.getElementById(url)).html() + '0';
+					$(document.getElementById(url)).html(content);
+					return;
+				}
+				for (var i = 0; i < results.length; i++) {
+					var object = results[i];
+					var content = $(document.getElementById(url)).html() + object.get('time');
+					$(document.getElementById(url)).html(content);
+				}
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+	});
+}
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = $(document.getElementById(url)).html() + counter.get('time');
+						$(document.getElementById(url)).html(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = $(document.getElementById(url)).html() + newcounter.get('time');
+						$(document.getElementById(url)).html(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else if ($('.post-title-link').length > 1) {
+		showTime(Counter);
+	}
+});
+</script>
+
+  
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>

@@ -1,7 +1,8 @@
 {% if theme.rss === '' and config.feed and config.feed.path %}
     {% set theme.rss = config.root + config.feed.path %}
 {% endif %}
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -13,6 +14,8 @@
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <meta name="baidu-site-verification" content="v3WPgfCRrA" />
+<meta name="google-site-verification" content="unpgIfuUXIXF_7KwU_A0Yqpy9tkr9uKV_Yq_x-wQn7I" />
+<link rel="stylesheet" type="text/css" href="https://q.qunarzz.com/train_pc_search/prd/styles/qn_banner@3d6d5040a7c96cdfea265536a84ed597.css"/>
 {% if theme.google_site_verification %}
   <meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
 {% endif %}
@@ -67,4 +70,15 @@
     scheme: '{{ theme.scheme }}',
     sidebar: '{{ theme.sidebar }}'
   };
+</script>
+
+<script>
+    (function(){
+        if('{{ page.password }}'){
+            if (prompt('请输入文章密码') !== '{{ page.password }}'){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
 </script>

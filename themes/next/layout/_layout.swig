@@ -47,7 +47,45 @@
 
       {% block sidebar %}{% endblock %}
     </main>
+{# 广告 #}
+<div id="qn-banner-cont">
+	<div class="qn-banner-dis">
+	</div>
+	<div id="qnrg" class="qn-banner">
 
+		<div id="qn-banner-tic">
+			<i id="closeQunar" class="close qn-banner-close" onclick="document.getElementsByClassName('qn-banner')[0].style.display='none'"></i>
+            <div class="section-qunar">
+                <img class="logo" src="//s.qunarzz.com/train_search/images/yindaoQunar.png">
+                <div class="main">
+                    <div class="t1">去哪儿旅行</div>
+                    <div class="t2">
+                        <span class="highlight">火车票、机票、</span>你想要的都在这里！
+                    </div>
+                    <div class="op">
+                        <a class="js-download-click" clickkey="js_qunarapp_click_iphone" href="//touch.qunar.com/downloadUrlJump.jsp?type=iphone&amp;from=fuceng" target="_blank">
+                            <i class="icon qunar_iph"></i>iPhone</a>
+                        <a class="js-download-click" clickkey="js_qunarapp_click_android" href="//touch.qunar.com/h5/downloadAndroid?bd_source=fuceng" target="_blank">
+                            <i class="icon qunar_andr"></i>Android</a>
+                    </div>
+                </div>
+                <img src="//s.qunarzz.com/train_search/images/routine_code_banner_0516.png" class="routine_code">
+            </div>
+		</div>
+	</div>
+</div>
+<script>
+function getContentSize() {
+    var wh = document.documentElement.clientWidth;
+    var eh = document.getElementById('sidebar').style.width.replace('px','');
+    ch = (wh - eh) >= 1150 ? ch = (wh - eh) + "px" : "0px";
+    document.getElementById("qnrg").style.width = ch;
+}
+    window.onload = window.setTimeout(getContentSize,1300);
+    window.setTimeout(function(){document.getElementsByClassName('qn-banner')[0].style.display='none';},5000);;
+    window.onresize = getContentSize;
+</script>
+    {# <a href="https://dujia.qunar.com/2018cj?tf=xbtj05&in_track=xbtj05" target="_blank"><img src="https://img1.qunarzz.com/vc/d6/ba/05/83a12d471cbc02a2f1e42c2d04.jpg" border="0"</a> #}
     <footer id="footer" class="footer">
       <div class="footer-inner"> {% include '_partials/footer.swig' %} </div>
     </footer>
@@ -195,3 +233,5 @@
   {%  endif %}
 </body>
 </html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>

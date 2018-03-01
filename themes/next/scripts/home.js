@@ -23,12 +23,12 @@ hexo.extend.generator.register('blogList', function(locals){
   var res = locals.posts.data.reverse().map(function(item, index) {
     return {
       title: item.title,
-      path: 'https://blog.lee.org/' + item.path,
+      path: 'https://去哪儿.我爱你/' + item.path,
       img: item.photos[0]
     }
   });
   var cache = [];
-  // 循环结构转换成json by 司徒: http://www.cnblogs.com/rubylouvre/p/6814431.html
+  // 循环结构转换成: http://www.cnblogs.com/rubylouvre/p/6814431.html
   var resStr = JSON.stringify(res, function(key, value) {
       if (typeof value === 'object' && value !== null) {
           if (cache.indexOf(value) !== -1) {

@@ -1,0 +1,1001 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" href="icon.png" />
+<link rel="apple-touch-icon-precomposed" href="icon.png" />
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="baidu-site-verification" content="v3WPgfCRrA" />
+<meta name="google-site-verification" content="unpgIfuUXIXF_7KwU_A0Yqpy9tkr9uKV_Yq_x-wQn7I" />
+<link rel="stylesheet" type="text/css" href="https://q.qunarzz.com/train_pc_search/prd/styles/qn_banner@3d6d5040a7c96cdfea265536a84ed597.css"/>
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+
+
+  <meta name="keywords" content="python," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="郭立lee - 个人博客" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="进入https://pypi.python.org/pypi/pip，下载第二项。 pip install virtualenv  wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz\#md5\=35f01d">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python环境集成">
+<meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/python环境集成/index.html">
+<meta property="og:site_name" content="郭立lee - 个人博客">
+<meta property="og:description" content="进入https://pypi.python.org/pypi/pip，下载第二项。 pip install virtualenv  wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz\#md5\=35f01d">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn9da8go6vj308b04owef.jpg">
+<meta property="og:updated_time" content="2018-01-18T14:17:40.986Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python环境集成">
+<meta name="twitter:description" content="进入https://pypi.python.org/pypi/pip，下载第二项。 pip install virtualenv  wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz\#md5\=35f01d">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn9da8go6vj308b04owef.jpg">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'always'
+  };
+</script>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+  <title> python环境集成 | 郭立lee - 个人博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <!-- href: config.root -->
+  <a href="https://leeguoo.com/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title lee">郭立lee - 个人博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <a href="https://leeguoo.com/" class="lee menu-item">GU0</a>
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            博客首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-rn">
+          <a href="/categories/react-native/" rel="section">
+            <i class="menu-item-icon icon-next-rn"></i> <br />
+            react native
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-interview">
+          <a href="/categories/面试题/" rel="section">
+            <i class="menu-item-icon icon-next-interview"></i> <br />
+            面试题
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      
+      <div class="js-reading-position"></div>
+      
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    <div id="js-share-img" data-src="https://ws1.sinaimg.cn/large/005T0OjCly1fn9da8go6vj308b04owef.jpg"></div>
+    
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    <header class="post-header">
+      <input type="text" id="post_title" value="python环境集成" hidden/>
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              python环境集成
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        
+        <span class="post-time">
+          <!-- 发表于 -->
+          <span class="iconfont">&#xf19f;</span>
+          <time itemprop="dateCreated" datetime="2018-01-08T18:15:07+08:00" content="2018-01-08">
+            2018-01-08
+          </time>
+        </span>
+
+        
+        <span class="post-time">
+          &nbsp; | &nbsp;
+          <span class="iconfont">&#xf024;</span>
+          <a href="/authors/郭立lee/">郭立lee</a>
+        </span>
+        
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp;
+            <!-- 分类于 -->
+            <span class="iconfont">&#xf1d0;</span>
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/python/" itemprop="url" rel="index">
+                  <span itemprop="name">python</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+
+        
+        	 <span id="/python环境集成/"class="leancloud_visitors"  data-flag-title="python环境集成">
+                &nbsp; | &nbsp;
+                <span class="iconfont">&#xf03a;</span>
+                </span>
+        
+
+        
+        <span class="post-comments-count">
+          <!-- 暂不支持评论 &nbsp; | &nbsp;
+          <a class="cloud-tie-join-count" href="javascript:void(0);">
+           <span class="join-count" style="color:black">0</span>
+           <span class="join-text">人评论</span>
+         </a> -->
+         
+        </span>
+      </div>
+      
+      <blockquote class="blockquote-center">
+        <p style="padding: 0 50px">郭立lee，目前任职于去哪儿网，全栈工程师。 技术一般，喜欢折腾。</p>
+      </blockquote>
+      
+
+
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>进入<a href="https://pypi.python.org/pypi/pip" target="_blank" rel="external">https://pypi.python.org/pypi/pip</a>，下载第二项。</p>
+<pre><code>pip install virtualenv
+
+wget https:<span class="comment">//pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz\#md5\=35f01da33009719497f01a4ba69d63c9 --no-check-certificate</span>
+
+tar -xf pip-<span class="number">9.0</span>.<span class="number">1</span><span class="class">.tar</span><span class="class">.gz</span>
+
+virtualenv <span class="class">.venv</span>
+
+source .venv/bin/activate
+
+pip install -r requirements<span class="class">.txt</span> -<span class="tag">i</span> http:<span class="comment">//devpi.corp.qunar.com/qunar/dev/+simple/</span>
+
+tools/with_venv<span class="class">.sh</span> python setup<span class="class">.py</span> install
+</code></pre><hr>
+<h1 id="Centos6-5-nodejsv4-X-express">Centos6.5-nodejsv4.X-express</h1><p>Centos6.5+nodejsv4.x+express的安装</p>
+<p>很高兴第一次在github中写东西，以后我会多在这里边写东西的<br>为什么我想要写这个Centos6.5+nodejsv4.x+express的安装呢？<br>首先我接触nodejs在4月份，<br>然后一直是在windows下使用nodejs+express的，windows我们很熟悉，<br>也容易处理一些文件<br>等等，但是我们工作的时候避免不了在linux下使用各种软件，这里不得不提到nodejs了，<br>当然linux的的性能等等的优点我这里就不阐述了。</p>
+<p>#下面进入正题：<br>（PS：网上关于Centos6.5+nodejsv4.x+express确实也很多，但是我照着网上的教程搞了一天还是失败了<br>而且还很麻烦，因为centos里的东西太老了，比如使用nodejs4.x以上就要升级gcc到4.8以上，这个我尝<br>试了好多还是失败了，后来我差点绝望了，不过我发现了一个办法可以，在这里跟大家说一声，希望少走<br>弯路）<br>(注意：这里的所有操作都在root模式下)</p>
+<p>1.安装centos6.5可以在虚拟机下安装</p>
+<p>2.打开centos6.5，打开终端，在root<br>模式下操作，root模式稍微说一下（su<br>回车，然后输入密码即可）</p>
+<h2 id="3-获取nodejs_资源，这里有一下几种模式">3.获取nodejs 资源，这里有一下几种模式</h2><p> 4.x——————————<br>curl –silent –location <a href="https://rpm.nodesource.com/setup_4.x" target="_blank" rel="external">https://rpm.nodesource.com/setup_4.x</a> | bash -</p>
+<p> 5.x——————————<br>curl –silent –location <a href="https://rpm.nodesource.com/setup_5.x" target="_blank" rel="external">https://rpm.nodesource.com/setup_5.x</a> | bash -</p>
+<p> 0.10—————————–<br>curl –silent –location <a href="https://rpm.nodesource.com/setup" target="_blank" rel="external">https://rpm.nodesource.com/setup</a> | bash -</p>
+<p>我当然安装比较新的版本，4.X</p>
+<p>在root模式下输入其中的一个</p>
+<p>4.安装<br>yum install -y nodejs</p>
+<p>5.测试是否成功<br>node -v</p>
+<p>成功会返回版本号</p>
+<hr>
+<p>下面可以安装express框架，具体express框架的作用自己谷歌一下</p>
+<p>1.npm install express -g</p>
+<p>不过express安装之后还要安装一下npm install -g express-generator</p>
+<p>具体为什么可以自己去了解这里就不多说了</p>
+<p>2.验证是否<br>建立一个文件夹，然后express myblog</p>
+<p>然后你们就应该都会了。。。。。。</p>
+</span>
+      
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag">#python</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/LINUX如何优雅的编码/" rel="next">LINUX如何优雅的编码</a>
+            
+          </div>
+        </div>
+
+        <div class ="post-donate">
+            <div id="donate_board" class="donate_bar center">
+                <a id="btn_donate" class="btn_donate" href="javascript:;" title="谢谢您请我吃糖~"></a>
+                <span class="donate_txt">
+                   <br>坚持原创技术分享，您的支持将鼓励我继续创作！
+                </span>
+                <br>
+              </div>
+        	<div id="donate_guide" class="donate_bar center hidden" >
+        		<!-- 微信打赏图案 -->
+        		<img src="/images/shang2.png" alt="谢谢您请我吃糖~ 一定要留下大名啊">
+            </div>
+        	<script type="text/javascript">
+        		document.getElementById('btn_donate').onclick = function(){
+        			$('#donate_board').addClass('hidden');
+        			$('#donate_guide').removeClass('hidden');
+        		}
+        	</script>
+        </div>
+
+        
+        <div id="gitalk-container"></div>
+        
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+        <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+        <script>
+        var gitalk = new Gitalk({
+          id: document.getElementById('post_title').value, // 可选。默认为 location.href
+          clientID: 'df4b56c0c784b50449a2',
+          clientSecret: '272d603a2eb298930f8c20b76aed0570400b4095',
+          owner: 'leeguooooo',
+          repo: 'shuoshuo',
+          admin: ['leeguooooo'],
+          language: 'zh-CN',
+        });
+
+        gitalk.render('gitalk-container')
+        // var gitment = new Gitment({
+        //   id: document.getElementById('post_title').value, // 可选。默认为 location.href
+        //   owner: 'leeguooooo',
+        //   repo: 'shuoshuo',
+        //   oauth: {
+        //     client_id: 'df4b56c0c784b50449a2',
+        //     client_secret: '272d603a2eb298930f8c20b76aed0570400b4095',
+        //   },
+        // })
+        // gitment.render('container')
+        </script>
+      
+
+      
+      
+    </footer>
+
+  </article>
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg" alt="郭立lee" width="200px" itemprop="image" style="border:none;max-width:200px"/>
+          <p class="site-author-name" itemprop="name">郭立lee</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives/">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">分类</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">标签</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-authors">
+            <a href="/authors/">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">作者</span>
+            </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <div class="links-of-author-item">
+                <a href="https://www.qunar.com/" target="_blank">去哪儿官网</a>
+              </div>
+            
+              <div class="links-of-author-item">
+                <a href="https://www.leeguoo.com/" target="_blank">LEEGUOO官网</a>
+              </div>
+            
+              <div class="links-of-author-item">
+                <a href="https://www.docschina.org" target="_blank">印记中文文档</a>
+              </div>
+            
+              <div class="links-of-author-item">
+                <a href="//www.alloyteam.com/page/0/" target="_blank">腾讯前端博客</a>
+              </div>
+            
+              <div class="links-of-author-item">
+                <a href="//zh-google-styleguide.readthedocs.io/en/latest/contents/" target="_blank">项目风格指南</a>
+              </div>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Centos6-5-nodejsv4-X-express"><span class="nav-number">1.</span> <span class="nav-text">Centos6.5-nodejsv4.X-express</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-获取nodejs_资源，这里有一下几种模式"><span class="nav-number">1.1.</span> <span class="nav-text">3.获取nodejs 资源，这里有一下几种模式</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+<div id="qn-banner-cont">
+	<div class="qn-banner-dis">
+	</div>
+	<div id="qnrg" class="qn-banner">
+
+		<div id="qn-banner-tic">
+			<i id="closeQunar" class="close qn-banner-close" onclick="document.getElementsByClassName('qn-banner')[0].style.display='none'"></i>
+            <div class="section-qunar">
+                <img class="logo" src="//s.qunarzz.com/train_search/images/yindaoQunar.png">
+                <div class="main">
+                    <div class="t1">去哪儿旅行</div>
+                    <div class="t2">
+                        <span class="highlight">火车票、机票、</span>你想要的都在这里！
+                    </div>
+                    <div class="op">
+                        <a class="js-download-click" clickkey="js_qunarapp_click_iphone" href="//touch.qunar.com/downloadUrlJump.jsp?type=iphone&amp;from=fuceng" target="_blank">
+                            <i class="icon qunar_iph"></i>iPhone</a>
+                        <a class="js-download-click" clickkey="js_qunarapp_click_android" href="//touch.qunar.com/h5/downloadAndroid?bd_source=fuceng" target="_blank">
+                            <i class="icon qunar_andr"></i>Android</a>
+                    </div>
+                </div>
+                <img src="//s.qunarzz.com/train_search/images/routine_code_banner_0516.png" class="routine_code">
+            </div>
+		</div>
+	</div>
+</div>
+<script>
+function getContentSize() {
+    var wh = document.documentElement.clientWidth;
+    var eh = document.getElementById('sidebar').style.width.replace('px','');
+    ch = (wh - eh) >= 1150 ? ch = (wh - eh) + "px" : "0px";
+    document.getElementById("qnrg").style.width = ch;
+}
+    window.onload = window.setTimeout(getContentSize,1300);
+    window.setTimeout(function(){document.getElementsByClassName('qn-banner')[0].style.display='none';},5000);;
+    window.onresize = getContentSize;
+</script>
+    
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">郭立lee | 去哪儿郭立 | lee.guo | https://leeguoo.com | https://myblog.leeguoo.com</span>
+</div>
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>-->
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/js/headBand.min.js"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+
+  </script>
+  <script type="text/javascript" src="//cdn.bootcss.com/raphael/2.2.1/raphael.min.js"></script>
+  <script type="text/javascript" src="//cdn.bootcss.com/flowchart/1.6.3/flowchart.min.js"></script>
+  <script type="text/javascript">
+      var requireId = 0;
+      $(function() {
+          $('.highlight.flow').each(function(index, item) {
+              var code = $(item).find('.code pre').text(),
+                  id = 'flow-' + requireId++;
+              $(item).attr('id', id);
+              $(item).attr('data-code', code);
+              $(item).html('');
+              var diagram = flowchart.parse(code);
+              diagram.drawSVG(id);
+          });
+      });
+  </script>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <script>
+  $(function(){
+    // 封装分享
+    function commonShare() {
+      var title = document.title,
+          link = location.href,
+          desc = $('.post-body p')[0].innerHTML,
+          imgSrc = $('#js-share-img').data('src') || $($('img')[0]).attr('src');
+      var commonConfig = {
+        title: title,
+        desc: desc,
+        link: link,
+        imgUrl: imgSrc,
+      };
+      wx.onMenuShareTimeline({
+        title: title,
+        link: link,
+        imgUrl: imgSrc
+      });
+      wx.onMenuShareAppMessage(commonConfig);
+      wx.onMenuShareQQ(commonConfig);
+      wx.onMenuShareWeibo(commonConfig);
+      wx.onMenuShareQZone(commonConfig);
+    }
+
+    // 请求: 微信分享
+    $.ajax({
+      type: "GET",
+      url: 'https://ued.qunar.com/ticket/wx',
+      data: {
+        url: window.location.href.split('#')[0],
+        jsApiList: [
+          'onMenuShareTimeline',
+          'onMenuShareAppMessage',
+          'onMenuShareQQ',
+          'onMenuShareWeibo',
+          'onMenuShareQZone'
+        ]
+      },
+      dataType: "jsonp",
+      jsonp: "sign",
+      success: function(res) {
+        wx.config({
+          debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+          appId: 'wx93dbe152c661b3bd', // 必填，公众号的唯一标识
+          timestamp: res.timestamp, // 必填，生成签名的时间戳
+          nonceStr: res.nonceStr, // 必填，生成签名的随机串
+          signature: res.signature,// 必填，签名，见附录1
+          jsApiList: [
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo',
+            'onMenuShareQZone'
+          ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+
+        wx.ready(function(res) {
+          commonShare();
+        })
+        wx.error(function(res){
+          console.log(res);
+        });
+      },
+      error: function(err) {
+        console.log(err);
+      }
+    })
+  });
+  $('.js-reading-position').headBand({
+		'background':'#ff561b',
+		'height':"3"
+	});
+  </script>
+
+  
+    <!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("BO9eK46P9VzLNPSvO36RsbwT-gzGzoHsz", "cN4Bh7rj4G1oYaAyLhiAf2PE");</script>
+<script>
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+	$(".leancloud_visitors").each(function() {
+		var url = $(this).attr("id").trim();
+		query.equalTo("url", url);
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {
+					var content = $(document.getElementById(url)).html() + '0';
+					$(document.getElementById(url)).html(content);
+					return;
+				}
+				for (var i = 0; i < results.length; i++) {
+					var object = results[i];
+					var content = $(document.getElementById(url)).html() + object.get('time');
+					$(document.getElementById(url)).html(content);
+				}
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+	});
+}
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = $(document.getElementById(url)).html() + counter.get('time');
+						$(document.getElementById(url)).html(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = $(document.getElementById(url)).html() + newcounter.get('time');
+						$(document.getElementById(url)).html(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else if ($('.post-title-link').length > 1) {
+		showTime(Counter);
+	}
+});
+</script>
+
+  
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
