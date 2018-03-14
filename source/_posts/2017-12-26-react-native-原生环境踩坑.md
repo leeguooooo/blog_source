@@ -14,5 +14,28 @@ carthage update # 项目目录下执行
 open Untitled.xcworkspace/
 ```
 
+
+## Unable to find a specification for `SocketRocket`
+
+* `xcodeproj` was renamed to `project`. Please update your Podfile accordingly.
+
+
+> 当在update或install时遇会到这个问题
+> 只需要把当前Pod的目录清理一下就行了。在终端执行以下命令：
+
+```shell
+pod repo remove master  
+pod setup 
+pod install
+```
+
+
+## 'ProtocolBuffers/ProtocolBuffers.h' file not found
+
+> 没有Pod进去的原因，改为
+
+    #import "ProtocolBuffers.h"
+    
+
 ----
 > 此文章只作为遇到问题的记录，如有相似问题请结合项目进行参考。

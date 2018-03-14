@@ -2,42 +2,46 @@ title:
   archive: 归档
   category: 分类
   tag: 标签
-  author: 作者
+  schedule: 日程表
+
+author: 博主
 
 menu:
-  home: 博客首页
+  home: 首页
   archives: 归档
   categories: 分类
   tags: 标签
-  github: Github
+  about: 关于
   search: 搜索
+  schedule: 日程表
+  sitemap: 站点地图
   commonweal: 公益404
-  joinus: 加入我们
-  Github: Github
-  tech: 大前端技术
-  product: 产品与设计
-  plan: 方案整理
-  explore: 前沿探索
-  team: 团队生活
-  projects: 团队项目
-  conf: leeConf
-  about: 关于我们
   weibo: 微博
   interview: 面试题
   rn: react native
-
 
 sidebar:
   overview: 站点概览
   toc: 文章目录
 
 post:
+  created: 创建于
+  modified: 更新于
+  sticky: 置顶
   posted: 发表于
-  in: 分类于
+  in: 分类
   read_more: 阅读全文
   untitled: 未命名
   toc_empty: 此文章未包含目录
-  top: 置顶
+  visitors: 阅读人数
+  wordcount: 字数
+  min2read: 时间≈
+  copyright:
+    author: 本文作者
+    link: 本文链接
+    license_title: 版权声明
+    license_content: '本博客所有文章除特别声明外，均采用
+      <a href="%s" rel="external nofollow" target="_blank">%s</a> 许可协议。转载请注明出处！'
 
 page:
   totally: 共有
@@ -46,7 +50,6 @@ page:
 footer:
   powered: "由 %s 强力驱动"
   theme: 主题
-
 
 counter:
   tag_cloud:
@@ -76,6 +79,9 @@ state:
   categories: 分类
   authors: 作者
 
+search:
+  placeholder: 搜索...
+
 cheers:
   um: 嗯..
   ok: OK
@@ -89,3 +95,4 @@ keep_on: 继续努力。
 symbol:
   comma: '， '
   period: '。 '
+  colon: '：'

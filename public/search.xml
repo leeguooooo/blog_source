@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[React 16.3 新特性]]></title>
+    <url>%2FReact-16-3-%E6%96%B0%E7%89%B9%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[React 16.3-alpha已经发布。这次发布都有哪些新特性呢，我们来一起看看。 新的Context API Context API总是很让人迷惑。这个API是官方的，但是官方又不希望开发者们使用这个API，说是这个API会在以后发生改变。现在就是那个改变的时刻。新的API已经被merge了。而且它看起来更加的“用户友好”了。尤其是你不得不使用redux、mobx的时候，可以选择新的Context API实现更加简单的状态管理。 新的API用起来非常的简单：React.createContext()，这样就创建了两个组件： 123456import &#123;createContext&#125; from 'react';const ThemeContext = createContext(&#123; background: 'yellow', color: 'white'&#125;); 调用createContext方法会返回两个对象，一个是Provider，一个是Consumer。 那个Provider是一个特殊的组件。它可以用来给子树里的组件提供数据。一个例子： 123456789class Application extends React.Component &#123; render() &#123; &lt;ThemeContext.Provider value=&#123;&#123;background: 'black', color: 'white'&#125;&#125;&gt; &lt;Header /&gt; &lt;Main /&gt; &lt;Footer /&gt; &lt;/ThemeContext.Provider&gt; &#125;&#125; 上例展示了如何传递“theme” context的。当然这些值可以是动态的（比如，基于this.state）。 下一步就是使用Consumer。 1234567891011const Header = () =&gt; &#123; &lt;ThemeContext.Consumer&gt; &#123;(context) =&gt; &#123; return ( &lt;div style=&#123;&#123;background: context.background, color: context.color&#125;&#125;&gt; Welcome! &lt;/div&gt; ); &#125;&#125; &lt;/ThemeContext.Consumer&gt;&#125; 如果在render Consumer的时候没有嵌套在一个Provider里面。那么就会使用createContext方法调用的时候设置的默认值。 注意: Consumer必须可以访问到同一个Context组件。如果你要创建一个新的context，用的是同样的入参，那么这个新建的context的数据是不可访问的。因此，可以把Context当做一个组件，它可以创建一次，然后可以export，可以import。 这个新的语法用了function as child模式（有时也叫做render prop模式）。如果不是很熟悉这个模式，那么推荐你看一下这些文章。 新的API不再要求你声明contextProps了。 新的声明周期方法 参考这个RFC。新的声明周期方法会被引入，而旧的会被废弃。 这一改变主要是为了强制推行最佳实践。你可以看看这篇文章来了解一下为什么这些生命周期方法会变得很诡异。这些最佳模式在React 16的异步绘制模式(Async Mode)下显得非常重要。 要被废弃的方法： componentWillMount–使用componentDidMount代替 componentWillUpdate–使用componentDidUpdate代替 componentWillReceiveProps–使用一个新的方法：static getDerivedStateFromProps来代替。 不过这些并不会立刻发生，他们可以用到React 16.4。在React 17里将被彻底移除。如果你开启了StrictMode或者AsyncMode，可以通过这样的方式来使用，但是会收到警告： UNSAFE_componentWillMount UNSAFE_componentWillReceiveProps UNSAFE_componentWillUpdate static getDerivedStateFromProps当componentWillReceiveProps我们需要其他的方式根据props的变动更新state。社区决定引入一个新的static方法来处理这个问题。 什么是静态方法？一个静态方法就是存在于类内，而不是类的实例内的方法。静态方法访问不到this，并且在声明的时候有static关键字在前面修饰。 但是，问题来了。既然这个方法没有办法访问this，那么如何调用this.setState呢？答案就是，不调用。这个方法直接返回需要更新的state的数据，或者返回null，如果没有什么需要更新的话。 12345678910static getDerivedStateFromProps(nextProps, prevState) &#123; if(nextProps.currentRow === prevState.lastRow) &#123; return null; &#125; return &#123; lastRow: nextProps.currentRow, isCrollingDown: nextProps.curentRow &gt; prevState.lastRow &#125;&#125; 值得注意的事你需要定义初始state的值。无论是在constructor里，或者是类属性。否则会报警告。 这个方法getDerivedStateFromProps()会在第一次挂载和重绘的时候都会调用到，因此你基本不用在constructor里根据传入的props来setState。 如果定义了getDerivedStateFromProps后，又定义了componentWillReceiveProps。那么，只有前者会被调用，并且你会收到一个警告。 一般你会使用一个回调来保证某些代码实在state更新之后才被调用的。那么，请把这些代码都移到componentDidUpdate里。 如果你不喜欢使用static关键字，那么你可以这样： 调用这个方法和之前调用this.setState的效果是一样的。只会修改这些返回的值，如果是null的话则不修改state。state的其他值都会保留。 123ComponentName.getDerivedStateFromProps = (nextProps, prevState) =&gt; &#123; // Your code here&#125; Static Mode 严格模式是一个新的方式来确保你的代码是按照最佳实践开发的。它实际是一个在React.StrictMode下的组件。它可以用在你的组件树的任何一部分上。 123456789101112131415import &#123;StrictMode&#125; from 'react'class Application extends React.Component &#123; render() &#123; return ( &lt;StrictMode&gt; &lt;Context.Provider value=&#123;&#123;background: 'black', color: 'white'&#125;&#125;&gt; &lt;Header /&gt; &lt;Main /&gt; &lt;Footer /&gt; &lt;/Context.Provider&gt; &lt;/StrictMode&gt; ); &#125;&#125; 如果一个在StricMode子树里的组件使用了componentWillMount方法，那么你会看到一个报错消息。 AsyncMode 异步模式在React.unsafe_AsyncMode下。使用AsncMode也会打开StrictMode模式下的警告。 如果你想学习更多异步模式的内容，你可以在下面的地方看到更多的文章和示例： https://build-mbfootjxoo.now.shhttps://github.com/koba04/react-fiber-resources 新版React Developer Tools 这个作者发文的时候居然是Firefox支持了最新版的React。而Chrome还木有。。。 原文地址：https://medium.com/@baphemot/whats-new-in-react-16-3-d2c9b7b6193b]]></content>
+      <categories>
+        <category>react</category>
+      </categories>
+      <tags>
+        <tag>react</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[react native 问题汇总]]></title>
+    <url>%2Freact-native-%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%2F</url>
+    <content type="text"><![CDATA[ReferenceError: Can’t find variable: event static getDerivedStateFromProps 作为被废弃的componentWillReceiveProps的替代，React提供了一个新的函数static getDerivedStateFromProps(nextProps, prevState) 注意前面的static，这意味着在这个函数中我们不能使用this, 该函数的返回值将用于更新state。如果不需要更新state，就返回null 1234static getDerivedStateFromProps(nextProps, prevState) &#123; if (nextProps.text === prevState.text) return null; return &#123; text: nextProps.text &#125;; // 相当于setState(&#123; text: nextProps.text &#125;);&#125; 16.3 生命周期相关改动为了支持未来的异步渲染特性，以下生命周期函数将被废弃 componentWillMount 请使用 componentDidMount代替 componentWillUpdate 请使用 componentDidUpdate代替 componentWillReceiveProps 请使用新增的 static getDerivedStateFromProps代替废弃警告会在React 16.4开启，废弃的函数预计在React 17.0移除 123456789101112// componentWillMount 请使用 componentDidMount代替 替换实例componentWillUpdate(nextProps, nextState) &#123; foo(nextProps, nextState); bar(this.props, this.state); nextProps.a === this.props.a;&#125;componentDidUpdate(prevProps, prevState) &#123; foo(this.props, this.state); bar(prevProps, prevState); this.props.a === prevProps.a;&#125;]]></content>
+      <categories>
+        <category>react native</category>
+      </categories>
+      <tags>
+        <tag>RN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python环境集成]]></title>
+    <url>%2Fpython%E7%8E%AF%E5%A2%83%E9%9B%86%E6%88%90%2F</url>
+    <content type="text"><![CDATA[进入https://pypi.python.org/pypi/pip，下载第二项。 pip install virtualenv wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz\#md5\=35f01da33009719497f01a4ba69d63c9 --no-check-certificate tar -xf pip-9.0.1.tar.gz virtualenv .venv source .venv/bin/activate pip install -r requirements.txt -i http://devpi.corp.qunar.com/qunar/dev/+simple/ tools/with_venv.sh python setup.py install Centos6.5-nodejsv4.X-expressCentos6.5+nodejsv4.x+express的安装 很高兴第一次在github中写东西，以后我会多在这里边写东西的为什么我想要写这个Centos6.5+nodejsv4.x+express的安装呢？首先我接触nodejs在4月份，然后一直是在windows下使用nodejs+express的，windows我们很熟悉，也容易处理一些文件等等，但是我们工作的时候避免不了在linux下使用各种软件，这里不得不提到nodejs了，当然linux的的性能等等的优点我这里就不阐述了。 #下面进入正题：（PS：网上关于Centos6.5+nodejsv4.x+express确实也很多，但是我照着网上的教程搞了一天还是失败了而且还很麻烦，因为centos里的东西太老了，比如使用nodejs4.x以上就要升级gcc到4.8以上，这个我尝试了好多还是失败了，后来我差点绝望了，不过我发现了一个办法可以，在这里跟大家说一声，希望少走弯路）(注意：这里的所有操作都在root模式下) 1.安装centos6.5可以在虚拟机下安装 2.打开centos6.5，打开终端，在root模式下操作，root模式稍微说一下（su回车，然后输入密码即可） 3.获取nodejs 资源，这里有一下几种模式 4.x——————————curl –silent –location https://rpm.nodesource.com/setup_4.x | bash - 5.x——————————curl –silent –location https://rpm.nodesource.com/setup_5.x | bash - 0.10—————————–curl –silent –location https://rpm.nodesource.com/setup | bash - 我当然安装比较新的版本，4.X 在root模式下输入其中的一个 4.安装yum install -y nodejs 5.测试是否成功node -v 成功会返回版本号 下面可以安装express框架，具体express框架的作用自己谷歌一下 1.npm install express -g 不过express安装之后还要安装一下npm install -g express-generator 具体为什么可以自己去了解这里就不多说了 2.验证是否建立一个文件夹，然后express myblog 然后你们就应该都会了。。。。。。]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LINUX如何优雅的编码]]></title>
+    <url>%2FLINUX%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E7%BC%96%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[oh-my-zshzshLinux shellLinux/Unix提供了很多种Shell，为毛要这么多Shell？ 难道用来炒着吃么？那我问你，你同类型的衣服怎么有那么多件？花色，质地还不一样。写程序比买衣服复杂多了，而且程序员往往负责把复杂的事情搞简单，简单的事情搞复杂。牛程序员看到不爽的Shell，就会自己重新写一套，慢慢形成了一些标准，常用的Shell有这么几种，sh、bash、csh等，想知道你的系统有几种shell，可以通过以下命令查看： cat /etc/shells 1234567[lee.guo@l-backyard.ops.dev.cn0 ~/qunar.com/qunar-backyard-v2]cat /etc/shells/bin/sh/bin/bash/sbin/nologin/bin/dash/bin/tcsh/bin/csh zsh简介Zsh是一个Linux下强大的shell, 由于大多数Linux产品安装，以及默认使用bash shell, 但是丝毫不影响极客们对zsh的热衷, 几乎每一款Linux产品都包含有zsh，通常可以用apt-get、urpmi或yum等包管理器进行安装 Zsh具有以下主要功能 开箱即用、可编程的命令行补全功能可以帮助用户输入各种参数以及选项 在用户启动的所有shell中共享命令历史 通过扩展的文件通配符，可以不利用外部命令达到find命令一般展开文件名 改进的变量与数组处理 在缓冲区中编辑多行命令 多种兼容模式，例如使用/bin/sh运行时可以伪装成Bourne shell 可以定制呈现形式的提示符；包括在屏幕右端显示信息，并在键入长命令时自动隐藏 可加载的模块，提供其他各种支持：完整的TCP与Unix域套接字控制，FTP客户端与扩充过的数学函数 完全可定制化 zsh安装sudo apt-get install zsh # Ubuntu sudo yum install zsh 取代bash，设为默认shellsudo usermod -s /bin/zsh exit oh-my-zsh安装直接用zsh会很蛋疼，因为zsh功能很强大但是太复杂，所以需要oh-my-zsh来将它简单化 直接用git从github上面下载包 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 直接使用脚本安装 cd oh-my-zsh/tools ./install.sh 你可以直接直接使用如下命令安装 curl sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" wget sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" oh-my-zsh主题vim themes/robbyrussell.zsh-theme 替换内容 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )" # PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)' PROMPT='%{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p%{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}% %{$reset_color%}&gt;' ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}" ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} " ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗" ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})" exz-conf vim 工具 GET CODE1234567CONFDIR=/home/lee.guoecho $CONFDIRcd $CONFDIRgit clone https://github.com/jaypei/exz-conf.gitcd exz-confgit submodule initgit submodule update VIM CONFIGinstallln -s $CONFDIR/exz-conf/vimconf/_vimrc ~/.vimrc ln -s $CONFDIR/exz-conf/vimconf/_gvimrc ~/.gvimrc ln -s $CONFDIR/exz-conf/vimconf/vimfiles ~/.vim # pylint ln -s $CONFDIR/exz-conf/vimconf/pylint.ini ~/.pylintrc updatingcd $CONFDIR/exz-conf git pull --rebase; git submodule update cd - usage 回车 等同于 : (normal) 空格 等同于 ,/ (normal) 0 等同于 ^ ，到行首字母前 (noarmal) Q 关闭文件 (normal) F4 or Shift+F4 切换 source/header (A) F5 or Shift+F5 语法静态检查 (SyntasticCheck) F8 or Shift+F8 VimWiki F11 or Shift+F11 tag list (tagbar) F12 or Shift+F12 目录树 (NERDTree) Ctrl+h 光标移进 左 侧分割窗 Ctrl+l 光标移进 右 侧分割窗 Ctrl+j 光标移进 下 侧分割窗 Ctrl+k 光标移进 上 侧分割窗 默认 leader key 已设置为 , 。 ,j 当前行下移 (normal) ,k 当前行上移 (normal) ,pp 切换paste和nopaste模式 ,m 设置当前位置单词高亮 ,n 取消当前位置单词高亮 ,/ 跳转到下一个高亮位置 ,c 清除所有高亮 ,s 删除所有行尾空白 ,, 保存文件，等同于 :w]]></content>
+      <categories>
+        <category>LINUX</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LINUX磁盘空间查看]]></title>
+    <url>%2FLINUX%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E6%9F%A5%E7%9C%8B%2F</url>
+    <content type="text"><![CDATA[显示磁盘分区上的可使用的磁盘空间df命令用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。 语法df(选项)(参数) 选项12345678910111213141516-a或--all：包含全部的文件系统；--block-size=&lt;区块大小&gt;：以指定的区块大小来显示区块数目；-h或--human-readable：以可读性较高的方式来显示信息；-H或--si：与-h参数相同，但在计算时是以1000 Bytes为换算单位而非1024 Bytes；-i或--inodes：显示inode的信息；-k或--kilobytes：指定区块大小为1024字节；-l或--local：仅显示本地端的文件系统；-m或--megabytes：指定区块大小为1048576字节；--no-sync：在取得磁盘使用信息前，不要执行sync指令，此为预设值；-P或--portability：使用POSIX的输出格式；--sync：在取得磁盘使用信息前，先执行sync指令；-t&lt;文件系统类型&gt;或--type=&lt;文件系统类型&gt;：仅显示指定文件系统类型的磁盘信息；-T或--print-type：显示文件系统的类型；-x&lt;文件系统类型&gt;或--exclude-type=&lt;文件系统类型&gt;：不要显示指定文件系统类型的磁盘信息；--help：显示帮助；--version：显示版本信息。 参数文件：指定文件系统上的文件。 实例12345678[root@l-opsapp1.ops.cn2 /home/q]# df -hFilesystem Size Used Avail Use% Mounted on/dev/vda2 9.9G 1.5G 7.9G 16% /tmpfs 1.9G 12K 1.9G 1% /dev/shm/dev/vda1 194M 54M 131M 29% /boot/dev/vda6 985M 38M 897M 5% /home/dev/vda7 60G 48G 9.1G 85% /home/q/dev/vda5 4.0G 2.9G 953M 76% /var 对文件和目录磁盘使用的空间的查看du命令也是查看使用空间的，但是与df命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看，还是和df命令有一些区别的。 语法du [选项][文件] 选项123456789101112131415-a或-all 显示目录中个别文件的大小。-b或-bytes 显示目录或文件大小时，以byte为单位。-c或--total 除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和。-k或--kilobytes 以KB(1024bytes)为单位输出。-m或--megabytes 以MB为单位输出。-s或--summarize 仅显示总计，只列出最后加总的值。-h或--human-readable 以K，M，G为单位，提高信息的可读性。-x或--one-file-xystem 以一开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过。-L&lt;符号链接&gt;或--dereference&lt;符号链接&gt; 显示选项中所指定符号链接的源文件大小。-S或--separate-dirs 显示个别目录的大小时，并不含其子目录的大小。-X&lt;文件&gt;或--exclude-from=&lt;文件&gt; 在&lt;文件&gt;指定目录或文件。--exclude=&lt;目录或文件&gt; 略过指定的目录或文件。-D或--dereference-args 显示指定符号链接的源文件大小。-H或--si 与-h参数相同，但是K，M，G是以1000为换算单位。-l或--count-links 重复计算硬件链接的文件。 实例查看当前目录下总大小12[root@l-opsapp1.ops.cn2 /home/q]# du -s49912968 . 查看当前目录下各文件及文件夹大小12345678910111213141516171819202122[root@l-opsapp1.ops.cn2 /home/q]# du -h --max-depth=1192K ./ops_deploy16K ./lost+found228K ./www7.0M ./collectd6.9M ./tomcat94M ./apache-flume-1.5.0-bin120M ./opsapp-tools279M ./java11M ./zeromq23M ./qagentcli994M ./qflume-ng16K ./salt46G ./var197M ./python2716K ./.code44K ./tools20K ./runit24K ./bds_deploy528K ./cache6.4M ./nrpe48G . 附清空大文件内容echo "" &gt; filename 以上资料均参考自linux命令大全]]></content>
+      <categories>
+        <category>LINUX</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[RN大版本升级 0.41 -> 0.51]]></title>
+    <url>%2FRN%E5%A4%A7%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7-0-41-0-51%2F</url>
+    <content type="text"><![CDATA[前言 本来打算升级的时候RN最新版还是0.51，直到升级实施起来RN已经更新到0.53。 react native部分修改package.json中react,react-native版本1234"dependencies": &#123; "react": "^16.3.0-alpha.1", "react-native": "^0.54.0"&#125; 根据react native 的changelog 修改不兼容的代码，同时需要注意用到的某些开源组件，是否对新版本兼容。修改不兼容的组件，升级/修改源码/重换组件 react/lib/XXX 已没有123var ReactChildren = require('react/src/ReactChildren');修改为React.Children 12345var ReactPropTypes = require('react/src/ReactPropTypes');修改为import PropTypes from 'prop-types';PropTypes.XXXX react-native-fance-html 库修改12345// HTMLStyles.js // import ReactPropTypeLocations from 'react/lib/ReactPropTypeLocations'// if (styleProps[key](testStyle, key, '', ReactPropTypeLocations.prop)) &#123;if (styleProps[key](testStyle, key, '', 'prop')) &#123;&#125; ios部分 更新依赖, 修改react,react-native版本. rm -rf node_modules qnpm install pod install --no-repo-update 清理xcode/模拟器缓存 如果确认自己代码没问题，相关依赖也都正确，试试清空 watchman/模拟器/xcode 缓存，清理的时候，关闭npm start，模拟器，xcode 如果 pod install 报错 -bash: /usr/local/bin/pod: /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby: bad interpreter: No such file or directory, 解决方案]]></content>
+      <categories>
+        <category>react native</category>
+      </categories>
+      <tags>
+        <tag>RN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[RN升级遇到的坑]]></title>
+    <url>%2FRN%E5%8D%87%E7%BA%A7%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91%2F</url>
+    <content type="text"><![CDATA[找不到index入口问题症状 RN找不到index入口 error: bundling failed: Error Cannot find entry file index.js in any of the roots 处理方法12将 index.android.js 重命名为 index.js然后把 index.ios.js 删除。 原因 0.49 版本最大的一个变化应该就是将两个平台的入口文件 index.android.js 与 index.ios.js 合并成了一个入口文件 index.js，但是 RN 并不会自动帮你完成这个改变，你需要自己完成这步操作. prop-types 报错症状 undefined is not an object evaluating ‘_react2.PropTypes.string’ 找不到PropTypes 处理方案1npm install --save prop-types 代码引入12import PropTypes from 'prop-types'; // ES6var PropTypes = require('prop-types'); // ES5 with npm 或者12345&lt;!-- development version --&gt;&lt;script src="https://unpkg.com/prop-types/prop-types.js"&gt;&lt;/script&gt;&lt;!-- production version --&gt;&lt;script src="https://unpkg.com/prop-types/prop-types.min.js"&gt;&lt;/script&gt; 使用下面例子仅供参考 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687import React from 'react';import PropTypes from 'prop-types';class MyComponent extends React.Component &#123; render() &#123; // ... do things with the props &#125;&#125;MyComponent.propTypes = &#123; // You can declare that a prop is a specific JS primitive. By default, these // are all optional. optionalArray: PropTypes.array, optionalBool: PropTypes.bool, optionalFunc: PropTypes.func, optionalNumber: PropTypes.number, optionalObject: PropTypes.object, optionalString: PropTypes.string, optionalSymbol: PropTypes.symbol, // Anything that can be rendered: numbers, strings, elements or an array // (or fragment) containing these types. optionalNode: PropTypes.node, // A React element. optionalElement: PropTypes.element, // You can also declare that a prop is an instance of a class. This uses // JS's instanceof operator. optionalMessage: PropTypes.instanceOf(Message), // You can ensure that your prop is limited to specific values by treating // it as an enum. optionalEnum: PropTypes.oneOf(['News', 'Photos']), // An object that could be one of many types optionalUnion: PropTypes.oneOfType([ PropTypes.string, PropTypes.number, PropTypes.instanceOf(Message) ]), // An array of a certain type optionalArrayOf: PropTypes.arrayOf(PropTypes.number), // An object with property values of a certain type optionalObjectOf: PropTypes.objectOf(PropTypes.number), // An object taking on a particular shape optionalObjectWithShape: PropTypes.shape(&#123; color: PropTypes.string, fontSize: PropTypes.number &#125;), // You can chain any of the above with `isRequired` to make sure a warning // is shown if the prop isn't provided. requiredFunc: PropTypes.func.isRequired, // A value of any data type requiredAny: PropTypes.any.isRequired, // You can also specify a custom validator. It should return an Error // object if the validation fails. Don't `console.warn` or throw, as this // won't work inside `oneOfType`. customProp: function(props, propName, componentName) &#123; if (!/matchme/.test(props[propName])) &#123; return new Error( 'Invalid prop `' + propName + '` supplied to' + ' `' + componentName + '`. Validation failed.' ); &#125; &#125;, // You can also supply a custom validator to `arrayOf` and `objectOf`. // It should return an Error object if the validation fails. The validator // will be called for each key in the array or object. The first two // arguments of the validator are the array or object itself, and the // current item's key. customArrayProp: PropTypes.arrayOf(function(propValue, key, componentName, location, propFullName) &#123; if (!/matchme/.test(propValue[key])) &#123; return new Error( 'Invalid prop `' + propFullName + '` supplied to' + ' `' + componentName + '`. Validation failed.' ); &#125; &#125;)&#125;; 原因从 React 16.0.0 开始，PropTypes 就已经不再由 React 提供了，而 fb 专门提供了 prop-types 模块，需要通过import PropTypes from ‘prop-types’来使用 PropTypes。0.48 版本的 RN 使用的是 16.0.0-alpha.12 版本的 React，alpha 版本还没有移除 PropTypes，所以之前项目不会有任何问题。而到了 0.49版本，自动将 React 升级到了 16.0.0-beta.5，这个版本已经移除了 React.PropTypes，所以再编译就会报错了，因为找不到 PropTypes 了。 react-native 出现 No component found for view with name “RNSVG*”症状 no component found for view with name ‘RNSVGPath’ 处理办法 ios解决方案 ##]]></content>
+      <categories>
+        <category>react native</category>
+      </categories>
+      <tags>
+        <tag>RN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[react native 原生环境踩坑]]></title>
+    <url>%2Freact-native-%E5%8E%9F%E7%94%9F%E7%8E%AF%E5%A2%83%E8%B8%A9%E5%9D%91%2F</url>
+    <content type="text"><![CDATA[IOS ‘MMMarkdown/MMMarkdown.h’ file not found 苹果原生环境MMMarkdown找不到，需要安装carthage123brew install carthagecarthage update # 项目目录下执行open Untitled.xcworkspace/ Unable to find a specification for SocketRocket xcodeproj was renamed to project. Please update your Podfile accordingly. 当在update或install时遇会到这个问题只需要把当前Pod的目录清理一下就行了。在终端执行以下命令： 123pod repo remove master pod setup pod install ‘ProtocolBuffers/ProtocolBuffers.h’ file not found 没有Pod进去的原因，改为 #import "ProtocolBuffers.h" 此文章只作为遇到问题的记录，如有相似问题请结合项目进行参考。]]></content>
+      <categories>
+        <category>react native</category>
+      </categories>
+      <tags>
+        <tag>RN</tag>
+        <tag>native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[react native 安卓真机开发者模式]]></title>
+    <url>%2Freact-native-%E5%AE%89%E5%8D%93%E7%9C%9F%E6%9C%BA%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[踩坑 安卓真机调试，摇一摇无法唤醒开发菜单 react native 安卓无法打开开发者菜单 react native无法调试 安卓开发者模式出不来 准备你需要开启USB调试才能在你的设备上安装你的APP。首先，确定你已经打开设备的USB调试开关确保手机电脑连接同一WiFi手机已打开可出现在顶部的应用程序权限各个手机设置方法不一致，以三星s6为例设置 --&gt; 应用程序 --&gt; [对应的程序] --&gt; 高级设置(出现在顶部的应用程序) [注意] android中setUseDeveloperSupport为true123456789101112public static ReactInstanceManager buildBundle(Activity activity, String register, String bundle)&#123; return ReactInstanceManager.builder() .setApplication(activity.getApplication()) .setJSBundleFile(getLocalBundlePath(activity) + bundle) .setJSMainModuleName("index.android") .addPackage(new MainReactPackage()) .addPackage(new StoreReactPackage()) .setUseDeveloperSupport(CommonConfig.isDebug) //这里必须设置成true .setInitialLifecycleState(LifecycleState.RESUMED) .build(); &#125;; 摇晃设备，打开开发者菜单。Dev Settings --&gt; Debug server host for device --&gt; 输入你电脑的IP地址和端口号 后话至此全部准备工作完成，开始你愉快的RN开发旅程吧。 如有什么疑问欢迎下方留言。]]></content>
+      <categories>
+        <category>react native</category>
+      </categories>
+      <tags>
+        <tag>RN</tag>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ECMAScript学习笔记(一)]]></title>
+    <url>%2FECMAScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80%2F</url>
+    <content type="text"><![CDATA[ECMAScript 学习笔记（一） es6标准的制定为javascript添加了很多新特性,今天主要说一下展开运算符。 函数调用中使用展开运算符es6之前：123function test(a, b, c) &#123; &#125;var args = [0, 1, 2];test.apply(null, args);//数组展开成多个参数 es6之后，利用es6的展开运算符这一新特性，简化了代码书写:123function test(a,b,c) &#123; &#125;var args = [0,1,2];test(...args); 用于解构赋值123456let [arg1,arg2,...arg3] = [1, 2, 3, 4];arg1 //1arg2 //2arg3 //['3','4']/* 注意： 解构赋值中展开运算符必须放在最后，不然会报错！！！*/ ES7对象展开运算符偶然发现对象还可以有这种操作，跟数组展开运算符大同小异，很方便啊~~123456789101112131415//解构赋值let &#123;x,y,...z&#125;=&#123;x:1,y:2,a:3,b:4&#125;;x; //1y; //2z; //&#123;a:3,b:4&#125;// 直接插值let a=&#123;x:1&#125;;let b=&#123;y:1,z:1,...a&#125;;//对象合并let a=&#123;x:1&#125;;let b=&#123;y:1&#125;;let c=&#123;...a,...b&#125;;c; //&#123;x:1,y:1&#125; 类数组对象变成数组(Array.from())一开始对类数组对象的认识比较模糊，特地了解了一下什么是类数组对象，对于类数组对象的解释和大家说一下： 关于类数组对象的介绍：JavaScript中有一些看起来像却又不是数组的对象，叫做类数组。简单举个例子：1let t=&#123;0:52,1:63,2:4,length:3&#125;; 我理解的简单一点，首先它必须是一个对象类型，其次对象内部的key表示的是当前的索引值，以及length 属性告诉我们对象的元素个数. 类数组对象自身不具有push、forEach、indexOf等数组对象对应的方法。 这里es6新特性对于类数组对象转化为数组，提供了更简便的方法。es6之前：123let t=&#123;0:52,1:63,2:4,length:3&#125;;let arr=[].slice.call(t);console.log(arr) // [52, 63, 4] es6之后：12let t=&#123;0:52,1:63,2:4,length:3&#125;;let d=Array.from(t); // [52, 63, 4] 错误示范12let t=&#123;0:52,1:63,2:4,length:3&#125;;let arr=[...t];// 这种写法是错误的，类数组对象明确定义不能直接使用数组对象的方法。只有展开对象是可遍历的情况下可以这样写。 正确示范123var tr=&#123;x:52,y:63,z:4&#125;;//展开对象可遍历var arr=[...d];arr；// [52, 63, 4] 本文只是对es6展开运算符做了简单介绍，如有写不对的地方，欢迎指正！ 参考文章链接：ECMAScript 6学习笔记（一）：展开运算符]]></content>
+      <categories>
+        <category>javascrip</category>
+      </categories>
+      <tags>
+        <tag>es6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[react native样式整理]]></title>
+    <url>%2Freact-native%E6%A0%B7%E5%BC%8F%E6%95%B4%E7%90%86%2F</url>
+    <content type="text"><![CDATA[react native 样式表整理 整理下rn的常用样式，供新手参考： Flexbox布局样式 样式名称 k v 解释 项目对齐 alignItems flex-startflex-endcenterstretch 自身对齐 alignSelf flex-startflex-endcenterautostretch flex-start：与父容器首部对齐flex-end:与父容器尾部对齐 center：位于垂直位置auto：按照自身设置的宽高来显示，如果没设置，效果跟streth一样stretch：垂直拉伸 该属性通过定义flex容器的主轴方向来决定felx子项在flex容器中的位置。这将决定flex需要如何进行排列 flexDirection rowrow-reversecolumncolumn-reverse row：主轴与行内轴方向作为默认的书写模式。即横向从左到右排列（左对齐）。row-reverse：对齐方式与row相反column：主轴与块轴方向作为默认的书写模式。即纵向从上往下排列（顶对齐）column-reverse：对齐方式与column相反。]]></content>
+      <categories>
+        <category>react native</category>
+      </categories>
+      <tags>
+        <tag>RN</tag>
+        <tag>样式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[用D3实现伪3D效果金字塔]]></title>
+    <url>%2F%E7%94%A8d3%E5%AE%9E%E7%8E%B0%E4%BC%AA3d%E6%95%88%E6%9E%9C%E9%87%91%E5%AD%97%E5%A1%94%2F</url>
+    <content type="text"><![CDATA[用d3实现金字塔伪3d效果 工作中偶然接触到d3，慢慢开始熟悉d3，并可以根据效果图进行图形绘制，要完全掌握d3绘图技巧需要不断深入学习研究，今天要展示的是我遇到的一个类似3d效果的金字塔效果图，其实是个伪3d，由于本人学术不精，只想到利用path拼接面的形式来实现（其实一开始想研究研究threejs，but needtime,so…),废话不多说，绘制过程代码如下： 定义图表需要的数据结构1234567891011121314151617181920212223 /*植被类型*/let vegetation_type = ['人工林', '沼泽', '常绿阔叶灌丛', '灌草丛', '红树林'];/*金字塔每层颜色*/let vegetation_color = [&#123; startColor: '#077cec', endColor: '#126fbf'&#125;, &#123; startColor: '#2c6cff', endColor: '#2783df'&#125;, &#123; startColor: '#628eff', endColor: '#2d74cc'&#125;, &#123; startColor: '#60e9e9', endColor: '#46b7b3'&#125;, &#123; startColor: '#fffe2c', endColor: '#fffe2c'&#125;];/*定义金字塔最大宽度*/let w_pyramid_max = 148;/*定义金字塔最大高度*/let h_pyramid_max = 138; 创建svg1234let svg = d3.select('#pyramid') .append('svg') .attr('width', 400) .attr('height', 400); 生成金字塔1234567891011121314151617181920function CreatePyramid(tra_x, tra_y, startColor, endColor, path_bot, path_ins) &#123; let set_path_ins=path_ins||''; let g_contain = svg.append('g') .attr('transform', 'translate(' + tra_x + ',' + tra_y + ')'); let g_bottom = g_contain.append('g') .attr('transform', 'translate(0,0)'); let path_bottom = g_bottom.append('path') .attr('d', function() &#123; return path_bot; &#125;) .attr('fill', startColor); // .attr('stroke', '#3ed8fb'); let g_inside = g_contain.append('g') .attr('transform', 'translate(0,0)'); let path_inside = g_inside.append('path') .attr('d', function() &#123; return set_path_ins; &#125;) .attr('fill', endColor);&#125;; 调用函数方法并传参123456789101112131415161718192021222324252627282930let [axis_a,axis_b,axis_c,axis_d]=[[],[],[],[]];//外层坐标点let [axisIn_a,axisIn_b,axisIn_c,axisIn_d]=[[],[],[],[]];//内层坐标点//循环5组数据，调用函数方法并赋值vegetation_type.map((t, i) =&gt; &#123; let tra_x = 100; //x轴偏移量 let tra_y = 100 - i * 26; //y轴偏移量 let startColor = vegetation_color[i].startColor; //外层颜色 let endColor = vegetation_color[i].endColor; //内层颜色 //外层4个坐标点 axis_a=[12.8*(i+1),118]; axis_b=[14.8*i,138]; axis_c=[w_pyramid_max-14.8*i,h_pyramid_max]; axis_d=[w_pyramid_max-12.8*(i+1),118]; //里层4个坐标点 axisIn_a=[axis_a[0]+6,112]; axisIn_b=[axis_a[0],118]; axisIn_c=[w_pyramid_max-axis_a[0],118] axisIn_d=[148-axis_a[0]-6*(i+1),112]; if(i===4)&#123; //最顶层 let path_bot = 'M'+w_pyramid_max/2+','+108+'L'+axis_b[0]+','+axis_b[1]+'L'+90+','+axis_c[1]+' Z'; CreatePyramid(tra_x, tra_y, startColor, endColor,path_bot); &#125;else&#123; let path_bot = 'M'+axis_a[0]+','+axis_a[1]+'L'+axis_b[0]+','+axis_b[1]+'L'+axis_c[0]+','+axis_c[1]+'L'+axis_d[0]+','+axis_d[1]+' Z'; let path_ins = 'M'+axisIn_a[0]+','+axisIn_a[1]+'L'+axisIn_b[0]+','+axisIn_b[1]+'L'+axisIn_c[0]+','+axisIn_c[1]+'L'+axisIn_d[0]+','+axisIn_d[1]+' Z'; CreatePyramid(tra_x, tra_y, startColor, endColor,path_bot,path_ins); &#125; &#125;); 点击跳转Demo 最终效果呈现：]]></content>
+      <categories>
+        <category>D3</category>
+      </categories>
+      <tags>
+        <tag>D3</tag>
+        <tag>金字塔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[lisa面试总结1001篇 - 0001]]></title>
+    <url>%2F%E6%9D%8E%E7%88%BD%E7%9A%84%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%930001%2F</url>
+    <content type="text"><![CDATA[发布到线上的版本发现问题，git回滚怎么实现？ 远程分支回滚的三种办法： 方法一： revert1234git revert HEAD //撤销最近一次提交git revert HEAD~1 //撤销上上次的提交，注意：数字从0开始git revert 0ffaacc //撤销0ffaacc这次提交git push origin master 方法二： reset （不推荐， 不尊重历史记录）123// reset是指将当前head的内容重置，不会留任何痕迹。git reset --hard HEAD^git push origin master -f 注意，revert和reset的区别: revert是放弃指定提交的修改，但是会生成一次新的提交，需要填写提交注释，以前的历史记录都在. reset是指将HEAD指针指到指定提交，历史记录中不会出现放弃的提交记录。 关于远程仓库回滚 首先，必须要明白的一件事，任何普通用户不能擅自做有关远程仓库回退的操作，如果你擅自回滚了远程仓库，会对项目团队其他人造成不可预知的影响。如果需要回退版本，先联系项目的仓库管理员，在团队其他人都对自己本地未提交的工作做好备份之后，再进行远程仓库回退操作，操作结束后，团队成员需要重新同步远程仓库后继续自己的工作。 react什么情况会触发页面重新渲染 &emsp; 参考链接： React组件生命周期小结 首次加载 setState改变组件内部state 接收到新的props react-router了解多少，怎么实现路由页面的切换 svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。 webpack怎么实现线上版本发布 和本地代码分离，webpack配置项怎么配置 第一步，分别设置不同的接口地址分别创建下面的两个文件：12/config/dev.env.js/config/prod.env.js 这两个文件就是针对生产环境和发布环境设置不同参数的文件。我们打开dev.en.js文件。代码如下： 123456var merge = require('webpack-merge')var prodEnv = require('./prod.env')module.exports = merge(prodEnv, &#123; NODE_ENV: '"development"'&#125;) 在NODE_ENV下面增加一项，代码如下： 1234567var merge = require('webpack-merge')var prodEnv = require('./prod.env')module.exports = merge(prodEnv, &#123; NODE_ENV: '"development"', API_ROOT: '"//192.168.1.8/api"'&#125;) 编辑prod.env.js文件 1234module.exports = &#123; NODE_ENV: '"production"', API_ROOT: '"//www.baidu.com/api"'&#125; 在经过这样的配置之后，我们在运行 12npm run dev //测试环境npm run build //打包项目的时候，打包的是服务器正式接口 第二部，在代码中调用设置好的参数打开src/config/api.js文件，将原来开头的代码 12// 配置API接口地址var root = 'https://cnodejs.org/api/v1' 修改为12// 配置API接口地址var root = process.env.API_ROOT 用过redux吗 Redux的官网中用一句话来说明Redux是什么: Redux是针对JavaScript应用的可预测状态容器 redux 使用场景 用户的使用方式复杂 不同身份的用户有不同的使用方式（比如普通用户和管理员） 多个用户之间可以协作 与服务器大量交互，或者使用了WebSocket View要从多个来源获取数据 从组件角度： 某个组件的状态，需要共享 某个状态需要在任何地方都可以拿到 一个组件需要改变全局状态 一个组件需要改变另一个组件的状态 发生上面情况时，如果不使用 Redux 或者其他状态管理工具，不按照一定规律处理状态的读写，代码很快就会变成一团乱麻。你需要一种机制，可以在同一个地方查询状态、改变状态、传播状态的变化。 总之，不要把 Redux 当作万灵丹，如果你的应用没那么复杂，就没必要用它。另一方面，Redux 只是 Web 架构的一种解决方案，也可以选择其他方案。 redux文档-阮一峰Redux简介-慕课网]]></content>
+      <categories>
+        <category>面试题</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+        <tag>react</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我的第一篇文章]]></title>
+    <url>%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%2F</url>
+    <content type="text"><![CDATA[雪落无绪，梨花弄雨，美丽的相遇，春风依依。淡淡的年华似水，流逝的思念，没有谁不想走出爱的荆棘。 一段感情的浓浓蜜意，只是为失落做了更深的苦凄，不是守不住颜花玫丽；因为风，因为雨，因为有太多的折磨经历。多想与你共谋岁月，同渡一生，只是你的影袂已在千里之外，相隔山水重重。一个人走在冷冷风中，雪花飘飘如梦，痴想着守护今生，不要有什么海誓山盟，那不过是离别的誓词，为岁月中的相思留下满心的惆怅。春色撩人，春花茵茵，盛开的春景中遗落了爱的脚步。流水无情，情书难诉，其实水在洗涤着落香，失落的爱情。 你走了，你走向天涯的远方，没有音信，盼不到归期。鸿雁常飞，轮回秋月，收割者收去了季节的金黄，只余下空空荡荡的旷野，稀稀落落的残梦。天空蓝的莫名，白云轻轻，不要惊扰了思念，不要安慰孤独的心灵。感不到温暖，饮一壶老酒，燃烧胸膛，不去熄灭爱的征程。 听风的私语，听雨的悲泣，听不见呼唤的声音，无法走近心的距离。明月圆了，思念瘦了，总是在黎明前疲惫的睡去。阳光明媚，却针刺般痛，其实是无法调节自己的心情，关闭窗棂，任黑暗蔓延。 太久的时日，太久的孤单，内心深处依旧向往着，有一天你能突然出现，不在让一颗心永远沁泡在冰冷的深渊。宽阔的海岸正在被疯狂的浪吞噬，浩瀚的辽原只有一束大漠孤烟。一个旅行者，你的生命会在这荒凉里残喘吗？不，你等待吧！还有柔和的秋风，夕阳的璀璨。 你已经远走，留下一个梦，一个让人日夜的思念。都有谁一生为爱风雨兼程，又有谁能走过心中爱的渡口，跋涉追求需要一个爱的理由。若你远走只是为了邂逅，不如剪断最初的信守。你已经远走，离别时泪水流，那才是爱的语言。思程程，念漫漫，相思犹自长哀叹。 彼岸花开，空留牵念，山水有相逢，爱渐行渐远，思终结了爱恨情缘，在叶落失眠的夜，抽出一封封曾经灌满爱情的信笺，读过了午夜，感动了黎明。 素描菊淡，清香袭婉，你守望着凝练的深秋。天蓝蓝，遮拙疏影间飘零的衣衫，绣红的胸膛，北风吹老了灿烂。期语无寄，妥协给了生活，爱却不能放下。也许那是一个永远无法弥补的残局，你下了一半，不再落子，成为勾人心弦的悬念。 时光的河流轻轻淌过，凡世的纯美开不了天长地久。如果你曾经拥有，请珍惜，也许今生今世无缘在续。花泥往事，烟雨悠悠，蹒跚步履，白发拂风；真的爱，爱的真，婉约的故事多少伤情。 来了去了，穿越你的世界，读懂的人痴迷进去，流念停泊。春天，漫山的杏花浓郁芳香，只是品尝了酸涩的果子。 渡口斑驳的记忆中，思念成为涌动的潮流。]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>乱写</tag>
+      </tags>
+  </entry>
+</search>

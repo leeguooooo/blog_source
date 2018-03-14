@@ -1,22 +1,51 @@
-<!doctype html>
-<html class="theme-next use-motion theme-next-mist">
-<head>
+<!DOCTYPE html>
+
+
+
   
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<link rel="apple-touch-icon" href="icon.png" />
-<link rel="apple-touch-icon-precomposed" href="icon.png" />
+<meta name="theme-color" content="#222">
+<meta name="baidu-site-verification" content="v3WPgfCRrA" />
+<meta name="google-site-verification" content="unpgIfuUXIXF_7KwU_A0Yqpy9tkr9uKV_Yq_x-wQn7I" />
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="baidu-site-verification" content="v3WPgfCRrA" />
-<meta name="google-site-verification" content="unpgIfuUXIXF_7KwU_A0Yqpy9tkr9uKV_Yq_x-wQn7I" />
-<link rel="stylesheet" type="text/css" href="https://q.qunarzz.com/train_pc_search/prd/styles/qn_banner@3d6d5040a7c96cdfea265536a84ed597.css"/>
 
 
 
@@ -24,13 +53,30 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
 
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -40,7 +86,12 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
 
 
 <meta property="og:type" content="website">
@@ -52,66 +103,103 @@
 <meta name="twitter:title" content="郭立lee - 个人博客">
 
 
-<script type="text/javascript" id="hexo.configuration">
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Mist',
-    sidebar: 'always'
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
   };
 </script>
 
-<script>
-    (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
-                alert('密码错误！');
-                history.back();
-            }
-        }
-    })();
-</script>
 
-  <title> 郭立lee - 个人博客 </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <link rel="canonical" href="https://xn--v4q63d8za.xn--6qq986b3xl/"/>
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "44802c07"
+    });
+  daovoice('update');
+  </script>
+
+
+  <title>郭立lee - 个人博客</title>
   
 
 
 
-  <div class="container one-column 
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <!-- href: config.root -->
-  <a href="https://leeguoo.com/" class="brand" rel="start">
-      <span class="logo">
-        <i class="icon-next-logo"></i>
-      </span>
-      <span class="site-title lee">郭立lee - 个人博客</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
+    <a href="https://github.com/leeguooooo"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub"></a>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">郭立lee - 个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -119,36 +207,36 @@
 
   
     <a href="https://leeguoo.com/" class="lee menu-item">GU0</a>
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon icon-next-home"></i> <br />
-            博客首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            <i class="menu-item-icon icon-next-categories"></i> <br />
-            分类
+            
+            首页
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            <i class="menu-item-icon icon-next-archives"></i> <br />
+          <a href="/archives/" rel="section">
+            
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+            标签
           </a>
         </li>
       
         
         <li class="menu-item menu-item-rn">
           <a href="/categories/react-native/" rel="section">
-            <i class="menu-item-icon icon-next-rn"></i> <br />
+            
             react native
           </a>
         </li>
@@ -156,137 +244,703 @@
         
         <li class="menu-item menu-item-interview">
           <a href="/categories/面试题/" rel="section">
-            <i class="menu-item-icon icon-next-interview"></i> <br />
+            
             面试题
           </a>
         </li>
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
 
   
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
 </nav>
+
+
+
  </div>
     </header>
 
     <main id="main" class="main">
-      
       <div class="main-inner">
-        <div id="content" class="content"> 
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
     
       
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    
-    
-        
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
-    <header class="post-header">
-      <input type="text" id="post_title" value="python环境集成" hidden/>
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/React-16-3-新特性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭立lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭立lee - 个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/React-16-3-新特性/" itemprop="url">React 16.3 新特性</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
             
-              <a class="post-title-link" href="/python环境集成/" itemprop="url">
-                python环境集成
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        
-        <span class="post-time">
-          <!-- 发表于 -->
-          <span class="iconfont">&#xf19f;</span>
-          <time itemprop="dateCreated" datetime="2018-01-08T18:15:07+08:00" content="2018-01-08">
-            2018-01-08
-          </time>
-        </span>
-
-        
-        <span class="post-time">
-          &nbsp; | &nbsp;
-          <span class="iconfont">&#xf024;</span>
-          <a href="/authors/郭立lee/">郭立lee</a>
-        </span>
-        
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp;
-            <!-- 分类于 -->
-            <span class="iconfont">&#xf1d0;</span>
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/python/" itemprop="url" rel="index">
-                  <span itemprop="name">python</span>
-                </a>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
               </span>
-
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-09T21:04:04+08:00">
+                2018-03-09
+              </time>
+            
 
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-13T18:14:11+08:00">
+                2018-03-13
+              </time>
+            
+            
+            <span class="post-time">
+              &nbsp; | &nbsp;
+              <span class="iconfont">&#xf024;</span>
+              <a href="/authors/郭立lee/">郭立lee</a>
+            </span>
             
           </span>
-        
 
-        
           
-        
-
-        
-        	 <span id="/python环境集成/"class="leancloud_visitors"  data-flag-title="python环境集成">
-                &nbsp; | &nbsp;
-                <span class="iconfont">&#xf03a;</span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
                 </span>
-        
 
-        
-        </span>
-      </div>
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/React-16-3-新特性/" class="leancloud_visitors" data-flag-title="React 16.3 新特性">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读人数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-divider">|</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  1,312
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时间≈</span>
+                
+                <span title="时间≈">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-
-
-    </header>
-
-    <div class="post-body">
-
-      
-      
+    
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fn9da8go6vj308b04owef.jpg" rel="gallery_cjd04q4jq000uehpz2ftrh8au"
+                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fp6vsosgqzj30g207i0sw.jpg" rel="gallery_cjeqo37hr000yy4pzb8em4eus"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn9da8go6vj308b04owef.jpg" itemprop="contentUrl" style="max-height: 300px"/>
+                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fp6vsosgqzj30g207i0sw.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+            React 16.3-alpha已经发布。这次发布都有哪些新特性呢，我们来一起看看。
+新的Context API
+Context API总是很让人迷惑。这个API是官方的，但是官方又不希望开发者们使用这个API，说是这个API会在以后发生改变。现在就是那个改变的时刻。新的API已经被merge了。而且它看起来更加的“用户友好”了。尤其是你不得不使用redux、mobx的时候，可以选择新的Conte
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/React-16-3-新特性/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-问题汇总/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭立lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭立lee - 个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/react-native-问题汇总/" itemprop="url">react native 问题汇总</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-09T20:34:43+08:00">
+                2018-03-09
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-09T21:04:22+08:00">
+                2018-03-09
+              </time>
+            
+            
+            <span class="post-time">
+              &nbsp; | &nbsp;
+              <span class="iconfont">&#xf024;</span>
+              <a href="/authors/郭立lee/">郭立lee</a>
+            </span>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react-native/" itemprop="url" rel="index">
+                    <span itemprop="name">react native</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/react-native-问题汇总/" class="leancloud_visitors" data-flag-title="react native 问题汇总">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读人数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-divider">|</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  230
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时间≈</span>
+                
+                <span title="时间≈">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+    
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg" rel="gallery_cjeqo37ht0011y4pzy4mhtofl"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+            ReferenceError: Can’t find variable: event
+static getDerivedStateFromProps
+作为被废弃的componentWillReceiveProps的替代，React提供了一个新的函数static getDerivedStateFromProps(nextProps, prevState)
+注意前面的static，这意味着在这个函数中
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/react-native-问题汇总/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/python环境集成/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭立lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭立lee - 个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/python环境集成/" itemprop="url">python环境集成</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-08T18:15:07+08:00">
+                2018-01-08
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-01-18T22:17:40+08:00">
+                2018-01-18
+              </time>
+            
+            
+            <span class="post-time">
+              &nbsp; | &nbsp;
+              <span class="iconfont">&#xf024;</span>
+              <a href="/authors/郭立lee/">郭立lee</a>
+            </span>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/python环境集成/" class="leancloud_visitors" data-flag-title="python环境集成">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读人数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-divider">|</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  589
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时间≈</span>
+                
+                <span title="时间≈">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+    
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fn9da8go6vj308b04owef.jpg" rel="gallery_cjeqo37hq000wy4pzok5xs1nc"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn9da8go6vj308b04owef.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -303,18 +957,34 @@
             进入https://pypi.python.org/pypi/pip，下载第二项。
 pip install virtualenv
 
-wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05
+wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz\#md5\=35f01d
             ...
           </span>
           <div class="post-more-link text-center">
-            <a class="btn" href="/python环境集成/#more" rel="contents">
+            <a class="btn" href="/python环境集成/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
     </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -324,99 +994,187 @@ wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb0
         <div class="post-eof"></div>
       
     </footer>
-
+  </div>
+  
+  
+  
   </article>
 
-    
-    
-    
-        
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
-    <header class="post-header">
-      <input type="text" id="post_title" value="LINUX如何优雅的编码" hidden/>
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/LINUX如何优雅的编码/" itemprop="url">
-                LINUX如何优雅的编码
-              </a>
-            
-          
-        </h1>
+    
       
 
-      <div class="post-meta">
-        
-        <span class="post-time">
-          <!-- 发表于 -->
-          <span class="iconfont">&#xf19f;</span>
-          <time itemprop="dateCreated" datetime="2018-01-08T17:00:36+08:00" content="2018-01-08">
-            2018-01-08
-          </time>
-        </span>
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/LINUX如何优雅的编码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭立lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭立lee - 个人博客">
+    </span>
+
+    
+      <header class="post-header">
 
         
-        <span class="post-time">
-          &nbsp; | &nbsp;
-          <span class="iconfont">&#xf024;</span>
-          <a href="/authors/郭立lee/">郭立lee</a>
-        </span>
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/LINUX如何优雅的编码/" itemprop="url">LINUX如何优雅的编码</a></h1>
         
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp;
-            <!-- 分类于 -->
-            <span class="iconfont">&#xf1d0;</span>
+        <div class="post-meta">
+          <span class="post-time">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/LINUX/" itemprop="url" rel="index">
-                  <span itemprop="name">LINUX</span>
-                </a>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
               </span>
-
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-08T17:00:36+08:00">
+                2018-01-08
+              </time>
+            
 
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-01-08T17:54:14+08:00">
+                2018-01-08
+              </time>
+            
+            
+            <span class="post-time">
+              &nbsp; | &nbsp;
+              <span class="iconfont">&#xf024;</span>
+              <a href="/authors/郭立lee/">郭立lee</a>
+            </span>
             
           </span>
-        
 
-        
           
-        
-
-        
-        	 <span id="/LINUX如何优雅的编码/"class="leancloud_visitors"  data-flag-title="LINUX如何优雅的编码">
-                &nbsp; | &nbsp;
-                <span class="iconfont">&#xf03a;</span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LINUX/" itemprop="url" rel="index">
+                    <span itemprop="name">LINUX</span>
+                  </a>
                 </span>
-        
 
-        
-        </span>
-      </div>
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/LINUX如何优雅的编码/" class="leancloud_visitors" data-flag-title="LINUX如何优雅的编码">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读人数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-divider">|</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  954
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时间≈</span>
+                
+                <span title="时间≈">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-
-
-    </header>
-
-    <div class="post-body">
-
-      
-      
+    
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fn9b741sfnj30d608zt9c.jpg" rel="gallery_cjd04q4jo000qehpzjkebwuim"
+                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fn9b741sfnj30d608zt9c.jpg" rel="gallery_cjeqo37hn000sy4pzj0wuhumx"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn9b741sfnj30d608zt9c.jpg" itemprop="contentUrl" style="max-height: 300px"/>
+                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn9b741sfnj30d608zt9c.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -432,18 +1190,34 @@ wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb0
             
             oh-my-zshzshLinux shellLinux/Unix提供了很多种Shell，为毛要这么多Shell？
 
-难道用来炒着吃么？那我问你，你同类型的衣服怎么有那么多件？花色，质地还不一样。写程序比买衣服复杂多了，而且程序员往往负责把复杂的事情搞简单，简单的事情搞复杂。牛程序员看到不爽的She
+难道用来炒着吃么？那我问你，你同类型的衣服怎么有那么多件？花色，质地还不一样。写程序比买衣服复杂多了，而且程序员往往负责把复杂的事情搞简单，简单的事情搞复杂。牛程序员看到不爽的Shell，就会自己重新写一套，慢慢形成了一些标准，常用的Shell有这么几种，sh、bash、csh等，
             ...
           </span>
           <div class="post-more-link text-center">
-            <a class="btn" href="/LINUX如何优雅的编码/#more" rel="contents">
+            <a class="btn" href="/LINUX如何优雅的编码/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
     </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -453,99 +1227,187 @@ wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb0
         <div class="post-eof"></div>
       
     </footer>
-
+  </div>
+  
+  
+  
   </article>
 
-    
-    
-    
-        
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
-    <header class="post-header">
-      <input type="text" id="post_title" value="LINUX磁盘空间查看" hidden/>
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/LINUX磁盘空间查看/" itemprop="url">
-                LINUX磁盘空间查看
-              </a>
-            
-          
-        </h1>
+    
       
 
-      <div class="post-meta">
-        
-        <span class="post-time">
-          <!-- 发表于 -->
-          <span class="iconfont">&#xf19f;</span>
-          <time itemprop="dateCreated" datetime="2018-01-03T11:34:32+08:00" content="2018-01-03">
-            2018-01-03
-          </time>
-        </span>
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/LINUX磁盘空间查看/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭立lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭立lee - 个人博客">
+    </span>
+
+    
+      <header class="post-header">
 
         
-        <span class="post-time">
-          &nbsp; | &nbsp;
-          <span class="iconfont">&#xf024;</span>
-          <a href="/authors/郭立lee/">郭立lee</a>
-        </span>
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/LINUX磁盘空间查看/" itemprop="url">LINUX磁盘空间查看</a></h1>
         
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp;
-            <!-- 分类于 -->
-            <span class="iconfont">&#xf1d0;</span>
+        <div class="post-meta">
+          <span class="post-time">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/LINUX/" itemprop="url" rel="index">
-                  <span itemprop="name">LINUX</span>
-                </a>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
               </span>
-
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-03T11:34:32+08:00">
+                2018-01-03
+              </time>
+            
 
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-01-03T12:37:42+08:00">
+                2018-01-03
+              </time>
+            
+            
+            <span class="post-time">
+              &nbsp; | &nbsp;
+              <span class="iconfont">&#xf024;</span>
+              <a href="/authors/郭立lee/">郭立lee</a>
+            </span>
             
           </span>
-        
 
-        
           
-        
-
-        
-        	 <span id="/LINUX磁盘空间查看/"class="leancloud_visitors"  data-flag-title="LINUX磁盘空间查看">
-                &nbsp; | &nbsp;
-                <span class="iconfont">&#xf03a;</span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LINUX/" itemprop="url" rel="index">
+                    <span itemprop="name">LINUX</span>
+                  </a>
                 </span>
-        
 
-        
-        </span>
-      </div>
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/LINUX磁盘空间查看/" class="leancloud_visitors" data-flag-title="LINUX磁盘空间查看">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读人数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-divider">|</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  921
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时间≈</span>
+                
+                <span title="时间≈">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-
-
-    </header>
-
-    <div class="post-body">
-
-      
-      
+    
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fn3aybt7u1j30lo08swgg.jpg" rel="gallery_cjd04q4jn000pehpzoxskrm5f"
+                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fn3aybt7u1j30lo08swgg.jpg" rel="gallery_cjeqo37hk000ry4pznqmht8uu"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn3aybt7u1j30lo08swgg.jpg" itemprop="contentUrl" style="max-height: 300px"/>
+                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn3aybt7u1j30lo08swgg.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -561,18 +1423,34 @@ wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb0
             
             显示磁盘分区上的可使用的磁盘空间df命令用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。
 语法df(选项)(参数)
-选项12345678910111213141516-a或--all：包含全部的文件系统；--block-s
+选项12345678910111213141516-a或--all：包含全部的文件系统；--block-size=&lt;区块大小&gt;：以指定的区块大小来显示区块数目；-h或--human-readab
             ...
           </span>
           <div class="post-more-link text-center">
-            <a class="btn" href="/LINUX磁盘空间查看/#more" rel="contents">
+            <a class="btn" href="/LINUX磁盘空间查看/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
     </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -582,99 +1460,187 @@ wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb0
         <div class="post-eof"></div>
       
     </footer>
-
+  </div>
+  
+  
+  
   </article>
 
-    
-    
-    
-        
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
-    <header class="post-header">
-      <input type="text" id="post_title" value="RN大版本升级 0.41 -> 0.51" hidden/>
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/RN大版本升级-0-41-0-51/" itemprop="url">
-                RN大版本升级 0.41 -> 0.51
-              </a>
-            
-          
-        </h1>
+    
       
 
-      <div class="post-meta">
-        
-        <span class="post-time">
-          <!-- 发表于 -->
-          <span class="iconfont">&#xf19f;</span>
-          <time itemprop="dateCreated" datetime="2018-01-02T19:53:45+08:00" content="2018-01-02">
-            2018-01-02
-          </time>
-        </span>
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/RN大版本升级-0-41-0-51/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭立lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭立lee - 个人博客">
+    </span>
+
+    
+      <header class="post-header">
 
         
-        <span class="post-time">
-          &nbsp; | &nbsp;
-          <span class="iconfont">&#xf024;</span>
-          <a href="/authors/郭立lee/">郭立lee</a>
-        </span>
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/RN大版本升级-0-41-0-51/" itemprop="url">RN大版本升级 0.41 -> 0.51</a></h1>
         
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp;
-            <!-- 分类于 -->
-            <span class="iconfont">&#xf1d0;</span>
+        <div class="post-meta">
+          <span class="post-time">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/react-native/" itemprop="url" rel="index">
-                  <span itemprop="name">react native</span>
-                </a>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
               </span>
-
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-02T19:53:45+08:00">
+                2018-01-02
+              </time>
+            
 
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-09T11:53:23+08:00">
+                2018-03-09
+              </time>
+            
+            
+            <span class="post-time">
+              &nbsp; | &nbsp;
+              <span class="iconfont">&#xf024;</span>
+              <a href="/authors/郭立lee/">郭立lee</a>
+            </span>
             
           </span>
-        
 
-        
           
-        
-
-        
-        	 <span id="/RN大版本升级-0-41-0-51/"class="leancloud_visitors"  data-flag-title="RN大版本升级 0.41 -> 0.51">
-                &nbsp; | &nbsp;
-                <span class="iconfont">&#xf03a;</span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react-native/" itemprop="url" rel="index">
+                    <span itemprop="name">react native</span>
+                  </a>
                 </span>
-        
 
-        
-        </span>
-      </div>
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/RN大版本升级-0-41-0-51/" class="leancloud_visitors" data-flag-title="RN大版本升级 0.41 -> 0.51">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读人数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-divider">|</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  286
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时间≈</span>
+                
+                <span title="时间≈">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-
-
-    </header>
-
-    <div class="post-body">
-
-      
-      
+    
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fn2igovf0vj30kk0dz0yv.jpg" rel="gallery_cjd04q4jl000kehpzlp4bsj3e"
+                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fn2igovf0vj30kk0dz0yv.jpg" rel="gallery_cjeqo37hh000ny4pzpptkryxp"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn2igovf0vj30kk0dz0yv.jpg" itemprop="contentUrl" style="max-height: 300px"/>
+                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn2igovf0vj30kk0dz0yv.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -689,23 +1655,37 @@ wget https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb0
           <span itemprop="articleBody">
             
             前言
-没什么可说的, 直接搞起..
+本来打算升级的时候RN最新版还是0.51，直到升级实施起来RN已经更新到0.53。
 
-  增量升级方案
-  react native 中文网
-Lv. UP!安装react-native-git-upgrade工具模块1npm install -g react-native-git-upgrade
-运行更新命令1234567react-native
+react native部分修改package.json中react,react-native版本1234"dependencies": &#123;   "react": "^16.3.0-alpha.1",   "react-native": "^0.54.0"&#125;
+根据react native
             ...
           </span>
           <div class="post-more-link text-center">
-            <a class="btn" href="/RN大版本升级-0-41-0-51/#more" rel="contents">
+            <a class="btn" href="/RN大版本升级-0-41-0-51/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
     </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -715,99 +1695,187 @@ Lv. UP!安装react-native-git-upgrade工具模块1npm install -g react-native-gi
         <div class="post-eof"></div>
       
     </footer>
-
+  </div>
+  
+  
+  
   </article>
 
-    
-    
-    
-        
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
-    <header class="post-header">
-      <input type="text" id="post_title" value="RN升级遇到的坑" hidden/>
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/RN升级遇到的坑/" itemprop="url">
-                RN升级遇到的坑
-              </a>
-            
-          
-        </h1>
+    
       
 
-      <div class="post-meta">
-        
-        <span class="post-time">
-          <!-- 发表于 -->
-          <span class="iconfont">&#xf19f;</span>
-          <time itemprop="dateCreated" datetime="2018-01-02T17:58:33+08:00" content="2018-01-02">
-            2018-01-02
-          </time>
-        </span>
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/RN升级遇到的坑/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭立lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭立lee - 个人博客">
+    </span>
+
+    
+      <header class="post-header">
 
         
-        <span class="post-time">
-          &nbsp; | &nbsp;
-          <span class="iconfont">&#xf024;</span>
-          <a href="/authors/郭立lee/">郭立lee</a>
-        </span>
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/RN升级遇到的坑/" itemprop="url">RN升级遇到的坑</a></h1>
         
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp;
-            <!-- 分类于 -->
-            <span class="iconfont">&#xf1d0;</span>
+        <div class="post-meta">
+          <span class="post-time">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/react-native/" itemprop="url" rel="index">
-                  <span itemprop="name">react native</span>
-                </a>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
               </span>
-
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-02T17:58:33+08:00">
+                2018-01-02
+              </time>
+            
 
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-01-03T15:58:31+08:00">
+                2018-01-03
+              </time>
+            
+            
+            <span class="post-time">
+              &nbsp; | &nbsp;
+              <span class="iconfont">&#xf024;</span>
+              <a href="/authors/郭立lee/">郭立lee</a>
+            </span>
             
           </span>
-        
 
-        
           
-        
-
-        
-        	 <span id="/RN升级遇到的坑/"class="leancloud_visitors"  data-flag-title="RN升级遇到的坑">
-                &nbsp; | &nbsp;
-                <span class="iconfont">&#xf03a;</span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react-native/" itemprop="url" rel="index">
+                    <span itemprop="name">react native</span>
+                  </a>
                 </span>
-        
 
-        
-        </span>
-      </div>
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/RN升级遇到的坑/" class="leancloud_visitors" data-flag-title="RN升级遇到的坑">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读人数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-divider">|</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  734
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时间≈</span>
+                
+                <span title="时间≈">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-
-
-    </header>
-
-    <div class="post-body">
-
-      
-      
+    
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg" rel="gallery_cjd04q4jm000lehpzkhgit9gy"
+                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg" rel="gallery_cjeqo37hf000my4pzrai68g6d"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg" itemprop="contentUrl" style="max-height: 300px"/>
+                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -829,18 +1897,36 @@ Cannot find entry file index.js in any of the roots
 
 
 
-处理方法12将 index.android.js 重命名为 index.
+处理方法12将 index.android.js 重命名为 index.js然后把 index.ios.js 删除。
+原因
+0.49 版本最大的一个变化应该就是将两个平台的
             ...
           </span>
           <div class="post-more-link text-center">
-            <a class="btn" href="/RN升级遇到的坑/#more" rel="contents">
+            <a class="btn" href="/RN升级遇到的坑/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
     </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -850,99 +1936,187 @@ Cannot find entry file index.js in any of the roots
         <div class="post-eof"></div>
       
     </footer>
-
+  </div>
+  
+  
+  
   </article>
 
-    
-    
-    
-        
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
-    <header class="post-header">
-      <input type="text" id="post_title" value="react native 原生环境踩坑" hidden/>
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/react-native-原生环境踩坑/" itemprop="url">
-                react native 原生环境踩坑
-              </a>
-            
-          
-        </h1>
+    
       
 
-      <div class="post-meta">
-        
-        <span class="post-time">
-          <!-- 发表于 -->
-          <span class="iconfont">&#xf19f;</span>
-          <time itemprop="dateCreated" datetime="2017-12-26T17:07:23+08:00" content="2017-12-26">
-            2017-12-26
-          </time>
-        </span>
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-原生环境踩坑/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭立lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭立lee - 个人博客">
+    </span>
+
+    
+      <header class="post-header">
 
         
-        <span class="post-time">
-          &nbsp; | &nbsp;
-          <span class="iconfont">&#xf024;</span>
-          <a href="/authors/郭立lee/">郭立lee</a>
-        </span>
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/react-native-原生环境踩坑/" itemprop="url">react native 原生环境踩坑</a></h1>
         
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp;
-            <!-- 分类于 -->
-            <span class="iconfont">&#xf1d0;</span>
+        <div class="post-meta">
+          <span class="post-time">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/react-native/" itemprop="url" rel="index">
-                  <span itemprop="name">react native</span>
-                </a>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
               </span>
-
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-26T17:07:23+08:00">
+                2017-12-26
+              </time>
+            
 
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-09T17:54:41+08:00">
+                2018-03-09
+              </time>
+            
+            
+            <span class="post-time">
+              &nbsp; | &nbsp;
+              <span class="iconfont">&#xf024;</span>
+              <a href="/authors/郭立lee/">郭立lee</a>
+            </span>
             
           </span>
-        
 
-        
           
-        
-
-        
-        	 <span id="/react-native-原生环境踩坑/"class="leancloud_visitors"  data-flag-title="react native 原生环境踩坑">
-                &nbsp; | &nbsp;
-                <span class="iconfont">&#xf03a;</span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react-native/" itemprop="url" rel="index">
+                    <span itemprop="name">react native</span>
+                  </a>
                 </span>
-        
 
-        
-        </span>
-      </div>
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/react-native-原生环境踩坑/" class="leancloud_visitors" data-flag-title="react native 原生环境踩坑">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读人数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-divider">|</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  148
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时间≈</span>
+                
+                <span title="时间≈">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-
-
-    </header>
-
-    <div class="post-body">
-
-      
-      
+    
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fmua8azwdzj3096064jrh.jpg" rel="gallery_cjd04q4jk000gehpzqsz2x76d"
+                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fmua8azwdzj3096064jrh.jpg" rel="gallery_cjeqo37hd000iy4pzrk9wyunv"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmua8azwdzj3096064jrh.jpg" itemprop="contentUrl" style="max-height: 300px"/>
+                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmua8azwdzj3096064jrh.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -957,18 +2131,36 @@ Cannot find entry file index.js in any of the roots
           <span itemprop="articleBody">
             
             IOS ‘MMMarkdown/MMMarkdown.h’ file not found
-苹果原生环境MMMarkdown找不到，需要安装carthage123brew install carthagecarthage update # 项目目录下执行open Untitled.xcworkspac
+苹果原生环境MMMarkdown找不到，需要安装carthage123brew install carthagecarthage update # 项目目录下执行open Untitled.xcworkspace/
+
+Unable to find a specification for SocketRocke
             ...
           </span>
           <div class="post-more-link text-center">
-            <a class="btn" href="/react-native-原生环境踩坑/#more" rel="contents">
+            <a class="btn" href="/react-native-原生环境踩坑/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
     </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -978,99 +2170,187 @@ Cannot find entry file index.js in any of the roots
         <div class="post-eof"></div>
       
     </footer>
-
+  </div>
+  
+  
+  
   </article>
 
-    
-    
-    
-        
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
-    <header class="post-header">
-      <input type="text" id="post_title" value="react native 安卓真机开发者模式" hidden/>
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/react-native-安卓真机开发者模式/" itemprop="url">
-                react native 安卓真机开发者模式
-              </a>
-            
-          
-        </h1>
+    
       
 
-      <div class="post-meta">
-        
-        <span class="post-time">
-          <!-- 发表于 -->
-          <span class="iconfont">&#xf19f;</span>
-          <time itemprop="dateCreated" datetime="2017-12-25T20:04:35+08:00" content="2017-12-25">
-            2017-12-25
-          </time>
-        </span>
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-安卓真机开发者模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭立lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭立lee - 个人博客">
+    </span>
+
+    
+      <header class="post-header">
 
         
-        <span class="post-time">
-          &nbsp; | &nbsp;
-          <span class="iconfont">&#xf024;</span>
-          <a href="/authors/郭立lee/">郭立lee</a>
-        </span>
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/react-native-安卓真机开发者模式/" itemprop="url">react native 安卓真机开发者模式</a></h1>
         
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp;
-            <!-- 分类于 -->
-            <span class="iconfont">&#xf1d0;</span>
+        <div class="post-meta">
+          <span class="post-time">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/react-native/" itemprop="url" rel="index">
-                  <span itemprop="name">react native</span>
-                </a>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
               </span>
-
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-25T20:04:35+08:00">
+                2017-12-25
+              </time>
+            
 
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-12-26T16:21:37+08:00">
+                2017-12-26
+              </time>
+            
+            
+            <span class="post-time">
+              &nbsp; | &nbsp;
+              <span class="iconfont">&#xf024;</span>
+              <a href="/authors/郭立lee/">郭立lee</a>
+            </span>
             
           </span>
-        
 
-        
           
-        
-
-        
-        	 <span id="/react-native-安卓真机开发者模式/"class="leancloud_visitors"  data-flag-title="react native 安卓真机开发者模式">
-                &nbsp; | &nbsp;
-                <span class="iconfont">&#xf03a;</span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react-native/" itemprop="url" rel="index">
+                    <span itemprop="name">react native</span>
+                  </a>
                 </span>
-        
 
-        
-        </span>
-      </div>
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/react-native-安卓真机开发者模式/" class="leancloud_visitors" data-flag-title="react native 安卓真机开发者模式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读人数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-divider">|</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  275
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时间≈</span>
+                
+                <span title="时间≈">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-
-
-    </header>
-
-    <div class="post-body">
-
-      
-      
+    
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fmt9r5ual8j30850643yp.jpg" rel="gallery_cjd04q4ji000fehpzvm4lzhmb"
+                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fmt9r5ual8j30850643yp.jpg" rel="gallery_cjeqo37hb000hy4pzon5bmk19"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmt9r5ual8j30850643yp.jpg" itemprop="contentUrl" style="max-height: 300px"/>
+                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmt9r5ual8j30850643yp.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -1092,18 +2372,34 @@ react native无法调试
 安卓开发者模式出不来
 
 
-准备你需要开启USB调试才能在你的设备上安装你的APP。首先，确定你已经打开设备的USB调试开关确保手机电脑连接同一WiFi手机已打开可出现在顶
+准备你需要开启USB调试才能在你的设备上安装你的APP。首先，确定你已经打开设备的USB调试开关确保手机电脑连接同一WiFi手机已打开可出现在顶部的应用程序权限各个手机设置方法不一致，以三星s6为例设置 --&gt; 应用程序 --&gt; [
             ...
           </span>
           <div class="post-more-link text-center">
-            <a class="btn" href="/react-native-安卓真机开发者模式/#more" rel="contents">
+            <a class="btn" href="/react-native-安卓真机开发者模式/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
     </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -1113,99 +2409,187 @@ react native无法调试
         <div class="post-eof"></div>
       
     </footer>
-
+  </div>
+  
+  
+  
   </article>
 
-    
-    
-    
-        
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
-    <header class="post-header">
-      <input type="text" id="post_title" value="ECMAScript学习笔记(一)" hidden/>
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/ECMAScript学习笔记-一/" itemprop="url">
-                ECMAScript学习笔记(一)
-              </a>
-            
-          
-        </h1>
+    
       
 
-      <div class="post-meta">
-        
-        <span class="post-time">
-          <!-- 发表于 -->
-          <span class="iconfont">&#xf19f;</span>
-          <time itemprop="dateCreated" datetime="2017-12-22T17:31:30+08:00" content="2017-12-22">
-            2017-12-22
-          </time>
-        </span>
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/ECMAScript学习笔记-一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="郭立lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郭立lee - 个人博客">
+    </span>
+
+    
+      <header class="post-header">
 
         
-        <span class="post-time">
-          &nbsp; | &nbsp;
-          <span class="iconfont">&#xf024;</span>
-          <a href="/authors/李爽lisa/">李爽lisa</a>
-        </span>
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/ECMAScript学习笔记-一/" itemprop="url">ECMAScript学习笔记(一)</a></h1>
         
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp;
-            <!-- 分类于 -->
-            <span class="iconfont">&#xf1d0;</span>
+        <div class="post-meta">
+          <span class="post-time">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/javascrip/" itemprop="url" rel="index">
-                  <span itemprop="name">javascrip</span>
-                </a>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
               </span>
-
               
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-22T17:31:30+08:00">
+                2017-12-22
+              </time>
+            
 
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-12-22T18:45:43+08:00">
+                2017-12-22
+              </time>
+            
+            
+            <span class="post-time">
+              &nbsp; | &nbsp;
+              <span class="iconfont">&#xf024;</span>
+              <a href="/authors/李爽lisa/">李爽lisa</a>
+            </span>
             
           </span>
-        
 
-        
           
-        
-
-        
-        	 <span id="/ECMAScript学习笔记-一/"class="leancloud_visitors"  data-flag-title="ECMAScript学习笔记(一)">
-                &nbsp; | &nbsp;
-                <span class="iconfont">&#xf03a;</span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascrip/" itemprop="url" rel="index">
+                    <span itemprop="name">javascrip</span>
+                  </a>
                 </span>
-        
 
-        
-        </span>
-      </div>
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/ECMAScript学习笔记-一/" class="leancloud_visitors" data-flag-title="ECMAScript学习笔记(一)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读人数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-divider">|</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  650
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时间≈</span>
+                
+                <span title="时间≈">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-
-
-    </header>
-
-    <div class="post-body">
-
-      
-      
+    
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fmpohcio7ej30i30aw746.jpg" rel="gallery_cjd04q4jd0007ehpzmq3uuhrp"
+                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fmpohcio7ej30i30aw746.jpg" rel="gallery_cjeqo37h50009y4pzeypmu5r1"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmpohcio7ej30i30aw746.jpg" itemprop="contentUrl" style="max-height: 300px"/>
+                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmpohcio7ej30i30aw746.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -1221,18 +2605,35 @@ react native无法调试
             
             ECMAScript 学习笔记（一）
 es6标准的制定为javascript添加了很多新特性,今天主要说一下展开运算符。
-函数调用中使用展开运算符es6之前：123function test(a, b, c) &#123; &#125;var args = [0, 1, 2];test.apply(
+函数调用中使用展开运算符es6之前：123function test(a, b, c) &#123; &#125;var args = [0, 1, 2];test.apply(null, args);//数组展开成多个参数
+es6之后，利用es6的展开运算符这一新特性，简化了
             ...
           </span>
           <div class="post-more-link text-center">
-            <a class="btn" href="/ECMAScript学习笔记-一/#more" rel="contents">
+            <a class="btn" href="/ECMAScript学习笔记-一/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
       
     </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -1242,302 +2643,32 @@ es6标准的制定为javascript添加了很多新特性,今天主要说一下展
         <div class="post-eof"></div>
       
     </footer>
-
+  </div>
+  
+  
+  
   </article>
 
-    
-    
-    
-        
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
-    <header class="post-header">
-      <input type="text" id="post_title" value="react native样式整理" hidden/>
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/react-native样式整理/" itemprop="url">
-                react native样式整理
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        
-        <span class="post-time">
-          <!-- 发表于 -->
-          <span class="iconfont">&#xf19f;</span>
-          <time itemprop="dateCreated" datetime="2017-12-22T16:15:43+08:00" content="2017-12-22">
-            2017-12-22
-          </time>
-        </span>
-
-        
-        <span class="post-time">
-          &nbsp; | &nbsp;
-          <span class="iconfont">&#xf024;</span>
-          <a href="/authors/郭立lee/">郭立lee</a>
-        </span>
-        
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp;
-            <!-- 分类于 -->
-            <span class="iconfont">&#xf1d0;</span>
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/react-native/" itemprop="url" rel="index">
-                  <span itemprop="name">react native</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-
-        
-        	 <span id="/react-native样式整理/"class="leancloud_visitors"  data-flag-title="react native样式整理">
-                &nbsp; | &nbsp;
-                <span class="iconfont">&#xf03a;</span>
-                </span>
-        
-
-        
-        </span>
-      </div>
-      
-
-
-    </header>
-
-    <div class="post-body">
-
-      
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fmpmj62aucj30co07s0sn.jpg" rel="gallery_cjd04q4jf0009ehpzhwrugbhh"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmpmj62aucj30co07s0sn.jpg" itemprop="contentUrl" style="max-height: 300px"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-            react native 样式表整理
-整理下rn的常用样式，供新手参考：
-Flexbox布局样式
-
-
-样式名称
-k
-v
-解释
-
-
-
-
-项目对齐
-alignItems
-flex-startflex-endcenterstretch
-
-
-
-自身对齐
-alignSelf
-flex-startflex-en
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/react-native样式整理/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-
-  </article>
-
-    
-    
-    
-        
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    <header class="post-header">
-      <input type="text" id="post_title" value="用D3实现伪3D效果金字塔" hidden/>
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/用d3实现伪3d效果金字塔/" itemprop="url">
-                用D3实现伪3D效果金字塔
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        
-        <span class="post-time">
-          <!-- 发表于 -->
-          <span class="iconfont">&#xf19f;</span>
-          <time itemprop="dateCreated" datetime="2017-12-22T00:10:03+08:00" content="2017-12-22">
-            2017-12-22
-          </time>
-        </span>
-
-        
-        <span class="post-time">
-          &nbsp; | &nbsp;
-          <span class="iconfont">&#xf024;</span>
-          <a href="/authors/李爽lisa/">李爽lisa</a>
-        </span>
-        
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp;
-            <!-- 分类于 -->
-            <span class="iconfont">&#xf1d0;</span>
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/D3/" itemprop="url" rel="index">
-                  <span itemprop="name">D3</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-        
-
-        
-        	 <span id="/用d3实现伪3d效果金字塔/"class="leancloud_visitors"  data-flag-title="用D3实现伪3D效果金字塔">
-                &nbsp; | &nbsp;
-                <span class="iconfont">&#xf03a;</span>
-                </span>
-        
-
-        
-        </span>
-      </div>
-      
-
-
-    </header>
-
-    <div class="post-body">
-
-      
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/005T0OjCly1fmovukq0zrj30hm09o74c.jpg" rel="gallery_cjd04q4jg000behpzcnpougt0"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://ws1.sinaimg.cn/large/005T0OjCly1fmovukq0zrj30hm09o74c.jpg" itemprop="contentUrl" style="max-height: 300px"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-            用d3实现金字塔伪3d效果
-工作中偶然接触到d3，慢慢开始熟悉d3，并可以根据效果图进行图形绘制，要完全掌握d3绘图技巧需要不断深入学习研究，今天要展示的是我遇到的一个类似3d效果的金字塔效果图，其实是个伪3d，由于本人学术不精，只想到利用path拼接面的形式来实现（其实一开始想研究研究threej
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/用d3实现伪3d效果金字塔/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-
-  </article>
-
-    
     
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
- </div>
 
+
+          </div>
+          
+
+
+          
+
+        </div>
         
-
-        
-      </div>
-
-      
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -1548,37 +2679,55 @@ flex-startflex-en
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
-      <section class="site-overview">
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg" alt="郭立lee" width="200px" itemprop="image" style="border:none;max-width:200px"/>
+          <img class="site-author-image" itemprop="image"
+               src="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg"
+               alt="郭立lee" />
           <p class="site-author-name" itemprop="name">郭立lee</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
         </div>
-        <p class="site-description motion-element" itemprop="description"></p>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives/">
-              <span class="site-state-item-count">12</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
-          <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-              <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">分类</span>
-            </a>
-          </div>
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-              <span class="site-state-item-count">13</span>
-              <span class="site-state-item-name">标签</span>
-            </a>
-          </div>
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
 
           <div class="site-state-item site-state-authors">
             <a href="/authors/">
@@ -1586,13 +2735,13 @@ flex-startflex-en
               <span class="site-state-item-name">作者</span>
             </a>
           </div>
-
+          
         </nav>
 
         
           <div class="feed-link motion-element">
             <a href="/atom.xml" rel="alternate">
-              <i class="menu-item-icon icon-next-feed"></i>
+              <i class="fa fa-rss"></i>
               RSS
             </a>
           </div>
@@ -1601,25 +2750,38 @@ flex-startflex-en
         <div class="links-of-author motion-element">
           
             
-              <div class="links-of-author-item">
-                <a href="https://www.qunar.com/" target="_blank">去哪儿官网</a>
-              </div>
+              <span class="links-of-author-item">
+                <a href="https://github.com/leeguooooo" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
             
-              <div class="links-of-author-item">
-                <a href="https://www.leeguoo.com/" target="_blank">LEEGUOO官网</a>
-              </div>
+              <span class="links-of-author-item">
+                <a href="leeguoo@163.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
             
-              <div class="links-of-author-item">
-                <a href="https://www.docschina.org" target="_blank">印记中文文档</a>
-              </div>
-            
-              <div class="links-of-author-item">
-                <a href="//www.alloyteam.com/page/0/" target="_blank">腾讯前端博客</a>
-              </div>
-            
-              <div class="links-of-author-item">
-                <a href="//zh-google-styleguide.readthedocs.io/en/latest/contents/" target="_blank">项目风格指南</a>
-              </div>
+              <span class="links-of-author-item">
+                <a href="12491851.weibo.com" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
             
           
         </div>
@@ -1627,11 +2789,45 @@ flex-startflex-en
         
         
 
-        <div class="links-of-author motion-element">
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.qunar.com/" title="去哪儿官网" target="_blank">去哪儿官网</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.leeguoo.com/" title="LEEGUOO官网" target="_blank">LEEGUOO官网</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.docschina.org" title="印记中文文档" target="_blank">印记中文文档</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="//www.alloyteam.com/page/0/" title="腾讯前端博客" target="_blank">腾讯前端博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="//zh-google-styleguide.readthedocs.io/en/latest/contents/" title="项目风格指南" target="_blank">项目风格指南</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
 
       </section>
+
+      
 
       
 
@@ -1639,59 +2835,25 @@ flex-startflex-en
   </aside>
 
 
+        
+      </div>
     </main>
 
-<div id="qn-banner-cont">
-	<div class="qn-banner-dis">
-	</div>
-	<div id="qnrg" class="qn-banner">
-
-		<div id="qn-banner-tic">
-			<i id="closeQunar" class="close qn-banner-close" onclick="document.getElementsByClassName('qn-banner')[0].style.display='none'"></i>
-            <div class="section-qunar">
-                <img class="logo" src="//s.qunarzz.com/train_search/images/yindaoQunar.png">
-                <div class="main">
-                    <div class="t1">去哪儿旅行</div>
-                    <div class="t2">
-                        <span class="highlight">火车票、机票、</span>你想要的都在这里！
-                    </div>
-                    <div class="op">
-                        <a class="js-download-click" clickkey="js_qunarapp_click_iphone" href="//touch.qunar.com/downloadUrlJump.jsp?type=iphone&amp;from=fuceng" target="_blank">
-                            <i class="icon qunar_iph"></i>iPhone</a>
-                        <a class="js-download-click" clickkey="js_qunarapp_click_android" href="//touch.qunar.com/h5/downloadAndroid?bd_source=fuceng" target="_blank">
-                            <i class="icon qunar_andr"></i>Android</a>
-                    </div>
-                </div>
-                <img src="//s.qunarzz.com/train_search/images/routine_code_banner_0516.png" class="routine_code">
-            </div>
-		</div>
-	</div>
-</div>
-<script>
-function getContentSize() {
-    var wh = document.documentElement.clientWidth;
-    var eh = document.getElementById('sidebar').style.width.replace('px','');
-    ch = (wh - eh) >= 1150 ? ch = (wh - eh) + "px" : "0px";
-    document.getElementById("qnrg").style.width = ch;
-}
-    window.onload = window.setTimeout(getContentSize,1300);
-    window.setTimeout(function(){document.getElementsByClassName('qn-banner')[0].style.display='none';},5000);;
-    window.onresize = getContentSize;
-</script>
-    
     <footer id="footer" class="footer">
-      <div class="footer-inner"> <div class="copyright" >
+      <div class="footer-inner">
+        <div class="copyright" >
   
-  &copy; &nbsp; 
+  &copy; 
   <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="icon-next-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">郭立lee | 去哪儿郭立 | lee.guo | https://leeguoo.com | https://myblog.leeguoo.com</span>
+  <span class="author" itemprop="copyrightHolder">郭立lee</span>
 </div>
-<!--
+
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
@@ -1699,250 +2861,661 @@ function getContentSize() {
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
-</div>-->
+</div>
 
- </div>
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共8.8k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  
-  
-    
-    
 
   
 
-
-  
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
-  
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
-
-
-
-
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
-  <script type="text/javascript" src="/js/headBand.min.js"></script>
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-      if (isMobile()) {
-        FastClick.attach(document.body);
-      }
-    });
-  </script>
-
-  
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/lazyload.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
-        effect: "fadeIn"
-      });
-    });
-
-  </script>
-  <script type="text/javascript" src="//cdn.bootcss.com/raphael/2.2.1/raphael.min.js"></script>
-  <script type="text/javascript" src="//cdn.bootcss.com/flowchart/1.6.3/flowchart.min.js"></script>
-  <script type="text/javascript">
-      var requireId = 0;
-      $(function() {
-          $('.highlight.flow').each(function(index, item) {
-              var code = $(item).find('.code pre').text(),
-                  id = 'flow-' + requireId++;
-              $(item).attr('id', id);
-              $(item).attr('data-code', code);
-              $(item).html('');
-              var diagram = flowchart.parse(code);
-              diagram.drawSVG(id);
-          });
-      });
-  </script>
-  <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-  <script>
-  $(function(){
-    // 封装分享
-    function commonShare() {
-      var title = document.title,
-          link = location.href,
-          desc = $('.post-body p')[0].innerHTML,
-          imgSrc = $('#js-share-img').data('src') || $($('img')[0]).attr('src');
-      var commonConfig = {
-        title: title,
-        desc: desc,
-        link: link,
-        imgUrl: imgSrc,
-      };
-      wx.onMenuShareTimeline({
-        title: title,
-        link: link,
-        imgUrl: imgSrc
-      });
-      wx.onMenuShareAppMessage(commonConfig);
-      wx.onMenuShareQQ(commonConfig);
-      wx.onMenuShareWeibo(commonConfig);
-      wx.onMenuShareQZone(commonConfig);
-    }
-
-    // 请求: 微信分享
-    $.ajax({
-      type: "GET",
-      url: 'https://ued.qunar.com/ticket/wx',
-      data: {
-        url: window.location.href.split('#')[0],
-        jsApiList: [
-          'onMenuShareTimeline',
-          'onMenuShareAppMessage',
-          'onMenuShareQQ',
-          'onMenuShareWeibo',
-          'onMenuShareQZone'
-        ]
-      },
-      dataType: "jsonp",
-      jsonp: "sign",
-      success: function(res) {
-        wx.config({
-          debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-          appId: 'wx93dbe152c661b3bd', // 必填，公众号的唯一标识
-          timestamp: res.timestamp, // 必填，生成签名的时间戳
-          nonceStr: res.nonceStr, // 必填，生成签名的随机串
-          signature: res.signature,// 必填，签名，见附录1
-          jsApiList: [
-            'onMenuShareTimeline',
-            'onMenuShareAppMessage',
-            'onMenuShareQQ',
-            'onMenuShareWeibo',
-            'onMenuShareQZone'
-          ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
-        });
-
-        wx.ready(function(res) {
-          commonShare();
-        })
-        wx.error(function(res){
-          console.log(res);
-        });
-      },
-      error: function(err) {
-        console.log(err);
-      }
-    })
-  });
-  $('.js-reading-position').headBand({
-		'background':'#ff561b',
-		'height':"3"
-	});
-  </script>
-
-  
-    <!-- custom analytics part create by xiamo -->
-<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-<script>AV.initialize("BO9eK46P9VzLNPSvO36RsbwT-gzGzoHsz", "cN4Bh7rj4G1oYaAyLhiAf2PE");</script>
-<script>
-function showTime(Counter) {
-	var query = new AV.Query(Counter);
-	$(".leancloud_visitors").each(function() {
-		var url = $(this).attr("id").trim();
-		query.equalTo("url", url);
-		query.find({
-			success: function(results) {
-				if (results.length == 0) {
-					var content = $(document.getElementById(url)).html() + '0';
-					$(document.getElementById(url)).html(content);
-					return;
-				}
-				for (var i = 0; i < results.length; i++) {
-					var object = results[i];
-					var content = $(document.getElementById(url)).html() + object.get('time');
-					$(document.getElementById(url)).html(content);
-				}
-			},
-			error: function(object, error) {
-				console.log("Error: " + error.code + " " + error.message);
-			}
-		});
-	});
-}
-function addCount(Counter) {
-	var Counter = AV.Object.extend("Counter");
-	url = $(".leancloud_visitors").attr('id').trim();
-	title = $(".leancloud_visitors").attr('data-flag-title').trim();
-	var query = new AV.Query(Counter);
-	query.equalTo("url", url);
-	query.find({
-		success: function(results) {
-			if (results.length > 0) {
-				var counter = results[0];
-				counter.fetchWhenSave(true);
-				counter.increment("time");
-				counter.save(null, {
-					success: function(counter) {
-						var content = $(document.getElementById(url)).html() + counter.get('time');
-						$(document.getElementById(url)).html(content);
-					},
-					error: function(counter, error) {
-						console.log('Failed to save Visitor num, with error message: ' + error.message);
-					}
-				});
-			} else {
-				var newcounter = new Counter();
-				newcounter.set("title", title);
-				newcounter.set("url", url);
-				newcounter.set("time", 1);
-				newcounter.save(null, {
-					success: function(newcounter) {
-					    console.log("newcounter.get('time')="+newcounter.get('time'));
-						var content = $(document.getElementById(url)).html() + newcounter.get('time');
-						$(document.getElementById(url)).html(content);
-					},
-					error: function(newcounter, error) {
-						console.log('Failed to create');
-					}
-				});
-			}
-		},
-		error: function(error) {
-			console.log('Error:' + error.code + " " + error.message);
-		}
-	});
-}
-$(function() {
-	var Counter = AV.Object.extend("Counter");
-	if ($('.leancloud_visitors').length == 1) {
-		addCount(Counter);
-	} else if ($('.post-title-link').length > 1) {
-		showTime(Counter);
-	}
-});
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
+
+
+
+
+
+
+
+
   
-</body>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("BO9eK46P9VzLNPSvO36RsbwT-gzGzoHsz", "cN4Bh7rj4G1oYaAyLhiAf2PE");</script>
+  <script>
+
+  function getCookie(c_name)
+  	{
+  	if (document.cookie.length>0)
+  		{
+  		c_start=document.cookie.indexOf(c_name + "=")
+  		if (c_start!=-1)
+  			{
+  			c_start=c_start + c_name.length+1
+  			c_end=document.cookie.indexOf(";",c_start)
+  			if (c_end==-1) c_end=document.cookie.length
+  			return unescape(document.cookie.substring(c_start,c_end))
+  			}
+  		}
+  	return ""
+  	}
+
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      //同一cookie只能累加一次阅读量
+      if(getCookie(url)){
+        var Counter = AV.Object.extend("Counter");
+        showTime(Counter);
+        return;
+      }
+      var exdate=new Date()
+      exdate.setDate(exdate.getDate()+3650)
+      document.cookie=url+ "=" +escape("test")+ ";expires="+exdate.toGMTString();
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.1},"react":{"opacityDefault":0.7,"opacityOnHover":0.2}});</script></body>
 </html>
+
+<script>
+//百度统计
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?93279313ae39d9e8a19b442a830f8fd2";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115467496-2"></script>
+<script>
+//谷歌统计
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115467496-2');
+</script>
+
+
 <!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/love.js"></script>
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script type="text/javascript" src="/js/src/copy.js"></script>

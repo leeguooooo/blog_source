@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c534b22-80af-4b2c-a58b-832ebc86137e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change beforePath="$PROJECT_DIR$/build.sh" afterPath="$PROJECT_DIR$/build.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/themes/next/source/js/copy.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/db.json" afterPath="$PROJECT_DIR$/db.json" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hexo-generator-baidu-sitemap/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-generator-baidu-sitemap/package.json" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hexo-generator-sitemap/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-generator-sitemap/package.json" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/public/ECMAScript学习笔记-一/index.html" afterPath="$PROJECT_DIR$/public/ECMAScript学习笔记-一/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/LINUX如何优雅的编码/index.html" afterPath="$PROJECT_DIR$/public/LINUX如何优雅的编码/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/LINUX磁盘空间查看/index.html" afterPath="$PROJECT_DIR$/public/LINUX磁盘空间查看/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/RN升级遇到的坑/index.html" afterPath="$PROJECT_DIR$/public/RN升级遇到的坑/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/RN大版本升级-0-41-0-51/index.html" afterPath="$PROJECT_DIR$/public/RN大版本升级-0-41-0-51/index.html" />
       <change beforePath="$PROJECT_DIR$/public/archives/2017/03/index.html" afterPath="$PROJECT_DIR$/public/archives/2017/03/index.html" />
       <change beforePath="$PROJECT_DIR$/public/archives/2017/12/index.html" afterPath="$PROJECT_DIR$/public/archives/2017/12/index.html" />
       <change beforePath="$PROJECT_DIR$/public/archives/2017/index.html" afterPath="$PROJECT_DIR$/public/archives/2017/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/archives/2018/01/index.html" afterPath="$PROJECT_DIR$/public/archives/2018/01/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/archives/2018/index.html" afterPath="$PROJECT_DIR$/public/archives/2018/index.html" />
       <change beforePath="$PROJECT_DIR$/public/archives/index.html" afterPath="$PROJECT_DIR$/public/archives/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/archives/page/2/index.html" afterPath="$PROJECT_DIR$/public/archives/page/2/index.html" />
       <change beforePath="$PROJECT_DIR$/public/atom.xml" afterPath="$PROJECT_DIR$/public/atom.xml" />
       <change beforePath="$PROJECT_DIR$/public/authors/index.html" afterPath="$PROJECT_DIR$/public/authors/index.html" />
       <change beforePath="$PROJECT_DIR$/public/authors/李爽lisa/index.html" afterPath="$PROJECT_DIR$/public/authors/李爽lisa/index.html" />
@@ -21,31 +24,49 @@
       <change beforePath="$PROJECT_DIR$/public/baidu_verify_v3WPgfCRrA.html" afterPath="$PROJECT_DIR$/public/baidu_verify_v3WPgfCRrA.html" />
       <change beforePath="$PROJECT_DIR$/public/baidusitemap.xml" afterPath="$PROJECT_DIR$/public/baidusitemap.xml" />
       <change beforePath="$PROJECT_DIR$/public/blog.json" afterPath="$PROJECT_DIR$/public/blog.json" />
+      <change beforePath="$PROJECT_DIR$/public/categories/D3/index.html" afterPath="$PROJECT_DIR$/public/categories/D3/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/categories/LINUX/index.html" afterPath="$PROJECT_DIR$/public/categories/LINUX/index.html" />
       <change beforePath="$PROJECT_DIR$/public/categories/index.html" afterPath="$PROJECT_DIR$/public/categories/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/categories/javascrip/index.html" afterPath="$PROJECT_DIR$/public/categories/javascrip/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/categories/python/index.html" afterPath="$PROJECT_DIR$/public/categories/python/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/categories/react-native/index.html" afterPath="$PROJECT_DIR$/public/categories/react-native/index.html" />
       <change beforePath="$PROJECT_DIR$/public/categories/测试/index.html" afterPath="$PROJECT_DIR$/public/categories/测试/index.html" />
       <change beforePath="$PROJECT_DIR$/public/categories/面试题/index.html" afterPath="$PROJECT_DIR$/public/categories/面试题/index.html" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
       <change beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/js/motion_global.js" afterPath="$PROJECT_DIR$/public/js/motion_global.js" />
+      <change beforePath="$PROJECT_DIR$/public/page/2/index.html" afterPath="$PROJECT_DIR$/public/page/2/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/python环境集成/index.html" afterPath="$PROJECT_DIR$/public/python环境集成/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/react-native-原生环境踩坑/index.html" afterPath="$PROJECT_DIR$/public/react-native-原生环境踩坑/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/react-native-安卓真机开发者模式/index.html" afterPath="$PROJECT_DIR$/public/react-native-安卓真机开发者模式/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/react-native样式整理/index.html" afterPath="$PROJECT_DIR$/public/react-native样式整理/index.html" />
       <change beforePath="$PROJECT_DIR$/public/sitemap.xml" afterPath="$PROJECT_DIR$/public/sitemap.xml" />
+      <change beforePath="$PROJECT_DIR$/public/tags/D3/index.html" afterPath="$PROJECT_DIR$/public/tags/D3/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/tags/RN/index.html" afterPath="$PROJECT_DIR$/public/tags/RN/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/tags/android/index.html" afterPath="$PROJECT_DIR$/public/tags/android/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/tags/es6/index.html" afterPath="$PROJECT_DIR$/public/tags/es6/index.html" />
       <change beforePath="$PROJECT_DIR$/public/tags/index.html" afterPath="$PROJECT_DIR$/public/tags/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/tags/linux/index.html" afterPath="$PROJECT_DIR$/public/tags/linux/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/tags/native/index.html" afterPath="$PROJECT_DIR$/public/tags/native/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/tags/python/index.html" afterPath="$PROJECT_DIR$/public/tags/python/index.html" />
       <change beforePath="$PROJECT_DIR$/public/tags/react/index.html" afterPath="$PROJECT_DIR$/public/tags/react/index.html" />
       <change beforePath="$PROJECT_DIR$/public/tags/乱写/index.html" afterPath="$PROJECT_DIR$/public/tags/乱写/index.html" />
       <change beforePath="$PROJECT_DIR$/public/tags/前端/index.html" afterPath="$PROJECT_DIR$/public/tags/前端/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/tags/样式/index.html" afterPath="$PROJECT_DIR$/public/tags/样式/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/tags/金字塔/index.html" afterPath="$PROJECT_DIR$/public/tags/金字塔/index.html" />
       <change beforePath="$PROJECT_DIR$/public/tags/面试/index.html" afterPath="$PROJECT_DIR$/public/tags/面试/index.html" />
       <change beforePath="$PROJECT_DIR$/public/test/index.html" afterPath="$PROJECT_DIR$/public/test/index.html" />
       <change beforePath="$PROJECT_DIR$/public/我的第一篇文章/index.html" afterPath="$PROJECT_DIR$/public/我的第一篇文章/index.html" />
       <change beforePath="$PROJECT_DIR$/public/李爽的面试总结0001/index.html" afterPath="$PROJECT_DIR$/public/李爽的面试总结0001/index.html" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/2017-12-19-李爽的面试总结0001.md" afterPath="$PROJECT_DIR$/source/_posts/2017-12-19-李爽的面试总结0001.md" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/我的第一篇文章.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/themes/next/_config.yml" afterPath="$PROJECT_DIR$/themes/next/_config.yml" />
-      <change beforePath="$PROJECT_DIR$/themes/next/languages/zh-Hans.yml" afterPath="$PROJECT_DIR$/themes/next/languages/zh-Hans.yml" />
+      <change beforePath="$PROJECT_DIR$/public/用d3实现伪3d效果金字塔/index.html" afterPath="$PROJECT_DIR$/public/用d3实现伪3d效果金字塔/index.html" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/2017-12-26-react-native-原生环境踩坑.md" afterPath="$PROJECT_DIR$/source/_posts/2017-12-26-react-native-原生环境踩坑.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/2018-01-02-RN大版本升级-0-41-0-51.md" afterPath="$PROJECT_DIR$/source/_posts/2018-01-02-RN大版本升级-0-41-0-51.md" />
       <change beforePath="$PROJECT_DIR$/themes/next/layout/_layout.swig" afterPath="$PROJECT_DIR$/themes/next/layout/_layout.swig" />
       <change beforePath="$PROJECT_DIR$/themes/next/layout/_macro/post.swig" afterPath="$PROJECT_DIR$/themes/next/layout/_macro/post.swig" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/footer.swig" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/footer.swig" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/head.swig" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/head.swig" />
-      <change beforePath="$PROJECT_DIR$/themes/next/layout/_scripts/pages/post-details.swig" afterPath="$PROJECT_DIR$/themes/next/layout/_scripts/pages/post-details.swig" />
-      <change beforePath="$PROJECT_DIR$/themes/next/scripts/home.js" afterPath="$PROJECT_DIR$/themes/next/scripts/home.js" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/css/main.styl" afterPath="$PROJECT_DIR$/themes/next/source/css/main.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/next/layout/_macro/sidebar.swig" afterPath="$PROJECT_DIR$/themes/next/layout/_macro/sidebar.swig" />
+      <change beforePath="$PROJECT_DIR$/themes/next/layout/_partials/header.swig" afterPath="$PROJECT_DIR$/themes/next/layout/_partials/header.swig" />
+      <change beforePath="$PROJECT_DIR$/themes/next/layout/_scripts/lean-analytics.swig" afterPath="$PROJECT_DIR$/themes/next/layout/_scripts/lean-analytics.swig" />
+      <change beforePath="$PROJECT_DIR$/themes/next/source/js/motion_global.js" afterPath="$PROJECT_DIR$/themes/next/source/js/motion_global.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,55 +79,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="home.swig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/layout/home.swig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="30" column="7" lean-forward="false" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+            <state relative-caret-position="4710">
+              <caret line="314" column="50" lean-forward="false" selection-start-line="314" selection-start-column="50" selection-end-line="314" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-12-22-用d3实现伪3d效果金字塔.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/2017-12-22-用d3实现伪3d效果金字塔.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="75">
-                <caret line="5" column="73" lean-forward="false" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
-                <folding>
-                  <marker date="1517225134917" expanded="true" signature="398:406" ph="/*...*/" />
-                  <marker date="1517225134917" expanded="true" signature="468:479" ph="/*...*/" />
-                  <marker date="1517225134917" expanded="true" signature="503:754" ph="[...]" />
-                  <marker date="1517225134917" expanded="true" signature="504:553" ph="{&quot;startColor&quot;: '##077cec'...}" />
-                  <marker date="1517225134917" expanded="true" signature="555:603" ph="{&quot;startColor&quot;: '##2c6cff'...}" />
-                  <marker date="1517225134917" expanded="true" signature="605:653" ph="{&quot;startColor&quot;: '##628eff'...}" />
-                  <marker date="1517225134917" expanded="true" signature="655:703" ph="{&quot;startColor&quot;: '##60e9e9'...}" />
-                  <marker date="1517225134917" expanded="true" signature="705:753" ph="{&quot;startColor&quot;: '##fffe2c'...}" />
-                  <marker date="1517225134917" expanded="true" signature="756:769" ph="/*...*/" />
-                  <marker date="1517225134917" expanded="true" signature="795:808" ph="/*...*/" />
-                  <marker date="1517225134917" expanded="true" signature="1063:1654" ph="{...}" />
-                  <marker date="1517225134917" expanded="true" signature="1346:1373" ph="{...}" />
-                  <marker date="1517225134917" expanded="true" signature="1591:1622" ph="{...}" />
-                  <marker date="1517225134917" expanded="true" signature="1804:1831" ph="//..." />
-                  <marker date="1517225134917" expanded="true" signature="1863:2904" ph="{...}" />
-                  <marker date="1517225134917" expanded="true" signature="2033:2051" ph="//..." />
-                  <marker date="1517225134917" expanded="true" signature="2352:2530" ph="{...}" />
-                  <marker date="1517225134917" expanded="true" signature="2534:2897" ph="{...}" />
-                </folding>
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="_layout.swig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/layout/_layout.swig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="848">
+              <caret line="238" column="44" lean-forward="false" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-12-22-react-native样式整理.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/2017-12-22-react-native样式整理.md">
+      <file leaf-file-name="2017-12-26-react-native-原生环境踩坑.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/2017-12-26-react-native-原生环境踩坑.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="315">
-                <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <first_editor relative-caret-position="510">
+                <caret line="34" column="15" lean-forward="false" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -114,7 +113,106 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/scripts/home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authors.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/scripts/authors.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1513189356560" expanded="true" signature="580:876" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="merge-configs.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/scripts/merge-configs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="full-image.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/scripts/tags/full-image.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="center-quote.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/scripts/tags/center-quote.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="love.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/source/js/love.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="copy.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/source/js/copy.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="47" column="45" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>qnrg</find>
+      <find>广告</find>
+      <find>sidebar-toggle-line-wrap</find>
+      <find>love.js</find>
+      <find>d(</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/themes/next</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -125,6 +223,11 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/source/_posts/2017-12-22-用d3实现伪3d效果金字塔.md" />
         <option value="$PROJECT_DIR$/source/_posts/2017-12-22-react-native样式整理.md" />
+        <option value="$PROJECT_DIR$/source/_posts/2018-01-02-RN大版本升级-0-41-0-51.md" />
+        <option value="$PROJECT_DIR$/themes/next/source/js/motion_global.js" />
+        <option value="$PROJECT_DIR$/themes/next/layout/_layout.swig" />
+        <option value="$PROJECT_DIR$/themes/next/source/js/copy.js" />
+        <option value="$PROJECT_DIR$/source/_posts/2017-12-26-react-native-原生环境踩坑.md" />
       </list>
     </option>
   </component>
@@ -150,11 +253,10 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="1680" />
-    <option name="y" value="22" />
     <option name="width" value="1920" />
-    <option name="height" value="1058" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -188,6 +290,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,19 +301,40 @@
             <path>
               <item name="blog_source" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog_source" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog_source" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog_source" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog_source" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog_source" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog_source" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog_source" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blog_source" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog_source" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -225,6 +349,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -238,7 +363,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.启动">
+  <component name="RunManager">
     <configuration name="启动" type="js.build_tools.npm" factoryName="npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="start" />
@@ -251,10 +376,6 @@
       <node-interpreter value="project" />
       <envs />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="npm.启动" />
-      <item index="1" class="java.lang.String" itemvalue="npm.发布" />
-    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -270,33 +391,35 @@
       <option name="presentableId" value="Default" />
       <updated>1517224364710</updated>
       <workItem from="1517224367737" duration="671000" />
+      <workItem from="1520566770196" duration="4399000" />
+      <workItem from="1520583432917" duration="4729000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="671000" />
+    <option name="totallyTimeSpent" value="9799000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1680" y="22" width="1920" height="1058" extended-state="0" />
+    <frame x="1680" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2164297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -311,20 +434,106 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/_posts/2018-01-18-抽奖程序操作手册.md">
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="7" lean-forward="false" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/2017-12-22-用d3实现伪3d效果金字塔.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="73" lean-forward="false" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+            <folding>
+              <marker date="1517225134917" expanded="true" signature="398:406" ph="/*...*/" />
+              <marker date="1517225134917" expanded="true" signature="468:479" ph="/*...*/" />
+              <marker date="1517225134917" expanded="true" signature="503:754" ph="[...]" />
+              <marker date="1517225134917" expanded="true" signature="504:553" ph="{&quot;startColor&quot;: '##077cec'...}" />
+              <marker date="1517225134917" expanded="true" signature="555:603" ph="{&quot;startColor&quot;: '##2c6cff'...}" />
+              <marker date="1517225134917" expanded="true" signature="605:653" ph="{&quot;startColor&quot;: '##628eff'...}" />
+              <marker date="1517225134917" expanded="true" signature="655:703" ph="{&quot;startColor&quot;: '##60e9e9'...}" />
+              <marker date="1517225134917" expanded="true" signature="705:753" ph="{&quot;startColor&quot;: '##fffe2c'...}" />
+              <marker date="1517225134917" expanded="true" signature="756:769" ph="/*...*/" />
+              <marker date="1517225134917" expanded="true" signature="795:808" ph="/*...*/" />
+              <marker date="1517225134917" expanded="true" signature="1063:1654" ph="{...}" />
+              <marker date="1517225134917" expanded="true" signature="1346:1373" ph="{...}" />
+              <marker date="1517225134917" expanded="true" signature="1591:1622" ph="{...}" />
+              <marker date="1517225134917" expanded="true" signature="1804:1831" ph="//..." />
+              <marker date="1517225134917" expanded="true" signature="1863:2904" ph="{...}" />
+              <marker date="1517225134917" expanded="true" signature="2033:2051" ph="//..." />
+              <marker date="1517225134917" expanded="true" signature="2352:2530" ph="{...}" />
+              <marker date="1517225134917" expanded="true" signature="2534:2897" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/2017-12-22-react-native样式整理.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="315">
+            <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/2018-01-02-RN大版本升级-0-41-0-51.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="345">
+            <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <folding>
+              <marker date="1520567603928" expanded="true" signature="327:390" ph="{...}" />
+              <marker date="1520567603928" expanded="true" signature="773:938" ph="//..." />
+              <marker date="1520567603928" expanded="true" signature="988:989" ph="{...}" />
+              <marker date="1520567603928" expanded="true" signature="988:991" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/home.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4710">
+          <caret line="314" column="50" lean-forward="false" selection-start-line="314" selection-start-column="50" selection-end-line="314" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/_macro/sidebar.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/js/motion_global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/_layout.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" column="89" lean-forward="false" selection-start-line="71" selection-start-column="89" selection-end-line="71" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
+        <state relative-caret-position="450">
           <caret line="30" column="7" lean-forward="false" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
           <folding />
         </state>
@@ -365,6 +574,181 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="315">
             <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/2018-01-18-抽奖程序操作手册.md" />
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="7" lean-forward="false" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/2017-12-22-用d3实现伪3d效果金字塔.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="73" lean-forward="false" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+            <folding>
+              <marker date="1517225134917" expanded="true" signature="398:406" ph="/*...*/" />
+              <marker date="1517225134917" expanded="true" signature="468:479" ph="/*...*/" />
+              <marker date="1517225134917" expanded="true" signature="503:754" ph="[...]" />
+              <marker date="1517225134917" expanded="true" signature="504:553" ph="{&quot;startColor&quot;: '##077cec'...}" />
+              <marker date="1517225134917" expanded="true" signature="555:603" ph="{&quot;startColor&quot;: '##2c6cff'...}" />
+              <marker date="1517225134917" expanded="true" signature="605:653" ph="{&quot;startColor&quot;: '##628eff'...}" />
+              <marker date="1517225134917" expanded="true" signature="655:703" ph="{&quot;startColor&quot;: '##60e9e9'...}" />
+              <marker date="1517225134917" expanded="true" signature="705:753" ph="{&quot;startColor&quot;: '##fffe2c'...}" />
+              <marker date="1517225134917" expanded="true" signature="756:769" ph="/*...*/" />
+              <marker date="1517225134917" expanded="true" signature="795:808" ph="/*...*/" />
+              <marker date="1517225134917" expanded="true" signature="1063:1654" ph="{...}" />
+              <marker date="1517225134917" expanded="true" signature="1346:1373" ph="{...}" />
+              <marker date="1517225134917" expanded="true" signature="1591:1622" ph="{...}" />
+              <marker date="1517225134917" expanded="true" signature="1804:1831" ph="//..." />
+              <marker date="1517225134917" expanded="true" signature="1863:2904" ph="{...}" />
+              <marker date="1517225134917" expanded="true" signature="2033:2051" ph="//..." />
+              <marker date="1517225134917" expanded="true" signature="2352:2530" ph="{...}" />
+              <marker date="1517225134917" expanded="true" signature="2534:2897" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/2017-12-22-react-native样式整理.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="315">
+            <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/2018-01-02-RN大版本升级-0-41-0-51.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="345">
+            <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <folding>
+              <marker date="1520567603928" expanded="true" signature="327:390" ph="{...}" />
+              <marker date="1520567603928" expanded="true" signature="773:938" ph="//..." />
+              <marker date="1520567603928" expanded="true" signature="988:989" ph="{...}" />
+              <marker date="1520567603928" expanded="true" signature="988:991" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/_macro/sidebar.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/js/motion_global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/home.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4710">
+          <caret line="314" column="50" lean-forward="false" selection-start-line="314" selection-start-column="50" selection-end-line="314" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/scripts/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/scripts/authors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1513189356560" expanded="true" signature="580:876" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/scripts/merge-configs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/scripts/tags/full-image.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/scripts/tags/center-quote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/js/love.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/_layout.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="848">
+          <caret line="238" column="44" lean-forward="false" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/js/copy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="45" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/2017-12-26-react-native-原生环境踩坑.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="510">
+            <caret line="34" column="15" lean-forward="false" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
             <folding />
           </first_editor>
           <second_editor />
