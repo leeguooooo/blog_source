@@ -21,6 +21,10 @@ hexo new "我的日记"
 
 `source --> _posts --> 对应的文章`
 
+## 添加作者
+
+根目录下`_config.yml`中`authors:`下面添加作者
+
 ## 本地服务启动
 
 `npm start`
