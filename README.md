@@ -31,5 +31,7 @@ hexo new "我的日记"
 
 ## 上传github
 
-`git commit -am"test: update"`
-`git push origin master`
+```shell
+git commit -am"test: update"
+git push origin master
+```
