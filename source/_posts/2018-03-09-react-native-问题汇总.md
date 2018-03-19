@@ -2,7 +2,7 @@ title: react native 问题汇总
 date: 2018-03-09 20:34:43
 author: 郭立lee
 category: react native
-tags: [RN]
+tags: [RN,react nateve,debug,debuggerWorker.js,404,bundle 100%,debugger]
 photos: https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg
 ---
 
@@ -51,4 +51,16 @@ componentDidUpdate(prevProps, prevState) {
   this.props.a === prevProps.a;
 }
 ```
+
+详细介绍请见：[去哪儿.我爱你/React-16-3-新特性](https://xn--v4q63d8za.xn--6qq986b3xl/React-16-3-%E6%96%B0%E7%89%B9%E6%80%A7/)
+
 ----
+
+## react native debug模式加载100%之后空白页
+
+* "GET /debuggerWorker.js HTTP/1.1" 404 156 "http://localhost:8081/debugger-ui"
+* Downloading JavaScript bundle 100%
+
+1. ` "GET /debuggerWorker.js HTTP/1.1"`的问题是由于我chrome的问题无法自动打开`http://localhost:8081/debugger-ui`的页面导致的。
+2. `Downloading JavaScript bundle 100%`加载之后一直空白页尝试了多次一直都这样。
+最后我通过使用官方的`react native debugger`工具成功debug了

@@ -76,7 +76,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="RN," />
+  <meta name="keywords" content="RN,PropTypes.checkPropTypes,prop-types," />
 
 
 
@@ -95,7 +95,7 @@
 
 
 <meta name="description" content="找不到index入口问题症状  RN找不到index入口 error: bundling failed: Error Cannot find entry file index.js in any of the roots    处理方法12将 index.android.js 重命名为 index.js然后把 index.ios.js 删除。 原因 0.49 版本最大的一个变化应该就是将两个平台的">
-<meta name="keywords" content="RN">
+<meta name="keywords" content="RN,PropTypes.checkPropTypes,prop-types">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RN升级遇到的坑">
 <meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/RN升级遇到的坑/index.html">
@@ -103,7 +103,7 @@
 <meta property="og:description" content="找不到index入口问题症状  RN找不到index入口 error: bundling failed: Error Cannot find entry file index.js in any of the roots    处理方法12将 index.android.js 重命名为 index.js然后把 index.ios.js 删除。 原因 0.49 版本最大的一个变化应该就是将两个平台的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg">
-<meta property="og:updated_time" content="2018-01-03T07:58:31.370Z">
+<meta property="og:updated_time" content="2018-03-15T10:02:31.920Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RN升级遇到的坑">
 <meta name="twitter:description" content="找不到index入口问题症状  RN找不到index入口 error: bundling failed: Error Cannot find entry file index.js in any of the roots    处理方法12将 index.android.js 重命名为 index.js然后把 index.ios.js 删除。 原因 0.49 版本最大的一个变化应该就是将两个平台的">
@@ -239,14 +239,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-            标签
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-rn">
           <a href="/categories/react-native/" rel="section">
             
@@ -332,7 +324,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郭立lee">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fpchgl4fb9j30yi0yjq5r.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -372,8 +364,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-01-03T15:58:31+08:00">
-                2018-01-03
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-15T18:02:31+08:00">
+                2018-03-15
               </time>
             
             
@@ -441,7 +433,7 @@
                   <span class="post-meta-item-text">字数</span>
                 
                 <span title="字数">
-                  734
+                  895
                 </span>
               
 
@@ -499,8 +491,8 @@
 <h2 id="prop-types_报错">prop-types 报错</h2><h3 id="症状">症状</h3><blockquote>
 <ul>
 <li>undefined is not an object</li>
-<li>evaluating ‘_react2.PropTypes.string’</li>
 <li>找不到PropTypes</li>
+<li>evaluating react2.PropTypes.string</li>
 </ul>
 </blockquote>
 <p><img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn2h4muo96j30ac0iidha.jpg" alt=""></p>
@@ -508,7 +500,7 @@
 <h4 id="代码引入">代码引入</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>; <span class="comment">// ES6</span></div><div class="line"><span class="keyword">var</span> PropTypes = <span class="built_in">require</span>(<span class="string">'prop-types'</span>); <span class="comment">// ES5 with npm</span></div></pre></td></tr></table></figure>
 <p>或者<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- development version --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/prop-types/prop-types.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- production version --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/prop-types/prop-types.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h4 id="使用">使用</h4><p>下面例子仅供参考</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="comment">// ... do things with the props</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">MyComponent.propTypes = &#123;</div><div class="line">  <span class="comment">// You can declare that a prop is a specific JS primitive. By default, these</span></div><div class="line">  <span class="comment">// are all optional.</span></div><div class="line">  optionalArray: PropTypes.array,</div><div class="line">  optionalBool: PropTypes.bool,</div><div class="line">  optionalFunc: PropTypes.func,</div><div class="line">  optionalNumber: PropTypes.number,</div><div class="line">  optionalObject: PropTypes.object,</div><div class="line">  optionalString: PropTypes.string,</div><div class="line">  optionalSymbol: PropTypes.symbol,</div><div class="line"></div><div class="line">  <span class="comment">// Anything that can be rendered: numbers, strings, elements or an array</span></div><div class="line">  <span class="comment">// (or fragment) containing these types.</span></div><div class="line">  optionalNode: PropTypes.node,</div><div class="line"></div><div class="line">  <span class="comment">// A React element.</span></div><div class="line">  optionalElement: PropTypes.element,</div><div class="line"></div><div class="line">  <span class="comment">// You can also declare that a prop is an instance of a class. This uses</span></div><div class="line">  <span class="comment">// JS's instanceof operator.</span></div><div class="line">  optionalMessage: PropTypes.instanceOf(Message),</div><div class="line"></div><div class="line">  <span class="comment">// You can ensure that your prop is limited to specific values by treating</span></div><div class="line">  <span class="comment">// it as an enum.</span></div><div class="line">  optionalEnum: PropTypes.oneOf([<span class="string">'News'</span>, <span class="string">'Photos'</span>]),</div><div class="line"></div><div class="line">  <span class="comment">// An object that could be one of many types</span></div><div class="line">  optionalUnion: PropTypes.oneOfType([</div><div class="line">    PropTypes.string,</div><div class="line">    PropTypes.number,</div><div class="line">    PropTypes.instanceOf(Message)</div><div class="line">  ]),</div><div class="line"></div><div class="line">  <span class="comment">// An array of a certain type</span></div><div class="line">  optionalArrayOf: PropTypes.arrayOf(PropTypes.number),</div><div class="line"></div><div class="line">  <span class="comment">// An object with property values of a certain type</span></div><div class="line">  optionalObjectOf: PropTypes.objectOf(PropTypes.number),</div><div class="line"></div><div class="line">  <span class="comment">// An object taking on a particular shape</span></div><div class="line">  optionalObjectWithShape: PropTypes.shape(&#123;</div><div class="line">    color: PropTypes.string,</div><div class="line">    fontSize: PropTypes.number</div><div class="line">  &#125;),</div><div class="line"></div><div class="line">  <span class="comment">// You can chain any of the above with `isRequired` to make sure a warning</span></div><div class="line">  <span class="comment">// is shown if the prop isn't provided.</span></div><div class="line">  requiredFunc: PropTypes.func.isRequired,</div><div class="line"></div><div class="line">  <span class="comment">// A value of any data type</span></div><div class="line">  requiredAny: PropTypes.any.isRequired,</div><div class="line"></div><div class="line">  <span class="comment">// You can also specify a custom validator. It should return an Error</span></div><div class="line">  <span class="comment">// object if the validation fails. Don't `console.warn` or throw, as this</span></div><div class="line">  <span class="comment">// won't work inside `oneOfType`.</span></div><div class="line">  customProp: <span class="function"><span class="keyword">function</span>(<span class="params">props, propName, componentName</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="regexp">/matchme/</span>.test(props[propName])) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(</div><div class="line">        <span class="string">'Invalid prop `'</span> + propName + <span class="string">'` supplied to'</span> +</div><div class="line">        <span class="string">' `'</span> + componentName + <span class="string">'`. Validation failed.'</span></div><div class="line">      );</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="comment">// You can also supply a custom validator to `arrayOf` and `objectOf`.</span></div><div class="line">  <span class="comment">// It should return an Error object if the validation fails. The validator</span></div><div class="line">  <span class="comment">// will be called for each key in the array or object. The first two</span></div><div class="line">  <span class="comment">// arguments of the validator are the array or object itself, and the</span></div><div class="line">  <span class="comment">// current item's key.</span></div><div class="line">  customArrayProp: PropTypes.arrayOf(<span class="function"><span class="keyword">function</span>(<span class="params">propValue, key, componentName, location, propFullName</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="regexp">/matchme/</span>.test(propValue[key])) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(</div><div class="line">        <span class="string">'Invalid prop `'</span> + propFullName + <span class="string">'` supplied to'</span> +</div><div class="line">        <span class="string">' `'</span> + componentName + <span class="string">'`. Validation failed.'</span></div><div class="line">      );</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;</div><div class="line"></div><div class="line">MyComponent.propTypes = &#123;</div><div class="line">  <span class="comment">// 你可以将属性声明为以下 JS 原生类型</span></div><div class="line">  optionalArray: PropTypes.array,</div><div class="line">  optionalBool: PropTypes.bool,</div><div class="line">  optionalFunc: PropTypes.func,</div><div class="line">  optionalNumber: PropTypes.number,</div><div class="line">  optionalObject: PropTypes.object,</div><div class="line">  optionalString: PropTypes.string,</div><div class="line">  optionalSymbol: PropTypes.symbol,</div><div class="line"></div><div class="line">  <span class="comment">// 任何可被渲染的元素（包括数字、字符串、子元素或数组）。</span></div><div class="line">  optionalNode: PropTypes.node,</div><div class="line"></div><div class="line">  <span class="comment">// 一个 React 元素</span></div><div class="line">  optionalElement: PropTypes.element,</div><div class="line"></div><div class="line">  <span class="comment">// 你也可以声明属性为某个类的实例，这里使用 JS 的</span></div><div class="line">  <span class="comment">// instanceof 操作符实现。</span></div><div class="line">  optionalMessage: PropTypes.instanceOf(Message),</div><div class="line"></div><div class="line">  <span class="comment">// 你也可以限制你的属性值是某个特定值之一</span></div><div class="line">  optionalEnum: PropTypes.oneOf([<span class="string">'News'</span>, <span class="string">'Photos'</span>]),</div><div class="line"></div><div class="line">  <span class="comment">// 限制它为列举类型之一的对象</span></div><div class="line">  optionalUnion: PropTypes.oneOfType([</div><div class="line">    PropTypes.string,</div><div class="line">    PropTypes.number,</div><div class="line">    PropTypes.instanceOf(Message)</div><div class="line">  ]),</div><div class="line"></div><div class="line">  <span class="comment">// 一个指定元素类型的数组</span></div><div class="line">  optionalArrayOf: PropTypes.arrayOf(PropTypes.number),</div><div class="line"></div><div class="line">  <span class="comment">// 一个指定类型的对象</span></div><div class="line">  optionalObjectOf: PropTypes.objectOf(PropTypes.number),</div><div class="line"></div><div class="line">  <span class="comment">// 一个指定属性及其类型的对象</span></div><div class="line">  optionalObjectWithShape: PropTypes.shape(&#123;</div><div class="line">    color: PropTypes.string,</div><div class="line">    fontSize: PropTypes.number</div><div class="line">  &#125;),</div><div class="line"></div><div class="line">  <span class="comment">// 你也可以在任何 PropTypes 属性后面加上 `isRequired`</span></div><div class="line">  <span class="comment">// 后缀，这样如果这个属性父组件没有提供时，会打印警告信息</span></div><div class="line">  requiredFunc: PropTypes.func.isRequired,</div><div class="line"></div><div class="line">  <span class="comment">// 任意类型的数据</span></div><div class="line">  requiredAny: PropTypes.any.isRequired,</div><div class="line"></div><div class="line">  <span class="comment">// 你也可以指定一个自定义验证器。它应该在验证失败时返回</span></div><div class="line">  <span class="comment">// 一个 Error 对象而不是 `console.warn` 或抛出异常。</span></div><div class="line">  <span class="comment">// 不过在 `oneOfType` 中它不起作用。</span></div><div class="line">  customProp: <span class="function"><span class="keyword">function</span>(<span class="params">props, propName, componentName</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="regexp">/matchme/</span>.test(props[propName])) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(</div><div class="line">        <span class="string">'Invalid prop `'</span> + propName + <span class="string">'` supplied to'</span> +</div><div class="line">        <span class="string">' `'</span> + componentName + <span class="string">'`. Validation failed.'</span></div><div class="line">      );</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="comment">// 不过你可以提供一个自定义的 `arrayOf` 或 `objectOf`</span></div><div class="line">  <span class="comment">// 验证器，它应该在验证失败时返回一个 Error 对象。 它被用</span></div><div class="line">  <span class="comment">// 于验证数组或对象的每个值。验证器前两个参数的第一个是数组</span></div><div class="line">  <span class="comment">// 或对象本身，第二个是它们对应的键。</span></div><div class="line">  customArrayProp: PropTypes.arrayOf(<span class="function"><span class="keyword">function</span>(<span class="params">propValue, key, componentName, location, propFullName</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="regexp">/matchme/</span>.test(propValue[key])) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(</div><div class="line">        <span class="string">'Invalid prop `'</span> + propFullName + <span class="string">'` supplied to'</span> +</div><div class="line">        <span class="string">' `'</span> + componentName + <span class="string">'`. Validation failed.'</span></div><div class="line">      );</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <h3 id="原因-1">原因</h3><p>从 React 16.0.0 开始，PropTypes 就已经不再由 React 提供了，而 fb 专门提供了 prop-types 模块，需要通过<code>import PropTypes from ‘prop-types’</code>来使用 PropTypes。0.48 版本的 RN 使用的是 16.0.0-alpha.12 版本的 React，alpha 版本还没有移除 PropTypes，所以之前项目不会有任何问题。而到了 0.49版本，自动将 React 升级到了 16.0.0-beta.5，这个版本已经移除了 React.PropTypes，所以再编译就会报错了，因为找不到 PropTypes 了。</p>
 <hr>
 <h2 id="react-native_出现_No_component_found_for_view_with_name_“RNSVG*”">react-native 出现 No component found for view with name “RNSVG<em>*</em>”</h2><h3 id="症状-1">症状</h3><blockquote>
@@ -518,10 +510,11 @@
 </blockquote>
 <p><img src="https://upload-images.jianshu.io/upload_images/5822915-eecb1f40a36e82df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
 <h4 id="处理办法">处理办法</h4><blockquote>
-<p><a href="https://www.jianshu.com/p/b51b79ca14e7" target="_blank" rel="external">ios解决方案</a></p>
+<p><a href="https://www.jianshu.com/p/b51b79ca14e7" target="_blank" rel="external">ios解决方案: https://www.jianshu.com/p/b51b79ca14e7</a></p>
 </blockquote>
 <hr>
-<p>## </p>
+<h2 id="Invariant_Violation:_Calling_PropTypes_validators_directly_is_not_supported_by_the_prop-types_package-_Use_PropTypes-checkPropTypes()_to_call_them-_Read_more_at_http://fb-me/use-check-prop-types">Invariant Violation: Calling PropTypes validators directly is not supported by the <code>prop-types</code> package. Use <code>PropTypes.checkPropTypes()</code> to call them. Read more at <a href="http://fb.me/use-check-prop-types" target="_blank" rel="external">http://fb.me/use-check-prop-types</a></h2><hr>
+<h2 id="Invariant_Violation:_Element_type_is_invalid:_expected_a_string_(for_built-in_components)_or_a_class/function_(for_composite_components)_but_got:_object-">Invariant Violation: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object.</h2><h4 id="处理方案-1">处理方案</h4><p>&gt;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> HTML = <span class="built_in">require</span>(<span class="string">'react-native-htmlview'</span>);</div><div class="line"><span class="comment">//改为</span></div><div class="line"><span class="keyword">import</span> HTML <span class="keyword">from</span> <span class="string">'react-native-htmlview'</span>;</div></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -571,6 +564,10 @@
         <div class="post-tags">
           
             <a href="/tags/RN/" rel="tag"><i class="fa fa-tag"></i> RN</a>
+          
+            <a href="/tags/PropTypes-checkPropTypes/" rel="tag"><i class="fa fa-tag"></i> PropTypes.checkPropTypes</a>
+          
+            <a href="/tags/prop-types/" rel="tag"><i class="fa fa-tag"></i> prop-types</a>
           
         </div>
       
@@ -685,7 +682,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg"
+               src="https://ws1.sinaimg.cn/large/005T0OjCly1fpchgl4fb9j30yi0yjq5r.jpg"
                alt="郭立lee" />
           <p class="site-author-name" itemprop="name">郭立lee</p>
            
@@ -697,7 +694,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -719,7 +716,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -727,7 +724,7 @@
 
           <div class="site-state-item site-state-authors">
             <a href="/authors/">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">作者</span>
             </a>
           </div>
@@ -745,17 +742,6 @@
 
         <div class="links-of-author motion-element">
           
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/leeguooooo" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
             
               <span class="links-of-author-item">
                 <a href="leeguoo@163.com" target="_blank" title="E-Mail">
@@ -795,14 +781,6 @@
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://www.qunar.com/" title="去哪儿官网" target="_blank">去哪儿官网</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://www.leeguoo.com/" title="LEEGUOO官网" target="_blank">LEEGUOO官网</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
                   <a href="https://www.docschina.org" title="印记中文文档" target="_blank">印记中文文档</a>
                 </li>
               
@@ -812,6 +790,10 @@
               
                 <li class="links-of-blogroll-item">
                   <a href="//zh-google-styleguide.readthedocs.io/en/latest/contents/" title="项目风格指南" target="_blank">项目风格指南</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.redux.org.cn/" title="REDUX中文网" target="_blank">REDUX中文网</a>
                 </li>
               
             </ul>
@@ -833,7 +815,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#找不到index入口"><span class="nav-number">1.</span> <span class="nav-text">找不到index入口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题症状"><span class="nav-number">1.1.</span> <span class="nav-text">问题症状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理方法"><span class="nav-number">1.2.</span> <span class="nav-text">处理方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原因"><span class="nav-number">1.3.</span> <span class="nav-text">原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prop-types_报错"><span class="nav-number">2.</span> <span class="nav-text">prop-types 报错</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#症状"><span class="nav-number">2.1.</span> <span class="nav-text">症状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理方案"><span class="nav-number">2.2.</span> <span class="nav-text">处理方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码引入"><span class="nav-number">2.2.1.</span> <span class="nav-text">代码引入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用"><span class="nav-number">2.2.2.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原因-1"><span class="nav-number">2.3.</span> <span class="nav-text">原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-native_出现_No_component_found_for_view_with_name_“RNSVG*”"><span class="nav-number">3.</span> <span class="nav-text">react-native 出现 No component found for view with name “RNSVG*”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#症状-1"><span class="nav-number">3.1.</span> <span class="nav-text">症状</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#处理办法"><span class="nav-number">3.1.1.</span> <span class="nav-text">处理办法</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#找不到index入口"><span class="nav-number">1.</span> <span class="nav-text">找不到index入口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题症状"><span class="nav-number">1.1.</span> <span class="nav-text">问题症状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理方法"><span class="nav-number">1.2.</span> <span class="nav-text">处理方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原因"><span class="nav-number">1.3.</span> <span class="nav-text">原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prop-types_报错"><span class="nav-number">2.</span> <span class="nav-text">prop-types 报错</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#症状"><span class="nav-number">2.1.</span> <span class="nav-text">症状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理方案"><span class="nav-number">2.2.</span> <span class="nav-text">处理方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码引入"><span class="nav-number">2.2.1.</span> <span class="nav-text">代码引入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用"><span class="nav-number">2.2.2.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原因-1"><span class="nav-number">2.3.</span> <span class="nav-text">原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-native_出现_No_component_found_for_view_with_name_“RNSVG*”"><span class="nav-number">3.</span> <span class="nav-text">react-native 出现 No component found for view with name “RNSVG*”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#症状-1"><span class="nav-number">3.1.</span> <span class="nav-text">症状</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#处理办法"><span class="nav-number">3.1.1.</span> <span class="nav-text">处理办法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Invariant_Violation:_Calling_PropTypes_validators_directly_is_not_supported_by_the_prop-types_package-_Use_PropTypes-checkPropTypes()_to_call_them-_Read_more_at_http://fb-me/use-check-prop-types"><span class="nav-number">4.</span> <span class="nav-text">Invariant Violation: Calling PropTypes validators directly is not supported by the prop-types package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Invariant_Violation:_Element_type_is_invalid:_expected_a_string_(for_built-in_components)_or_a_class/function_(for_composite_components)_but_got:_object-"><span class="nav-number">5.</span> <span class="nav-text">Invariant Violation: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#处理方案-1"><span class="nav-number">5.0.1.</span> <span class="nav-text">处理方案</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -877,7 +859,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.8k字</span>
+  <span class="post-count">博客全站共14.5k字</span>
 </div>
 
         

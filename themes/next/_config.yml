@@ -51,7 +51,7 @@ menu:
   #categories: /categories/
   #about: /about/
   archives: /archives/
-  tags: /tags/
+  # tags: /tags/
   #sitemap: /sitemap.xml
   # commonweal: /404/
   rn: /categories/react-native/
@@ -97,7 +97,7 @@ scheme: Mist
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  GitHub: https://github.com/leeguooooo
+  # GitHub: https://github.com/leeguooooo
   E-Mail: leeguoo@163.com
   Weibo: 12491851.weibo.com
 # social:
@@ -135,11 +135,12 @@ social_icons:
 # links_layout: block
 # links_layout: inline
 links:
-  去哪儿官网: https://www.qunar.com/
-  LEEGUOO官网: https://www.leeguoo.com/
+  # 去哪儿官网: https://www.qunar.com/
+  # LEEGUOO官网: https://www.leeguoo.com/
   印记中文文档: https://www.docschina.org
   腾讯前端博客: //www.alloyteam.com/page/0/
   项目风格指南: //zh-google-styleguide.readthedocs.io/en/latest/contents/
+  REDUX中文网: http://www.redux.org.cn/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg

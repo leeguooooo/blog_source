@@ -76,7 +76,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="RN," />
+  <meta name="keywords" content="RN,react nateve,debug,debuggerWorker.js,404,bundle 100%,debugger," />
 
 
 
@@ -95,7 +95,7 @@
 
 
 <meta name="description" content="ReferenceError: Can’t find variable: event static getDerivedStateFromProps 作为被废弃的componentWillReceiveProps的替代，React提供了一个新的函数static getDerivedStateFromProps(nextProps, prevState) 注意前面的static，这意味着在这个函数中">
-<meta name="keywords" content="RN">
+<meta name="keywords" content="RN,react nateve,debug,debuggerWorker.js,404,bundle 100%,debugger">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react native 问题汇总">
 <meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-问题汇总/index.html">
@@ -103,7 +103,7 @@
 <meta property="og:description" content="ReferenceError: Can’t find variable: event static getDerivedStateFromProps 作为被废弃的componentWillReceiveProps的替代，React提供了一个新的函数static getDerivedStateFromProps(nextProps, prevState) 注意前面的static，这意味着在这个函数中">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg">
-<meta property="og:updated_time" content="2018-03-09T13:04:22.344Z">
+<meta property="og:updated_time" content="2018-03-16T08:06:34.651Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react native 问题汇总">
 <meta name="twitter:description" content="ReferenceError: Can’t find variable: event static getDerivedStateFromProps 作为被废弃的componentWillReceiveProps的替代，React提供了一个新的函数static getDerivedStateFromProps(nextProps, prevState) 注意前面的static，这意味着在这个函数中">
@@ -239,14 +239,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-            标签
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-rn">
           <a href="/categories/react-native/" rel="section">
             
@@ -332,7 +324,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郭立lee">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fpchgl4fb9j30yi0yjq5r.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -372,8 +364,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-09T21:04:22+08:00">
-                2018-03-09
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-16T16:06:34+08:00">
+                2018-03-16
               </time>
             
             
@@ -441,7 +433,7 @@
                   <span class="post-meta-item-text">字数</span>
                 
                 <span title="字数">
-                  230
+                  353
                 </span>
               
 
@@ -457,7 +449,7 @@
                   <span class="post-meta-item-text">时间≈</span>
                 
                 <span title="时间≈">
-                  1
+                  2
                 </span>
               
             </div>
@@ -497,7 +489,16 @@
 <li>componentWillReceiveProps 请使用新增的 static getDerivedStateFromProps代替<br>废弃警告会在React 16.4开启，废弃的函数预计在React 17.0移除</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// componentWillMount 请使用 componentDidMount代替 替换实例</span></div><div class="line">componentWillUpdate(nextProps, nextState) &#123;</div><div class="line">  foo(nextProps, nextState);</div><div class="line">  bar(<span class="keyword">this</span>.props, <span class="keyword">this</span>.state);</div><div class="line">  nextProps.a === <span class="keyword">this</span>.props.a;</div><div class="line">&#125;</div><div class="line"></div><div class="line">componentDidUpdate(prevProps, prevState) &#123;</div><div class="line">  foo(<span class="keyword">this</span>.props, <span class="keyword">this</span>.state);</div><div class="line">  bar(prevProps, prevState);</div><div class="line">  <span class="keyword">this</span>.props.a === prevProps.a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>详细介绍请见：<a href="https://xn--v4q63d8za.xn--6qq986b3xl/React-16-3-%E6%96%B0%E7%89%B9%E6%80%A7/">去哪儿.我爱你/React-16-3-新特性</a></p>
 <hr>
+<h2 id="react_native_debug模式加载100%之后空白页">react native debug模式加载100%之后空白页</h2><ul>
+<li>“GET /debuggerWorker.js HTTP/1.1” 404 156 “<a href="http://localhost:8081/debugger-ui" target="_blank" rel="external">http://localhost:8081/debugger-ui</a>“</li>
+<li>Downloading JavaScript bundle 100%</li>
+</ul>
+<ol>
+<li><code>&quot;GET /debuggerWorker.js HTTP/1.1&quot;</code>的问题是由于我chrome的问题无法自动打开<code>http://localhost:8081/debugger-ui</code>的页面导致的。</li>
+<li><code>Downloading JavaScript bundle 100%</code>加载之后一直空白页尝试了多次一直都这样。<br>最后我通过使用官方的<code>react native debugger</code>工具成功debug了</li>
+</ol>
 </span>
       
     </div>
@@ -547,6 +548,18 @@
         <div class="post-tags">
           
             <a href="/tags/RN/" rel="tag"><i class="fa fa-tag"></i> RN</a>
+          
+            <a href="/tags/react-nateve/" rel="tag"><i class="fa fa-tag"></i> react nateve</a>
+          
+            <a href="/tags/debug/" rel="tag"><i class="fa fa-tag"></i> debug</a>
+          
+            <a href="/tags/debuggerWorker-js/" rel="tag"><i class="fa fa-tag"></i> debuggerWorker.js</a>
+          
+            <a href="/tags/404/" rel="tag"><i class="fa fa-tag"></i> 404</a>
+          
+            <a href="/tags/bundle-100/" rel="tag"><i class="fa fa-tag"></i> bundle 100%</a>
+          
+            <a href="/tags/debugger/" rel="tag"><i class="fa fa-tag"></i> debugger</a>
           
         </div>
       
@@ -661,7 +674,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="https://ws1.sinaimg.cn/large/005T0OjCly1fmg9jsl1dlj30yi0yjhdt.jpg"
+               src="https://ws1.sinaimg.cn/large/005T0OjCly1fpchgl4fb9j30yi0yjq5r.jpg"
                alt="郭立lee" />
           <p class="site-author-name" itemprop="name">郭立lee</p>
            
@@ -673,7 +686,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -695,7 +708,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -703,7 +716,7 @@
 
           <div class="site-state-item site-state-authors">
             <a href="/authors/">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">作者</span>
             </a>
           </div>
@@ -721,17 +734,6 @@
 
         <div class="links-of-author motion-element">
           
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/leeguooooo" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
             
               <span class="links-of-author-item">
                 <a href="leeguoo@163.com" target="_blank" title="E-Mail">
@@ -771,14 +773,6 @@
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://www.qunar.com/" title="去哪儿官网" target="_blank">去哪儿官网</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://www.leeguoo.com/" title="LEEGUOO官网" target="_blank">LEEGUOO官网</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
                   <a href="https://www.docschina.org" title="印记中文文档" target="_blank">印记中文文档</a>
                 </li>
               
@@ -788,6 +782,10 @@
               
                 <li class="links-of-blogroll-item">
                   <a href="//zh-google-styleguide.readthedocs.io/en/latest/contents/" title="项目风格指南" target="_blank">项目风格指南</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.redux.org.cn/" title="REDUX中文网" target="_blank">REDUX中文网</a>
                 </li>
               
             </ul>
@@ -809,7 +807,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ReferenceError:_Can’t_find_variable:_event"><span class="nav-number">1.</span> <span class="nav-text">ReferenceError: Can’t find variable: event</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static_getDerivedStateFromProps"><span class="nav-number">2.</span> <span class="nav-text">static getDerivedStateFromProps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-3_生命周期相关改动"><span class="nav-number">3.</span> <span class="nav-text">16.3 生命周期相关改动</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ReferenceError:_Can’t_find_variable:_event"><span class="nav-number">1.</span> <span class="nav-text">ReferenceError: Can’t find variable: event</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static_getDerivedStateFromProps"><span class="nav-number">2.</span> <span class="nav-text">static getDerivedStateFromProps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-3_生命周期相关改动"><span class="nav-number">3.</span> <span class="nav-text">16.3 生命周期相关改动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react_native_debug模式加载100%之后空白页"><span class="nav-number">4.</span> <span class="nav-text">react native debug模式加载100%之后空白页</span></a></li></ol></div>
             
 
           </div>
@@ -853,7 +851,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.8k字</span>
+  <span class="post-count">博客全站共14.5k字</span>
 </div>
 
         
