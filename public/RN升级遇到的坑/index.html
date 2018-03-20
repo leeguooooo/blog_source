@@ -94,19 +94,19 @@
 
 
 
-<meta name="description" content="找不到index入口问题症状  RN找不到index入口 error: bundling failed: Error Cannot find entry file index.js in any of the roots    处理方法12将 index.android.js 重命名为 index.js然后把 index.ios.js 删除。 原因 0.49 版本最大的一个变化应该就是将两个平台的">
+<meta name="description" content="目录  找不到index入口 问题症状 处理方法 原因   prop-types 报错 症状 处理方案 代码引入 使用   原因   react-native 出现 No component found for view with name “RNSVG*” 症状 处理办法     Invariant Violation: Calling PropTypes validators direct">
 <meta name="keywords" content="RN,PropTypes.checkPropTypes,prop-types">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RN升级遇到的坑">
 <meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/RN升级遇到的坑/index.html">
 <meta property="og:site_name" content="郭立lee - 个人博客">
-<meta property="og:description" content="找不到index入口问题症状  RN找不到index入口 error: bundling failed: Error Cannot find entry file index.js in any of the roots    处理方法12将 index.android.js 重命名为 index.js然后把 index.ios.js 删除。 原因 0.49 版本最大的一个变化应该就是将两个平台的">
+<meta property="og:description" content="目录  找不到index入口 问题症状 处理方法 原因   prop-types 报错 症状 处理方案 代码引入 使用   原因   react-native 出现 No component found for view with name “RNSVG*” 症状 处理办法     Invariant Violation: Calling PropTypes validators direct">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg">
-<meta property="og:updated_time" content="2018-03-15T10:02:31.920Z">
+<meta property="og:updated_time" content="2018-03-20T11:34:58.638Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RN升级遇到的坑">
-<meta name="twitter:description" content="找不到index入口问题症状  RN找不到index入口 error: bundling failed: Error Cannot find entry file index.js in any of the roots    处理方法12将 index.android.js 重命名为 index.js然后把 index.ios.js 删除。 原因 0.49 版本最大的一个变化应该就是将两个平台的">
+<meta name="twitter:description" content="目录  找不到index入口 问题症状 处理方法 原因   prop-types 报错 症状 处理方案 代码引入 使用   原因   react-native 出现 No component found for view with name “RNSVG*” 症状 处理办法     Invariant Violation: Calling PropTypes validators direct">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg">
 
 
@@ -364,8 +364,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-15T18:02:31+08:00">
-                2018-03-15
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-20T19:34:58+08:00">
+                2018-03-20
               </time>
             
             
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数</span>
                 
                 <span title="字数">
-                  895
+                  1,006
                 </span>
               
 
@@ -449,7 +449,7 @@
                   <span class="post-meta-item-text">时间≈</span>
                 
                 <span title="时间≈">
-                  4
+                  5
                 </span>
               
             </div>
@@ -475,7 +475,41 @@
     
 
       
-        <span itemprop="articleBody"><h2 id="找不到index入口">找不到index入口</h2><h3 id="问题症状">问题症状</h3><blockquote>
+        <span itemprop="articleBody"><!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>目录</strong></p>
+<ul>
+<li><a href="#%E6%89%BE%E4%B8%8D%E5%88%B0index%E5%85%A5%E5%8F%A3">找不到index入口</a><ul>
+<li><a href="#%E9%97%AE%E9%A2%98%E7%97%87%E7%8A%B6">问题症状</a></li>
+<li><a href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95">处理方法</a></li>
+<li><a href="#%E5%8E%9F%E5%9B%A0">原因</a></li>
+</ul>
+</li>
+<li><a href="#prop-types-%E6%8A%A5%E9%94%99">prop-types 报错</a><ul>
+<li><a href="#%E7%97%87%E7%8A%B6">症状</a></li>
+<li><a href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88">处理方案</a><ul>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%BC%95%E5%85%A5">代码引入</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8">使用</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8E%9F%E5%9B%A0-1">原因</a></li>
+</ul>
+</li>
+<li><a href="#react-native-%E5%87%BA%E7%8E%B0-no-component-found-for-view-with-name-rnsvg">react-native 出现 No component found for view with name “RNSVG<em>*</em>”</a><ul>
+<li><a href="#%E7%97%87%E7%8A%B6-1">症状</a><ul>
+<li><a href="#%E5%A4%84%E7%90%86%E5%8A%9E%E6%B3%95">处理办法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#invariant-violation-calling-proptypes-validators-directly-is-not-supported-by-the-prop-types-package-use-proptypescheckproptypes-to-call-them-read-more-at-httpfbmeuse-check-prop-types">Invariant Violation: Calling PropTypes validators directly is not supported by the <code>prop-types</code> package. Use <code>PropTypes.checkPropTypes()</code> to call them. Read more at http://fb.me/use-check-prop-types</a></li>
+<li><a href="#invariant-violation-element-type-is-invalid-expected-a-string-for-built-in-components-or-a-classfunction-for-composite-components-but-got-object">Invariant Violation: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object.</a><ul>
+<li><a href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88-1">处理方案</a></li>
+</ul>
+</li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="找不到index入口">找不到index入口</h2><h3 id="问题症状">问题症状</h3><blockquote>
 <ul>
 <li>RN找不到index入口</li>
 <li>error: bundling failed: Error</li>
@@ -694,7 +728,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -705,7 +739,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -716,7 +750,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -859,7 +893,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共14.8k字</span>
+  <span class="post-count">博客全站共16.1k字</span>
 </div>
 
         

@@ -94,19 +94,19 @@
 
 
 
-<meta name="description" content="用d3实现金字塔伪3d效果 工作中偶然接触到d3，慢慢开始熟悉d3，并可以根据效果图进行图形绘制，要完全掌握d3绘图技巧需要不断深入学习研究，今天要展示的是我遇到的一个类似3d效果的金字塔效果图，其实是个伪3d，由于本人学术不精，只想到利用path拼接面的形式来实现（其实一开始想研究研究threejs，but needtime,so…),废话不多说，绘制过程代码如下： 定义图表需要的数据结构123">
+<meta name="description" content="目录  用d3实现金字塔伪3d效果 定义图表需要的数据结构 创建svg 生成金字塔 调用函数方法并传参     用d3实现金字塔伪3d效果 工作中偶然接触到d3，慢慢开始熟悉d3，并可以根据效果图进行图形绘制，要完全掌握d3绘图技巧需要不断深入学习研究，今天要展示的是我遇到的一个类似3d效果的金字塔效果图，其实是个伪3d，由于本人学术不精，只想到利用path拼接面的形式来实现（其实一开始想研究">
 <meta name="keywords" content="D3,金字塔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用D3实现伪3D效果金字塔">
 <meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/用d3实现伪3d效果金字塔/index.html">
 <meta property="og:site_name" content="郭立lee - 个人博客">
-<meta property="og:description" content="用d3实现金字塔伪3d效果 工作中偶然接触到d3，慢慢开始熟悉d3，并可以根据效果图进行图形绘制，要完全掌握d3绘图技巧需要不断深入学习研究，今天要展示的是我遇到的一个类似3d效果的金字塔效果图，其实是个伪3d，由于本人学术不精，只想到利用path拼接面的形式来实现（其实一开始想研究研究threejs，but needtime,so…),废话不多说，绘制过程代码如下： 定义图表需要的数据结构123">
+<meta property="og:description" content="目录  用d3实现金字塔伪3d效果 定义图表需要的数据结构 创建svg 生成金字塔 调用函数方法并传参     用d3实现金字塔伪3d效果 工作中偶然接触到d3，慢慢开始熟悉d3，并可以根据效果图进行图形绘制，要完全掌握d3绘图技巧需要不断深入学习研究，今天要展示的是我遇到的一个类似3d效果的金字塔效果图，其实是个伪3d，由于本人学术不精，只想到利用path拼接面的形式来实现（其实一开始想研究">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmovukq0zrj30hm09o74c.jpg">
-<meta property="og:updated_time" content="2018-01-29T11:25:34.918Z">
+<meta property="og:updated_time" content="2018-03-20T11:34:58.637Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用D3实现伪3D效果金字塔">
-<meta name="twitter:description" content="用d3实现金字塔伪3d效果 工作中偶然接触到d3，慢慢开始熟悉d3，并可以根据效果图进行图形绘制，要完全掌握d3绘图技巧需要不断深入学习研究，今天要展示的是我遇到的一个类似3d效果的金字塔效果图，其实是个伪3d，由于本人学术不精，只想到利用path拼接面的形式来实现（其实一开始想研究研究threejs，but needtime,so…),废话不多说，绘制过程代码如下： 定义图表需要的数据结构123">
+<meta name="twitter:description" content="目录  用d3实现金字塔伪3d效果 定义图表需要的数据结构 创建svg 生成金字塔 调用函数方法并传参     用d3实现金字塔伪3d效果 工作中偶然接触到d3，慢慢开始熟悉d3，并可以根据效果图进行图形绘制，要完全掌握d3绘图技巧需要不断深入学习研究，今天要展示的是我遇到的一个类似3d效果的金字塔效果图，其实是个伪3d，由于本人学术不精，只想到利用path拼接面的形式来实现（其实一开始想研究">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmovukq0zrj30hm09o74c.jpg">
 
 
@@ -364,8 +364,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-01-29T19:25:34+08:00">
-                2018-01-29
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-20T19:34:58+08:00">
+                2018-03-20
               </time>
             
             
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数</span>
                 
                 <span title="字数">
-                  560
+                  600
                 </span>
               
 
@@ -475,7 +475,20 @@
     
 
       
-        <span itemprop="articleBody"><h1 id="用d3实现金字塔伪3d效果">用d3实现金字塔伪3d效果</h1><hr>
+        <span itemprop="articleBody"><!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>目录</strong></p>
+<ul>
+<li><a href="#%E7%94%A8d3%E5%AE%9E%E7%8E%B0%E9%87%91%E5%AD%97%E5%A1%94%E4%BC%AA3d%E6%95%88%E6%9E%9C">用d3实现金字塔伪3d效果</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89%E5%9B%BE%E8%A1%A8%E9%9C%80%E8%A6%81%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">定义图表需要的数据结构</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BAsvg">创建svg</a></li>
+<li><a href="#%E7%94%9F%E6%88%90%E9%87%91%E5%AD%97%E5%A1%94">生成金字塔</a></li>
+<li><a href="#%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%B9%B6%E4%BC%A0%E5%8F%82">调用函数方法并传参</a></li>
+</ul>
+</li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h1 id="用d3实现金字塔伪3d效果">用d3实现金字塔伪3d效果</h1><hr>
 <p>工作中偶然接触到d3，慢慢开始熟悉d3，并可以根据效果图进行图形绘制，要完全掌握d3绘图技巧需要不断深入学习研究，今天要展示的是我遇到的一个类似3d效果的金字塔效果图，其实是个伪3d，由于本人学术不精，只想到利用path拼接面的形式来实现（其实一开始想研究研究threejs，but needtime,so…),废话不多说，绘制过程代码如下：</p>
 <h3 id="定义图表需要的数据结构">定义图表需要的数据结构</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">/*植被类型*/</span></div><div class="line"><span class="keyword">let</span> vegetation_type = [<span class="string">'人工林'</span>, <span class="string">'沼泽'</span>, <span class="string">'常绿阔叶灌丛'</span>, <span class="string">'灌草丛'</span>, <span class="string">'红树林'</span>];</div><div class="line"><span class="comment">/*金字塔每层颜色*/</span></div><div class="line"><span class="keyword">let</span> vegetation_color = [&#123;</div><div class="line">  startColor: <span class="string">'#077cec'</span>,</div><div class="line">	endColor: <span class="string">'#126fbf'</span></div><div class="line">&#125;, &#123;</div><div class="line">	startColor: <span class="string">'#2c6cff'</span>,</div><div class="line">	endColor: <span class="string">'#2783df'</span></div><div class="line">&#125;, &#123;</div><div class="line">	startColor: <span class="string">'#628eff'</span>,</div><div class="line">	endColor: <span class="string">'#2d74cc'</span></div><div class="line">&#125;, &#123;</div><div class="line">	startColor: <span class="string">'#60e9e9'</span>,</div><div class="line">	endColor: <span class="string">'#46b7b3'</span></div><div class="line">&#125;, &#123;</div><div class="line">	startColor: <span class="string">'#fffe2c'</span>,</div><div class="line">	endColor: <span class="string">'#fffe2c'</span></div><div class="line">&#125;];</div><div class="line"><span class="comment">/*定义金字塔最大宽度*/</span></div><div class="line"><span class="keyword">let</span> w_pyramid_max = <span class="number">148</span>;</div><div class="line"><span class="comment">/*定义金字塔最大高度*/</span></div><div class="line"><span class="keyword">let</span> h_pyramid_max = <span class="number">138</span>;</div></pre></td></tr></table></figure>
 <h3 id="创建svg">创建svg</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> svg = d3.select(<span class="string">'#pyramid'</span>)</div><div class="line">	.append(<span class="string">'svg'</span>)</div><div class="line">	.attr(<span class="string">'width'</span>, <span class="number">400</span>)</div><div class="line">	.attr(<span class="string">'height'</span>, <span class="number">400</span>);</div></pre></td></tr></table></figure>
@@ -661,7 +674,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -672,7 +685,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -683,7 +696,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -826,7 +839,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共14.8k字</span>
+  <span class="post-count">博客全站共16.1k字</span>
 </div>
 
         

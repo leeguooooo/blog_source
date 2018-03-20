@@ -5,6 +5,22 @@ category: javascrip
 tags: [es6]
 photos: https://ws1.sinaimg.cn/large/005T0OjCly1fmpohcio7ej30i30aw746.jpg
 ---
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**目录**
+
+- [ECMAScript 学习笔记（一）](#ecmascript-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80)
+  - [函数调用中使用展开运算符](#%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6)
+  - [用于解构赋值](#%E7%94%A8%E4%BA%8E%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC)
+  - [ES7对象展开运算符](#es7%E5%AF%B9%E8%B1%A1%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6)
+  - [类数组对象变成数组(Array.from())](#%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E5%8F%98%E6%88%90%E6%95%B0%E7%BB%84arrayfrom)
+  - [错误示范](#%E9%94%99%E8%AF%AF%E7%A4%BA%E8%8C%83)
+  - [正确示范](#%E6%AD%A3%E7%A1%AE%E7%A4%BA%E8%8C%83)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 ## ECMAScript 学习笔记（一）
 ------
 es6标准的制定为javascript添加了很多新特性,今天主要说一下展开运算符。

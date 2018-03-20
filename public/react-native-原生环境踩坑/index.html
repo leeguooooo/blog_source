@@ -94,19 +94,19 @@
 
 
 
-<meta name="description" content="IOS ‘MMMarkdown/MMMarkdown.h’ file not found 苹果原生环境MMMarkdown找不到，需要安装carthage123brew install carthagecarthage update # 项目目录下执行open Untitled.xcworkspace/  Unable to find a specification for SocketRocke">
+<meta name="description" content="目录  IOS ‘MMMarkdown/MMMarkdown.h’ file not found Unable to find a specification for SocketRocket ‘ProtocolBuffers/ProtocolBuffers.h’ file not found   IOS ‘MMMarkdown/MMMarkdown.h’ file not found 苹果原">
 <meta name="keywords" content="RN,native">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react native 原生环境踩坑">
 <meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-原生环境踩坑/index.html">
 <meta property="og:site_name" content="郭立lee - 个人博客">
-<meta property="og:description" content="IOS ‘MMMarkdown/MMMarkdown.h’ file not found 苹果原生环境MMMarkdown找不到，需要安装carthage123brew install carthagecarthage update # 项目目录下执行open Untitled.xcworkspace/  Unable to find a specification for SocketRocke">
+<meta property="og:description" content="目录  IOS ‘MMMarkdown/MMMarkdown.h’ file not found Unable to find a specification for SocketRocket ‘ProtocolBuffers/ProtocolBuffers.h’ file not found   IOS ‘MMMarkdown/MMMarkdown.h’ file not found 苹果原">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmua8azwdzj3096064jrh.jpg">
-<meta property="og:updated_time" content="2018-03-09T09:54:41.429Z">
+<meta property="og:updated_time" content="2018-03-20T11:34:58.638Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react native 原生环境踩坑">
-<meta name="twitter:description" content="IOS ‘MMMarkdown/MMMarkdown.h’ file not found 苹果原生环境MMMarkdown找不到，需要安装carthage123brew install carthagecarthage update # 项目目录下执行open Untitled.xcworkspace/  Unable to find a specification for SocketRocke">
+<meta name="twitter:description" content="目录  IOS ‘MMMarkdown/MMMarkdown.h’ file not found Unable to find a specification for SocketRocket ‘ProtocolBuffers/ProtocolBuffers.h’ file not found   IOS ‘MMMarkdown/MMMarkdown.h’ file not found 苹果原">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmua8azwdzj3096064jrh.jpg">
 
 
@@ -364,8 +364,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-09T17:54:41+08:00">
-                2018-03-09
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-20T19:34:58+08:00">
+                2018-03-20
               </time>
             
             
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数</span>
                 
                 <span title="字数">
-                  148
+                  169
                 </span>
               
 
@@ -475,7 +475,16 @@
     
 
       
-        <span itemprop="articleBody"><h2 id="IOS_‘MMMarkdown/MMMarkdown-h’_file_not_found">IOS ‘MMMarkdown/MMMarkdown.h’ file not found</h2><blockquote>
+        <span itemprop="articleBody"><!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>目录</strong></p>
+<ul>
+<li><a href="#ios-mmmarkdownmmmarkdownh-file-not-found">IOS ‘MMMarkdown/MMMarkdown.h’ file not found</a></li>
+<li><a href="#unable-to-find-a-specification-for-socketrocket">Unable to find a specification for <code>SocketRocket</code></a></li>
+<li><a href="#protocolbuffersprotocolbuffersh-file-not-found">‘ProtocolBuffers/ProtocolBuffers.h’ file not found</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="IOS_‘MMMarkdown/MMMarkdown-h’_file_not_found">IOS ‘MMMarkdown/MMMarkdown.h’ file not found</h2><blockquote>
 <p>苹果原生环境MMMarkdown找不到，需要安装carthage<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">brew install carthage</div><div class="line">carthage update # 项目目录下执行</div><div class="line">open Untitled.xcworkspace/</div></pre></td></tr></table></figure></p>
 </blockquote>
 <h2 id="Unable_to_find_a_specification_for_SocketRocket">Unable to find a specification for <code>SocketRocket</code></h2><ul>
@@ -484,7 +493,7 @@
 <blockquote>
 <p>当在update或install时遇会到这个问题<br>只需要把当前Pod的目录清理一下就行了。在终端执行以下命令：</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pod repo remove master  </div><div class="line">pod setup </div><div class="line">pod install</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pod repo remove master  </div><div class="line">pod setup</div><div class="line">pod install</div></pre></td></tr></table></figure>
 <h2 id="‘ProtocolBuffers/ProtocolBuffers-h’_file_not_found">‘ProtocolBuffers/ProtocolBuffers.h’ file not found</h2><blockquote>
 <p>没有Pod进去的原因，改为</p>
 </blockquote>
@@ -670,7 +679,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -681,7 +690,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -692,7 +701,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -835,7 +844,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共14.8k字</span>
+  <span class="post-count">博客全站共16.1k字</span>
 </div>
 
         

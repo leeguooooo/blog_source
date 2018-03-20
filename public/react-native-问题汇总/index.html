@@ -94,19 +94,19 @@
 
 
 
-<meta name="description" content="ReferenceError: Can’t find variable: event static getDerivedStateFromProps 作为被废弃的componentWillReceiveProps的替代，React提供了一个新的函数static getDerivedStateFromProps(nextProps, prevState) 注意前面的static，这意味着在这个函数中">
+<meta name="description" content="目录  一、static getDerivedStateFromProps 二、16.3 生命周期相关改动 三、react native debug模式加载100%之后空白页 四、Module does not exist in the module map 五、ReactPropTypeLocations 找不到 六、Invariant Violation: Calling PropType">
 <meta name="keywords" content="RN,react nateve,debug,debuggerWorker.js,404,bundle 100%,debugger">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react native 问题汇总">
 <meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-问题汇总/index.html">
 <meta property="og:site_name" content="郭立lee - 个人博客">
-<meta property="og:description" content="ReferenceError: Can’t find variable: event static getDerivedStateFromProps 作为被废弃的componentWillReceiveProps的替代，React提供了一个新的函数static getDerivedStateFromProps(nextProps, prevState) 注意前面的static，这意味着在这个函数中">
+<meta property="og:description" content="目录  一、static getDerivedStateFromProps 二、16.3 生命周期相关改动 三、react native debug模式加载100%之后空白页 四、Module does not exist in the module map 五、ReactPropTypeLocations 找不到 六、Invariant Violation: Calling PropType">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg">
-<meta property="og:updated_time" content="2018-03-16T08:06:34.651Z">
+<meta property="og:updated_time" content="2018-03-20T11:34:58.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react native 问题汇总">
-<meta name="twitter:description" content="ReferenceError: Can’t find variable: event static getDerivedStateFromProps 作为被废弃的componentWillReceiveProps的替代，React提供了一个新的函数static getDerivedStateFromProps(nextProps, prevState) 注意前面的static，这意味着在这个函数中">
+<meta name="twitter:description" content="目录  一、static getDerivedStateFromProps 二、16.3 生命周期相关改动 三、react native debug模式加载100%之后空白页 四、Module does not exist in the module map 五、ReactPropTypeLocations 找不到 六、Invariant Violation: Calling PropType">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg">
 
 
@@ -364,8 +364,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-16T16:06:34+08:00">
-                2018-03-16
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-20T19:34:58+08:00">
+                2018-03-20
               </time>
             
             
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数</span>
                 
                 <span title="字数">
-                  353
+                  538
                 </span>
               
 
@@ -449,7 +449,7 @@
                   <span class="post-meta-item-text">时间≈</span>
                 
                 <span title="时间≈">
-                  2
+                  3
                 </span>
               
             </div>
@@ -475,14 +475,25 @@
     
 
       
-        <span itemprop="articleBody"><h2 id="ReferenceError:_Can’t_find_variable:_event">ReferenceError: Can’t find variable: event</h2><hr>
-<h2 id="static_getDerivedStateFromProps">static getDerivedStateFromProps</h2><blockquote>
+        <span itemprop="articleBody"><!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>目录</strong></p>
+<ul>
+<li><a href="#%E4%B8%80static-getderivedstatefromprops">一、static getDerivedStateFromProps</a></li>
+<li><a href="#%E4%BA%8C163-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9B%B8%E5%85%B3%E6%94%B9%E5%8A%A8">二、16.3 生命周期相关改动</a></li>
+<li><a href="#%E4%B8%89react-native-debug%E6%A8%A1%E5%BC%8F%E5%8A%A0%E8%BD%BD100%25%E4%B9%8B%E5%90%8E%E7%A9%BA%E7%99%BD%E9%A1%B5">三、react native debug模式加载100%之后空白页</a></li>
+<li><a href="#%E5%9B%9Bmodule-does-not-exist-in-the-module-map">四、Module does not exist in the module map</a></li>
+<li><a href="#%E4%BA%94reactproptypelocations-%E6%89%BE%E4%B8%8D%E5%88%B0">五、ReactPropTypeLocations 找不到</a></li>
+<li><a href="#%E5%85%ADinvariant-violation-calling-proptypes-validators-directly-is-not-supported-by-the-prop-types-package-use-proptypescheckproptypes-to-call-them">六、Invariant Violation: Calling PropTypes validators directly is not supported by the <code>prop-types</code> package. Use <code>PropTypes.checkPropTypes()</code> to call them.</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="一、static_getDerivedStateFromProps">一、static getDerivedStateFromProps</h2><blockquote>
 <p>作为被废弃的componentWillReceiveProps的替代，React提供了一个新的函数static getDerivedStateFromProps(nextProps, prevState)</p>
 <p>注意前面的static，这意味着在这个函数中我们不能使用this, 该函数的返回值将用于更新state。如果不需要更新state，就返回null</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">static</span> getDerivedStateFromProps(nextProps, prevState) &#123;</div><div class="line">  <span class="keyword">if</span> (nextProps.text === prevState.text) <span class="keyword">return</span> <span class="literal">null</span>;</div><div class="line">  <span class="keyword">return</span> &#123; <span class="attr">text</span>: nextProps.text &#125;; <span class="comment">// 相当于setState(&#123; text: nextProps.text &#125;);</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
-<h2 id="16-3_生命周期相关改动">16.3 生命周期相关改动</h2><p>为了支持未来的异步渲染特性，以下生命周期函数将被废弃</p>
+<h2 id="二、16-3_生命周期相关改动">二、16.3 生命周期相关改动</h2><p>为了支持未来的异步渲染特性，以下生命周期函数将被废弃</p>
 <ul>
 <li>componentWillMount 请使用 componentDidMount代替</li>
 <li>componentWillUpdate 请使用 componentDidUpdate代替</li>
@@ -491,7 +502,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// componentWillMount 请使用 componentDidMount代替 替换实例</span></div><div class="line">componentWillUpdate(nextProps, nextState) &#123;</div><div class="line">  foo(nextProps, nextState);</div><div class="line">  bar(<span class="keyword">this</span>.props, <span class="keyword">this</span>.state);</div><div class="line">  nextProps.a === <span class="keyword">this</span>.props.a;</div><div class="line">&#125;</div><div class="line"></div><div class="line">componentDidUpdate(prevProps, prevState) &#123;</div><div class="line">  foo(<span class="keyword">this</span>.props, <span class="keyword">this</span>.state);</div><div class="line">  bar(prevProps, prevState);</div><div class="line">  <span class="keyword">this</span>.props.a === prevProps.a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>详细介绍请见：<a href="https://xn--v4q63d8za.xn--6qq986b3xl/React-16-3-%E6%96%B0%E7%89%B9%E6%80%A7/">去哪儿.我爱你/React-16-3-新特性</a></p>
 <hr>
-<h2 id="react_native_debug模式加载100%之后空白页">react native debug模式加载100%之后空白页</h2><ul>
+<h2 id="三、react_native_debug模式加载100%之后空白页">三、react native debug模式加载100%之后空白页</h2><ul>
 <li>“GET /debuggerWorker.js HTTP/1.1” 404 156 “<a href="http://localhost:8081/debugger-ui" target="_blank" rel="external">http://localhost:8081/debugger-ui</a>“</li>
 <li>Downloading JavaScript bundle 100%</li>
 </ul>
@@ -499,6 +510,15 @@
 <li><code>&quot;GET /debuggerWorker.js HTTP/1.1&quot;</code>的问题是由于我chrome的问题无法自动打开<code>http://localhost:8081/debugger-ui</code>的页面导致的。</li>
 <li><code>Downloading JavaScript bundle 100%</code>加载之后一直空白页尝试了多次一直都这样。<br>最后我通过使用官方的<code>react native debugger</code>工具成功debug了</li>
 </ol>
+<hr>
+<h2 id="四、Module_does_not_exist_in_the_module_map">四、Module does not exist in the module map</h2><blockquote>
+<p>error: bundling failed: Error: Unable to resolve module <code>react/lib/ReactPropTypeLocations</code> from <code>/Users/lee.guo/qunar.com/mobile/opsapp-rn/src/qrnControl/react-native-fence-html/HTMLStyles.js</code>: Module does not exist in the module map</p>
+</blockquote>
+<p>出现<code>Module does not exist in the module map</code>问题都是找不到module导致的， 检查下路径就能解决</p>
+<h2 id="五、ReactPropTypeLocations_找不到">五、ReactPropTypeLocations 找不到</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// if (styleProps[key](testStyle, key, '', ReactPropTypeLocations.prop)) &#123;</span></div><div class="line"><span class="keyword">if</span> (styleProps[key](testStyle, key, <span class="string">''</span>, <span class="string">'prop'</span>)) &#123;</div></pre></td></tr></table></figure>
+<h2 id="六、Invariant_Violation:_Calling_PropTypes_validators_directly_is_not_supported_by_the_prop-types_package-_Use_PropTypes-checkPropTypes()_to_call_them-">六、Invariant Violation: Calling PropTypes validators directly is not supported by the <code>prop-types</code> package. Use <code>PropTypes.checkPropTypes()</code> to call them.</h2><blockquote>
+<p>Read more at <a href="http://fb.me/use-check-prop-types" target="_blank" rel="external">http://fb.me/use-check-prop-types</a></p>
+</blockquote>
 </span>
       
     </div>
@@ -686,7 +706,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -697,7 +717,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -708,7 +728,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -807,7 +827,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ReferenceError:_Can’t_find_variable:_event"><span class="nav-number">1.</span> <span class="nav-text">ReferenceError: Can’t find variable: event</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static_getDerivedStateFromProps"><span class="nav-number">2.</span> <span class="nav-text">static getDerivedStateFromProps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-3_生命周期相关改动"><span class="nav-number">3.</span> <span class="nav-text">16.3 生命周期相关改动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react_native_debug模式加载100%之后空白页"><span class="nav-number">4.</span> <span class="nav-text">react native debug模式加载100%之后空白页</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、static_getDerivedStateFromProps"><span class="nav-number">1.</span> <span class="nav-text">一、static getDerivedStateFromProps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、16-3_生命周期相关改动"><span class="nav-number">2.</span> <span class="nav-text">二、16.3 生命周期相关改动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、react_native_debug模式加载100%之后空白页"><span class="nav-number">3.</span> <span class="nav-text">三、react native debug模式加载100%之后空白页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、Module_does_not_exist_in_the_module_map"><span class="nav-number">4.</span> <span class="nav-text">四、Module does not exist in the module map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、ReactPropTypeLocations_找不到"><span class="nav-number">5.</span> <span class="nav-text">五、ReactPropTypeLocations 找不到</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、Invariant_Violation:_Calling_PropTypes_validators_directly_is_not_supported_by_the_prop-types_package-_Use_PropTypes-checkPropTypes()_to_call_them-"><span class="nav-number">6.</span> <span class="nav-text">六、Invariant Violation: Calling PropTypes validators directly is not supported by the prop-types package. Use PropTypes.checkPropTypes() to call them.</span></a></li></ol></div>
             
 
           </div>
@@ -851,7 +871,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共14.8k字</span>
+  <span class="post-count">博客全站共16.1k字</span>
 </div>
 
         

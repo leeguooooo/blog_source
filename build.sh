@@ -7,6 +7,7 @@ if [ ! -d "$modulePath" ]; then
     npm install --registry=http://registry.npm.corp.qunar.com/
 fi
 
+doctoc ./source/_posts
 hexo clean
 hexo g
 hexo s

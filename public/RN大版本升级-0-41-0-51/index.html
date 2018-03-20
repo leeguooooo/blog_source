@@ -94,19 +94,19 @@
 
 
 
-<meta name="description" content="前言 本来打算升级的时候RN最新版还是0.51，直到升级实施起来RN已经更新到0.53。  react native部分修改package.json中react,react-native版本1234&quot;dependencies&quot;: &amp;#123;   &quot;react&quot;: &quot;^16.3.0-alpha.1&quot;,   &quot;react-native&quot;: &quot;^0.54.0&quot;&amp;#125; 根据react native">
+<meta name="description" content="目录  前言 react native部分 修改package.json中react,react-native版本 根据react native 的changelog 修改不兼容的代码，同时需要注意用到的某些开源组件，是否对新版本兼容。修改不兼容的组件，升级/修改源码/重换组件   ios部分   前言 本来打算升级的时候RN最新版还是0.51，直到升级实施起来RN已经更新到0.53。  re">
 <meta name="keywords" content="RN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RN大版本升级 0.41 -&gt; 0.51">
 <meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/RN大版本升级-0-41-0-51/index.html">
 <meta property="og:site_name" content="郭立lee - 个人博客">
-<meta property="og:description" content="前言 本来打算升级的时候RN最新版还是0.51，直到升级实施起来RN已经更新到0.53。  react native部分修改package.json中react,react-native版本1234&quot;dependencies&quot;: &amp;#123;   &quot;react&quot;: &quot;^16.3.0-alpha.1&quot;,   &quot;react-native&quot;: &quot;^0.54.0&quot;&amp;#125; 根据react native">
+<meta property="og:description" content="目录  前言 react native部分 修改package.json中react,react-native版本 根据react native 的changelog 修改不兼容的代码，同时需要注意用到的某些开源组件，是否对新版本兼容。修改不兼容的组件，升级/修改源码/重换组件   ios部分   前言 本来打算升级的时候RN最新版还是0.51，直到升级实施起来RN已经更新到0.53。  re">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn2igovf0vj30kk0dz0yv.jpg">
-<meta property="og:updated_time" content="2018-03-09T03:53:23.928Z">
+<meta property="og:updated_time" content="2018-03-20T11:34:58.639Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RN大版本升级 0.41 -&gt; 0.51">
-<meta name="twitter:description" content="前言 本来打算升级的时候RN最新版还是0.51，直到升级实施起来RN已经更新到0.53。  react native部分修改package.json中react,react-native版本1234&quot;dependencies&quot;: &amp;#123;   &quot;react&quot;: &quot;^16.3.0-alpha.1&quot;,   &quot;react-native&quot;: &quot;^0.54.0&quot;&amp;#125; 根据react native">
+<meta name="twitter:description" content="目录  前言 react native部分 修改package.json中react,react-native版本 根据react native 的changelog 修改不兼容的代码，同时需要注意用到的某些开源组件，是否对新版本兼容。修改不兼容的组件，升级/修改源码/重换组件   ios部分   前言 本来打算升级的时候RN最新版还是0.51，直到升级实施起来RN已经更新到0.53。  re">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn2igovf0vj30kk0dz0yv.jpg">
 
 
@@ -364,8 +364,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-09T11:53:23+08:00">
-                2018-03-09
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-20T19:34:58+08:00">
+                2018-03-20
               </time>
             
             
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数</span>
                 
                 <span title="字数">
-                  286
+                  361
                 </span>
               
 
@@ -449,7 +449,7 @@
                   <span class="post-meta-item-text">时间≈</span>
                 
                 <span title="时间≈">
-                  1
+                  2
                 </span>
               
             </div>
@@ -475,16 +475,29 @@
     
 
       
-        <span itemprop="articleBody"><h2 id="前言">前言</h2><blockquote>
+        <span itemprop="articleBody"><!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>目录</strong></p>
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#react-native%E9%83%A8%E5%88%86">react native部分</a><ul>
+<li><a href="#%E4%BF%AE%E6%94%B9packagejson%E4%B8%ADreactreact-native%E7%89%88%E6%9C%AC">修改<code>package.json</code>中<code>react</code>,<code>react-native</code>版本</a></li>
+<li><a href="#%E6%A0%B9%E6%8D%AEreact-native-%E7%9A%84changelog-%E4%BF%AE%E6%94%B9%E4%B8%8D%E5%85%BC%E5%AE%B9%E7%9A%84%E4%BB%A3%E7%A0%81%E5%90%8C%E6%97%B6%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%94%A8%E5%88%B0%E7%9A%84%E6%9F%90%E4%BA%9B%E5%BC%80%E6%BA%90%E7%BB%84%E4%BB%B6%E6%98%AF%E5%90%A6%E5%AF%B9%E6%96%B0%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E4%BF%AE%E6%94%B9%E4%B8%8D%E5%85%BC%E5%AE%B9%E7%9A%84%E7%BB%84%E4%BB%B6%E5%8D%87%E7%BA%A7%E4%BF%AE%E6%94%B9%E6%BA%90%E7%A0%81%E9%87%8D%E6%8D%A2%E7%BB%84%E4%BB%B6">根据react native 的changelog 修改不兼容的代码，同时需要注意用到的某些开源组件，是否对新版本兼容。修改不兼容的组件，升级/修改源码/重换组件</a></li>
+</ul>
+</li>
+<li><a href="#ios%E9%83%A8%E5%88%86">ios部分</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="前言">前言</h2><blockquote>
 <p>本来打算升级的时候RN最新版还是0.51，直到升级实施起来RN已经更新到0.53。</p>
 </blockquote>
-<h2 id="react_native部分">react native部分</h2><h3 id="修改package-json中react,react-native版本">修改<code>package.json</code>中<code>react</code>,<code>react-native</code>版本</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"dependencies"</span>: &#123; </div><div class="line">  <span class="string">"react"</span>: <span class="string">"^16.3.0-alpha.1"</span>, </div><div class="line">  <span class="string">"react-native"</span>: <span class="string">"^0.54.0"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="react_native部分">react native部分</h2><h3 id="修改package-json中react,react-native版本">修改<code>package.json</code>中<code>react</code>,<code>react-native</code>版本</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"dependencies"</span>: &#123;</div><div class="line">  <span class="string">"react"</span>: <span class="string">"^16.3.0-alpha.1"</span>,</div><div class="line">  <span class="string">"react-native"</span>: <span class="string">"^0.54.0"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="根据react_native_的changelog_修改不兼容的代码，同时需要注意用到的某些开源组件，是否对新版本兼容。修改不兼容的组件，升级/修改源码/重换组件">根据react native 的changelog 修改不兼容的代码，同时需要注意用到的某些开源组件，是否对新版本兼容。修改不兼容的组件，升级/修改源码/重换组件</h3><blockquote>
 <p>react/lib/XXX 已没有<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ReactChildren = <span class="built_in">require</span>(<span class="string">'react/src/ReactChildren'</span>);</div><div class="line">修改为</div><div class="line">React.Children</div></pre></td></tr></table></figure></p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ReactPropTypes = <span class="built_in">require</span>(<span class="string">'react/src/ReactPropTypes'</span>);</div><div class="line">修改为</div><div class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;</div><div class="line"></div><div class="line">PropTypes.XXXX</div></pre></td></tr></table></figure>
 <blockquote>
-<p>react-native-fance-html 库修改<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// HTMLStyles.js </span></div><div class="line"><span class="comment">// import ReactPropTypeLocations from 'react/lib/ReactPropTypeLocations'</span></div><div class="line"><span class="comment">// if (styleProps[key](testStyle, key, '', ReactPropTypeLocations.prop)) &#123;</span></div><div class="line"><span class="keyword">if</span> (styleProps[key](testStyle, key, <span class="string">''</span>, <span class="string">'prop'</span>)) &#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>react-native-fance-html 库修改<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// HTMLStyles.js</span></div><div class="line"><span class="comment">// import ReactPropTypeLocations from 'react/lib/ReactPropTypeLocations'</span></div><div class="line"><span class="comment">// if (styleProps[key](testStyle, key, '', ReactPropTypeLocations.prop)) &#123;</span></div><div class="line"><span class="keyword">if</span> (styleProps[key](testStyle, key, <span class="string">''</span>, <span class="string">'prop'</span>)) &#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 </blockquote>
 <h2 id="ios部分">ios部分</h2><ul>
 <li>更新依赖, 修改react,react-native版本.</li>
@@ -672,7 +685,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -683,7 +696,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -694,7 +707,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -837,7 +850,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共14.8k字</span>
+  <span class="post-count">博客全站共16.1k字</span>
 </div>
 
         

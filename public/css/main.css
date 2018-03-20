@@ -385,7 +385,7 @@ dd {
   top: -9999px;
 }
 .use-motion .motion-element {
-  opacity: 0;
+  opacity: 1;
 }
 table {
   margin: 20px 0;
@@ -2007,7 +2007,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff6583;
+  background: #fb30e0;
 }
 .links-of-blogroll {
   font-size: 13px;
