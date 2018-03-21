@@ -8,6 +8,7 @@ if [ ! -d "$modulePath" ]; then
 fi
 
 doctoc ./source/_posts
+node ../ygoogle/script/fetch.js
 hexo clean
 hexo g
 hexo s
