@@ -103,7 +103,7 @@
 <meta property="og:description" content="目录  js事件代理是什么 事件代理是什么 为什么要用事件委托(事件代理)： 事件委托(事件代理)的原理： 事件委托(事件代理)怎么实现： 总结：   二叉树执行顺序 元素水平垂直居中 用css画三角形 Jsonp a页面跳转b页面，怎么知道是a页面跳转过去的 Cookie和另外两个的区别 模块开发用什么 两个数组，不改变自身，进行排序 Const和let区别 Vue生命周期 有哪些钩子函数">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmpqn2r7a2j3096064jro.jpg">
-<meta property="og:updated_time" content="2018-03-21T03:07:11.973Z">
+<meta property="og:updated_time" content="2018-03-21T08:59:09.513Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="李爽的面试总结0002">
 <meta name="twitter:description" content="目录  js事件代理是什么 事件代理是什么 为什么要用事件委托(事件代理)： 事件委托(事件代理)的原理： 事件委托(事件代理)怎么实现： 总结：   二叉树执行顺序 元素水平垂直居中 用css画三角形 Jsonp a页面跳转b页面，怎么知道是a页面跳转过去的 Cookie和另外两个的区别 模块开发用什么 两个数组，不改变自身，进行排序 Const和let区别 Vue生命周期 有哪些钩子函数">
@@ -364,7 +364,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-21T11:07:11+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-21T16:59:09+08:00">
                 2018-03-21
               </time>
             
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数</span>
                 
                 <span title="字数">
-                  6,056
+                  6,055
                 </span>
               
 
@@ -567,7 +567,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">var</span> oBtn = <span class="built_in">document</span>.getElementById(<span class="string">"btn"</span>);</div><div class="line">            <span class="keyword">var</span> oUl = <span class="built_in">document</span>.getElementById(<span class="string">"ul1"</span>);</div><div class="line">            <span class="keyword">var</span> aLi = oUl.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line">            <span class="keyword">var</span> num = <span class="number">4</span>;</div><div class="line"></div><div class="line">            <span class="comment">//事件委托，添加的子元素也有事件</span></div><div class="line">            oUl.onmouseover = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">                <span class="keyword">var</span> ev = ev || <span class="built_in">window</span>.event;</div><div class="line">                <span class="keyword">var</span> target = ev.target || ev.srcElement;</div><div class="line">                <span class="keyword">if</span>(target.nodeName.toLowerCase() == <span class="string">'li'</span>)&#123;</div><div class="line">                    target.style.background = <span class="string">"red"</span>;</div><div class="line">                &#125;</div><div class="line"></div><div class="line">            &#125;;</div><div class="line">            oUl.onmouseout = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">                <span class="keyword">var</span> ev = ev || <span class="built_in">window</span>.event;</div><div class="line">                <span class="keyword">var</span> target = ev.target || ev.srcElement;</div><div class="line">                <span class="keyword">if</span>(target.nodeName.toLowerCase() == <span class="string">'li'</span>)&#123;</div><div class="line">                    target.style.background = <span class="string">"#fff"</span>;</div><div class="line">                &#125;</div><div class="line"></div><div class="line">            &#125;;</div><div class="line"></div><div class="line">            <span class="comment">//添加新节点</span></div><div class="line">            oBtn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                num++;</div><div class="line">                <span class="keyword">var</span> oLi = <span class="built_in">document</span>.createElement(<span class="string">'li'</span>);</div><div class="line">                oLi.innerHTML = <span class="number">111</span>*num;</div><div class="line">                oUl.appendChild(oLi);</div><div class="line">            &#125;;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
 <p>看，上面是用事件委托的方式，新添加的子元素是带有事件效果的，我们可以发现，当用事件委托的时候，根本就不需要去遍历元素的子节点，只需要给父级元素添加事件就好了，其他的都是在js里面的执行，这样可以大大的减少dom操作，这才是事件委托的精髓所在。</p>
 <blockquote>
-<p>现在给一个场景 ul &gt; li &gt; div &gt; p，div占满li，p占满div，还是给ul绑定时间，需要判断点击的是不是li（假设li里面的结构是不固定的），那么e.target就可能是p，也有可能是div，这种情况你会怎么处理呢？</p>
+<p>现在给一个场景 ul &gt; li &gt; div &gt; p，div占满li，p占满div，还是给ul绑定时间，需要判断点击的是不是li（假设li里面的结构是不固定的），那么e.target就可能是p，也有可能是div，这种情况你会怎么处理呢？</p>
 </blockquote>
 <p>那我们现在就再现一下这个场景</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">　　<span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"test"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>11111111111<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">            22222222</div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>3333333333<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>4444444<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -581,10 +581,10 @@
 <p>不适合的就有很多了，举个例子，mousemove，每次都要计算它的位置，非常不好把控，在不如说focus，blur之类的，本身就没用冒泡的特性，自然就不能用事件委托了。</p>
 <p>好了，今天就到这里，下次我想介绍一下事件绑定，欢迎大家关注和阅读，以上纯属个人见解，如有不对的地方，万望指正，不胜感谢！</p>
 <p>以上内容参考自： <a href="https://www.cnblogs.com/liugang-vip/p/5616484.html" target="_blank" rel="external">js中的事件委托或是事件代理详解</a></p>
-<h2 id="二叉树执行顺序">二叉树执行顺序</h2><h2 id="元素水平垂直居中">元素水平垂直居中</h2><h2 id="用css画三角形">用css画三角形</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    div&#123;</span></div><div class="line"><span class="css">     <span class="selector-tag">width</span><span class="selector-pseudo">:0</span>;</span></div><div class="line"><span class="css">     <span class="selector-tag">height</span><span class="selector-pseudo">:0</span>;</span></div><div class="line"><span class="undefined">     border: 200px solid;</span></div><div class="line"><span class="css">     <span class="comment">/*border-color:#02F4FF #FF0000 #FF1F6E #FFFFFF;*/</span></span></div><div class="line"><span class="css">     <span class="selector-tag">border-top</span><span class="selector-pseudo">:200px</span> <span class="selector-tag">solid</span> <span class="selector-tag">red</span>;</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">"background:#000"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="二叉树执行顺序">二叉树执行顺序</h2><h2 id="元素水平垂直居中">元素水平垂直居中</h2><h2 id="用css画三角形">用css画三角形</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    div&#123;</span></div><div class="line"><span class="undefined">     width:0;</span></div><div class="line"><span class="undefined">     height:0;</span></div><div class="line"><span class="undefined">     border: 200px solid;</span></div><div class="line"><span class="undefined">     /*border-color:#02F4FF #FF0000 #FF1F6E #FFFFFF;*/</span></div><div class="line"><span class="undefined">     border-top:200px solid red;</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">"background:#000"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="Jsonp">Jsonp</h2><h2 id="a页面跳转b页面，怎么知道是a页面跳转过去的">a页面跳转b页面，怎么知道是a页面跳转过去的</h2><h2 id="Cookie和另外两个的区别">Cookie和另外两个的区别</h2><h2 id="模块开发用什么">模块开发用什么</h2><h2 id="两个数组，不改变自身，进行排序">两个数组，不改变自身，进行排序</h2><h2 id="Const和let区别">Const和let区别</h2><hr>
 <blockquote>
-<p>这是一道送命题，这里不写答案了。 请参见ES6语法。</p>
+<p>这是一道送命题，这里不写答案了。 请参见ES6语法。</p>
 </blockquote>
 <h2 id="Vue生命周期">Vue生命周期</h2><h2 id="有哪些钩子函数">有哪些钩子函数</h2><h2 id="Css盒子模型">Css盒子模型</h2><h2 id="一个数组，找出第二大的">一个数组，找出第二大的</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> aa = [<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">3</span>];</div><div class="line">aa[aa.indexOf(<span class="built_in">Math</span>.max(...aa))]=<span class="literal">null</span>;</div><div class="line"><span class="built_in">Math</span>.max(...aa)</div></pre></td></tr></table></figure>
 <p>思路是，找出数组中第一大的值设置为null，再求数组中最大值；</p>
@@ -593,7 +593,7 @@
 <ul>
 <li>对于用户<br>301，302对用户来说没有区别，他们看到效果只是一个跳转，浏览器中旧的URL变成了新的URL。页面跳到了这个新的url指向的地方。</li>
 <li><p>对于引擎及站长<br>302转向可能会有URL规范化及网址劫持的问题。可能被搜索引擎判为可疑转向，甚至认为是作弊。</p>
-<p>详细信息见： <a href="https://www.cnblogs.com/zhuzhenwei918/p/7582620.html" target="_blank" rel="external">参考链接</a></p>
+<p>详细信息见： <a href="https://www.cnblogs.com/zhuzhenwei918/p/7582620.html" target="_blank" rel="external">参考链接</a></p>
 <h2 id="你在项目中担任什么角色">你在项目中担任什么角色</h2></li>
 </ul>
 <h2 id="一个元素在body中，算出它的位置">一个元素在body中，算出它的位置</h2><h2 id="用过哪些技术栈">用过哪些技术栈</h2><h2 id="react父组件和子组件如何通信">react父组件和子组件如何通信</h2><h2 id="js里面改变元素宽度，会发生什么操作">js里面改变元素宽度，会发生什么操作</h2><h2 id="React_什么是虚拟dom，虚拟dom有什么好处">React 什么是虚拟dom，虚拟dom有什么好处</h2><hr>
@@ -619,7 +619,7 @@
 <p>虚拟DOM具有批处理和高效的Diff算法，可以无需担心性能问题而随时“刷新”整个页面，因为虚拟DOM可以确保只对界面上真正变化的部分进行实际的DOM操作。</p>
 <h3 id="五、虚拟dom的缺点">五、虚拟dom的缺点</h3><p>首次渲染大量DOM时，由于多了一层虚拟DOM的计算，会比innerHTML插入慢。</p>
 <p>转载自AlloyTeam：<a href="http://www.alloyteam.com/2015/10/react-virtual-analysis-of-the-dom/" target="_blank" rel="external">http://www.alloyteam.com/2015/10/react-virtual-analysis-of-the-dom/</a></p>
-<p>推荐参考资料：<a href="https://weibo.com/p/1001603915568079095157" target="_blank" rel="external">为什么虚拟DOM更胜一筹</a></p>
+<p>推荐参考资料：<a href="https://weibo.com/p/1001603915568079095157" target="_blank" rel="external">为什么虚拟DOM更胜一筹</a></p>
 <h3 id="六、diff算法">六、diff算法</h3><p>其次，想分享下diff算法。前两天看司徒正美推销他的Avalon，也分析了下React，说了一句话，现在前端框架比的是算法。diff算法说白了就是比较两个文件不同的算法。一般diff算法的复杂度是O(n3)。Facebook工程师根据前端页面特点做了两个假设（如果你好奇是什么假设这么神奇，可以来问我），把比较前后两个状态虚拟DOM的diff算法的复杂度降到了O(n)。这个diff算法分为三部分，我用三句话总结：</p>
 <ol>
 <li>虚拟DOM树同一位置不同类型（标签不同）的节点：删除前一状态节点，插入后一状态节点，哪怕节点有子节点也这样做；</li>
@@ -690,7 +690,7 @@
   <!--<p><span>本文标题:</span><a href="/李爽的面试总结0002/">李爽的面试总结0002</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 郭立lee 的个人博客">郭立lee</a></p>-->
   <p><span>发布时间:</span>2018年03月16日 - 18:03</p>
-  <p><span>最后更新:</span>2018年03月21日 - 11:03</p>
+  <p><span>最后更新:</span>2018年03月21日 - 16:03</p>
   <p><span>原始链接:</span><a href="/李爽的面试总结0002/" title="李爽的面试总结0002">https://xn--v4q63d8za.xn--6qq986b3xl/李爽的面试总结0002/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://xn--v4q63d8za.xn--6qq986b3xl/李爽的面试总结0002/"  aria-label="复制成功！"></i></span>
   </p>
@@ -951,7 +951,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1116,7 +1116,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共16.1k字</span>
+  <span class="post-count">博客全站共16.5k字</span>
 </div>
 
         

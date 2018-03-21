@@ -9,6 +9,6 @@ fi
 
 doctoc ./source/_posts
 node ../ygoogle/script/fetch.js
-hexo clean
+# hexo clean
 hexo g
 hexo s

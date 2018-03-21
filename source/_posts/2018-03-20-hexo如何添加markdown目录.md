@@ -12,8 +12,8 @@ photos: https://ws1.sinaimg.cn/large/005T0OjCly1fpjhxcpvlqj312c0mi4ea.jpg
 **目录**
 
 - [新增构建脚本](#%E6%96%B0%E5%A2%9E%E6%9E%84%E5%BB%BA%E8%84%9A%E6%9C%AC)
-- [设置npm start](#%E8%AE%BE%E7%BD%AEnpm-start)
-- [END](#end)
+- [设置启动](#%E8%AE%BE%E7%BD%AE%E5%90%AF%E5%8A%A8)
+- [完成](#%E5%AE%8C%E6%88%90)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -38,19 +38,19 @@ hexo g
 hexo s
 ```
 
-## 设置npm start
+## 设置启动
 
 **在`package.json`中添加以下内容**
-```json
+
+```JavaScript
 "scripts": {
   "postinstall": "node scripts/postinstall.js --verbose",
   "build": "sh build.sh",
   "dev": "hexo serve",
   "start": "sh build.sh",
   "up": "sh scp.sh"
-},
+}
 ```
 
-## END
-
-每次编辑完成后执行`npm start`就自动生成了带目录的文章了
+## 完成
+每次编辑完成后执行 `npm start` 就自动生成了带目录的文章了
