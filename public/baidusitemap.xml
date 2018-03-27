@@ -3,15 +3,22 @@
 
     
   <url>
-    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/%E4%B8%80%E4%B8%AA%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E5%AD%97%E7%AC%A6/</loc>
-    <lastmod>2018-03-21T09:05:13.420Z</lastmod>
+    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/%E4%BA%94%E7%BA%BF%E8%B0%B1%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2018-03-27T08:04:00.564Z</lastmod>
     <data>
         <display>
-        <title>一个看不见的字符</title>
-        <pubTime>2018-03-21T08:04:49.000Z</pubTime>
+        <title>五线谱基础学习</title>
+        <pubTime>2018-03-22T08:21:02.000Z</pubTime>
         
+        <tag>五线谱 </tag>
+         
+        <tag>钢琴 </tag>
+         
          
            
+             
+              <breadCrumb title="钢琴" url="https://xn--v4q63d8za.xn--6qq986b3xl/categories/%E9%92%A2%E7%90%B4/"/>
+          
         </display>
     </data>
     </url>
@@ -19,7 +26,7 @@
     
   <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/hexo%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0markdown%E7%9B%AE%E5%BD%95/</loc>
-    <lastmod>2018-03-21T08:59:09.514Z</lastmod>
+    <lastmod>2018-03-27T08:02:33.818Z</lastmod>
     <data>
         <display>
         <title>hexo如何添加markdown目录</title>
@@ -40,11 +47,29 @@
 
     
   <url>
-    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/%E6%9D%8E%E7%88%BD%E7%9A%84%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%930002/</loc>
-    <lastmod>2018-03-21T08:59:09.513Z</lastmod>
+    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/%E5%91%BD%E4%BB%A4%E6%8E%A8%E8%8D%90-thefuck/</loc>
+    <lastmod>2018-03-27T07:54:42.490Z</lastmod>
     <data>
         <display>
-        <title>李爽的面试总结0002</title>
+        <title>命令推荐 thefuck</title>
+        <pubTime>2018-03-27T07:00:58.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="命令" url="https://xn--v4q63d8za.xn--6qq986b3xl/categories/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/%E5%B0%8F%E6%9D%8E%E7%9A%84%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%930002/</loc>
+    <lastmod>2018-03-23T10:48:37.112Z</lastmod>
+    <data>
+        <display>
+        <title>小李的面试总结0002</title>
         <pubTime>2018-03-16T10:07:09.000Z</pubTime>
         
         <tag>面试 </tag>
@@ -70,8 +95,47 @@
 
     
   <url>
+    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/%E5%B0%8F%E6%9D%8E%E7%9A%84%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%930001/</loc>
+    <lastmod>2018-03-23T10:48:11.410Z</lastmod>
+    <data>
+        <display>
+        <title>小李面试总结1001篇 - 0001</title>
+        <pubTime>2017-12-19T07:28:05.000Z</pubTime>
+        
+        <tag>面试 </tag>
+         
+        <tag>react </tag>
+         
+        <tag>前端 </tag>
+         
+         
+           
+             
+              <breadCrumb title="面试题" url="https://xn--v4q63d8za.xn--6qq986b3xl/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/%E4%B8%80%E4%B8%AA%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E5%AD%97%E7%AC%A6/</loc>
+    <lastmod>2018-03-22T09:00:11.881Z</lastmod>
+    <data>
+        <display>
+        <title>一个看不见的字符</title>
+        <pubTime>2018-03-21T08:04:49.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/react-native-%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    <lastmod>2018-03-21T08:58:21.547Z</lastmod>
+    <lastmod>2018-03-22T09:00:11.880Z</lastmod>
     <data>
         <display>
         <title>react native 问题汇总</title>
@@ -103,7 +167,7 @@
     
   <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/React-16-3-%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
-    <lastmod>2018-03-21T08:58:21.546Z</lastmod>
+    <lastmod>2018-03-22T09:00:11.879Z</lastmod>
     <data>
         <display>
         <title>React 16.3 新特性</title>
@@ -123,7 +187,7 @@
     
   <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/python%E7%8E%AF%E5%A2%83%E9%9B%86%E6%88%90/</loc>
-    <lastmod>2018-03-21T08:58:21.545Z</lastmod>
+    <lastmod>2018-03-22T09:00:11.879Z</lastmod>
     <data>
         <display>
         <title>python环境集成</title>
@@ -143,7 +207,7 @@
     
   <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/LINUX%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E7%BC%96%E7%A0%81/</loc>
-    <lastmod>2018-03-21T08:58:21.544Z</lastmod>
+    <lastmod>2018-03-22T09:00:11.878Z</lastmod>
     <data>
         <display>
         <title>LINUX如何优雅的编码</title>
@@ -163,7 +227,7 @@
     
   <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/LINUX%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E6%9F%A5%E7%9C%8B/</loc>
-    <lastmod>2018-03-21T08:58:21.543Z</lastmod>
+    <lastmod>2018-03-22T09:00:11.877Z</lastmod>
     <data>
         <display>
         <title>LINUX磁盘空间查看</title>
@@ -183,7 +247,7 @@
     
   <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/RN%E5%A4%A7%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7-0-41-0-51/</loc>
-    <lastmod>2018-03-21T08:58:21.542Z</lastmod>
+    <lastmod>2018-03-22T09:00:11.877Z</lastmod>
     <data>
         <display>
         <title>RN大版本升级 0.41 -> 0.51</title>
@@ -203,7 +267,7 @@
     
   <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/RN%E5%8D%87%E7%BA%A7%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</loc>
-    <lastmod>2018-03-21T08:58:21.541Z</lastmod>
+    <lastmod>2018-03-22T09:00:11.876Z</lastmod>
     <data>
         <display>
         <title>RN升级遇到的坑</title>
@@ -226,30 +290,8 @@
 
     
   <url>
-    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/react-native-%E5%AE%89%E5%8D%93%E7%9C%9F%E6%9C%BA%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2018-03-21T08:58:21.540Z</lastmod>
-    <data>
-        <display>
-        <title>react native 安卓真机开发者模式</title>
-        <pubTime>2017-12-25T12:04:35.000Z</pubTime>
-        
-        <tag>RN </tag>
-         
-        <tag>android </tag>
-         
-         
-           
-             
-              <breadCrumb title="react native" url="https://xn--v4q63d8za.xn--6qq986b3xl/categories/react-native/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/react-native-%E5%8E%9F%E7%94%9F%E7%8E%AF%E5%A2%83%E8%B8%A9%E5%9D%91/</loc>
-    <lastmod>2018-03-21T08:58:21.540Z</lastmod>
+    <lastmod>2018-03-22T09:00:11.875Z</lastmod>
     <data>
         <display>
         <title>react native 原生环境踩坑</title>
@@ -270,16 +312,16 @@
 
     
   <url>
-    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/react-native%E6%A0%B7%E5%BC%8F%E6%95%B4%E7%90%86/</loc>
-    <lastmod>2018-03-21T08:58:21.538Z</lastmod>
+    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/react-native-%E5%AE%89%E5%8D%93%E7%9C%9F%E6%9C%BA%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2018-03-22T09:00:11.875Z</lastmod>
     <data>
         <display>
-        <title>react native样式整理</title>
-        <pubTime>2017-12-22T08:15:43.000Z</pubTime>
+        <title>react native 安卓真机开发者模式</title>
+        <pubTime>2017-12-25T12:04:35.000Z</pubTime>
         
         <tag>RN </tag>
          
-        <tag>样式 </tag>
+        <tag>android </tag>
          
          
            
@@ -293,7 +335,7 @@
     
   <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/%E7%94%A8d3%E5%AE%9E%E7%8E%B0%E4%BC%AA3d%E6%95%88%E6%9E%9C%E9%87%91%E5%AD%97%E5%A1%94/</loc>
-    <lastmod>2018-03-21T08:58:21.538Z</lastmod>
+    <lastmod>2018-03-22T09:00:11.874Z</lastmod>
     <data>
         <display>
         <title>用D3实现伪3D效果金字塔</title>
@@ -314,8 +356,30 @@
 
     
   <url>
+    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/react-native%E6%A0%B7%E5%BC%8F%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2018-03-22T09:00:11.874Z</lastmod>
+    <data>
+        <display>
+        <title>react native样式整理</title>
+        <pubTime>2017-12-22T08:15:43.000Z</pubTime>
+        
+        <tag>RN </tag>
+         
+        <tag>样式 </tag>
+         
+         
+           
+             
+              <breadCrumb title="react native" url="https://xn--v4q63d8za.xn--6qq986b3xl/categories/react-native/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/ECMAScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/</loc>
-    <lastmod>2018-03-21T08:58:21.537Z</lastmod>
+    <lastmod>2018-03-22T09:00:11.873Z</lastmod>
     <data>
         <display>
         <title>ECMAScript学习笔记(一)</title>
@@ -327,30 +391,6 @@
            
              
               <breadCrumb title="javascrip" url="https://xn--v4q63d8za.xn--6qq986b3xl/categories/javascrip/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/%E6%9D%8E%E7%88%BD%E7%9A%84%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%930001/</loc>
-    <lastmod>2018-03-21T08:58:21.536Z</lastmod>
-    <data>
-        <display>
-        <title>lisa面试总结1001篇 - 0001</title>
-        <pubTime>2017-12-19T07:28:05.000Z</pubTime>
-        
-        <tag>面试 </tag>
-         
-        <tag>react </tag>
-         
-        <tag>前端 </tag>
-         
-         
-           
-             
-              <breadCrumb title="面试题" url="https://xn--v4q63d8za.xn--6qq986b3xl/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
           
         </display>
     </data>

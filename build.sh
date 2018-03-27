@@ -7,8 +7,8 @@ if [ ! -d "$modulePath" ]; then
     npm install --registry=http://registry.npm.corp.qunar.com/
 fi
 
-doctoc ./source/_posts
+# doctoc ./source/_posts
 node ../ygoogle/script/fetch.js
-# hexo clean
+hexo clean
 hexo g
 hexo s

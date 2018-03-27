@@ -2,7 +2,7 @@
 * git 环境
 
 
-## 博客环境搭建
+## 博客环境搭建
 
 ```shell
 git clone https://github.com/leeguooooo/blog_source.git

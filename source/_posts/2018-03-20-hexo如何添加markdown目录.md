@@ -7,18 +7,25 @@ tags: [markdown目录,生成目录]
 photos: https://ws1.sinaimg.cn/large/005T0OjCly1fpjhxcpvlqj312c0mi4ea.jpg
 ---
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**目录**
 
-- [新增构建脚本](#%E6%96%B0%E5%A2%9E%E6%9E%84%E5%BB%BA%E8%84%9A%E6%9C%AC)
-- [设置启动](#%E8%AE%BE%E7%BD%AE%E5%90%AF%E5%8A%A8)
-- [完成](#%E5%AE%8C%E6%88%90)
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+* [方案一](#方案一)
+	* [新增构建脚本](#新增构建脚本)
+	* [设置启动](#设置启动)
+	* [完成](#完成)
+* [方案二(目前在用,需要atom)](#方案二目前在用需要atom)
+	* [安装](#安装)
+	* [配置](#配置)
+	* [完成](#完成-1)
+
+<!-- /code_chunk_output -->
 
 
-## 新增构建脚本
+##方案一
+
+### 新增构建脚本
 
 **在根目录下创建`build.sh`**
 
@@ -38,7 +45,7 @@ hexo g
 hexo s
 ```
 
-## 设置启动
+### 设置启动
 
 **在`package.json`中添加以下内容**
 
@@ -52,5 +59,37 @@ hexo s
 }
 ```
 
-## 完成
+### 完成
 每次编辑完成后执行 `npm start` 就自动生成了带目录的文章了
+
+## 方案二(目前在用,需要atom)
+
+### 安装
+
+在atom中安装`markdown-toc`
+
+### 配置
+
+打开 `scaffolds` `post.md` 文件 修改
+```python
+title: {{ title }}
+date: {{ date }}
+author: 郭立lee
+category:
+tags:
+photos:
+copyright: true
+---
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+##目录
+* [目录](#目录)
+
+<!-- /code_chunk_output -->
+
+```
+
+### 完成
+
+每次编辑完成报错即可
