@@ -76,7 +76,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="RN,native," />
+  <meta name="keywords" content="d3," />
 
 
 
@@ -94,20 +94,20 @@
 
 
 
-<meta name="description" content="目录 目录 1. IOS ‘MMMarkdown/MMMarkdown.h’ file not found 2. Unable to find a specification for SocketRocket 3. ‘ProtocolBuffers/ProtocolBuffers.h’ file not found 4. Caused by: java.lang.InstantiationEr">
-<meta name="keywords" content="RN,native">
+<meta name="description" content="目录 目录 定义数据格式 创建虚拟数组，绘制外部弧线 创建svg 创建弧生成器 创建饼布局 转换数据格式 开始绘制 添加line节点 添加文字 绘制外圆 添加图例 添加动画   前言：环形图很好实现，百度的echart图标库就可以实现各种形式的环形，但是还是会有个别环形图的特殊样式，echart实现不了的那就用d3实现吧。 定义数据格式12345678910111213141516171819">
+<meta name="keywords" content="d3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react native 原生环境踩坑">
-<meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-原生环境踩坑/index.html">
+<meta property="og:title" content="用d3画环形图">
+<meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/用d3画环形图/index.html">
 <meta property="og:site_name" content="郭立lee - 个人博客">
-<meta property="og:description" content="目录 目录 1. IOS ‘MMMarkdown/MMMarkdown.h’ file not found 2. Unable to find a specification for SocketRocket 3. ‘ProtocolBuffers/ProtocolBuffers.h’ file not found 4. Caused by: java.lang.InstantiationEr">
+<meta property="og:description" content="目录 目录 定义数据格式 创建虚拟数组，绘制外部弧线 创建svg 创建弧生成器 创建饼布局 转换数据格式 开始绘制 添加line节点 添加文字 绘制外圆 添加图例 添加动画   前言：环形图很好实现，百度的echart图标库就可以实现各种形式的环形，但是还是会有个别环形图的特殊样式，echart实现不了的那就用d3实现吧。 定义数据格式12345678910111213141516171819">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmua8azwdzj3096064jrh.jpg">
-<meta property="og:updated_time" content="2018-03-29T10:27:52.745Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fpybb7m0d7j30pw0dgabl.jpg">
+<meta property="og:updated_time" content="2018-04-02T10:22:46.035Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react native 原生环境踩坑">
-<meta name="twitter:description" content="目录 目录 1. IOS ‘MMMarkdown/MMMarkdown.h’ file not found 2. Unable to find a specification for SocketRocket 3. ‘ProtocolBuffers/ProtocolBuffers.h’ file not found 4. Caused by: java.lang.InstantiationEr">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fmua8azwdzj3096064jrh.jpg">
+<meta name="twitter:title" content="用d3画环形图">
+<meta name="twitter:description" content="目录 目录 定义数据格式 创建虚拟数组，绘制外部弧线 创建svg 创建弧生成器 创建饼布局 转换数据格式 开始绘制 添加line节点 添加文字 绘制外圆 添加图例 添加动画   前言：环形图很好实现，百度的echart图标库就可以实现各种形式的环形，但是还是会有个别环形图的特殊样式，echart实现不了的那就用d3实现吧。 定义数据格式12345678910111213141516171819">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fpybb7m0d7j30pw0dgabl.jpg">
 
 
 
@@ -136,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-原生环境踩坑/"/>
+  <link rel="canonical" href="https://xn--v4q63d8za.xn--6qq986b3xl/用d3画环形图/"/>
 
 
 
@@ -152,7 +152,7 @@
   </script>
 
 
-  <title>react native 原生环境踩坑 | 郭立lee - 个人博客</title>
+  <title>用d3画环形图 | 郭立lee - 个人博客</title>
   
 
 
@@ -327,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-原生环境踩坑/">
+    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/用d3画环形图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郭立lee">
@@ -344,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">react native 原生环境踩坑</h1>
+          <h1 class="post-title" itemprop="name headline">用d3画环形图</h1>
         
 
         <div class="post-meta">
@@ -356,8 +356,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-26T17:07:23+08:00">
-                2017-12-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-02T14:48:35+08:00">
+                2018-04-02
               </time>
             
 
@@ -372,15 +372,15 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-29T18:27:52+08:00">
-                2018-03-29
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-02T18:22:46+08:00">
+                2018-04-02
               </time>
             
             
             <span class="post-time">
               &nbsp; | &nbsp;
               <span class="iconfont">&#xf024;</span>
-              <a href="/authors/郭立lee/">郭立lee</a>
+              <a href="/authors/李爽lisa/">李爽lisa</a>
             </span>
             
           </span>
@@ -398,8 +398,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/react-native/" itemprop="url" rel="index">
-                    <span itemprop="name">react native</span>
+                  <a href="/categories/d3/" itemprop="url" rel="index">
+                    <span itemprop="name">d3</span>
                   </a>
                 </span>
 
@@ -415,7 +415,7 @@
 
           
           
-             <span id="/react-native-原生环境踩坑/" class="leancloud_visitors" data-flag-title="react native 原生环境踩坑">
+             <span id="/用d3画环形图/" class="leancloud_visitors" data-flag-title="用d3画环形图">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -441,7 +441,7 @@
                   <span class="post-meta-item-text">字数</span>
                 
                 <span title="字数">
-                  316
+                  875
                 </span>
               
 
@@ -457,7 +457,7 @@
                   <span class="post-meta-item-text">时间≈</span>
                 
                 <span title="时间≈">
-                  1
+                  4
                 </span>
               
             </div>
@@ -467,7 +467,7 @@
 
           
           <blockquote class="blockquote-center">
-            <p style="padding: 0 50px">郭立lee，目前任职于去哪儿网，全栈工程师。</p>
+            <p style="padding: 0 50px">李爽lisa，目前任职于九次方大数据，负责可视化开发。</p>
           </blockquote>
           
         </div>
@@ -487,51 +487,35 @@
 <!-- code_chunk_output -->
 <h2 id="目录">目录</h2><ul>
 <li><a href="#目录">目录</a></li>
-<li><a href="#1-ios-mmmarkdownmmmarkdownh-file-not-found">1. IOS ‘MMMarkdown/MMMarkdown.h’ file not found</a></li>
-<li><a href="#2-unable-to-find-a-specification-for-socketrocket">2. Unable to find a specification for SocketRocket</a></li>
-<li><a href="#3-protocolbuffersprotocolbuffersh-file-not-found">3. ‘ProtocolBuffers/ProtocolBuffers.h’ file not found</a></li>
-<li><a href="#4-caused-by-javalanginstantiationerror-okhttp3internalwsrealwebsocket">4. Caused by: java.lang.InstantiationError: okhttp3.internal.ws.RealWebSocket</a><ul>
-<li><a href="#解决办法">解决办法</a></li>
-</ul>
-</li>
-<li><a href="#5-华为手机无法允许usb调试">5. 华为手机无法允许usb调试</a><ul>
-<li><a href="#问题">问题</a></li>
-<li><a href="#处理方案">处理方案</a></li>
-</ul>
-</li>
+<li><a href="#定义数据格式">定义数据格式</a></li>
+<li><a href="#创建虚拟数组绘制外部弧线">创建虚拟数组，绘制外部弧线</a></li>
+<li><a href="#创建svg">创建svg</a></li>
+<li><a href="#创建弧生成器">创建弧生成器</a></li>
+<li><a href="#创建饼布局">创建饼布局</a></li>
+<li><a href="#转换数据格式">转换数据格式</a></li>
+<li><a href="#开始绘制">开始绘制</a></li>
+<li><a href="#添加line节点">添加line节点</a></li>
+<li><a href="#添加文字">添加文字</a></li>
+<li><a href="#绘制外圆">绘制外圆</a></li>
+<li><a href="#添加图例">添加图例</a></li>
+<li><a href="#添加动画">添加动画</a></li>
 </ul>
 <!-- /code_chunk_output -->
-<h2 id="1-_IOS_‘MMMarkdown/MMMarkdown-h’_file_not_found">1. IOS ‘MMMarkdown/MMMarkdown.h’ file not found</h2><hr>
-<blockquote>
-<p>苹果原生环境MMMarkdown找不到，需要安装carthage<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">brew install carthage</div><div class="line">carthage update # 项目目录下执行</div><div class="line">open Untitled.xcworkspace/</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h2 id="2-_Unable_to_find_a_specification_for_SocketRocket">2. Unable to find a specification for SocketRocket</h2><hr>
-<ul>
-<li><code>xcodeproj</code> was renamed to <code>project</code>. Please update your Podfile accordingly.</li>
-</ul>
-<blockquote>
-<p>当在update或install时遇会到这个问题<br>只需要把当前Pod的目录清理一下就行了。在终端执行以下命令：</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pod repo remove master  </div><div class="line">pod setup</div><div class="line">pod install</div></pre></td></tr></table></figure>
-<h2 id="3-_‘ProtocolBuffers/ProtocolBuffers-h’_file_not_found">3. ‘ProtocolBuffers/ProtocolBuffers.h’ file not found</h2><hr>
-<blockquote>
-<p>没有Pod进去的原因，改为</p>
-</blockquote>
-<pre><code><span class="id">#import</span> <span class="string">"ProtocolBuffers.h"</span>
-</code></pre><h2 id="4-_Caused_by:_java-lang-InstantiationError:_okhttp3-internal-ws-RealWebSocket">4. Caused by: java.lang.InstantiationError: okhttp3.internal.ws.RealWebSocket</h2><blockquote>
-<p>在安卓启动时候报错,导致启动时就直接崩溃</p>
-</blockquote>
-<h3 id="解决办法">解决办法</h3><p>删除 <code>compile &#39;com.squareup.okhttp3:okhttp-ws:3.4.2&#39;</code><br>升级到最新版</p>
-<h2 id="5-_华为手机无法允许usb调试">5. 华为手机无法允许usb调试</h2><h3 id="问题">问题</h3><blockquote>
-<p>有应用遮挡了权限请求界面，所有辅助功能设置都提示前面</p>
-</blockquote>
-<h3 id="处理方案">处理方案</h3><blockquote>
-<p>关掉护眼模式跟悬浮导航就可以</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>此文章只作为遇到问题的记录，如有相似问题请结合项目进行参考。</p>
-</blockquote>
+<p>前言：环形图很好实现，百度的echart图标库就可以实现各种形式的环形，但是还是会有个别环形图的特殊样式，echart实现不了的那就用d3实现吧。</p>
+<h2 id="定义数据格式">定义数据格式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> dataSet = [&#123;</div><div class="line"> id: <span class="number">0</span>,</div><div class="line"> name: <span class="string">'国土局'</span>,</div><div class="line"> value: <span class="number">30</span></div><div class="line"></div><div class="line">&#125;, &#123;</div><div class="line"> id: <span class="number">1</span>,</div><div class="line"> name: <span class="string">'教育局'</span>,</div><div class="line"> value: <span class="number">50</span></div><div class="line">&#125;, &#123;</div><div class="line"> id: <span class="number">2</span>,</div><div class="line"> name: <span class="string">'民宗局'</span>,</div><div class="line"> value: <span class="number">39</span></div><div class="line">&#125;, &#123;</div><div class="line"> id: <span class="number">3</span>,</div><div class="line"> name: <span class="string">'文体局'</span>,</div><div class="line"> value: <span class="number">70</span></div><div class="line">&#125;, &#123;</div><div class="line"> id: <span class="number">4</span>,</div><div class="line"> name: <span class="string">'编办'</span>,</div><div class="line"> value: <span class="number">78</span></div><div class="line">&#125;, &#123;</div><div class="line"> id: <span class="number">5</span>,</div><div class="line"> name: <span class="string">'商务局'</span>,</div><div class="line"> value: <span class="number">33</span></div><div class="line">&#125;, &#123;</div><div class="line"> id: <span class="number">6</span>,</div><div class="line"> name: <span class="string">'财政局'</span>,</div><div class="line"> value: <span class="number">19</span></div><div class="line">&#125;, &#123;</div><div class="line"> id: <span class="number">7</span>,</div><div class="line"> name: <span class="string">'科技局'</span>,</div><div class="line"> value: <span class="number">36</span></div><div class="line">&#125;, &#123;</div><div class="line"> id: <span class="number">8</span>,</div><div class="line"> name: <span class="string">'环保局'</span>,</div><div class="line"> value: <span class="number">60</span></div><div class="line">&#125;, &#123;</div><div class="line"> id: <span class="number">9</span>,</div><div class="line"> name: <span class="string">'其他局'</span>,</div><div class="line"> value: <span class="number">84</span></div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<h2 id="创建虚拟数组，绘制外部弧线">创建虚拟数组，绘制外部弧线</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> updateData = <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line"> <span class="keyword">var</span> _updateArr = [];</div><div class="line"> <span class="keyword">var</span> _len = arr.length;</div><div class="line"> <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; _len; i++) &#123;</div><div class="line">  <span class="keyword">if</span>(i === _len - <span class="number">1</span>) &#123;</div><div class="line">   _updateArr.push(&#123;</div><div class="line">    value: ((arr[i].value) / <span class="number">2</span> + (arr[<span class="number">0</span>].value) / <span class="number">2</span>),</div><div class="line">    name: arr[i].name</div><div class="line">   &#125;);</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">   _updateArr.push(&#123;</div><div class="line">    value: ((arr[i].value) / <span class="number">2</span> + (arr[i + <span class="number">1</span>].value) / <span class="number">2</span>),</div><div class="line">    name: arr[i].name</div><div class="line">   &#125;);</div><div class="line">  &#125;</div><div class="line"> &#125;;</div><div class="line"> <span class="keyword">return</span> _updateArr;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> outerCircleData = updateData(dataSet);</div><div class="line"><span class="comment">//定义颜色数组</span></div><div class="line"><span class="keyword">var</span> colors = [<span class="string">'#21b6fc'</span>, <span class="string">'#7cfdfb'</span>, <span class="string">'#32fffe'</span>, <span class="string">'#59fee8'</span>, <span class="string">'#02d38b'</span>, <span class="string">'#d9fd8c'</span>, <span class="string">'#ffd553'</span>, <span class="string">'#ff396a'</span>, <span class="string">'#b860ef'</span>, <span class="string">'#015fc8'</span>];</div></pre></td></tr></table></figure>
+<h2 id="创建svg">创建svg</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//定义svg宽高</span></div><div class="line"><span class="keyword">var</span> width = <span class="number">460</span>,</div><div class="line"> height = <span class="number">238</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> svg = d3.select(<span class="string">'.comBox'</span>)</div><div class="line"> .append(<span class="string">'svg'</span>)</div><div class="line"> .attr(<span class="string">'width'</span>, width)</div><div class="line"> .attr(<span class="string">'height'</span>, height)</div><div class="line"> .append(<span class="string">'g'</span>)</div><div class="line"> .attr(<span class="string">'transform'</span>, <span class="string">'translate(150,120)'</span>);</div><div class="line"></div><div class="line"><span class="comment">//求value总和</span></div><div class="line"><span class="keyword">var</span> grossData = <span class="number">0</span>;</div><div class="line">dataSet.map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line"> grossData += item.value;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="创建弧生成器">创建弧生成器</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arc = d3.arc()</div><div class="line"> .innerRadius(<span class="number">56</span>)</div><div class="line"> .outerRadius(<span class="number">70</span>)</div><div class="line"> .padAngle(<span class="number">0.01</span>);</div></pre></td></tr></table></figure>
+<h2 id="创建饼布局">创建饼布局</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> pie = d3.pie()</div><div class="line"> .value(<span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> d.value;</div><div class="line"> &#125;)</div><div class="line"> .sort(<span class="literal">null</span>)</div></pre></td></tr></table></figure>
+<h2 id="转换数据格式">转换数据格式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> pieData = pie(dataSet);</div></pre></td></tr></table></figure>
+<h2 id="开始绘制">开始绘制</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//添加与data数量相等的g节点</span></div><div class="line"><span class="keyword">var</span> arc_g = svg.selectAll(<span class="string">'g'</span>)</div><div class="line"> .data(pieData)</div><div class="line"> .enter()</div><div class="line"> .append(<span class="string">'g'</span>);</div><div class="line"><span class="comment">//添加path节点</span></div><div class="line"><span class="keyword">var</span> arcPath = arc_g</div><div class="line"> .append(<span class="string">'path'</span>)</div><div class="line"> .attr(<span class="string">'d'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> arc(d)</div><div class="line"> &#125;)</div></pre></td></tr></table></figure>
+<h2 id="添加line节点">添加line节点</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">arc_g.append(<span class="string">'line'</span>)</div><div class="line">    .transition()</div><div class="line"> .duration(<span class="number">600</span>)</div><div class="line"> .attr(<span class="string">'stroke'</span>, <span class="string">'#3e8eff'</span>)</div><div class="line"> .attr(<span class="string">'stroke-dasharray'</span>, <span class="string">' 1 , 1.5 '</span>)</div><div class="line"> .attr(<span class="string">'stroke-width'</span>, <span class="number">2</span>)</div><div class="line"> .attr(<span class="string">'x1'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> arc.centroid(d)[<span class="number">0</span>] * <span class="number">1.1</span></div><div class="line"> &#125;)</div><div class="line"> .attr(<span class="string">'y1'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> arc.centroid(d)[<span class="number">1</span>] * <span class="number">1.1</span></div><div class="line"> &#125;)</div><div class="line"> .attr(<span class="string">'x2'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> arc.centroid(d)[<span class="number">0</span>] * <span class="number">1.3</span></div><div class="line"> &#125;)</div><div class="line"> .attr(<span class="string">'y2'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> arc.centroid(d)[<span class="number">1</span>] * <span class="number">1.3</span></div><div class="line"> &#125;);</div></pre></td></tr></table></figure>
+<h2 id="添加文字">添加文字</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">arc_g.append(<span class="string">'text'</span>)</div><div class="line">    .transition()</div><div class="line"> .duration(<span class="number">600</span>)</div><div class="line">    .attr(<span class="string">'transform'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">     <span class="keyword">var</span> x = arc.centroid(d)[<span class="number">0</span>] * <span class="number">1.5</span>;</div><div class="line">     <span class="keyword">var</span> y = arc.centroid(d)[<span class="number">1</span>] * <span class="number">1.48</span>;</div><div class="line">     <span class="keyword">return</span> <span class="string">"translate("</span> + (x + <span class="number">3</span>) + <span class="string">","</span> + (y + <span class="number">5</span>) + <span class="string">")"</span>;</div><div class="line">    &#125;)</div><div class="line">    .attr(<span class="string">"font-size"</span>, <span class="string">"14px"</span>)</div><div class="line">    .attr(<span class="string">"font-family"</span>, <span class="string">"微软雅黑"</span>)</div><div class="line">    .style(<span class="string">"text-anchor"</span>, <span class="string">"middle"</span>)</div><div class="line">    .attr(<span class="string">"fill"</span>, <span class="string">'#02f4ff'</span>)</div><div class="line">    .text(<span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">     <span class="keyword">return</span> <span class="built_in">Math</span>.ceil(d.value / grossData * <span class="number">100</span>) + <span class="string">'%'</span>;</div></pre></td></tr></table></figure>
+<h2 id="绘制外圆">绘制外圆</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arc = d3.arc()</div><div class="line">  .innerRadius(<span class="number">76</span>)</div><div class="line">  .outerRadius(<span class="number">77</span>)</div><div class="line">  .padAngle(<span class="number">0.08</span>);</div><div class="line"> <span class="keyword">var</span> arcLineData = pie(outerCircleData);</div><div class="line"></div><div class="line"> <span class="keyword">var</span> arcLine_g = svg.append(<span class="string">'g'</span>)</div><div class="line">  .attr(<span class="string">'transform'</span>, <span class="string">'rotate(12)'</span>);</div><div class="line"> arcLine_g.selectAll(<span class="string">'path'</span>)</div><div class="line">  .data(arcLineData)</div><div class="line">  .enter()</div><div class="line">  .append(<span class="string">'path'</span>)</div><div class="line">  .attr(<span class="string">'d'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">   <span class="built_in">console</span>.log(d)</div><div class="line">   <span class="keyword">return</span> arc(d)</div><div class="line">  &#125;)</div><div class="line">  .attr(<span class="string">'fill'</span>, <span class="string">'#3e8eff'</span>);</div></pre></td></tr></table></figure>
+<h2 id="添加图例">添加图例</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> rects = svg.append(<span class="string">'g'</span>)</div><div class="line"> .attr(<span class="string">'transform'</span>, <span class="string">'translate(170,-80)'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> rect_g = rects.selectAll(<span class="string">'g'</span>)</div><div class="line"> .data(dataSet)</div><div class="line"> .enter()</div><div class="line"> .append(<span class="string">'g'</span>);</div><div class="line"></div><div class="line">rect_g.append(<span class="string">'rect'</span>)</div><div class="line">    .transition()</div><div class="line"> .duration(<span class="number">600</span>)</div><div class="line"> .delay(<span class="function"><span class="keyword">function</span>(<span class="params">d,i</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(d,i)</div><div class="line">  <span class="keyword">return</span> i*<span class="number">50</span></div><div class="line"> &#125;)</div><div class="line"> .attr(<span class="string">'width'</span>, <span class="number">20</span>)</div><div class="line"> .attr(<span class="string">'height'</span>, <span class="number">8</span>)</div><div class="line"> .attr(<span class="string">'y'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d, i</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="number">18</span> * i;</div><div class="line"> &#125;)</div><div class="line"> .attr(<span class="string">'fill'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d, i</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> colors[i]</div><div class="line"> &#125;);</div><div class="line">rect_g.append(<span class="string">'text'</span>)</div><div class="line"> .attr(<span class="string">"font-size"</span>, <span class="string">"14px"</span>)</div><div class="line"> .attr(<span class="string">"font-family"</span>, <span class="string">"微软雅黑"</span>)</div><div class="line"> .style(<span class="string">"text-anchor"</span>, <span class="string">"middle"</span>)</div><div class="line"> .attr(<span class="string">"fill"</span>, <span class="string">'#30b4ff'</span>)</div><div class="line"> .attr(<span class="string">'dy'</span>, <span class="number">10</span>)</div><div class="line"> .attr(<span class="string">'y'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d, i</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="number">18</span> * i;</div><div class="line"> &#125;)</div><div class="line"> .attr(<span class="string">'x'</span>, <span class="number">60</span>)</div><div class="line"> .text(<span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> d.name</div><div class="line"> &#125;)</div></pre></td></tr></table></figure>
+<h2 id="添加动画">添加动画</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">arcPath</div><div class="line">    .transition()</div><div class="line"> .duration(<span class="number">1500</span>)</div><div class="line"> .delay(<span class="function"><span class="keyword">function</span>(<span class="params">d, i</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> i * <span class="number">50</span>;</div><div class="line"> &#125;)</div><div class="line"> .attr(<span class="string">'fill'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> colors[d.data.id]</div><div class="line"> &#125;);</div></pre></td></tr></table></figure>
+<p>最终效果图：</p>
+<p>本文d3相关属性和方法讲解：<br>d3.arc() - 创建一个新弧生成器<br>arc.innerRadius() - 设置内半径<br>arc.outerRadius() - 设置外半径<br>arc.padAngle() - 设置相邻弧之间的夹角（取值范围0~0.1）<br>arc.centroid() - 弧中心<br>arc.centroid(d)[0] - x轴坐标<br>arc.centroid(d)[1 ] - y轴坐标<br>d3.transition() - 添加动画<br>transition.duration - 指定每个元素的持续时间（以毫米为单位）。<br>transition.delay - 指定每个元素的延迟时间（以毫米为单位）。</p>
 </span>
       
     </div>
@@ -542,6 +526,111 @@
     <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+    
+  </div>
+  <!--<p><span>本文标题:</span><a href="/用d3画环形图/">用d3画环形图</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 郭立lee 的个人博客">郭立lee</a></p>-->
+  <p><span>发布时间:</span>2018年04月02日 - 14:04</p>
+  <p><span>最后更新:</span>2018年04月02日 - 18:04</p>
+  <p><span>原始链接:</span><a href="/用d3画环形图/" title="用d3画环形图">https://xn--v4q63d8za.xn--6qq986b3xl/用d3画环形图/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://xn--v4q63d8za.xn--6qq986b3xl/用d3画环形图/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({
+          title: "",
+          text: '复制成功~',
+          icon: "success",
+          showConfirmButton: true
+          });
+        });
+    });
+
+    var G = function(a, b, c){
+
+      // 拼接字符串
+      function d(a, b) {
+        return ['著作权归作者所有。',
+          '商业转载请联系作者获得授权，非商业转载请注明出处。',
+          '作者：' + b,
+          '链接：' + a,
+          '来源：leeguoo.com',
+          '',
+          ''
+        ]
+      }
+
+      // 拼接成html
+      function f(b, c, m) {
+        return '<div>' + d(b, c).join('<br />') + m +'</div>'
+      }
+
+      // 处理 copy
+      function g(a){
+        if(!window.getSelection){
+          return;
+        }
+
+
+        var m = window.getSelection().toString();
+
+        if ('object' === typeof a.clipboardData) {
+          var m = window.getSelection().toString();
+          a.clipboardData.setData('text/html', f( b, c));
+          a.clipboardData.setData('text/plain', d(b, c).join('\n') + m);
+          a.preventDefault();
+
+          return;
+        }
+
+        var n = $(f(b, c, m)).css({
+          position: 'fixed',
+          left: '-9999px'
+        }).appendTo('body');
+        window.getSelection().selectAllChildren(n[0]);
+
+      }
+
+      function hander(a){
+        // g(a);
+        var m = window.getSelection().toString();
+        console.log(12312313);
+        var clipboard = new Clipboard('.fa-clipboard');
+        swal({
+          title: "复制成功",
+          text: d(b, c).join('\n') + m,
+          icon: "success",
+          showConfirmButton: true
+          });
+      }
+
+      // 绑定copy事件
+      a.addEventListener('copy', hander);
+
+    }
+
+    G(document.getElementsByTagName("body")[0], location.href, "郭立lee")
+
+</script>
+
 
       
     </div>
@@ -580,9 +669,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/RN/" rel="tag"><i class="fa fa-tag"></i> RN</a>
-          
-            <a href="/tags/native/" rel="tag"><i class="fa fa-tag"></i> native</a>
+            <a href="/tags/d3/" rel="tag"><i class="fa fa-tag"></i> d3</a>
           
         </div>
       
@@ -595,8 +682,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/react-native-安卓真机开发者模式/" rel="next" title="react native 安卓真机开发者模式">
-                <i class="fa fa-chevron-left"></i> react native 安卓真机开发者模式
+              <a href="/用d3画出气泡图/" rel="next" title="用d3画出气泡图">
+                <i class="fa fa-chevron-left"></i> 用d3画出气泡图
               </a>
             
           </div>
@@ -605,17 +692,13 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/RN升级遇到的坑/" rel="prev" title="RN升级遇到的坑">
-                RN升级遇到的坑 <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
 
         <div id="gitalk-container"></div>
         <script>
         var gitalk = new Gitalk({
-          id: 'react native 原生环境踩坑', // 可选。默认为 location.href
+          id: '用d3画环形图', // 可选。默认为 location.href
           clientID: 'df4b56c0c784b50449a2',
           clientSecret: '272d603a2eb298930f8c20b76aed0570400b4095',
           owner: 'leeguooooo',
@@ -830,7 +913,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-_IOS_‘MMMarkdown/MMMarkdown-h’_file_not_found"><span class="nav-text">1. IOS ‘MMMarkdown/MMMarkdown.h’ file not found</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-_Unable_to_find_a_specification_for_SocketRocket"><span class="nav-text">2. Unable to find a specification for SocketRocket</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-_‘ProtocolBuffers/ProtocolBuffers-h’_file_not_found"><span class="nav-text">3. ‘ProtocolBuffers/ProtocolBuffers.h’ file not found</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-_Caused_by:_java-lang-InstantiationError:_okhttp3-internal-ws-RealWebSocket"><span class="nav-text">4. Caused by: java.lang.InstantiationError: okhttp3.internal.ws.RealWebSocket</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法"><span class="nav-text">解决办法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-_华为手机无法允许usb调试"><span class="nav-text">5. 华为手机无法允许usb调试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理方案"><span class="nav-text">处理方案</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义数据格式"><span class="nav-text">定义数据格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建虚拟数组，绘制外部弧线"><span class="nav-text">创建虚拟数组，绘制外部弧线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建svg"><span class="nav-text">创建svg</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建弧生成器"><span class="nav-text">创建弧生成器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建饼布局"><span class="nav-text">创建饼布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转换数据格式"><span class="nav-text">转换数据格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始绘制"><span class="nav-text">开始绘制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加line节点"><span class="nav-text">添加line节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文字"><span class="nav-text">添加文字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绘制外圆"><span class="nav-text">绘制外圆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加图例"><span class="nav-text">添加图例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加动画"><span class="nav-text">添加动画</span></a></li></ol></div>
             
 
           </div>

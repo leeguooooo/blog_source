@@ -3,6 +3,26 @@
 
     
   <url>
+    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/%E7%94%A8d3%E7%94%BB%E7%8E%AF%E5%BD%A2%E5%9B%BE/</loc>
+    <lastmod>2018-04-02T10:22:46.035Z</lastmod>
+    <data>
+        <display>
+        <title>用d3画环形图</title>
+        <pubTime>2018-04-02T06:48:35.000Z</pubTime>
+        
+        <tag>d3 </tag>
+         
+         
+           
+             
+              <breadCrumb title="d3" url="https://xn--v4q63d8za.xn--6qq986b3xl/categories/d3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/%E7%94%A8d3%E7%94%BB%E5%87%BA%E6%B0%94%E6%B3%A1%E5%9B%BE/</loc>
     <lastmod>2018-04-02T04:38:03.043Z</lastmod>
     <data>
@@ -230,26 +250,6 @@
 
     
   <url>
-    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/python%E7%8E%AF%E5%A2%83%E9%9B%86%E6%88%90/</loc>
-    <lastmod>2018-03-22T09:00:11.879Z</lastmod>
-    <data>
-        <display>
-        <title>python环境集成</title>
-        <pubTime>2018-01-08T10:15:07.000Z</pubTime>
-        
-        <tag>python </tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="https://xn--v4q63d8za.xn--6qq986b3xl/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://xn--v4q63d8za.xn--6qq986b3xl/React-16-3-%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
     <lastmod>2018-03-22T09:00:11.879Z</lastmod>
     <data>
@@ -263,6 +263,26 @@
            
              
               <breadCrumb title="react" url="https://xn--v4q63d8za.xn--6qq986b3xl/categories/react/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://xn--v4q63d8za.xn--6qq986b3xl/python%E7%8E%AF%E5%A2%83%E9%9B%86%E6%88%90/</loc>
+    <lastmod>2018-03-22T09:00:11.879Z</lastmod>
+    <data>
+        <display>
+        <title>python环境集成</title>
+        <pubTime>2018-01-08T10:15:07.000Z</pubTime>
+        
+        <tag>python </tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="https://xn--v4q63d8za.xn--6qq986b3xl/categories/python/"/>
           
         </display>
     </data>

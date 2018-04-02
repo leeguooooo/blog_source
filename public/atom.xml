@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://xn--v4q63d8za.xn--6qq986b3xl/"/>
-  <updated>2018-04-02T04:38:03.043Z</updated>
+  <updated>2018-04-02T10:22:46.035Z</updated>
   <id>https://xn--v4q63d8za.xn--6qq986b3xl/</id>
   
   <author>
@@ -13,6 +13,23 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[用d3画环形图]]></title>
+    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/%E7%94%A8d3%E7%94%BB%E7%8E%AF%E5%BD%A2%E5%9B%BE/"/>
+    <id>https://xn--v4q63d8za.xn--6qq986b3xl/用d3画环形图/</id>
+    <published>2018-04-02T06:48:35.000Z</published>
+    <updated>2018-04-02T10:22:46.035Z</updated>
+    <content type="html"><![CDATA[目录 目录 定义数据格式 创建虚拟数组，绘制外部弧线 创建svg 创建弧生成器 创建饼布局 转换数据格式 开始绘制 添加line节点 添加文字 绘制外圆 添加图例 添加动画 前言：环形图很好实现，百度的echart图标库就可以实现各种形式的环形，但是还是会有个别环形图的特殊样式，echart实现不了的那就用d3实现吧。 定义数据格式123456789101112131415161718192021222324252627282930313233343536373839404142var dataSet = [&#123; id: 0, name: '国土局', value: 30&#125;, &#123; id: 1, name: '教育局', value: 50&#125;, &#123; id: 2, name: '民宗局', value: 39&#125;, &#123; id: 3, name: '文体局', value: 70&#125;, &#123; id: 4, name: '编办', value: 78&#125;, &#123; id: 5, name: '商务局', value: 33&#125;, &#123; id: 6, name: '财政局', value: 19&#125;, &#123; id: 7, name: '科技局', value: 36&#125;, &#123; id: 8, name: '环保局', value: 60&#125;, &#123; id: 9, name: '其他局', value: 84&#125;]; 创建虚拟数组，绘制外部弧线123456789101112131415161718192021var updateData = function(arr) &#123; var _updateArr = []; var _len = arr.length; for(var i = 0; i &lt; _len; i++) &#123; if(i === _len - 1) &#123; _updateArr.push(&#123; value: ((arr[i].value) / 2 + (arr[0].value) / 2), name: arr[i].name &#125;); &#125; else &#123; _updateArr.push(&#123; value: ((arr[i].value) / 2 + (arr[i + 1].value) / 2), name: arr[i].name &#125;); &#125; &#125;; return _updateArr;&#125;;var outerCircleData = updateData(dataSet);//定义颜色数组var colors = ['#21b6fc', '#7cfdfb', '#32fffe', '#59fee8', '#02d38b', '#d9fd8c', '#ffd553', '#ff396a', '#b860ef', '#015fc8']; 创建svg12345678910111213141516//定义svg宽高var width = 460, height = 238;var svg = d3.select('.comBox') .append('svg') .attr('width', width) .attr('height', height) .append('g') .attr('transform', 'translate(150,120)');//求value总和var grossData = 0;dataSet.map(function(item) &#123; grossData += item.value;&#125;); 创建弧生成器1234var arc = d3.arc() .innerRadius(56) .outerRadius(70) .padAngle(0.01); 创建饼布局12345var pie = d3.pie() .value(function(d) &#123; return d.value; &#125;) .sort(null) 转换数据格式1var pieData = pie(dataSet); 开始绘制1234567891011//添加与data数量相等的g节点var arc_g = svg.selectAll('g') .data(pieData) .enter() .append('g');//添加path节点var arcPath = arc_g .append('path') .attr('d', function(d) &#123; return arc(d) &#125;) 添加line节点123456789101112131415161718arc_g.append('line') .transition() .duration(600) .attr('stroke', '#3e8eff') .attr('stroke-dasharray', ' 1 , 1.5 ') .attr('stroke-width', 2) .attr('x1', function(d) &#123; return arc.centroid(d)[0] * 1.1 &#125;) .attr('y1', function(d) &#123; return arc.centroid(d)[1] * 1.1 &#125;) .attr('x2', function(d) &#123; return arc.centroid(d)[0] * 1.3 &#125;) .attr('y2', function(d) &#123; return arc.centroid(d)[1] * 1.3 &#125;); 添加文字1234567891011121314arc_g.append('text') .transition() .duration(600) .attr('transform', function(d) &#123; var x = arc.centroid(d)[0] * 1.5; var y = arc.centroid(d)[1] * 1.48; return "translate(" + (x + 3) + "," + (y + 5) + ")"; &#125;) .attr("font-size", "14px") .attr("font-family", "微软雅黑") .style("text-anchor", "middle") .attr("fill", '#02f4ff') .text(function(d) &#123; return Math.ceil(d.value / grossData * 100) + '%'; 绘制外圆1234567891011121314151617var arc = d3.arc() .innerRadius(76) .outerRadius(77) .padAngle(0.08); var arcLineData = pie(outerCircleData); var arcLine_g = svg.append('g') .attr('transform', 'rotate(12)'); arcLine_g.selectAll('path') .data(arcLineData) .enter() .append('path') .attr('d', function(d) &#123; console.log(d) return arc(d) &#125;) .attr('fill', '#3e8eff'); 添加图例123456789101112131415161718192021222324252627282930313233343536var rects = svg.append('g') .attr('transform', 'translate(170,-80)');var rect_g = rects.selectAll('g') .data(dataSet) .enter() .append('g');rect_g.append('rect') .transition() .duration(600) .delay(function(d,i)&#123; console.log(d,i) return i*50 &#125;) .attr('width', 20) .attr('height', 8) .attr('y', function(d, i) &#123; return 18 * i; &#125;) .attr('fill', function(d, i) &#123; return colors[i] &#125;);rect_g.append('text') .attr("font-size", "14px") .attr("font-family", "微软雅黑") .style("text-anchor", "middle") .attr("fill", '#30b4ff') .attr('dy', 10) .attr('y', function(d, i) &#123; return 18 * i; &#125;) .attr('x', 60) .text(function(d) &#123; return d.name &#125;) 添加动画123456789arcPath .transition() .duration(1500) .delay(function(d, i) &#123; return i * 50; &#125;) .attr('fill', function(d) &#123; return colors[d.data.id] &#125;); 最终效果图： 本文d3相关属性和方法讲解：d3.arc() - 创建一个新弧生成器arc.innerRadius() - 设置内半径arc.outerRadius() - 设置外半径arc.padAngle() - 设置相邻弧之间的夹角（取值范围0~0.1）arc.centroid() - 弧中心arc.centroid(d)[0] - x轴坐标arc.centroid(d)[1 ] - y轴坐标d3.transition() - 添加动画transition.duration - 指定每个元素的持续时间（以毫米为单位）。transition.delay - 指定每个元素的延迟时间（以毫米为单位）。]]></content>
+    <summary type="html">
+    <![CDATA[目录]]>
+    </summary>
+    
+      <category term="d3" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/d3/"/>
+    
+      <category term="d3" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/d3/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[用d3画出气泡图]]></title>
@@ -368,27 +385,6 @@
       <category term="金字塔" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E9%87%91%E5%AD%97%E5%A1%94/"/>
     
       <category term="D3" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/D3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[小李面试总结1001篇 - 0001]]></title>
-    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/%E5%B0%8F%E6%9D%8E%E7%9A%84%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%930001/"/>
-    <id>https://xn--v4q63d8za.xn--6qq986b3xl/小李的面试总结0001/</id>
-    <published>2017-12-19T07:28:05.000Z</published>
-    <updated>2018-03-23T10:48:11.410Z</updated>
-    <content type="html"><![CDATA[目录 发布到线上的版本发现问题，git回滚怎么实现？ react什么情况会触发页面重新渲染 react-router了解多少，怎么实现路由页面的切换 svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。 webpack怎么实现线上版本发布 和本地代码分离，webpack配置项怎么配置 第一步，分别设置不同的接口地址 第二部，在代码中调用设置好的参数 用过redux吗 发布到线上的版本发现问题，git回滚怎么实现？ 远程分支回滚的三种办法： 方法一： revert1234git revert HEAD //撤销最近一次提交git revert HEAD~1 //撤销上上次的提交，注意：数字从0开始git revert 0ffaacc //撤销0ffaacc这次提交git push origin master 方法二： reset （不推荐， 不尊重历史记录）123// reset是指将当前head的内容重置，不会留任何痕迹。git reset --hard HEAD^git push origin master -f 注意，revert和reset的区别: revert是放弃指定提交的修改，但是会生成一次新的提交，需要填写提交注释，以前的历史记录都在. reset是指将HEAD指针指到指定提交，历史记录中不会出现放弃的提交记录。 关于远程仓库回滚 首先，必须要明白的一件事，任何普通用户不能擅自做有关远程仓库回退的操作，如果你擅自回滚了远程仓库，会对项目团队其他人造成不可预知的影响。如果需要回退版本，先联系项目的仓库管理员，在团队其他人都对自己本地未提交的工作做好备份之后，再进行远程仓库回退操作，操作结束后，团队成员需要重新同步远程仓库后继续自己的工作。 react什么情况会触发页面重新渲染 &emsp; 参考链接： React组件生命周期小结 首次加载 setState改变组件内部state 接收到新的props react-router了解多少，怎么实现路由页面的切换 svg画过图吗，举例说明怎么实现，svg画一条线，外面传进来的数据怎么与path路径映射。 webpack怎么实现线上版本发布 和本地代码分离，webpack配置项怎么配置 第一步，分别设置不同的接口地址分别创建下面的两个文件：12/config/dev.env.js/config/prod.env.js 这两个文件就是针对生产环境和发布环境设置不同参数的文件。我们打开dev.en.js文件。代码如下： 123456var merge = require('webpack-merge')var prodEnv = require('./prod.env')module.exports = merge(prodEnv, &#123; NODE_ENV: '"development"'&#125;) 在NODE_ENV下面增加一项，代码如下： 1234567var merge = require('webpack-merge')var prodEnv = require('./prod.env')module.exports = merge(prodEnv, &#123; NODE_ENV: '"development"', API_ROOT: '"//192.168.1.8/api"'&#125;) 编辑prod.env.js文件 1234module.exports = &#123; NODE_ENV: '"production"', API_ROOT: '"//www.baidu.com/api"'&#125; 在经过这样的配置之后，我们在运行 12npm run dev //测试环境npm run build //打包项目的时候，打包的是服务器正式接口 第二部，在代码中调用设置好的参数打开src/config/api.js文件，将原来开头的代码 12// 配置API接口地址var root = 'https://cnodejs.org/api/v1' 修改为12// 配置API接口地址var root = process.env.API_ROOT 用过redux吗 Redux的官网中用一句话来说明Redux是什么: Redux是针对JavaScript应用的可预测状态容器 redux 使用场景 用户的使用方式复杂 不同身份的用户有不同的使用方式（比如普通用户和管理员） 多个用户之间可以协作 与服务器大量交互，或者使用了WebSocket View要从多个来源获取数据 从组件角度： 某个组件的状态，需要共享 某个状态需要在任何地方都可以拿到 一个组件需要改变全局状态 一个组件需要改变另一个组件的状态 发生上面情况时，如果不使用 Redux 或者其他状态管理工具，不按照一定规律处理状态的读写，代码很快就会变成一团乱麻。你需要一种机制，可以在同一个地方查询状态、改变状态、传播状态的变化。 总之，不要把 Redux 当作万灵丹，如果你的应用没那么复杂，就没必要用它。另一方面，Redux 只是 Web 架构的一种解决方案，也可以选择其他方案。 redux文档-阮一峰Redux简介-慕课网]]></content>
-    <summary type="html">
-    <![CDATA[]]>
-    </summary>
-    
-      <category term="面试" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="react" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/react/"/>
-    
-      <category term="前端" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="面试题" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
