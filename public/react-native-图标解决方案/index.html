@@ -94,19 +94,19 @@
 
 
 
-<meta name="description" content="目录 目录 业务背景 决定实施方案 （svg） RN部分安装 ios部分添加依赖 使用方法 属性 脚本处理 封装Svg Component 使用   业务背景接手前同事的一个RN项目， 项目中的图标采用的方案是iconfont。   iconfont的优点:  文件小 使用便利， 不用担心屏幕屏幕尺寸  都不错，但是缺点对我来说确实致命的：  不能热更新  于是上网查资料寻求更好的解决方案 ，">
+<meta name="description" content="目录 目录 业务背景 决定实施方案 （svg） RN部分安装 ios部分添加依赖 使用方法 属性 脚本处理 封装Svg Component 使用 DEMO   业务背景接手前同事的一个RN项目， 项目中的图标采用的方案是iconfont。   iconfont的优点:  文件小 使用便利， 不用担心屏幕屏幕尺寸  都不错，但是缺点对我来说确实致命的：  不能热更新  于是上网查资料寻求更好的解">
 <meta name="keywords" content="react-native-svg,react-native-art-svg">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react native 图标解决方案">
 <meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-图标解决方案/index.html">
 <meta property="og:site_name" content="郭立lee - 个人博客">
-<meta property="og:description" content="目录 目录 业务背景 决定实施方案 （svg） RN部分安装 ios部分添加依赖 使用方法 属性 脚本处理 封装Svg Component 使用   业务背景接手前同事的一个RN项目， 项目中的图标采用的方案是iconfont。   iconfont的优点:  文件小 使用便利， 不用担心屏幕屏幕尺寸  都不错，但是缺点对我来说确实致命的：  不能热更新  于是上网查资料寻求更好的解决方案 ，">
+<meta property="og:description" content="目录 目录 业务背景 决定实施方案 （svg） RN部分安装 ios部分添加依赖 使用方法 属性 脚本处理 封装Svg Component 使用 DEMO   业务背景接手前同事的一个RN项目， 项目中的图标采用的方案是iconfont。   iconfont的优点:  文件小 使用便利， 不用担心屏幕屏幕尺寸  都不错，但是缺点对我来说确实致命的：  不能热更新  于是上网查资料寻求更好的解">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fpv5bazegnj308k04ka9z.jpg">
-<meta property="og:updated_time" content="2018-03-30T13:22:34.758Z">
+<meta property="og:updated_time" content="2018-04-02T10:42:34.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react native 图标解决方案">
-<meta name="twitter:description" content="目录 目录 业务背景 决定实施方案 （svg） RN部分安装 ios部分添加依赖 使用方法 属性 脚本处理 封装Svg Component 使用   业务背景接手前同事的一个RN项目， 项目中的图标采用的方案是iconfont。   iconfont的优点:  文件小 使用便利， 不用担心屏幕屏幕尺寸  都不错，但是缺点对我来说确实致命的：  不能热更新  于是上网查资料寻求更好的解决方案 ，">
+<meta name="twitter:description" content="目录 目录 业务背景 决定实施方案 （svg） RN部分安装 ios部分添加依赖 使用方法 属性 脚本处理 封装Svg Component 使用 DEMO   业务背景接手前同事的一个RN项目， 项目中的图标采用的方案是iconfont。   iconfont的优点:  文件小 使用便利， 不用担心屏幕屏幕尺寸  都不错，但是缺点对我来说确实致命的：  不能热更新  于是上网查资料寻求更好的解">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fpv5bazegnj308k04ka9z.jpg">
 
 
@@ -372,8 +372,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-30T21:22:34+08:00">
-                2018-03-30
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-02T18:42:34+08:00">
+                2018-04-02
               </time>
             
             
@@ -441,7 +441,7 @@
                   <span class="post-meta-item-text">字数</span>
                 
                 <span title="字数">
-                  1,420
+                  1,427
                 </span>
               
 
@@ -496,6 +496,7 @@
 <li><a href="#脚本处理">脚本处理</a></li>
 <li><a href="#封装svg-component">封装Svg Component</a></li>
 <li><a href="#使用">使用</a></li>
+<li><a href="#demo">DEMO</a></li>
 </ul>
 <!-- /code_chunk_output -->
 <h2 id="业务背景">业务背景</h2><p>接手前同事的一个RN项目， 项目中的图标采用的方案是iconfont。  </p>
@@ -650,6 +651,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// svgs.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="string">'svgName1'</span>: <span class="string">'xmlData1...'</span>,</div><div class="line">  <span class="string">'svgName2'</span>: <span class="string">'xmlData2...'</span>,</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="封装Svg_Component">封装Svg Component</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Svg.js</span></div><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> &#123;</div><div class="line">  ViewStyle,</div><div class="line">&#125; <span class="keyword">from</span> <span class="string">'react-native'</span></div><div class="line"><span class="keyword">import</span> SvgUri <span class="keyword">from</span> <span class="string">'../../lib/react-native-svg-uri'</span>;</div><div class="line"><span class="keyword">import</span> svgs <span class="keyword">from</span> <span class="string">'../../assets/svgs'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Svg</span> <span class="keyword">extends</span> <span class="title">Component</span>&lt;<span class="title">SvgProperties</span>, <span class="title">void</span>&gt;</span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">const</span> &#123;</div><div class="line">      iocn,</div><div class="line">      color,</div><div class="line">      size,</div><div class="line">      style,</div><div class="line">    &#125; = <span class="keyword">this</span>.props;</div><div class="line">    <span class="keyword">let</span> svgXmlData = svgs[<span class="keyword">this</span>.props.icon];</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (!svgXmlData) &#123;</div><div class="line">      <span class="keyword">let</span> err_msg = <span class="string">`没有"<span class="subst">$&#123;<span class="keyword">this</span>.props.icon&#125;</span>"这个icon，请下载最新的icomoo并 npm run build-js`</span>;</div><div class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(err_msg);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;SvgUri</div><div class="line">        width=&#123;size&#125;</div><div class="line">        height=&#123;size&#125;</div><div class="line">        svgXmlData=&#123;svgXmlData&#125;</div><div class="line">        fill=&#123;color&#125;</div><div class="line">        style=&#123;style&#125;</div><div class="line">      /&gt;</div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="使用">使用</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">render() &#123;</div><div class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">Svg</span> <span class="attr">icon</span>=<span class="string">"ac_unit"</span> <span class="attr">size</span>=<span class="string">"40"</span> <span class="attr">fill</span>=<span class="string">"#ccc"</span>/&gt;</span></span></div><div class="line"><span class="xml">&#125;</span></div></pre></td></tr></table></figure>
+<h2 id="DEMO">DEMO</h2><p><a href="https://github.com/leeguooooo/react-native-svg-demo" target="_blank" rel="external">leeguooooo/react-native-svg-demo</a></p>
 <hr>
 <p>注: <code>react-native-art-svg</code> 已改名 <code>react-native-svg</code></p>
 </span>
@@ -681,7 +683,7 @@
   <!--<p><span>本文标题:</span><a href="/react-native-图标解决方案/">react native 图标解决方案</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 郭立lee 的个人博客">郭立lee</a></p>-->
   <p><span>发布时间:</span>2018年03月30日 - 19:03</p>
-  <p><span>最后更新:</span>2018年03月30日 - 21:03</p>
+  <p><span>最后更新:</span>2018年04月02日 - 18:04</p>
   <p><span>原始链接:</span><a href="/react-native-图标解决方案/" title="react native 图标解决方案">https://xn--v4q63d8za.xn--6qq986b3xl/react-native-图标解决方案/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://xn--v4q63d8za.xn--6qq986b3xl/react-native-图标解决方案/"  aria-label="复制成功！"></i></span>
   </p>
@@ -1055,7 +1057,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#业务背景"><span class="nav-text">业务背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决定实施方案_（svg）"><span class="nav-text">决定实施方案 （svg）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RN部分安装"><span class="nav-text">RN部分安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ios部分添加依赖"><span class="nav-text">ios部分添加依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方法"><span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-text">属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脚本处理"><span class="nav-text">脚本处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装Svg_Component"><span class="nav-text">封装Svg Component</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-text">使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#业务背景"><span class="nav-text">业务背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决定实施方案_（svg）"><span class="nav-text">决定实施方案 （svg）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RN部分安装"><span class="nav-text">RN部分安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ios部分添加依赖"><span class="nav-text">ios部分添加依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方法"><span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-text">属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脚本处理"><span class="nav-text">脚本处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装Svg_Component"><span class="nav-text">封装Svg Component</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DEMO"><span class="nav-text">DEMO</span></a></li></ol></div>
             
 
           </div>
