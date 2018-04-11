@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://xn--v4q63d8za.xn--6qq986b3xl/"/>
-  <updated>2018-04-02T10:29:44.481Z</updated>
+  <updated>2018-04-11T09:25:49.762Z</updated>
   <id>https://xn--v4q63d8za.xn--6qq986b3xl/</id>
   
   <author>
@@ -13,6 +13,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[大连车厘子上市啦]]></title>
+    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/%E5%A4%A7%E8%BF%9E%E8%BD%A6%E5%8E%98%E5%AD%90%E4%B8%8A%E5%B8%82%E5%95%A6/"/>
+    <id>https://xn--v4q63d8za.xn--6qq986b3xl/大连车厘子上市啦/</id>
+    <published>2018-04-09T07:28:00.000Z</published>
+    <updated>2018-04-11T09:25:49.762Z</updated>
+    <content type="html"><![CDATA[购买方式淘宝链接： 大连车厘子下单之后私聊我 改价格 微信&amp;电话 微信联系方式： 12491851 车厘子 来自于大连的大棚车厘子，美早品种]]></content>
+    <summary type="html">
+    <![CDATA[购买方式淘宝链接：]]>
+    </summary>
+    
+      <category term="车厘子" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E8%BD%A6%E5%8E%98%E5%AD%90/"/>
+    
+      <category term="樱桃" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E6%A8%B1%E6%A1%83/"/>
+    
+      <category term="广告" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/%E5%B9%BF%E5%91%8A/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[用d3画环形图]]></title>
@@ -366,25 +385,6 @@
       <category term="样式" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E6%A0%B7%E5%BC%8F/"/>
     
       <category term="react native" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/react-native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[用D3实现伪3D效果金字塔]]></title>
-    <link href="https://xn--v4q63d8za.xn--6qq986b3xl/%E7%94%A8d3%E5%AE%9E%E7%8E%B0%E4%BC%AA3d%E6%95%88%E6%9E%9C%E9%87%91%E5%AD%97%E5%A1%94/"/>
-    <id>https://xn--v4q63d8za.xn--6qq986b3xl/用d3实现伪3d效果金字塔/</id>
-    <published>2017-12-21T16:10:03.000Z</published>
-    <updated>2018-03-22T09:00:11.874Z</updated>
-    <content type="html"><![CDATA[目录 用d3实现金字塔伪3d效果 定义图表需要的数据结构 创建svg 生成金字塔 调用函数方法并传参 用d3实现金字塔伪3d效果 工作中偶然接触到d3，慢慢开始熟悉d3，并可以根据效果图进行图形绘制，要完全掌握d3绘图技巧需要不断深入学习研究，今天要展示的是我遇到的一个类似3d效果的金字塔效果图，其实是个伪3d，由于本人学术不精，只想到利用path拼接面的形式来实现（其实一开始想研究研究threejs，but needtime,so…),废话不多说，绘制过程代码如下： 定义图表需要的数据结构1234567891011121314151617181920212223 /*植被类型*/let vegetation_type = ['人工林', '沼泽', '常绿阔叶灌丛', '灌草丛', '红树林'];/*金字塔每层颜色*/let vegetation_color = [&#123; startColor: '#077cec', endColor: '#126fbf'&#125;, &#123; startColor: '#2c6cff', endColor: '#2783df'&#125;, &#123; startColor: '#628eff', endColor: '#2d74cc'&#125;, &#123; startColor: '#60e9e9', endColor: '#46b7b3'&#125;, &#123; startColor: '#fffe2c', endColor: '#fffe2c'&#125;];/*定义金字塔最大宽度*/let w_pyramid_max = 148;/*定义金字塔最大高度*/let h_pyramid_max = 138; 创建svg1234let svg = d3.select('#pyramid') .append('svg') .attr('width', 400) .attr('height', 400); 生成金字塔1234567891011121314151617181920function CreatePyramid(tra_x, tra_y, startColor, endColor, path_bot, path_ins) &#123; let set_path_ins=path_ins||''; let g_contain = svg.append('g') .attr('transform', 'translate(' + tra_x + ',' + tra_y + ')'); let g_bottom = g_contain.append('g') .attr('transform', 'translate(0,0)'); let path_bottom = g_bottom.append('path') .attr('d', function() &#123; return path_bot; &#125;) .attr('fill', startColor); // .attr('stroke', '#3ed8fb'); let g_inside = g_contain.append('g') .attr('transform', 'translate(0,0)'); let path_inside = g_inside.append('path') .attr('d', function() &#123; return set_path_ins; &#125;) .attr('fill', endColor);&#125;; 调用函数方法并传参123456789101112131415161718192021222324252627282930let [axis_a,axis_b,axis_c,axis_d]=[[],[],[],[]];//外层坐标点let [axisIn_a,axisIn_b,axisIn_c,axisIn_d]=[[],[],[],[]];//内层坐标点//循环5组数据，调用函数方法并赋值vegetation_type.map((t, i) =&gt; &#123; let tra_x = 100; //x轴偏移量 let tra_y = 100 - i * 26; //y轴偏移量 let startColor = vegetation_color[i].startColor; //外层颜色 let endColor = vegetation_color[i].endColor; //内层颜色 //外层4个坐标点 axis_a=[12.8*(i+1),118]; axis_b=[14.8*i,138]; axis_c=[w_pyramid_max-14.8*i,h_pyramid_max]; axis_d=[w_pyramid_max-12.8*(i+1),118]; //里层4个坐标点 axisIn_a=[axis_a[0]+6,112]; axisIn_b=[axis_a[0],118]; axisIn_c=[w_pyramid_max-axis_a[0],118] axisIn_d=[148-axis_a[0]-6*(i+1),112]; if(i===4)&#123; //最顶层 let path_bot = 'M'+w_pyramid_max/2+','+108+'L'+axis_b[0]+','+axis_b[1]+'L'+90+','+axis_c[1]+' Z'; CreatePyramid(tra_x, tra_y, startColor, endColor,path_bot); &#125;else&#123; let path_bot = 'M'+axis_a[0]+','+axis_a[1]+'L'+axis_b[0]+','+axis_b[1]+'L'+axis_c[0]+','+axis_c[1]+'L'+axis_d[0]+','+axis_d[1]+' Z'; let path_ins = 'M'+axisIn_a[0]+','+axisIn_a[1]+'L'+axisIn_b[0]+','+axisIn_b[1]+'L'+axisIn_c[0]+','+axisIn_c[1]+'L'+axisIn_d[0]+','+axisIn_d[1]+' Z'; CreatePyramid(tra_x, tra_y, startColor, endColor,path_bot,path_ins); &#125; &#125;); 点击跳转Demo 最终效果呈现：]]></content>
-    <summary type="html">
-    <![CDATA[]]>
-    </summary>
-    
-      <category term="D3" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/D3/"/>
-    
-      <category term="金字塔" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/tags/%E9%87%91%E5%AD%97%E5%A1%94/"/>
-    
-      <category term="D3" scheme="https://xn--v4q63d8za.xn--6qq986b3xl/categories/D3/"/>
     
   </entry>
   

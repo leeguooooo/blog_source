@@ -97,6 +97,12 @@ authors:
   李爽lisa: 目前任职于九次方大数据，负责可视化开发。
   小李: 目前就职于小米,前端开发工程师。
 
+# hexo-admin authentification
+admin:
+  username: lee.guo
+  password_hash: $2a$10$CX.zH8hPhbU1wQ.LY7BHSOR15a4Vh1fnC8YiYdiBJFkKM6nQcN4O2
+  secret: kuaikuaishiyongshuangjiegun
+  
 # 下面是一些model，可以换不同的宠物
 #
 # model 模型名称 默认值: z16
