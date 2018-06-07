@@ -98,10 +98,10 @@ authors:
   小李: 目前就职于小米,前端开发工程师。
 
 # hexo-admin authentification
-admin:
-  username: lee.guo
-  password_hash: $2a$10$CX.zH8hPhbU1wQ.LY7BHSOR15a4Vh1fnC8YiYdiBJFkKM6nQcN4O2
-  secret: kuaikuaishiyongshuangjiegun
+# admin:
+#  username: lee.guo
+#  password_hash: $2a$10$CX.zH8hPhbU1wQ.LY7BHSOR15a4Vh1fnC8YiYdiBJFkKM6nQcN4O2
+#  secret: kuaikuaishiyongshuangjiegun
   
 # 下面是一些model，可以换不同的宠物
 #
