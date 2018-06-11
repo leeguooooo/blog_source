@@ -76,7 +76,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="RN,PropTypes.checkPropTypes,prop-types," />
+  <meta name="keywords" content="闭包,作用域," />
 
 
 
@@ -94,20 +94,20 @@
 
 
 
-<meta name="description" content="目录  找不到index入口 问题症状 处理方法 原因   prop-types 报错 症状 处理方案 代码引入 使用   原因   react-native 出现 No component found for view with name “RNSVG*” 症状 处理办法     Invariant Violation: Calling PropTypes validators direct">
-<meta name="keywords" content="RN,PropTypes.checkPropTypes,prop-types">
+<meta name="description" content="目录 目录 前言 执行上下文 this 作用域 作用域链 闭包 闭包的概念 闭包的用途 使用闭包的注意事项 参考     前言作用域和闭包是前端面试中，最可能考查的知识点。例如下面的题目：  题目：现在有个 HTML 片段，要求编写代码，点击编号为几的链接就alert弹出其编号  1234567&amp;lt;ul&amp;gt;    &amp;lt;li&amp;gt;编号1，点击我请弹出1&amp;lt;/li&amp;gt;">
+<meta name="keywords" content="闭包,作用域">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RN升级遇到的坑">
-<meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/RN升级遇到的坑/index.html">
+<meta property="og:title" content="作用域和闭包">
+<meta property="og:url" content="https://xn--v4q63d8za.xn--6qq986b3xl/作用域和闭包/index.html">
 <meta property="og:site_name" content="郭立lee - 个人博客">
-<meta property="og:description" content="目录  找不到index入口 问题症状 处理方法 原因   prop-types 报错 症状 处理方案 代码引入 使用   原因   react-native 出现 No component found for view with name “RNSVG*” 症状 处理办法     Invariant Violation: Calling PropTypes validators direct">
+<meta property="og:description" content="目录 目录 前言 执行上下文 this 作用域 作用域链 闭包 闭包的概念 闭包的用途 使用闭包的注意事项 参考     前言作用域和闭包是前端面试中，最可能考查的知识点。例如下面的题目：  题目：现在有个 HTML 片段，要求编写代码，点击编号为几的链接就alert弹出其编号  1234567&amp;lt;ul&amp;gt;    &amp;lt;li&amp;gt;编号1，点击我请弹出1&amp;lt;/li&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg">
-<meta property="og:updated_time" content="2018-03-22T09:00:11.876Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fs7hhrqfc4j30jv0b0n0x.jpg">
+<meta property="og:updated_time" content="2018-06-11T12:05:40.894Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RN升级遇到的坑">
-<meta name="twitter:description" content="目录  找不到index入口 问题症状 处理方法 原因   prop-types 报错 症状 处理方案 代码引入 使用   原因   react-native 出现 No component found for view with name “RNSVG*” 症状 处理办法     Invariant Violation: Calling PropTypes validators direct">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fn2f2xxu5yj30a705tdgq.jpg">
+<meta name="twitter:title" content="作用域和闭包">
+<meta name="twitter:description" content="目录 目录 前言 执行上下文 this 作用域 作用域链 闭包 闭包的概念 闭包的用途 使用闭包的注意事项 参考     前言作用域和闭包是前端面试中，最可能考查的知识点。例如下面的题目：  题目：现在有个 HTML 片段，要求编写代码，点击编号为几的链接就alert弹出其编号  1234567&amp;lt;ul&amp;gt;    &amp;lt;li&amp;gt;编号1，点击我请弹出1&amp;lt;/li&amp;gt;">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/005T0OjCly1fs7hhrqfc4j30jv0b0n0x.jpg">
 
 
 
@@ -136,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="https://xn--v4q63d8za.xn--6qq986b3xl/RN升级遇到的坑/"/>
+  <link rel="canonical" href="https://xn--v4q63d8za.xn--6qq986b3xl/作用域和闭包/"/>
 
 
 
@@ -152,7 +152,7 @@
   </script>
 
 
-  <title>RN升级遇到的坑 | 郭立lee - 个人博客</title>
+  <title>作用域和闭包 | 郭立lee - 个人博客</title>
   
 
 
@@ -327,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/RN升级遇到的坑/">
+    <link itemprop="mainEntityOfPage" href="https://xn--v4q63d8za.xn--6qq986b3xl/作用域和闭包/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郭立lee">
@@ -344,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RN升级遇到的坑</h1>
+          <h1 class="post-title" itemprop="name headline">作用域和闭包</h1>
         
 
         <div class="post-meta">
@@ -356,8 +356,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-02T17:58:33+08:00">
-                2018-01-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-11T19:22:19+08:00">
+                2018-06-11
               </time>
             
 
@@ -372,8 +372,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-22T17:00:11+08:00">
-                2018-03-22
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-11T20:05:40+08:00">
+                2018-06-11
               </time>
             
             
@@ -398,8 +398,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/react-native/" itemprop="url" rel="index">
-                    <span itemprop="name">react native</span>
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
                   </a>
                 </span>
 
@@ -415,7 +415,7 @@
 
           
           
-             <span id="/RN升级遇到的坑/" class="leancloud_visitors" data-flag-title="RN升级遇到的坑">
+             <span id="/作用域和闭包/" class="leancloud_visitors" data-flag-title="作用域和闭包">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -441,7 +441,7 @@
                   <span class="post-meta-item-text">字数</span>
                 
                 <span title="字数">
-                  1,006
+                  2,417
                 </span>
               
 
@@ -457,7 +457,7 @@
                   <span class="post-meta-item-text">时间≈</span>
                 
                 <span title="时间≈">
-                  5
+                  9
                 </span>
               
             </div>
@@ -483,80 +483,96 @@
     
 
       
-        <span itemprop="articleBody"><!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<p><strong>目录</strong></p>
+        <span itemprop="articleBody"><!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+<h2 id="目录">目录</h2><ul>
+<li><a href="#目录">目录</a><ul>
+<li><a href="#前言">前言</a></li>
+<li><a href="#执行上下文">执行上下文</a></li>
+<li><a href="#this"><code>this</code></a></li>
+<li><a href="#作用域">作用域</a></li>
+<li><a href="#作用域链">作用域链</a></li>
+<li><a href="#闭包">闭包</a></li>
+<li><a href="#闭包的概念">闭包的概念</a></li>
+<li><a href="#闭包的用途">闭包的用途</a></li>
+<li><a href="#使用闭包的注意事项">使用闭包的注意事项</a></li>
+<li><a href="#参考">参考</a></li>
+</ul>
+</li>
+</ul>
+<!-- /code_chunk_output -->
+<h3 id="前言">前言</h3><p>作用域和闭包是前端面试中，最可能考查的知识点。例如下面的题目：</p>
+<blockquote>
+<p>题目：现在有个 HTML 片段，要求编写代码，点击编号为几的链接就<code>alert</code>弹出其编号</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>编号1，点击我请弹出1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>一般不知道这个题目用闭包的话，会写出下面的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> list = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; list.length; i++) &#123;</div><div class="line">    list[i].addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        alert(i + <span class="number">1</span>)</div><div class="line">    &#125;, <span class="literal">true</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>实际上执行才会发现始终弹出的是6，这时候就应该通过闭包来解决：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> list = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; list.length; i++) &#123;</div><div class="line">    list[i].addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            alert(i + <span class="number">1</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;(i), <span class="literal">true</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>要理解闭包，就需要我们从「执行上下文」开始讲起。</p>
+<h3 id="执行上下文">执行上下文</h3><p>先讲一个关于 <strong>变量提升</strong> 的知识点，面试中可能会遇见下面的问题：</p>
+<blockquote>
+<p>题目：说出下面执行的结果（这里笔者直接注释输出了）</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(a)  <span class="comment">// undefined</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">100</span></div><div class="line"></div><div class="line">fn(<span class="string">'zhangsan'</span>)  <span class="comment">// 'zhangsan' 20</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    age = <span class="number">20</span></div><div class="line">    <span class="built_in">console</span>.log(name, age)</div><div class="line">    <span class="keyword">var</span> age</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 这里报错</span></div><div class="line"><span class="comment">// Uncaught ReferenceError: b is not defined</span></div><div class="line">b = <span class="number">100</span>;</div></pre></td></tr></table></figure>
+<p>在一段 JS 脚本（即一个<code>&lt;script&gt;</code>标签中）执行之前，要先解析代码（所以说 JS 是解释执行的脚本语言），解析的时候会先创建一个 全局执行上下文 环境，先把代码中即将执行的（内部函数的不算，因为你不知道函数何时执行）变量、函数声明都拿出来。变量先暂时赋值为<code>undefined</code>，函数则先声明好可使用。这一步做完了，然后再开始正式执行程序。再次强调，这是在代码执行之前才开始的工作。</p>
+<p>我们来看下上面的面试小题目，为什么<code>a</code>是<code>undefined</code>，而<code>b</code>却报错了，实际 JS 在代码执行之前，要「全文解析」，发现<code>var a</code>，知道有个<code>a</code>的变量，存入了执行上下文，而b没有找到var关键字，这时候没有在执行上下文提前「占位」，所以代码执行的时候，提前报到的a是有记录的，只不过值暂时还没有赋值，即为<code>undefined</code>，而<code>b</code>在执行上下文没有找到，自然会报错（没有找到<code>b</code>的引用）。</p>
+<p>另外，一个函数在执行之前，也会创建一个 函数执行上下文 环境，跟 全局上下文 差不多，不过 函数执行上下文 中会多出<code>this`` arguments</code>和函数的参数。参数和<code>arguments</code>好理解，这里的<code>this</code>咱们需要专门讲解。</p>
+<p>总结一下：</p>
+<p>范围：一段<code>&lt;script&gt;</code>、js 文件或者一个函数<br>全局上下文：变量定义，函数声明<br>函数上下文：变量定义，函数声明，<code>this</code>，<code>arguments</code></p>
+<h3 id="this"><code>this</code></h3><p>先搞明白一个很重要的概念 —— <code>this</code>的值是在执行的时候才能确认，定义的时候不能确认！ 为什么呢 —— 因为<code>this</code>是执行上下文环境的一部分，而执行上下文需要在代码执行之前确定，而不是定义的时候。看如下例子</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;</div><div class="line">    name: <span class="string">'A'</span>,</div><div class="line">    fn: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">a.fn()  <span class="comment">// this === a</span></div><div class="line">a.fn.call(&#123;<span class="attr">name</span>: <span class="string">'B'</span>&#125;)  <span class="comment">// this === &#123;name: 'B'&#125;</span></div><div class="line"><span class="keyword">var</span> fn1 = a.fn</div><div class="line">fn1()  <span class="comment">// this === window</span></div></pre></td></tr></table></figure>
+<p><code>this</code>执行会有不同，主要集中在这几个场景中</p>
 <ul>
-<li><a href="#%E6%89%BE%E4%B8%8D%E5%88%B0index%E5%85%A5%E5%8F%A3">找不到index入口</a><ul>
-<li><a href="#%E9%97%AE%E9%A2%98%E7%97%87%E7%8A%B6">问题症状</a></li>
-<li><a href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95">处理方法</a></li>
-<li><a href="#%E5%8E%9F%E5%9B%A0">原因</a></li>
+<li>作为构造函数执行，构造函数中</li>
+<li>作为对象属性执行，上述代码中<code>a.fn()</code></li>
+<li>作为普通函数执行，上述代码中<code>fn1()</code></li>
+<li>用于<code>call</code> <code>apply</code> <code>bind</code>，上述代码中<code>a.fn.call({name: &#39;B&#39;})</code></li>
 </ul>
-</li>
-<li><a href="#prop-types-%E6%8A%A5%E9%94%99">prop-types 报错</a><ul>
-<li><a href="#%E7%97%87%E7%8A%B6">症状</a></li>
-<li><a href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88">处理方案</a><ul>
-<li><a href="#%E4%BB%A3%E7%A0%81%E5%BC%95%E5%85%A5">代码引入</a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8">使用</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8E%9F%E5%9B%A0-1">原因</a></li>
-</ul>
-</li>
-<li><a href="#react-native-%E5%87%BA%E7%8E%B0-no-component-found-for-view-with-name-rnsvg">react-native 出现 No component found for view with name “RNSVG<em>*</em>”</a><ul>
-<li><a href="#%E7%97%87%E7%8A%B6-1">症状</a><ul>
-<li><a href="#%E5%A4%84%E7%90%86%E5%8A%9E%E6%B3%95">处理办法</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#invariant-violation-calling-proptypes-validators-directly-is-not-supported-by-the-prop-types-package-use-proptypescheckproptypes-to-call-them-read-more-at-httpfbmeuse-check-prop-types">Invariant Violation: Calling PropTypes validators directly is not supported by the <code>prop-types</code> package. Use <code>PropTypes.checkPropTypes()</code> to call them. Read more at http://fb.me/use-check-prop-types</a></li>
-<li><a href="#invariant-violation-element-type-is-invalid-expected-a-string-for-built-in-components-or-a-classfunction-for-composite-components-but-got-object">Invariant Violation: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object.</a><ul>
-<li><a href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88-1">处理方案</a></li>
-</ul>
-</li>
-</ul>
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<h2 id="找不到index入口">找不到index入口</h2><h3 id="问题症状">问题症状</h3><blockquote>
+<p>下面再来讲解下什么是作用域和作用域链。</p>
+<blockquote>
+<p>题目：如何理解 JS 的作用域和作用域链</p>
+</blockquote>
+<h3 id="作用域">作用域</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">    <span class="keyword">var</span> name = <span class="string">'zhangsan'</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(name)</div></pre></td></tr></table></figure>
+<p>从上面的例子可以体会到作用域的概念，作用域就是一个独立的地盘，让变量不会外泄、暴露出去。上面的<code>name</code>就被暴露出去了，因此，<strong>JS 没有块级作用域，只有全局作用域和函数作用域。</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">100</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">200</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'fn'</span>, a)</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'global'</span>, a)</div><div class="line">fn()</div></pre></td></tr></table></figure>
+<p>全局作用域就是最外层的作用域，如果我们写了很多行 JS 代码，变量定义都没有用函数包括，那么它们就全部都在全局作用域中。这样的坏处就是很容易撞车、冲突。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">// 张三写的代码中</span></div><div class="line"><span class="keyword">var</span> data = &#123;<span class="attr">a</span>: <span class="number">100</span>&#125;</div><div class="line"></div><div class="line"><span class="comment">// 李四写的代码中</span></div><div class="line"><span class="keyword">var</span> data = &#123;<span class="attr">x</span>: <span class="literal">true</span>&#125;</div></pre></td></tr></table></figure>
+<p>这就是为何 jQuery、Zepto 等库的源码，所有的代码都会放在<code>(function(){....})()</code>中。因为放在里面的所有变量，都不会被外泄和暴露，不会污染到外面，不会对其他的库或者 JS 脚本造成影响。这是函数作用域的一个体现。</p>
+<p>附：ES6 中开始加入了块级作用域，使用<code>let</code>定义变量即可，如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">    <span class="keyword">let</span> name = <span class="string">'zhangsan'</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(name)  <span class="comment">// 报错，因为let定义的name是在if这个块级作用域</span></div></pre></td></tr></table></figure>
+<h3 id="作用域链">作用域链</h3><p>首先认识一下什么叫做 自由变量 。如下代码中，<code>console.log(a)</code>要得到<code>a</code>变量，但是在当前的作用域中没有定义<code>a</code>（可对比一下<code>b</code>）。当前作用域没有定义的变量，这成为 自由变量 。自由变量如何得到 —— 向父级作用域寻找。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="number">100</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> b = <span class="number">200</span></div><div class="line">    <span class="built_in">console</span>.log(a)</div><div class="line">    <span class="built_in">console</span>.log(b)</div><div class="line">&#125;</div><div class="line">fn()</div></pre></td></tr></table></figure>
+<p>如果父级也没呢？再一层一层向上寻找，直到找到全局作用域还是没找到，就宣布放弃。这种一层一层的关系，就是 <strong>作用域链</strong> 。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">100</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">F1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> b = <span class="number">200</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">F2</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> c = <span class="number">300</span></div><div class="line">        <span class="built_in">console</span>.log(a) <span class="comment">// 自由变量，顺作用域链向父作用域找</span></div><div class="line">        <span class="built_in">console</span>.log(b) <span class="comment">// 自由变量，顺作用域链向父作用域找</span></div><div class="line">        <span class="built_in">console</span>.log(c) <span class="comment">// 本作用域的变量</span></div><div class="line">    &#125;</div><div class="line">    F2()</div><div class="line">&#125;</div><div class="line">F1()</div></pre></td></tr></table></figure>
+<h3 id="闭包">闭包</h3><p>讲完这些内容，我们再来看一个例子，通过例子来理解闭包。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">F1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">100</span></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(a)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> f1 = F1()</div><div class="line"><span class="keyword">var</span> a = <span class="number">200</span></div><div class="line">f1()</div></pre></td></tr></table></figure>
+<p>自由变量将从作用域链中去寻找，但是 <strong>依据的是函数定义时的作用域链，而不是函数执行时</strong>，以上这个例子就是闭包。闭包主要有两个应用场景：</p>
 <ul>
-<li>RN找不到index入口</li>
-<li>error: bundling failed: Error</li>
-<li>Cannot find entry file index.js in any of the roots</li>
+<li><strong>函数作为返回值</strong>，上面的例子就是</li>
+<li><strong>函数作为参数传递</strong>，看以下例子</li>
 </ul>
-</blockquote>
-<p><img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn2eufwajwj30af0ikn05.jpg" alt=""></p>
-<h3 id="处理方法">处理方法</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">将 index<span class="selector-class">.android</span><span class="selector-class">.js</span> 重命名为 index.js</div><div class="line">然后把 index<span class="selector-class">.ios</span><span class="selector-class">.js</span> 删除。</div></pre></td></tr></table></figure>
-<h3 id="原因">原因</h3><blockquote>
-<p>0.49 版本最大的一个变化应该就是将两个平台的入口文件 index.android.js 与 index.ios.js 合并成了一个入口文件 index.js，但是 RN 并不会自动帮你完成这个改变，你需要自己完成这步操作.</p>
-</blockquote>
-<hr>
-<h2 id="prop-types_报错">prop-types 报错</h2><h3 id="症状">症状</h3><blockquote>
-<ul>
-<li>undefined is not an object</li>
-<li>找不到PropTypes</li>
-<li>evaluating react2.PropTypes.string</li>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">F1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">100</span></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(a)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">F2</span>(<span class="params">f1</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">200</span></div><div class="line">    <span class="built_in">console</span>.log(f1())</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> f1 = F1()</div><div class="line">F2(f1)</div></pre></td></tr></table></figure>
+<p>至此，对应着「作用域和闭包」这部分一开始的点击弹出<code>alert</code>的代码再看闭包，就很好理解了。</p>
+<h3 id="闭包的概念">闭包的概念</h3><p>各种专业文献上的”闭包”（closure）定义非常抽象，很难看懂。我的理解是，闭包就是能够读取其他函数内部变量的函数。</p>
+<p>由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成”定义在一个函数内部的函数”。</p>
+<p>所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。</p>
+<h3 id="闭包的用途">闭包的用途</h3><p>闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。</p>
+<p>怎么来理解这句话呢？请看下面的代码。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">　　　　<span class="keyword">var</span> n=<span class="number">999</span>;</div><div class="line"></div><div class="line">　　　　nAdd=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;n+=<span class="number">1</span>&#125;</div><div class="line"></div><div class="line">　　　　<span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　alert(n);</div><div class="line">　　　　&#125;</div><div class="line"></div><div class="line">　　　　<span class="keyword">return</span> f2;</div><div class="line"></div><div class="line">　　&#125;</div><div class="line"></div><div class="line">　　<span class="keyword">var</span> result=f1();</div><div class="line"></div><div class="line">　　result(); <span class="comment">// 999</span></div><div class="line"></div><div class="line">　　nAdd();</div><div class="line"></div><div class="line">　　result(); <span class="comment">// 1000</span></div></pre></td></tr></table></figure>
+<p>在这段代码中，result实际上就是闭包f2函数。它一共运行了两次，第一次的值是999，第二次的值是1000。这证明了，函数f1中的局部变量n一直保存在内存中，并没有在f1调用后被自动清除。</p>
+<p>为什么会这样呢？原因就在于f1是f2的父函数，而<code>f2</code>被赋给了一个全局变量，这导致<code>f2</code>始终在内存中，而<code>f2</code>的存在依赖于<code>f1</code>，因此f1也始终在内存中，不会在调用结束后，被垃圾回收机制（<code>garbage collection</code>）回收。</p>
+<p>这段代码中另一个值得注意的地方，就是”<code>nAdd=function(){n+=1}</code>“这一行，首先在<code>nAdd</code>前面没有使用<code>var</code>关键字，因此<code>nAdd</code>是一个全局变量，而不是局部变量。其次，<code>nAdd</code>的值是一个匿名函数（<code>anonymous function</code>），而这个匿名函数本身也是一个闭包，所以<code>nAdd</code>相当于是一个<code>setter</code>，可以在函数外部对函数内部的局部变量进行操作。</p>
+<h3 id="使用闭包的注意事项">使用闭包的注意事项</h3><ul>
+<li><p>由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。</p>
+</li>
+<li><p>闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</p>
+</li>
 </ul>
-</blockquote>
-<p><img src="https://ws1.sinaimg.cn/large/005T0OjCly1fn2h4muo96j30ac0iidha.jpg" alt=""></p>
-<h3 id="处理方案">处理方案</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save prop-types</div></pre></td></tr></table></figure>
-<h4 id="代码引入">代码引入</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>; <span class="comment">// ES6</span></div><div class="line"><span class="keyword">var</span> PropTypes = <span class="built_in">require</span>(<span class="string">'prop-types'</span>); <span class="comment">// ES5 with npm</span></div></pre></td></tr></table></figure>
-<p>或者<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- development version --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/prop-types/prop-types.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- production version --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/prop-types/prop-types.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h4 id="使用">使用</h4><p>下面例子仅供参考</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;</div><div class="line"></div><div class="line">MyComponent.propTypes = &#123;</div><div class="line">  <span class="comment">// 你可以将属性声明为以下 JS 原生类型</span></div><div class="line">  optionalArray: PropTypes.array,</div><div class="line">  optionalBool: PropTypes.bool,</div><div class="line">  optionalFunc: PropTypes.func,</div><div class="line">  optionalNumber: PropTypes.number,</div><div class="line">  optionalObject: PropTypes.object,</div><div class="line">  optionalString: PropTypes.string,</div><div class="line">  optionalSymbol: PropTypes.symbol,</div><div class="line"></div><div class="line">  <span class="comment">// 任何可被渲染的元素（包括数字、字符串、子元素或数组）。</span></div><div class="line">  optionalNode: PropTypes.node,</div><div class="line"></div><div class="line">  <span class="comment">// 一个 React 元素</span></div><div class="line">  optionalElement: PropTypes.element,</div><div class="line"></div><div class="line">  <span class="comment">// 你也可以声明属性为某个类的实例，这里使用 JS 的</span></div><div class="line">  <span class="comment">// instanceof 操作符实现。</span></div><div class="line">  optionalMessage: PropTypes.instanceOf(Message),</div><div class="line"></div><div class="line">  <span class="comment">// 你也可以限制你的属性值是某个特定值之一</span></div><div class="line">  optionalEnum: PropTypes.oneOf([<span class="string">'News'</span>, <span class="string">'Photos'</span>]),</div><div class="line"></div><div class="line">  <span class="comment">// 限制它为列举类型之一的对象</span></div><div class="line">  optionalUnion: PropTypes.oneOfType([</div><div class="line">    PropTypes.string,</div><div class="line">    PropTypes.number,</div><div class="line">    PropTypes.instanceOf(Message)</div><div class="line">  ]),</div><div class="line"></div><div class="line">  <span class="comment">// 一个指定元素类型的数组</span></div><div class="line">  optionalArrayOf: PropTypes.arrayOf(PropTypes.number),</div><div class="line"></div><div class="line">  <span class="comment">// 一个指定类型的对象</span></div><div class="line">  optionalObjectOf: PropTypes.objectOf(PropTypes.number),</div><div class="line"></div><div class="line">  <span class="comment">// 一个指定属性及其类型的对象</span></div><div class="line">  optionalObjectWithShape: PropTypes.shape(&#123;</div><div class="line">    color: PropTypes.string,</div><div class="line">    fontSize: PropTypes.number</div><div class="line">  &#125;),</div><div class="line"></div><div class="line">  <span class="comment">// 你也可以在任何 PropTypes 属性后面加上 `isRequired`</span></div><div class="line">  <span class="comment">// 后缀，这样如果这个属性父组件没有提供时，会打印警告信息</span></div><div class="line">  requiredFunc: PropTypes.func.isRequired,</div><div class="line"></div><div class="line">  <span class="comment">// 任意类型的数据</span></div><div class="line">  requiredAny: PropTypes.any.isRequired,</div><div class="line"></div><div class="line">  <span class="comment">// 你也可以指定一个自定义验证器。它应该在验证失败时返回</span></div><div class="line">  <span class="comment">// 一个 Error 对象而不是 `console.warn` 或抛出异常。</span></div><div class="line">  <span class="comment">// 不过在 `oneOfType` 中它不起作用。</span></div><div class="line">  customProp: <span class="function"><span class="keyword">function</span>(<span class="params">props, propName, componentName</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="regexp">/matchme/</span>.test(props[propName])) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(</div><div class="line">        <span class="string">'Invalid prop `'</span> + propName + <span class="string">'` supplied to'</span> +</div><div class="line">        <span class="string">' `'</span> + componentName + <span class="string">'`. Validation failed.'</span></div><div class="line">      );</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="comment">// 不过你可以提供一个自定义的 `arrayOf` 或 `objectOf`</span></div><div class="line">  <span class="comment">// 验证器，它应该在验证失败时返回一个 Error 对象。 它被用</span></div><div class="line">  <span class="comment">// 于验证数组或对象的每个值。验证器前两个参数的第一个是数组</span></div><div class="line">  <span class="comment">// 或对象本身，第二个是它们对应的键。</span></div><div class="line">  customArrayProp: PropTypes.arrayOf(<span class="function"><span class="keyword">function</span>(<span class="params">propValue, key, componentName, location, propFullName</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="regexp">/matchme/</span>.test(propValue[key])) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Error</span>(</div><div class="line">        <span class="string">'Invalid prop `'</span> + propFullName + <span class="string">'` supplied to'</span> +</div><div class="line">        <span class="string">' `'</span> + componentName + <span class="string">'`. Validation failed.'</span></div><div class="line">      );</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h3 id="原因-1">原因</h3><p>从 React 16.0.0 开始，PropTypes 就已经不再由 React 提供了，而 fb 专门提供了 prop-types 模块，需要通过<code>import PropTypes from ‘prop-types’</code>来使用 PropTypes。0.48 版本的 RN 使用的是 16.0.0-alpha.12 版本的 React，alpha 版本还没有移除 PropTypes，所以之前项目不会有任何问题。而到了 0.49版本，自动将 React 升级到了 16.0.0-beta.5，这个版本已经移除了 React.PropTypes，所以再编译就会报错了，因为找不到 PropTypes 了。</p>
-<hr>
-<h2 id="react-native_出现_No_component_found_for_view_with_name_“RNSVG*”">react-native 出现 No component found for view with name “RNSVG<em>*</em>”</h2><h3 id="症状-1">症状</h3><blockquote>
-<ul>
-<li>no component found for view with name ‘RNSVGPath’</li>
-</ul>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/5822915-eecb1f40a36e82df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt=""></p>
-<h4 id="处理办法">处理办法</h4><blockquote>
-<p><a href="https://www.jianshu.com/p/b51b79ca14e7" target="_blank" rel="external">ios解决方案: https://www.jianshu.com/p/b51b79ca14e7</a></p>
-</blockquote>
-<hr>
-<h2 id="Invariant_Violation:_Calling_PropTypes_validators_directly_is_not_supported_by_the_prop-types_package-_Use_PropTypes-checkPropTypes()_to_call_them-_Read_more_at_http://fb-me/use-check-prop-types">Invariant Violation: Calling PropTypes validators directly is not supported by the <code>prop-types</code> package. Use <code>PropTypes.checkPropTypes()</code> to call them. Read more at <a href="http://fb.me/use-check-prop-types" target="_blank" rel="external">http://fb.me/use-check-prop-types</a></h2><hr>
-<h2 id="Invariant_Violation:_Element_type_is_invalid:_expected_a_string_(for_built-in_components)_or_a_class/function_(for_composite_components)_but_got:_object-">Invariant Violation: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object.</h2><h4 id="处理方案-1">处理方案</h4><p>&gt;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> HTML = <span class="built_in">require</span>(<span class="string">'react-native-htmlview'</span>);</div><div class="line"><span class="comment">//改为</span></div><div class="line"><span class="keyword">import</span> HTML <span class="keyword">from</span> <span class="string">'react-native-htmlview'</span>;</div></pre></td></tr></table></figure></p>
+<h3 id="参考">参考</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"The Window"</span>;</div><div class="line"></div><div class="line">　　<span class="keyword">var</span> object = &#123;</div><div class="line">　　　　name : <span class="string">"My Object"</span>,</div><div class="line"></div><div class="line">　　　　getNameFunc : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　　　<span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">　　　　　　&#125;;</div><div class="line"></div><div class="line">　　　　&#125;</div><div class="line"></div><div class="line">　　&#125;;</div><div class="line"></div><div class="line">　　alert(object.getNameFunc()());</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"The Window"</span>;</div><div class="line"></div><div class="line">　　<span class="keyword">var</span> object = &#123;</div><div class="line">　　　　name : <span class="string">"My Object"</span>,</div><div class="line"></div><div class="line">　　　　getNameFunc : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　<span class="keyword">var</span> that = <span class="keyword">this</span>;</div><div class="line">　　　　　　<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　　　<span class="keyword">return</span> that.name;</div><div class="line">　　　　　　&#125;;</div><div class="line"></div><div class="line">　　　　&#125;</div><div class="line"></div><div class="line">　　&#125;;</div><div class="line"></div><div class="line">　　alert(object.getNameFunc()());</div></pre></td></tr></table></figure>
+<p>(完)</p>
 </span>
       
     </div>
@@ -567,6 +583,111 @@
     <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+    
+  </div>
+  <!--<p><span>本文标题:</span><a href="/作用域和闭包/">作用域和闭包</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 郭立lee 的个人博客">郭立lee</a></p>-->
+  <p><span>发布时间:</span>2018年06月11日 - 19:06</p>
+  <p><span>最后更新:</span>2018年06月11日 - 20:06</p>
+  <p><span>原始链接:</span><a href="/作用域和闭包/" title="作用域和闭包">https://xn--v4q63d8za.xn--6qq986b3xl/作用域和闭包/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://xn--v4q63d8za.xn--6qq986b3xl/作用域和闭包/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({
+          title: "",
+          text: '复制成功~',
+          icon: "success",
+          showConfirmButton: true
+          });
+        });
+    });
+
+    var G = function(a, b, c){
+
+      // 拼接字符串
+      function d(a, b) {
+        return ['著作权归作者所有。',
+          '商业转载请联系作者获得授权，非商业转载请注明出处。',
+          '作者：' + b,
+          '链接：' + a,
+          '来源：leeguoo.com',
+          '',
+          ''
+        ]
+      }
+
+      // 拼接成html
+      function f(b, c, m) {
+        return '<div>' + d(b, c).join('<br />') + m +'</div>'
+      }
+
+      // 处理 copy
+      function g(a){
+        if(!window.getSelection){
+          return;
+        }
+
+
+        var m = window.getSelection().toString();
+
+        if ('object' === typeof a.clipboardData) {
+          var m = window.getSelection().toString();
+          a.clipboardData.setData('text/html', f( b, c));
+          a.clipboardData.setData('text/plain', d(b, c).join('\n') + m);
+          a.preventDefault();
+
+          return;
+        }
+
+        var n = $(f(b, c, m)).css({
+          position: 'fixed',
+          left: '-9999px'
+        }).appendTo('body');
+        window.getSelection().selectAllChildren(n[0]);
+
+      }
+
+      function hander(a){
+        // g(a);
+        var m = window.getSelection().toString();
+        console.log(12312313);
+        var clipboard = new Clipboard('.fa-clipboard');
+        swal({
+          title: "复制成功",
+          text: d(b, c).join('\n') + m,
+          icon: "success",
+          showConfirmButton: true
+          });
+      }
+
+      // 绑定copy事件
+      a.addEventListener('copy', hander);
+
+    }
+
+    G(document.getElementsByTagName("body")[0], location.href, "郭立lee")
+
+</script>
+
 
       
     </div>
@@ -605,11 +726,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/RN/" rel="tag"><i class="fa fa-tag"></i> RN</a>
+            <a href="/tags/闭包/" rel="tag"><i class="fa fa-tag"></i> 闭包</a>
           
-            <a href="/tags/PropTypes-checkPropTypes/" rel="tag"><i class="fa fa-tag"></i> PropTypes.checkPropTypes</a>
-          
-            <a href="/tags/prop-types/" rel="tag"><i class="fa fa-tag"></i> prop-types</a>
+            <a href="/tags/作用域/" rel="tag"><i class="fa fa-tag"></i> 作用域</a>
           
         </div>
       
@@ -622,8 +741,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/react-native-原生环境踩坑/" rel="next" title="react native 原生环境踩坑">
-                <i class="fa fa-chevron-left"></i> react native 原生环境踩坑
+              <a href="/用d3画环形图/" rel="next" title="用d3画环形图">
+                <i class="fa fa-chevron-left"></i> 用d3画环形图
               </a>
             
           </div>
@@ -632,17 +751,13 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/RN大版本升级-0-41-0-51/" rel="prev" title="RN大版本升级 0.41 -> 0.51">
-                RN大版本升级 0.41 -> 0.51 <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
 
         <div id="gitalk-container"></div>
         <script>
         var gitalk = new Gitalk({
-          id: 'RN升级遇到的坑', // 可选。默认为 location.href
+          id: '作用域和闭包', // 可选。默认为 location.href
           clientID: 'df4b56c0c784b50449a2',
           clientSecret: '272d603a2eb298930f8c20b76aed0570400b4095',
           owner: 'leeguooooo',
@@ -857,7 +972,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#找不到index入口"><span class="nav-number">1.</span> <span class="nav-text">找不到index入口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题症状"><span class="nav-number">1.1.</span> <span class="nav-text">问题症状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理方法"><span class="nav-number">1.2.</span> <span class="nav-text">处理方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原因"><span class="nav-number">1.3.</span> <span class="nav-text">原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prop-types_报错"><span class="nav-number">2.</span> <span class="nav-text">prop-types 报错</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#症状"><span class="nav-number">2.1.</span> <span class="nav-text">症状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理方案"><span class="nav-number">2.2.</span> <span class="nav-text">处理方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码引入"><span class="nav-number">2.2.1.</span> <span class="nav-text">代码引入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用"><span class="nav-number">2.2.2.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原因-1"><span class="nav-number">2.3.</span> <span class="nav-text">原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-native_出现_No_component_found_for_view_with_name_“RNSVG*”"><span class="nav-number">3.</span> <span class="nav-text">react-native 出现 No component found for view with name “RNSVG*”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#症状-1"><span class="nav-number">3.1.</span> <span class="nav-text">症状</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#处理办法"><span class="nav-number">3.1.1.</span> <span class="nav-text">处理办法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Invariant_Violation:_Calling_PropTypes_validators_directly_is_not_supported_by_the_prop-types_package-_Use_PropTypes-checkPropTypes()_to_call_them-_Read_more_at_http://fb-me/use-check-prop-types"><span class="nav-number">4.</span> <span class="nav-text">Invariant Violation: Calling PropTypes validators directly is not supported by the prop-types package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Invariant_Violation:_Element_type_is_invalid:_expected_a_string_(for_built-in_components)_or_a_class/function_(for_composite_components)_but_got:_object-"><span class="nav-number">5.</span> <span class="nav-text">Invariant Violation: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#处理方案-1"><span class="nav-number">5.0.1.</span> <span class="nav-text">处理方案</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行上下文"><span class="nav-number">1.2.</span> <span class="nav-text">执行上下文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this"><span class="nav-number">1.3.</span> <span class="nav-text">this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域"><span class="nav-number">1.4.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域链"><span class="nav-number">1.5.</span> <span class="nav-text">作用域链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-number">1.6.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包的概念"><span class="nav-number">1.7.</span> <span class="nav-text">闭包的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包的用途"><span class="nav-number">1.8.</span> <span class="nav-text">闭包的用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用闭包的注意事项"><span class="nav-number">1.9.</span> <span class="nav-text">使用闭包的注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">1.10.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
             
 
           </div>
